@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-05T22:42:00+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 1월 5일</title><link href="http://localhost:4000/til/2021/01/05/TIL2.html" rel="alternate" type="text/html" title="21년 1월 5일" /><published>2021-01-05T00:00:00+09:00</published><updated>2021-01-05T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/05/TIL2</id><content type="html" xml:base="http://localhost:4000/til/2021/01/05/TIL2.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-05T23:07:57+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 1월 5일</title><link href="http://localhost:4000/til/2021/01/05/TIL2.html" rel="alternate" type="text/html" title="21년 1월 5일" /><published>2021-01-05T00:00:00+09:00</published><updated>2021-01-05T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/05/TIL2</id><content type="html" xml:base="http://localhost:4000/til/2021/01/05/TIL2.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;byteadder의 input으로 두 배열이 들어오는데, 두 배열의 크기가 다르게 들어올 경우 작은 배열을 큰 배열의 크기에 맞춰 늘려준 후 (새로 생긴 공간은 false로 채움) 두 배열을 더할 수 있게 수정하였다.&lt;/li&gt;
   &lt;li&gt;Relay -&amp;gt; 논리회로(AND, OR, NOT) -&amp;gt; 진공관 -&amp;gt; 트랜지스터 -&amp;gt; ALU -&amp;gt; CPU(ALU+Register+cache) -&amp;gt; AP(CPU+GPU)로 이루어지는 컴퓨터 구조에 대해 맛보기 개념 학습&lt;/li&gt;
@@ -54,13 +54,43 @@
       &lt;li&gt;키체인 접근 프로그램 들어간 후, github 관련 암호 모두 삭제&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
+  &lt;li&gt;jekyll로 테마적용하고 github.io 홈페이지 만들기
+    &lt;ol&gt;
+      &lt;li&gt;원하는 jekyll 테마를 다운로드 or fork한 후 [git id].github.io 로 원격 repository를 만든다.&lt;/li&gt;
+      &lt;li&gt;_config.yml 파일을 자신에게 맞게 수정한 후 push한다.&lt;/li&gt;
+      &lt;li&gt;(!중요)jekyll을 통해 _site 폴더를 빌드 한 후 모든 폴더를 source 브랜치로 푸시한다.
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+        &lt;p&gt;왜냐하면 github에서 자체적으로 빌드해주는 테마가 있는데, 그 외의 테마는 master로 빌드해도 빌드해주지 않는다.&lt;br /&gt;
+ 따라서 로컬에서 빌드한 후, 빌드한 전체 웹사이트를 source 브랜치로 커밋한다. (자체 빌드해도 source 브랜치에 생성하는듯)&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;향후 posting할 문서는 _post폴더에 md파일 작성 후, jekyll 실행하여 빌드 후에 전체 푸시&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;못한-일&quot;&gt;못한 일&lt;/h2&gt;
+&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;하루종일 github.io 구축한다고 공부를 하지 못했다.&lt;/li&gt;
+  &lt;li&gt;오늘도 알고리즘 문제를 한문제도 하지 못했다.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h2 id=&quot;잘한-일&quot;&gt;잘한 일&lt;/h2&gt;
+&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;음,, 딱히 잘한 건 떠오르지 않는다.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;</content><author><name></name></author><category term="Blog" /><category term="jekyll" /><category term="Github" /><category term="Git" /><summary type="html">byteadder, Program영역, git 설정, JVM</summary></entry><entry><title type="html">21년 1월 4일</title><link href="http://localhost:4000/til/2021/01/04/TIL1.html" rel="alternate" type="text/html" title="21년 1월 4일" /><published>2021-01-04T00:00:00+09:00</published><updated>2021-01-04T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/04/TIL1</id><content type="html" xml:base="http://localhost:4000/til/2021/01/04/TIL1.html">&lt;h1 id=&quot;한-일&quot;&gt;한 일&lt;/h1&gt;
+&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;시간관리를 잘 못한다는 걸 절실히 느꼈다. 뭔가 해보고 목표한 시간을 초과하면 포기한 후 다음 할일을 꼭 하자.&lt;/li&gt;
+  &lt;li&gt;끝내지 못한 일에 얽매여서 다른 스케줄에 영향을 끼치지 말자&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;programmers 알고리즘 문제 풀기&lt;/li&gt;
+  &lt;li&gt;TCP/IP 쉽게, 더 쉽게 책 20일 완독 목표 (1월 6일부터 시작)&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Blog" /><category term="jekyll" /><category term="Github" /><category term="Git" /><summary type="html">byteadder, Program영역, git 설정, JVM</summary></entry><entry><title type="html">21년 1월 4일</title><link href="http://localhost:4000/til/2021/01/04/TIL1.html" rel="alternate" type="text/html" title="21년 1월 4일" /><published>2021-01-04T00:00:00+09:00</published><updated>2021-01-04T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/04/TIL1</id><content type="html" xml:base="http://localhost:4000/til/2021/01/04/TIL1.html">&lt;h1 id=&quot;한-일&quot;&gt;한 일&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;논리 회로의 반가산기와 전가산기 개념 이해&lt;/li&gt;
   &lt;li&gt;반가산기를 직접 구현해보기 (입력: &lt;code class=&quot;highlighter-rouge&quot;&gt;boolean bit1&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;boolean bit2&lt;/code&gt;, 출력: &lt;code class=&quot;highlighter-rouge&quot;&gt;boolean sum&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;boolean carry&lt;/code&gt;)&lt;/li&gt;
