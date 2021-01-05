@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="정이삭" /></head>
+<style>@import url(/public/css/syntax/monokai.css);</style>
+  <title>정이삭</title>
+  <!-- <link href="/public/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link href="/public/css/style.css" rel="stylesheet">
+  <body>
+  	<div class="container"> 
+		<div class="sidebar">
+			<div class="sidebar-item sidebar-header">
+	<div class='sidebar-brand'>
+		<a href="/about/">정이삭</a>
+	</div>
+	<p class="lead">Themed by ejjoo</p></div>
+
+<div class="sidebar-item sidebar-nav">
+	<ul class="nav">
+      <li class="nav-title">Pages</li>
+	  <li>
+	  	<a class="nav-item" href="/">Articles</a>
+	  </li>
+	  
+	  
+	    
+	  
+	    
+	      
+	        <li>
+	        	<a class="nav-item" href="/about/">
+	            	About
+	            </a>
+	        </li>
+	      
+	    
+	  
+	    
+	      
+	    
+	  
+	    
+	  
+	    
+	  
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-nav">
+  	<ul class="nav">
+			<li class="nav-title">Categories</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#TIL">
+				<span class="name">TIL</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Blog">
+				<span class="name">Blog</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	  </nav>
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-footer">
+	<p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
+</div>
+		</div>
+		<div class="content">
+			<article class="post">
+	<header class="post-header">
+		<div class="post-title"> 
+			21년 1월 5일
+		</div>
+		<time class="post-date dt-published" datetime="2021-01-05T00:00:00+09:00" itemprop="datePublished">2021/01/05
+		</time>		
+	</header>
+
+	<div class="post-content">
+		<h2 id="한-일">한 일</h2>
+<ul>
+  <li>byteadder의 input으로 두 배열이 들어오는데, 두 배열의 크기가 다르게 들어올 경우 작은 배열을 큰 배열의 크기에 맞춰 늘려준 후 (새로 생긴 공간은 false로 채움) 두 배열을 더할 수 있게 수정하였다.</li>
+  <li>Relay -&gt; 논리회로(AND, OR, NOT) -&gt; 진공관 -&gt; 트랜지스터 -&gt; ALU -&gt; CPU(ALU+Register+cache) -&gt; AP(CPU+GPU)로 이루어지는 컴퓨터 구조에 대해 맛보기 개념 학습</li>
+  <li>Program을 메모리에 올리면 Process가 된다.
+    <ol>
+      <li>Code영역(Text)
+        <ul>
+          <li>실행할 코드가 저장되는 영역</li>
+          <li>컴파일시에 크기 결정됨</li>
+        </ul>
+      </li>
+      <li>Data영역
+        <ul>
+          <li>전역(global) 변수, 정적(static) 변수, 정적 배열 등 컴파일시 크기가 결정되는 것들이 저장됨</li>
+          <li>컴파일시에 크기 결정됨</li>
+        </ul>
+      </li>
+      <li>Heap영역에 동적할당해주는 변수들 (객체 등)
+        <ul>
+          <li>동적 할당되는 객체가 저장되는 영역</li>
+          <li>런타임시에 크기 결정됨</li>
+        </ul>
+      </li>
+      <li>Stack영역에 지역변수 등
+        <ul>
+          <li>지역변수, 매개변수, 리턴 값과 같이 임시로 사용되는 값들이 저장되는 영역</li>
+          <li>함수 호출이나 반복문 등의 스코프를 벗어나면 내부 변수는 사라짐</li>
+          <li>런타임시에 크기 결정됨</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <li>Github에서 21년 8월부터 Password 인증을 통한 Git operation인증이 안된다고 해서 two factor authenticator설정 하였다.
+    <ul>
+      <li>Two Factor authenticator 설정: https://jojoldu.tistory.com/449</li>
+    </ul>
+  </li>
+  <li>로컬 git에 설정되어 있던 git 계정을 삭제 후 재등록 했고, Two Factor Authenticator 설정 후엔 password로 인증할 수 없기 때문에 개인 token을 발급하여 그 token을 password로 등록하였다.
+    <ul>
+      <li>기존 git credential(인증서)를 삭제한 후 재 로그인할 때, password로 발급한 token을 입력한다.</li>
+    </ul>
+  </li>
+  <li>git credential 삭제하기
+    <ol>
+      <li><code class="highlighter-rouge">git config --global --unset credential.helper</code>로 삭제</li>
+      <li>안되면, <code class="highlighter-rouge">git config --system --unset credential.helper</code>로 삭제</li>
+      <li>키체인 접근 프로그램 들어간 후, github 관련 암호 모두 삭제</li>
+    </ol>
+  </li>
+</ul>
+
+<h2 id="못한-일">못한 일</h2>
+
+<h2 id="잘한-일">잘한 일</h2>
+
+<h2 id="할-일">할 일</h2>
+
+	</div>
+</article>
+		</div>
+	</div>
+  </body>
+</html>

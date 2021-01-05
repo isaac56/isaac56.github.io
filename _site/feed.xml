@@ -1,24 +1,90 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-05T21:36:42+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">정이삭</title><subtitle>Themed by ejjoo</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2020/01/02/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-01-02T19:31:29+09:00</published><updated>2020-01-02T19:31:29+09:00</updated><id>http://localhost:4000/jekyll/update/2020/01/02/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/01/02/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-05T21:46:34+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">정이삭</title><subtitle>Themed by ejjoo</subtitle><entry><title type="html">21년 1월 5일</title><link href="http://localhost:4000/blog/2021/01/05/TIL2.html" rel="alternate" type="text/html" title="21년 1월 5일" /><published>2021-01-05T00:00:00+09:00</published><updated>2021-01-05T00:00:00+09:00</updated><id>http://localhost:4000/blog/2021/01/05/TIL2</id><content type="html" xml:base="http://localhost:4000/blog/2021/01/05/TIL2.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;byteadder의 input으로 두 배열이 들어오는데, 두 배열의 크기가 다르게 들어올 경우 작은 배열을 큰 배열의 크기에 맞춰 늘려준 후 (새로 생긴 공간은 false로 채움) 두 배열을 더할 수 있게 수정하였다.&lt;/li&gt;
+  &lt;li&gt;Relay -&amp;gt; 논리회로(AND, OR, NOT) -&amp;gt; 진공관 -&amp;gt; 트랜지스터 -&amp;gt; ALU -&amp;gt; CPU(ALU+Register+cache) -&amp;gt; AP(CPU+GPU)로 이루어지는 컴퓨터 구조에 대해 맛보기 개념 학습&lt;/li&gt;
+  &lt;li&gt;Program을 메모리에 올리면 Process가 된다.
+    &lt;ol&gt;
+      &lt;li&gt;Code영역(Text)
+        &lt;ul&gt;
+          &lt;li&gt;실행할 코드가 저장되는 영역&lt;/li&gt;
+          &lt;li&gt;컴파일시에 크기 결정됨&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Data영역
+        &lt;ul&gt;
+          &lt;li&gt;전역(global) 변수, 정적(static) 변수, 정적 배열 등 컴파일시 크기가 결정되는 것들이 저장됨&lt;/li&gt;
+          &lt;li&gt;컴파일시에 크기 결정됨&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Heap영역에 동적할당해주는 변수들 (객체 등)
+        &lt;ul&gt;
+          &lt;li&gt;동적 할당되는 객체가 저장되는 영역&lt;/li&gt;
+          &lt;li&gt;런타임시에 크기 결정됨&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Stack영역에 지역변수 등
+        &lt;ul&gt;
+          &lt;li&gt;지역변수, 매개변수, 리턴 값과 같이 임시로 사용되는 값들이 저장되는 영역&lt;/li&gt;
+          &lt;li&gt;함수 호출이나 반복문 등의 스코프를 벗어나면 내부 변수는 사라짐&lt;/li&gt;
+          &lt;li&gt;런타임시에 크기 결정됨&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Github에서 21년 8월부터 Password 인증을 통한 Git operation인증이 안된다고 해서 two factor authenticator설정 하였다.
+    &lt;ul&gt;
+      &lt;li&gt;Two Factor authenticator 설정: https://jojoldu.tistory.com/449&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;로컬 git에 설정되어 있던 git 계정을 삭제 후 재등록 했고, Two Factor Authenticator 설정 후엔 password로 인증할 수 없기 때문에 개인 token을 발급하여 그 token을 password로 등록하였다.
+    &lt;ul&gt;
+      &lt;li&gt;기존 git credential(인증서)를 삭제한 후 재 로그인할 때, password로 발급한 token을 입력한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;git credential 삭제하기
+    &lt;ol&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git config --global --unset credential.helper&lt;/code&gt;로 삭제&lt;/li&gt;
+      &lt;li&gt;안되면, &lt;code class=&quot;highlighter-rouge&quot;&gt;git config --system --unset credential.helper&lt;/code&gt;로 삭제&lt;/li&gt;
+      &lt;li&gt;키체인 접근 프로그램 들어간 후, github 관련 암호 모두 삭제&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
+&lt;h2 id=&quot;못한-일&quot;&gt;못한 일&lt;/h2&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;잘한-일&quot;&gt;잘한 일&lt;/h2&gt;
 
-&lt;p&gt;Where &lt;code class=&quot;highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;</content><author><name></name></author><category term="Blog" /><category term="jekyll" /><category term="Github" /><category term="Git" /><summary type="html">byteadder, Program영역, git 설정, JVM</summary></entry><entry><title type="html">21년 1월 4일</title><link href="http://localhost:4000/til/2021/01/04/TIL1.html" rel="alternate" type="text/html" title="21년 1월 4일" /><published>2021-01-04T00:00:00+09:00</published><updated>2021-01-04T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/04/TIL1</id><content type="html" xml:base="http://localhost:4000/til/2021/01/04/TIL1.html">&lt;h1 id=&quot;한-일&quot;&gt;한 일&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;논리 회로의 반가산기와 전가산기 개념 이해&lt;/li&gt;
+  &lt;li&gt;반가산기를 직접 구현해보기 (입력: &lt;code class=&quot;highlighter-rouge&quot;&gt;boolean bit1&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;boolean bit2&lt;/code&gt;, 출력: &lt;code class=&quot;highlighter-rouge&quot;&gt;boolean sum&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;boolean carry&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;전가산기 구현해보기 (입력: &lt;code class=&quot;highlighter-rouge&quot;&gt;boolean1 bit1&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;boolean bit2&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;boolean carry&lt;/code&gt;, 출력: &lt;code class=&quot;highlighter-rouge&quot;&gt;boolean sum&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;boolean carry&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;전가산기를 이용하여 byte 덧셈 구현&lt;/li&gt;
+  &lt;li&gt;10진법 → 2진법, 2진법 → 10진법 변환 구현해보기&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;h1 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;sum, carry 등의 작은 연산을 메소드로 만들지 않아 가독성이 떨어졌다&lt;/li&gt;
+  &lt;li&gt;반가산기, 전가산기의 출력을 Sum, Carry를 포함하는 boolean 배열로 반환하였는데, 0은 Sum, 1은 Carry로 정하였지만,  코드상에서 final int로 각 인덱스를 명시해주지 않아 가독성이 떨어졌다.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;h1 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;무작정 코딩을 하지 않고, 전가산기와 반가산기의 개념을 익힌 후(배경지식, 구글링) 구현하여 시행착오를 줄일 수 있었다.&lt;/li&gt;
+  &lt;li&gt;Intellij를 통해 JUnit으로 Test 코드를 작성하여 구현이 제대로 됐는지 확인하였다.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">post-sample</title><link href="http://localhost:4000/sample/2020/01/02/post1.html" rel="alternate" type="text/html" title="post-sample" /><published>2020-01-02T19:20:23+09:00</published><updated>2020-01-02T19:20:23+09:00</updated><id>http://localhost:4000/sample/2020/01/02/post1</id><content type="html" xml:base="http://localhost:4000/sample/2020/01/02/post1.html">&lt;h1 id=&quot;post-sample&quot;&gt;post-sample&lt;/h1&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Hello!&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h1 id=&quot;느낌&quot;&gt;느낌&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;강의식 교육에만 익숙했던지라 굉장히 낯설다.&lt;/li&gt;
+  &lt;li&gt;다른 사람들의 Git history를 보고 벌써부터 조급해지려고 한다.&lt;/li&gt;
+  &lt;li&gt;조급해지면 안된다. 나는 나의 진도에 맞게 꾸준히 하면 된다. &lt;em&gt;길게 보고 준비하자.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;This is code&lt;/p&gt;
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'hello world'&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="sample" /><summary type="html">post-sample Hello!</summary></entry></feed>
+&lt;h1 id=&quot;할것&quot;&gt;할것&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;github.io를 꾸며서 제대로 블로깅할지, 지금처럼 TIL에 md파일 업로드할지 정하기&lt;/li&gt;
+  &lt;li&gt;최소 하루에 2문제씩 프로그래머스 문제 풀기&lt;/li&gt;
+  &lt;li&gt;JAVA 기본문법부터 확실히 (JAVA의 정석 책 도착하면 공부시작)&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Blog" /><category term="jekyll" /><category term="Github" /><category term="Git" /><summary type="html">byteadder, fulladder</summary></entry></feed>
