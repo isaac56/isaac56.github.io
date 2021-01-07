@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-07T14:00:29+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 1월 7일</title><link href="http://localhost:4000/til/2021/01/07/TIL4.html" rel="alternate" type="text/html" title="21년 1월 7일" /><published>2021-01-07T00:00:00+09:00</published><updated>2021-01-07T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/07/TIL4</id><content type="html" xml:base="http://localhost:4000/til/2021/01/07/TIL4.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-07T17:55:30+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 1월 7일</title><link href="http://localhost:4000/til/2021/01/07/TIL4.html" rel="alternate" type="text/html" title="21년 1월 7일" /><published>2021-01-07T00:00:00+09:00</published><updated>2021-01-07T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/07/TIL4</id><content type="html" xml:base="http://localhost:4000/til/2021/01/07/TIL4.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;Linux SSH 서버 설치 및 config 방법&lt;/p&gt;
+    &lt;p&gt;Linux SSH 서버 설치 및 config 방법 (Ubuntu)&lt;/p&gt;
 
     &lt;ol&gt;
       &lt;li&gt;
@@ -27,7 +27,7 @@
       &lt;li&gt;
         &lt;p&gt;VM 내부 ubuntu에서 ifconfig 명령어로 사설 IP를 확인한다.&lt;/p&gt;
 
-        &lt;p&gt;&lt;img src=&quot;/public/img/210107/1.png&quot; alt=&quot;image-20210107133137703&quot; /&gt;)&lt;/p&gt;
+        &lt;p&gt;&lt;img src=&quot;/public/img/210107/1.png&quot; alt=&quot;image-20210107133137703&quot; style=&quot;zoom:33%;&quot; /&gt;&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
         &lt;p&gt;기존 OS (host OS) 에서 사설 IP를 확인한다.&lt;/p&gt;
@@ -39,7 +39,7 @@
       &lt;li&gt;
         &lt;p&gt;VirtualBox 에서 ubuntu 설정 - 네트워크 - 고급 - 포트포워드 클릭&lt;/p&gt;
 
-        &lt;p&gt;&lt;img src=&quot;/public/img/210107/2.png&quot; alt=&quot;image-20210107134958414&quot; /&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;img src=&quot;/public/img/210107/2.png&quot; alt=&quot;image-20210107134958414&quot; style=&quot;zoom: 33%;&quot; /&gt;&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
         &lt;p&gt;호스트 IP에 원래 OS의 IP주소, 호스트 포트에 접속할 때 사용할 호스트 포트를 입력한다.&lt;/p&gt;
@@ -47,9 +47,75 @@
       &lt;li&gt;
         &lt;p&gt;게스트 IP에 vm내부의 ubuntu IP주소를 입력하고, 게스트 포트에는 22를 입력한다.(SSH의 기본 포트는 22이고, unbuntu내에서 ssh 포트를 수정하였다면 수정한 포트 번호를 입력한다.)&lt;/p&gt;
 
-        &lt;p&gt;&lt;img src=&quot;/public/img/210107/3.png&quot; alt=&quot;image-20210107135348581&quot; /&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;img src=&quot;/public/img/210107/3.png&quot; alt=&quot;image-20210107135348581&quot; style=&quot;zoom:50%;&quot; /&gt;&lt;/p&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;맥에는 기본적으로 tree명령어가 없기 때문에 tree명령어를 설치해보았다.&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;Homebrew는 Apple에서 제공하지 않는 패키지 관리자를 설치할 수 있다.&lt;/p&gt;
+
+        &lt;p&gt;Homebrew를 설치한다&lt;/p&gt;
+
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/bin/bash &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;homebrew를 통해 tree명령어를 설치한다&lt;/p&gt;
+
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;tree
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;코드스쿼드 미션으로 간단한 shell script를 짜보았다.&lt;/p&gt;
+
+    &lt;p&gt;사용한 것은 아래에 적어놓았고 기본적인 쉘스크립트 문법은 구글링해서 익히자.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;해당 폴더가 존재하는지 확인&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if [ ! -d &amp;lt;폴더명&amp;gt; ]; then
+  #do
+fi
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;해당 파일이 존재하는지 확인&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if [ ! -f &amp;lt;파일명&amp;gt; ]; then
+  #do
+fi
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;특정 형식의 파일이 존재하는지 확인&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if [ $(find &amp;lt;폴더&amp;gt; -name &amp;lt;파일형식(*.cs 등)&amp;gt; | wc -l) -eq 0 ]; then
+	#do
+fi
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;특정 형식의 파일만 zip로 압축 (tar도 거의 동일)&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;find &amp;lt;폴더&amp;gt; -name &amp;lt;파일형식(*.cs 등)&amp;gt; | xargs zip &amp;lt;압축파일명&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;scp로 remote에 파일 복사&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scp -P &amp;lt;포트번호&amp;gt; &amp;lt;복사할 파일명&amp;gt; &amp;lt;remote계정&amp;gt;@&amp;lt;remote IP&amp;gt;:&amp;lt;remote 파일경로(이 경로의 파일명으로 복사됨)&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -72,7 +138,58 @@
 &lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Blog" /><category term="jekyll" /><category term="Github" /><category term="Git" /></entry><entry><title type="html">21년 1월 6일</title><link href="http://localhost:4000/til/2021/01/06/TIL3.html" rel="alternate" type="text/html" title="21년 1월 6일" /><published>2021-01-06T00:00:00+09:00</published><updated>2021-01-06T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/06/TIL3</id><content type="html" xml:base="http://localhost:4000/til/2021/01/06/TIL3.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Blog" /><category term="jekyll" /><category term="Github" /><category term="Git" /></entry><entry><title type="html">SSH root 권한으로 접속 허용하기</title><link href="http://localhost:4000/linux/2021/01/07/permitSSH_Root.html" rel="alternate" type="text/html" title="SSH root 권한으로 접속 허용하기" /><published>2021-01-07T00:00:00+09:00</published><updated>2021-01-07T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/07/permitSSH_Root</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/07/permitSSH_Root.html">&lt;h2 id=&quot;ssh-root-권한으로-접속-허용하기&quot;&gt;SSH root 권한으로 접속 허용하기&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;SCP 명령어로 remote의 특정 폴더에 접근하려면 root권한이 필요할 때가 있다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;분명히 root 비밀번호가 맞았는데도 자꾸 Permission denied, please try again. 가 뜬다면 ssh 설정을 확인해야한다.&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;remote(ubuntu 기준) 로 들어가서 /etc/ssh/sshd_config 파일을 연다&lt;/p&gt;
+
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vi /etc/ssh/sshd_config
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;파일 내의 PermitRootLogin 을 yes로 바꿔준다. (없으면 추가한다.)&lt;/p&gt;
+
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;PermitRootLogin &lt;span class=&quot;nb&quot;&gt;yes&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;데몬 명령어로 ssh를 재시작시켜 변경된 설정을 적용한다.&lt;/p&gt;
+
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;systemctl restart ssh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Linux" /><category term="SSH" /></entry><entry><title type="html">su: Authentication failure 발생하는 이유</title><link href="http://localhost:4000/linux/2021/01/07/rootPwdSet.html" rel="alternate" type="text/html" title="su: Authentication failure 발생하는 이유" /><published>2021-01-07T00:00:00+09:00</published><updated>2021-01-07T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/07/rootPwdSet</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/07/rootPwdSet.html">&lt;h1 id=&quot;root-비번-설정&quot;&gt;Root 비번 설정&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;ubuntu를 깔고 사용자 등록 후 su 명령어를 통해 root로 전환하려는데 에러가 났다.&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;su : Authentication failure
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;나의 경우 root 비밀번호 설정을 하지 않아서 나는 에러였다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;root 비밀번호를 설정한다.&lt;/p&gt;
+
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;passwd root
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Linux" /></entry><entry><title type="html">21년 1월 6일</title><link href="http://localhost:4000/til/2021/01/06/TIL3.html" rel="alternate" type="text/html" title="21년 1월 6일" /><published>2021-01-06T00:00:00+09:00</published><updated>2021-01-06T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/06/TIL3</id><content type="html" xml:base="http://localhost:4000/til/2021/01/06/TIL3.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;백준 1009, 1076, 1052, 1757번 문제를 풀었다.&lt;/p&gt;

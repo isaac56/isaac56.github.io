@@ -75,27 +75,51 @@
 </div>
 		</div>
 		<div class="content">
-			<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+			<article class="post">
+	<header class="post-header">
+		<div class="post-title"> 
+			SSH root 권한으로 접속 허용하기
+		</div>
+		<time class="post-date dt-published" datetime="2021-01-07T00:00:00+09:00" itemprop="datePublished">2021/01/07
+		</time>		
+	</header>
 
-<div class="container">
-  <h1>404</h1>
+	<div class="post-content">
+		<h2 id="ssh-root-권한으로-접속-허용하기">SSH root 권한으로 접속 허용하기</h2>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+<ul>
+  <li>
+    <p>SCP 명령어로 remote의 특정 폴더에 접근하려면 root권한이 필요할 때가 있다.</p>
+  </li>
+  <li>
+    <p>분명히 root 비밀번호가 맞았는데도 자꾸 Permission denied, please try again. 가 뜬다면 ssh 설정을 확인해야한다.</p>
 
+    <ol>
+      <li>
+        <p>remote(ubuntu 기준) 로 들어가서 /etc/ssh/sshd_config 파일을 연다</p>
+
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vi /etc/ssh/sshd_config
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>파일 내의 PermitRootLogin 을 yes로 바꿔준다. (없으면 추가한다.)</p>
+
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PermitRootLogin <span class="nb">yes</span>
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>데몬 명령어로 ssh를 재시작시켜 변경된 설정을 적용한다.</p>
+
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl restart ssh
+</code></pre></div>        </div>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+
+	</div>
+</article>
 		</div>
 	</div>
   </body>
