@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-07T22:45:52+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 1월 7일</title><link href="http://localhost:4000/til/2021/01/07/TIL4.html" rel="alternate" type="text/html" title="21년 1월 7일" /><published>2021-01-07T00:00:00+09:00</published><updated>2021-01-07T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/07/TIL4</id><content type="html" xml:base="http://localhost:4000/til/2021/01/07/TIL4.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-07T23:26:01+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 1월 7일</title><link href="http://localhost:4000/til/2021/01/07/TIL4.html" rel="alternate" type="text/html" title="21년 1월 7일" /><published>2021-01-07T00:00:00+09:00</published><updated>2021-01-07T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/07/TIL4</id><content type="html" xml:base="http://localhost:4000/til/2021/01/07/TIL4.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;Linux SSH 서버 설치 및 config 방법 (Ubuntu)&lt;/p&gt;
@@ -117,27 +117,47 @@ fi
     &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scp -P &amp;lt;포트번호&amp;gt; &amp;lt;복사할 파일명&amp;gt; &amp;lt;remote계정&amp;gt;@&amp;lt;remote IP&amp;gt;:&amp;lt;remote 파일경로(이 경로의 파일명으로 복사됨)&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;프로그래머스에서 [다리를 지나는 트럭], [프린터] 2문제를 풀었다.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;두 문제 다 queue를 이용하여 푸는 문제였다. 이미 풀었던 문제를 Java로 풀어보았다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;Java의 정석과 TCP/IP 더 쉽게 책을 보지 못했다.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;VM을 설치하여 ubuntu를 설치하고, SSH를 연결한 후, 호스트에서 특정 파일을 압축하여 게스트OS로 보내는 과정을 쉘 스크립트로 자동화 하였다.
+	- SSH를 연결하는 과정에서 포트포워딩을 해보았고 이를 통해 NAT이라는 네트워크 개념을 익힌 후 글로 정리하였다.
+	- SCP로 파일을 전송하는 과정에서 permission denied를 겪었고 이를 통해, Linux에서 Directory의 소유자, 그룹에 따른 권한이 어떻게 적용되는지 알게 되었다.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;코드스쿼드에서 준 미션을 단순히 풀기만 함으로써 네트워크 관련 지식을 검색하고 알게 되어 좋았다.&lt;/li&gt;
+  &lt;li&gt;내가 정한 계획을 지키지 못했지만, 게을러서 지키지 못했다기보다 다른 공부거리가 생겨 이를 하다 보니 시간이 늦어버렸다.
+    &lt;ul&gt;
+      &lt;li&gt;오늘 호눅스가 얘기한 말을 기억하며,
+        &lt;ol&gt;
+          &lt;li&gt;전에 세웠던 계획을 다 소화 못하면 그것을 뒤로 미루지 말고 계획을 줄여서 새로 세우자!&lt;/li&gt;
+          &lt;li&gt;내가 지치면 암것도 못한다. 길게 보고 최선을 다하자&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;프로그래머스 2문제 풀기&lt;/li&gt;
+  &lt;li&gt;Java의 정석 읽기&lt;/li&gt;
+  &lt;li&gt;TCP/IP쉽게 더쉽게 읽기&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><category term="Blog" /><category term="jekyll" /><category term="Github" /><category term="Git" /></entry><entry><title type="html">SSH root 권한으로 접속 허용하기</title><link href="http://localhost:4000/linux/2021/01/07/permitSSH_Root.html" rel="alternate" type="text/html" title="SSH root 권한으로 접속 허용하기" /><published>2021-01-07T00:00:00+09:00</published><updated>2021-01-07T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/07/permitSSH_Root</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/07/permitSSH_Root.html">&lt;h2 id=&quot;ssh-root-권한으로-접속-허용하기&quot;&gt;SSH root 권한으로 접속 허용하기&lt;/h2&gt;
 
 &lt;ul&gt;
