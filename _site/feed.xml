@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-07T23:26:01+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 1월 7일</title><link href="http://localhost:4000/til/2021/01/07/TIL4.html" rel="alternate" type="text/html" title="21년 1월 7일" /><published>2021-01-07T00:00:00+09:00</published><updated>2021-01-07T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/07/TIL4</id><content type="html" xml:base="http://localhost:4000/til/2021/01/07/TIL4.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-07T23:28:12+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 1월 7일</title><link href="http://localhost:4000/til/2021/01/07/TIL4.html" rel="alternate" type="text/html" title="21년 1월 7일" /><published>2021-01-07T00:00:00+09:00</published><updated>2021-01-07T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/07/TIL4</id><content type="html" xml:base="http://localhost:4000/til/2021/01/07/TIL4.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;Linux SSH 서버 설치 및 config 방법 (Ubuntu)&lt;/p&gt;
@@ -134,8 +134,11 @@ fi
 &lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;VM을 설치하여 ubuntu를 설치하고, SSH를 연결한 후, 호스트에서 특정 파일을 압축하여 게스트OS로 보내는 과정을 쉘 스크립트로 자동화 하였다.
-	- SSH를 연결하는 과정에서 포트포워딩을 해보았고 이를 통해 NAT이라는 네트워크 개념을 익힌 후 글로 정리하였다.
-	- SCP로 파일을 전송하는 과정에서 permission denied를 겪었고 이를 통해, Linux에서 Directory의 소유자, 그룹에 따른 권한이 어떻게 적용되는지 알게 되었다.&lt;/li&gt;
+    &lt;ul&gt;
+      &lt;li&gt;SSH를 연결하는 과정에서 포트포워딩을 해보았고 이를 통해 NAT이라는 네트워크 개념을 익힌 후 글로 정리하였다.&lt;/li&gt;
+      &lt;li&gt;SCP로 파일을 전송하는 과정에서 permission denied를 겪었고 이를 통해, Linux에서 Directory의 소유자, 그룹에 따른 권한이 어떻게 적용되는지 알게 되었다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
