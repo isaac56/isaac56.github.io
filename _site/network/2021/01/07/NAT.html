@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Dev.Isaac" /></head>
+<style>@import url(/public/css/syntax/monokai.css);</style>
+  <title>Dev.Isaac</title>
+  <!-- <link href="/public/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link href="/public/css/style.css" rel="stylesheet">
+  <body>
+  	<div class="container"> 
+		<div class="sidebar">
+			<div class="sidebar-item sidebar-header">
+	<div class='sidebar-brand'>
+		<a href="/about/">Dev.Isaac</a>
+	</div>
+	<p class="lead">정이삭 공부블로그</p></div>
+
+<div class="sidebar-item sidebar-nav">
+	<ul class="nav">
+      <li class="nav-title">Pages</li>
+	  <li>
+	  	<a class="nav-item" href="/">Articles</a>
+	  </li>
+	  
+	  
+	    
+	  
+	    
+	      
+	        <li>
+	        	<a class="nav-item" href="/about/">
+	            	About
+	            </a>
+	        </li>
+	      
+	    
+	  
+	    
+	      
+	    
+	  
+	    
+	  
+	    
+	  
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-nav">
+  	<ul class="nav">
+			<li class="nav-title">Categories</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#TIL">
+				<span class="name">TIL</span>
+				<span class="badge">4</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Linux">
+				<span class="name">Linux</span>
+				<span class="badge">2</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Network">
+				<span class="name">Network</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	  </nav>
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-footer">
+	<p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
+</div>
+		</div>
+		<div class="content">
+			<article class="post">
+	<header class="post-header">
+		<div class="post-title"> 
+			NAT이란? Static NAT, Dynamic NAT, PAT 비교
+		</div>
+		<time class="post-date dt-published" datetime="2021-01-07T00:00:00+09:00" itemprop="datePublished">2021/01/07
+		</time>		
+	</header>
+
+	<div class="post-content">
+		<h1 id="nat">NAT</h1>
+
+<p>NAT은 Network Address Translation의 약자로, 네트워크 주소를 변환해주는 방식이라고 할 수 있다.</p>
+
+<p>Network Address는 우리가 흔히 아는 IP주소라고 생각하면 되는데, 이러한 변환 방식이 생겨난 이유는 다음과 같다.</p>
+
+<p>IPv4방식으로 표현할 수 있는 주소 개수에는 한계가 있는데, 때문에 현대의 수많은 장비(PC, 스마트폰 등)들을 수용할 수없다.</p>
+
+<p>그렇다고 IPv6로 한번에 바꾸기에는 이미 IPv4를 사용하고 있는 수많은 서비스들에 장애가 발생할 수 있다.</p>
+
+<p>따라서 여러 대의 기기들을 하나의 로컬 망으로 묶고 로컬 망 내의 사설 IP를 공인 IP로 맵핑시켜주는 방식을 통해,</p>
+
+<p>적은 공인 IP를 더 많은 장비들이 사용할 수 있게 해준다.</p>
+
+<p>여기서, 사설 IP와 공인 IP를 맵핑해주는 방식을 NAT이라고 한다.</p>
+
+<h2 id="static-nat">Static NAT</h2>
+
+<p>공인IP와 사설IP를 1:1로 맵핑시켜준다.</p>
+
+<p>예를 들어, 192.168.0.20 이라는 사설 IP와 121.156.242.211이라는 공인 IP가 한번 맵핑 되면 192.168.0.20은 항상 121.156.242.211와 묶여있게 된다.</p>
+
+<p>공인 IP주소와 실제로 사용하는 장비의 개수가 1:1이기 때문에, 공인 IP주소를 아낄수는 없다.</p>
+
+<h2 id="dynamic-nat">Dynamic NAT</h2>
+
+<p>공인IP와 사설IP를 1:1 맵핑 시켜주지만, 동적으로 맵핑되기 때문에 개념적으로 PC의 공인 IP는 고정되어 있지 않다.</p>
+
+<p>PC가 사용중이면 그 PC의 사설IP와 공인IP가 맵핑되어 있지만, PC가 사용중이지 않는다면 맵핑되어 있는 공인 IP가 반환되고,</p>
+
+<p>맵핑이 필요한 다른 PC가 해당 공인IP를 사용할 수 있게 된다.</p>
+
+<p>이런 식으로 동적 할당해줌으로써 더 적은 공인IP로 여러 PC가 인터넷에 연결할 수 있게 된다.</p>
+
+<h2 id="patport-address-translation">PAT(Port Address Translation)</h2>
+
+<p>공인IP 1개와 사설 IP여러개를 맵핑하여 사용할 수 있게 해주는데, 공인IP의 포트번호 별로 사설IP의 특정 포트에 맵핑해주는 방식이다.</p>
+
+<p>공유기에서 흔히 말하는 포트 포워딩이 이러한 방식이라고 볼 수 있다.</p>
+
+<p>예를 들어, 사설 IP가 192.168.0.1~10 이고 공인 IP가 121.156.242.211이라고 하자.</p>
+
+<ul>
+  <li>
+    <p>121.156.242.211:11 &lt;=&gt; 192.168.0.1:22</p>
+  </li>
+  <li>
+    <p>121.156.242.211:231 &lt;=&gt; 192.168.0.5:22</p>
+  </li>
+  <li>
+    <p>121.156.242.211:4000 &lt;=&gt; 192.168.0.3:900</p>
+  </li>
+  <li>
+    <p>121.156.242.211:3219 &lt;=&gt; 192.168.0.8:11</p>
+  </li>
+  <li>
+    <p>121.156.242.211:24442 &lt;=&gt; 192.168.0.10:22</p>
+  </li>
+</ul>
+
+<p>이런 식으로 맵핑하여 하나의 공인 IP로 여러 대의 PC를 사용할 수 있게 된다.</p>
+
+	</div>
+</article>
+		</div>
+	</div>
+  </body>
+</html>
