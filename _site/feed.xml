@@ -1,4 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-08T11:28:06+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">리눅스 group이란, group 변경</title><link href="http://localhost:4000/linux/2021/01/08/userGroup.html" rel="alternate" type="text/html" title="리눅스 group이란, group 변경" /><published>2021-01-08T00:00:00+09:00</published><updated>2021-01-08T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/08/userGroup</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/08/userGroup.html">&lt;h2 id=&quot;리눅스에서-group이란&quot;&gt;리눅스에서 group이란&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-08T16:48:50+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">SSH key를 이용한 접속</title><link href="http://localhost:4000/linux/2021/01/08/SSH-Key-How.html" rel="alternate" type="text/html" title="SSH key를 이용한 접속" /><published>2021-01-08T00:00:00+09:00</published><updated>2021-01-08T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/08/SSH-Key-How</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/08/SSH-Key-How.html">&lt;h2 id=&quot;ssh-key란&quot;&gt;SSH Key란&lt;/h2&gt;
+
+&lt;p&gt;SSH 접속은 패스워드로도 할 수 있지만, 안전한 인증방식은 아니라고 한다.&lt;/p&gt;
+
+&lt;p&gt;컴퓨팅 파워가 증가하면서 password를 단순 대입하며 bruth force 방식으로 접속 시도를 할 수 있고,&lt;/p&gt;
+
+&lt;p&gt;사람이 기억할 만한 password는 대부분 burth force 방식을 막을만큼 충분히 길지 않기 때문이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+이제, password 대신 ssh key라는 추가적인 보안 방식을 사용해보자.&lt;/p&gt;
+
+&lt;p&gt;ssh key는 공개키와 개인키로 나뉘어져 있다.&lt;/p&gt;
+
+&lt;p&gt;공개키와 개인키는 대칭키로, 각각의 키로 암호화한 암호는 대칭되는 키로만 해석이 가능하다.&lt;/p&gt;
+
+&lt;p&gt;즉, 공개키로 암호화한 암호는 개인키로만 해석이 가능하고, 개인키로 암호화한 암호는 공개키로만 해석이 가능하다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+공개키는 아무에게나 공개해도 되지만 개인키는 절대 타인에게 공개해서는 안되는데 그이유는 다음과 같다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;공개키로 암호화한 암호는 개인키를 가진 나만이 해석할 수 있기 때문에, 나만 볼 수 있게 하기위한 비밀메세지와 같다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;공개키로 해석할 수 있는 암호는 개인키를 가진 나만이 만들 수 있기 때문에, 개인키로 암호화한 암호는 내가 나임을 인증하려는 인증서의 목적이 크다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;따라서 나의 개인키를 공개한다는 것은 아무나 나인척 할 수 있게 만드는 것이다&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;ssh-서버에-ssh-key로-인증하는-방식&quot;&gt;SSH 서버에 SSH Key로 인증하는 방식&lt;/h2&gt;
+
+&lt;p&gt;SSH Key로 인증을 위해 나의 공개키가 서버안의 authorized_keys 파일에 등록되었다고 가정하자.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+SSH를 인증하는 방식은 다음과 같다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;클라이언트(나)가 서버에 SSH연결을 요청한다.&lt;/li&gt;
+  &lt;li&gt;서버는 랜덤 스트링을 생성하여 클라이언트에게 보낸다.&lt;/li&gt;
+  &lt;li&gt;클라이언트(나)는 전달받은 랜덤 스트링을 개인키로 암호화하여 서버에게 보낸다.&lt;/li&gt;
+  &lt;li&gt;서버는 받은 암호를 authorized_keys에 등록된 공개키로 해석한 후, 2번에서 보냈던 랜덤 스트링과 일치하는지 확인한다.&lt;/li&gt;
+  &lt;li&gt;일치한다면 클라이언트(나)는 authorized_keys에 등록된 authorized client 중 하나이므로 인증완료된다.&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="Linux" /><category term="SSH" /></entry><entry><title type="html">리눅스 group이란, group 변경</title><link href="http://localhost:4000/linux/2021/01/08/userGroup.html" rel="alternate" type="text/html" title="리눅스 group이란, group 변경" /><published>2021-01-08T00:00:00+09:00</published><updated>2021-01-08T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/08/userGroup</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/08/userGroup.html">&lt;h2 id=&quot;리눅스에서-group이란&quot;&gt;리눅스에서 group이란&lt;/h2&gt;
 
 &lt;p&gt;리눅스에선 group이라는 것이 있는데, 어떤 파일이나 폴더를 특정 User에게만 공유하고 싶을 때 사용한다.&lt;/p&gt;
 
@@ -135,7 +180,37 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;이런 식으로 맵핑하여 하나의 공인 IP로 여러 대의 PC를 사용할 수 있게 된다.&lt;/p&gt;</content><author><name></name></author><category term="Network" /><category term="NAT" /></entry><entry><title type="html">21년 1월 7일</title><link href="http://localhost:4000/til/2021/01/07/TIL4.html" rel="alternate" type="text/html" title="21년 1월 7일" /><published>2021-01-07T00:00:00+09:00</published><updated>2021-01-07T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/07/TIL4</id><content type="html" xml:base="http://localhost:4000/til/2021/01/07/TIL4.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;p&gt;이런 식으로 맵핑하여 하나의 공인 IP로 여러 대의 PC를 사용할 수 있게 된다.&lt;/p&gt;</content><author><name></name></author><category term="Network" /><category term="NAT" /></entry><entry><title type="html">SSH root 권한으로 접속 허용하기</title><link href="http://localhost:4000/linux/2021/01/07/permitSSH_Root.html" rel="alternate" type="text/html" title="SSH root 권한으로 접속 허용하기" /><published>2021-01-07T00:00:00+09:00</published><updated>2021-01-07T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/07/permitSSH_Root</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/07/permitSSH_Root.html">&lt;h2 id=&quot;ssh-root-권한으로-접속-허용하기&quot;&gt;SSH root 권한으로 접속 허용하기&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;SCP 명령어로 remote의 특정 폴더에 접근하려면 root권한이 필요할 때가 있다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;분명히 root 비밀번호가 맞았는데도 자꾸 Permission denied, please try again. 가 뜬다면 ssh 설정을 확인해야한다.&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;remote(ubuntu 기준) 로 들어가서 /etc/ssh/sshd_config 파일을 연다&lt;/p&gt;
+
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vi /etc/ssh/sshd_config
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;파일 내의 PermitRootLogin 을 yes로 바꿔준다. (없으면 추가한다.)&lt;/p&gt;
+
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;PermitRootLogin &lt;span class=&quot;nb&quot;&gt;yes&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;데몬 명령어로 ssh를 재시작시켜 변경된 설정을 적용한다.&lt;/p&gt;
+
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;systemctl restart ssh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Linux" /><category term="SSH" /></entry><entry><title type="html">21년 1월 7일</title><link href="http://localhost:4000/til/2021/01/07/TIL4.html" rel="alternate" type="text/html" title="21년 1월 7일" /><published>2021-01-07T00:00:00+09:00</published><updated>2021-01-07T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/07/TIL4</id><content type="html" xml:base="http://localhost:4000/til/2021/01/07/TIL4.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;Linux SSH 서버 설치 및 config 방법 (Ubuntu)&lt;/p&gt;
@@ -298,37 +373,7 @@ fi
   &lt;li&gt;프로그래머스 2문제 풀기&lt;/li&gt;
   &lt;li&gt;Java의 정석 읽기&lt;/li&gt;
   &lt;li&gt;TCP/IP쉽게 더쉽게 읽기&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Blog" /><category term="jekyll" /><category term="Github" /><category term="Git" /></entry><entry><title type="html">SSH root 권한으로 접속 허용하기</title><link href="http://localhost:4000/linux/2021/01/07/permitSSH_Root.html" rel="alternate" type="text/html" title="SSH root 권한으로 접속 허용하기" /><published>2021-01-07T00:00:00+09:00</published><updated>2021-01-07T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/07/permitSSH_Root</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/07/permitSSH_Root.html">&lt;h2 id=&quot;ssh-root-권한으로-접속-허용하기&quot;&gt;SSH root 권한으로 접속 허용하기&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;SCP 명령어로 remote의 특정 폴더에 접근하려면 root권한이 필요할 때가 있다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;분명히 root 비밀번호가 맞았는데도 자꾸 Permission denied, please try again. 가 뜬다면 ssh 설정을 확인해야한다.&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;
-        &lt;p&gt;remote(ubuntu 기준) 로 들어가서 /etc/ssh/sshd_config 파일을 연다&lt;/p&gt;
-
-        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vi /etc/ssh/sshd_config
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;파일 내의 PermitRootLogin 을 yes로 바꿔준다. (없으면 추가한다.)&lt;/p&gt;
-
-        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;PermitRootLogin &lt;span class=&quot;nb&quot;&gt;yes&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;데몬 명령어로 ssh를 재시작시켜 변경된 설정을 적용한다.&lt;/p&gt;
-
-        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;systemctl restart ssh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Linux" /><category term="SSH" /></entry><entry><title type="html">21년 1월 6일</title><link href="http://localhost:4000/til/2021/01/06/TIL3.html" rel="alternate" type="text/html" title="21년 1월 6일" /><published>2021-01-06T00:00:00+09:00</published><updated>2021-01-06T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/06/TIL3</id><content type="html" xml:base="http://localhost:4000/til/2021/01/06/TIL3.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Blog" /><category term="jekyll" /><category term="Github" /><category term="Git" /></entry><entry><title type="html">21년 1월 6일</title><link href="http://localhost:4000/til/2021/01/06/TIL3.html" rel="alternate" type="text/html" title="21년 1월 6일" /><published>2021-01-06T00:00:00+09:00</published><updated>2021-01-06T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/06/TIL3</id><content type="html" xml:base="http://localhost:4000/til/2021/01/06/TIL3.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;백준 1009, 1076, 1052, 1757번 문제를 풀었다.&lt;/p&gt;
