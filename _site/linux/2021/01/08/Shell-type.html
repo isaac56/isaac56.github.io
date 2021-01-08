@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Dev.Isaac" /></head>
+<style>@import url(/public/css/syntax/monokai.css);</style>
+  <title>Dev.Isaac</title>
+  <!-- <link href="/public/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link href="/public/css/style.css" rel="stylesheet">
+  <body>
+  	<div class="container"> 
+		<div class="sidebar">
+			<div class="sidebar-item sidebar-header">
+	<div class='sidebar-brand'>
+		<a href="/about/">Dev.Isaac</a>
+	</div>
+	<p class="lead">정이삭 공부블로그</p></div>
+
+<div class="sidebar-item sidebar-nav">
+	<ul class="nav">
+      <li class="nav-title">Pages</li>
+	  <li>
+	  	<a class="nav-item" href="/">Articles</a>
+	  </li>
+	  
+	  
+	    
+	  
+	    
+	      
+	        <li>
+	        	<a class="nav-item" href="/about/">
+	            	About
+	            </a>
+	        </li>
+	      
+	    
+	  
+	    
+	      
+	    
+	  
+	    
+	  
+	    
+	  
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-nav">
+  	<ul class="nav">
+			<li class="nav-title">Categories</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#TIL">
+				<span class="name">TIL</span>
+				<span class="badge">4</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Linux">
+				<span class="name">Linux</span>
+				<span class="badge">5</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Network">
+				<span class="name">Network</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	  </nav>
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-footer">
+	<p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
+</div>
+		</div>
+		<div class="content">
+			<article class="post">
+	<header class="post-header">
+		<div class="post-title"> 
+			Shell의 종류
+		</div>
+		<time class="post-date dt-published" datetime="2021-01-08T00:00:00+09:00" itemprop="datePublished">2021/01/08
+		</time>		
+	</header>
+
+	<div class="post-content">
+		<p><strong>1. sh (bourne shell)</strong></p>
+
+<p>가장 기본적인 쉘로 유닉스의 초기부터 사용되어 온 쉘이며 스크립트를 지원한다.</p>
+
+<p><strong>2. ksh (korn shell)</strong></p>
+
+<p>본 쉘을 확장한 쉘로 본 쉘 명령어를 모두 인식한다. 히스토리(history) 기능과 앨리어스(alias), 작업 제어 등의 기능이 추가되었다. 일반적으로 유닉스에서 가장 많이 사용되는 쉘이라고 한다. 명령행 편집기능을 제공</p>
+
+<p><strong>3. bash (Bourne Again Shell)</strong></p>
+
+<p>리눅스에서 가장 많이 사용하는 쉘이다. C 쉘과 콘 쉘의 장점을 결합하여 작성되었으며, Bourne 쉘 문법의 명령어 셋을 제공하여 Bourne Shell과 호환되는 쉘로 GNU 프로젝트에 의해 만들어지고 배포되었다. 명령행 편집기능을 제공</p>
+
+<h3 id="c-쉘-계열의-쉘">C 쉘 계열의 쉘</h3>
+
+<p><strong>1. csh (C Shell)</strong></p>
+
+<p>명령행 편집기능을 제공하지 않는다. C 언어 위주의 쉘로 처음 작성되었을 때에는 본 쉘이 가지고 있지 못한 기능들(작업제어, 명령어 히스토리 등)을 가지고 있었기 때문에 많이 사용되었다.</p>
+
+<p><strong>2. tcsh (TC Shell)</strong></p>
+
+<p>csh의 기능을 강화한 쉘입니다. 명령행 편집기능을 제공한다.</p>
+
+<h3 id="centos-sulinux-asianux-등의-레드햇-계열의-리눅스-배포판에서-기본으로-사용되지-않는-쉘">CentOS, SULinux, Asianux 등의 레드햇 계열의 리눅스 배포판에서 기본으로 사용되지 않는 쉘</h3>
+
+<p><strong>1. Zsh 쉘</strong></p>
+
+<p>로그인쉘 및 쉘스크립트 명령어 프로세서로서 이용 가능한 유닉스 쉘입니다. 표준 쉘들 중에서 zsh는 ksh와 가장 유사하지만 많은 개선들을 포함합니다. zsh는 명령행 편집, 내장 스펠링 수정, history 등의 기능을 가집니다.</p>
+
+<p><strong>2. ash 쉘</strong></p>
+
+<p>추가적인 기능들이 없이 본 쉘에 가장 부합하는 쉘입니다. 본 쉘은 상업적인 유닉스 시스템들에서 사용가능하므로, ash는 쉘 스크립트가 본 쉘에 잘 부합하는지 시험할 때 유용합니다. 또한 이것은 다른 sh- 호환 쉘에 비해 적은 메모리와 공간을 요구합니다.</p>
+
+	</div>
+</article>
+		</div>
+	</div>
+  </body>
+</html>
