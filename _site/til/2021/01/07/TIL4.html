@@ -55,7 +55,7 @@
 	    <li>
 	    	<a class="nav-item" href="/category/#TIL">
 				<span class="name">TIL</span>
-				<span class="badge">4</span>
+				<span class="badge">5</span>
 	    	</a>
  		</li>
 	    
@@ -85,7 +85,7 @@
 			<article class="post">
 	<header class="post-header">
 		<div class="post-title"> 
-			21년 1월 8일
+			21년 1월 7일
 		</div>
 		<time class="post-date dt-published" datetime="2021-01-07T00:00:00+09:00" itemprop="datePublished">2021/01/07
 		</time>		
@@ -94,7 +94,129 @@
 	<div class="post-content">
 		<h2 id="한-일">한 일</h2>
 <ul>
-  <li>어제 코드스쿼드 미션으로 나온</li>
+  <li>
+    <p>Linux SSH 서버 설치 및 config 방법 (Ubuntu)</p>
+
+    <ol>
+      <li>
+        <p>linux에 SSH가 설치되어 있지 않는 경우 SSH를 설치한다</p>
+
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#SSH 서버 클라이언트 모두 설치</span>
+<span class="nb">sudo </span>apt-get ssh
+<span class="c">#서버만 설치하고 싶으면</span>
+<span class="nb">sudo </span>apt-get openssh-server
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>/etc/ssh/sshd_config 파일을 통해 SSH 설정을 변경할 수 있다.</p>
+
+        <p>참고: <a href="http://programmingskills.net/archives/315">http://programmingskills.net/archives/315</a></p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Virtual Box으로 실행한 ubuntu에 ssh로 접속하기 (MAC 기준)</p>
+
+    <ul>
+      <li>
+        <p>VM 내부 ubuntu에서 ifconfig 명령어로 사설 IP를 확인한다.</p>
+
+        <p><img src="/public/img/210107/1.png" alt="image-20210107133137703" style="zoom:33%;" /></p>
+      </li>
+      <li>
+        <p>기존 OS (host OS) 에서 사설 IP를 확인한다.</p>
+
+        <ul>
+          <li>맥은 터미널에서 ifconfg 또는 시스템환경설정 - 네트워크에서 확인</li>
+        </ul>
+      </li>
+      <li>
+        <p>VirtualBox 에서 ubuntu 설정 - 네트워크 - 고급 - 포트포워드 클릭</p>
+
+        <p><img src="/public/img/210107/2.png" alt="image-20210107134958414" style="zoom: 33%;" /></p>
+      </li>
+      <li>
+        <p>호스트 IP에 원래 OS의 IP주소, 호스트 포트에 접속할 때 사용할 호스트 포트를 입력한다.</p>
+      </li>
+      <li>
+        <p>게스트 IP에 vm내부의 ubuntu IP주소를 입력하고, 게스트 포트에는 22를 입력한다.(SSH의 기본 포트는 22이고, unbuntu내에서 ssh 포트를 수정하였다면 수정한 포트 번호를 입력한다.)</p>
+
+        <p><img src="/public/img/210107/3.png" alt="image-20210107135348581" style="zoom:50%;" /></p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>맥에는 기본적으로 tree명령어가 없기 때문에 tree명령어를 설치해보았다.</p>
+
+    <ol>
+      <li>
+        <p>Homebrew는 Apple에서 제공하지 않는 패키지 관리자를 설치할 수 있다.</p>
+
+        <p>Homebrew를 설치한다</p>
+
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/bash <span class="nt">-c</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="si">)</span><span class="s2">"</span>
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>homebrew를 통해 tree명령어를 설치한다</p>
+
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>tree
+</code></pre></div>        </div>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>코드스쿼드 미션으로 간단한 shell script를 짜보았다.</p>
+
+    <p>사용한 것은 아래에 적어놓았고 기본적인 쉘스크립트 문법은 구글링해서 익히자.</p>
+
+    <ul>
+      <li>해당 폴더가 존재하는지 확인</li>
+    </ul>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if [ ! -d &lt;폴더명&gt; ]; then
+  #do
+fi
+</code></pre></div>    </div>
+
+    <ul>
+      <li>해당 파일이 존재하는지 확인</li>
+    </ul>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if [ ! -f &lt;파일명&gt; ]; then
+  #do
+fi
+</code></pre></div>    </div>
+
+    <ul>
+      <li>특정 형식의 파일이 존재하는지 확인</li>
+    </ul>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if [ $(find &lt;폴더&gt; -name &lt;파일형식(*.cs 등)&gt; | wc -l) -eq 0 ]; then
+	#do
+fi
+</code></pre></div>    </div>
+
+    <ul>
+      <li>특정 형식의 파일만 zip로 압축 (tar도 거의 동일)</li>
+    </ul>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find &lt;폴더&gt; -name &lt;파일형식(*.cs 등)&gt; | xargs zip &lt;압축파일명&gt;
+</code></pre></div>    </div>
+
+    <ul>
+      <li>scp로 remote에 파일 복사</li>
+    </ul>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scp -P &lt;포트번호&gt; &lt;복사할 파일명&gt; &lt;remote계정&gt;@&lt;remote IP&gt;:&lt;remote 파일경로(이 경로의 파일명으로 복사됨)&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>프로그래머스에서 [다리를 지나는 트럭], [프린터] 2문제를 풀었다.</p>
+    <ul>
+      <li>두 문제 다 queue를 이용하여 푸는 문제였다. 이미 풀었던 문제를 Java로 풀어보았다.</li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="잘못한-것">잘못한 것</h2>

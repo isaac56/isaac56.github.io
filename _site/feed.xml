@@ -1,34 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-08T17:24:49+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">Shell의 종류</title><link href="http://localhost:4000/linux/2021/01/08/Shell-type.html" rel="alternate" type="text/html" title="Shell의 종류" /><published>2021-01-08T00:00:00+09:00</published><updated>2021-01-08T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/08/Shell-type</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/08/Shell-type.html">&lt;p&gt;&lt;strong&gt;1. sh (bourne shell)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;가장 기본적인 쉘로 유닉스의 초기부터 사용되어 온 쉘이며 스크립트를 지원한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2. ksh (korn shell)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;본 쉘을 확장한 쉘로 본 쉘 명령어를 모두 인식한다. 히스토리(history) 기능과 앨리어스(alias), 작업 제어 등의 기능이 추가되었다. 일반적으로 유닉스에서 가장 많이 사용되는 쉘이라고 한다. 명령행 편집기능을 제공&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;3. bash (Bourne Again Shell)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;리눅스에서 가장 많이 사용하는 쉘이다. C 쉘과 콘 쉘의 장점을 결합하여 작성되었으며, Bourne 쉘 문법의 명령어 셋을 제공하여 Bourne Shell과 호환되는 쉘로 GNU 프로젝트에 의해 만들어지고 배포되었다. 명령행 편집기능을 제공&lt;/p&gt;
-
-&lt;h3 id=&quot;c-쉘-계열의-쉘&quot;&gt;C 쉘 계열의 쉘&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;1. csh (C Shell)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;명령행 편집기능을 제공하지 않는다. C 언어 위주의 쉘로 처음 작성되었을 때에는 본 쉘이 가지고 있지 못한 기능들(작업제어, 명령어 히스토리 등)을 가지고 있었기 때문에 많이 사용되었다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2. tcsh (TC Shell)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;csh의 기능을 강화한 쉘입니다. 명령행 편집기능을 제공한다.&lt;/p&gt;
-
-&lt;h3 id=&quot;centos-sulinux-asianux-등의-레드햇-계열의-리눅스-배포판에서-기본으로-사용되지-않는-쉘&quot;&gt;CentOS, SULinux, Asianux 등의 레드햇 계열의 리눅스 배포판에서 기본으로 사용되지 않는 쉘&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;1. Zsh 쉘&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;로그인쉘 및 쉘스크립트 명령어 프로세서로서 이용 가능한 유닉스 쉘입니다. 표준 쉘들 중에서 zsh는 ksh와 가장 유사하지만 많은 개선들을 포함합니다. zsh는 명령행 편집, 내장 스펠링 수정, history 등의 기능을 가집니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2. ash 쉘&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;추가적인 기능들이 없이 본 쉘에 가장 부합하는 쉘입니다. 본 쉘은 상업적인 유닉스 시스템들에서 사용가능하므로, ash는 쉘 스크립트가 본 쉘에 잘 부합하는지 시험할 때 유용합니다. 또한 이것은 다른 sh- 호환 쉘에 비해 적은 메모리와 공간을 요구합니다.&lt;/p&gt;</content><author><name></name></author><category term="Linux" /><category term="Shell" /></entry><entry><title type="html">SSH key를 이용한 접속</title><link href="http://localhost:4000/linux/2021/01/08/SSH-Key-How.html" rel="alternate" type="text/html" title="SSH key를 이용한 접속" /><published>2021-01-08T00:00:00+09:00</published><updated>2021-01-08T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/08/SSH-Key-How</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/08/SSH-Key-How.html">&lt;h2 id=&quot;ssh-key란&quot;&gt;SSH Key란&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-08T23:25:36+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">SSH key를 이용한 접속</title><link href="http://localhost:4000/linux/2021/01/08/SSH-Key-How.html" rel="alternate" type="text/html" title="SSH key를 이용한 접속" /><published>2021-01-08T00:00:00+09:00</published><updated>2021-01-08T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/08/SSH-Key-How</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/08/SSH-Key-How.html">&lt;h2 id=&quot;ssh-key란&quot;&gt;SSH Key란&lt;/h2&gt;
 
 &lt;p&gt;SSH 접속은 패스워드로도 할 수 있지만, 안전한 인증방식은 아니라고 한다.&lt;/p&gt;
 
@@ -129,28 +99,326 @@ SSH를 인증하는 방식은 다음과 같다.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;group1을 삭제 시킨다.&lt;/li&gt;
   &lt;li&gt;group1을 기본그룹으로 하는 user가 있다면 삭제가 안됨&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Linux" /><category term="group" /></entry><entry><title type="html">su: Authentication failure 발생하는 이유</title><link href="http://localhost:4000/linux/2021/01/07/rootPwdSet.html" rel="alternate" type="text/html" title="su: Authentication failure 발생하는 이유" /><published>2021-01-07T00:00:00+09:00</published><updated>2021-01-07T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/07/rootPwdSet</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/07/rootPwdSet.html">&lt;h1 id=&quot;root-비번-설정&quot;&gt;Root 비번 설정&lt;/h1&gt;
-
+&lt;/ul&gt;</content><author><name></name></author><category term="Linux" /><category term="group" /></entry><entry><title type="html">21년 1월 8일</title><link href="http://localhost:4000/til/2021/01/08/TIL5.html" rel="alternate" type="text/html" title="21년 1월 8일" /><published>2021-01-08T00:00:00+09:00</published><updated>2021-01-08T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/08/TIL5</id><content type="html" xml:base="http://localhost:4000/til/2021/01/08/TIL5.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;ubuntu를 깔고 사용자 등록 후 su 명령어를 통해 root로 전환하려는데 에러가 났다.&lt;/p&gt;
+    &lt;p&gt;어제 코드스쿼드 미션으로 나온 쉘 스크립트의 부족한 부분을 수정했다&lt;/p&gt;
 
-    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;su : Authentication failure
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;현재 폴더에 위치한 day1 ~ day16 폴더의 .cs 파일만을 복사해야 하는데,&lt;/p&gt;
+
+        &lt;p&gt;어제의 스크립트는 현재 폴더 하위에 위치한 모든 .cs 파일을 압축했었다.&lt;/p&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;p&gt;변경전 쉘 스크립트&lt;/p&gt;
+
+            &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;var &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;1..16&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;do
+  if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;day&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$var&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
+    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;day&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$var&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; not exists&quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;else
+    if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; day&lt;span class=&quot;nv&quot;&gt;$var&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; .cs | &lt;span class=&quot;nb&quot;&gt;wc&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-eq&lt;/span&gt; 0 &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
+      &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;day&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$var&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; is empty&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;fi
+  fi
+done
+       
+&lt;/span&gt;find &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-name&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;*.cs&quot;&lt;/span&gt; | xargs zip &lt;span class=&quot;nv&quot;&gt;$NAME&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; log.txt 2&amp;gt;&amp;amp;1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;            &lt;/div&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;변경후 쉘 스크립트&lt;/p&gt;
+
+            &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;targetFiles&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=()&lt;/span&gt;
+       
+&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;var &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;1..16&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;do
+  if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;day&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$var&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
+    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;day&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$var&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; not exists&quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;else
+    if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; day&lt;span class=&quot;nv&quot;&gt;$var&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; .cs | &lt;span class=&quot;nb&quot;&gt;wc&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-eq&lt;/span&gt; 0 &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
+      &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;day&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$var&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; is empty&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else
+      &lt;/span&gt;targetFiles+&lt;span class=&quot;o&quot;&gt;=(&lt;/span&gt;day&lt;span class=&quot;nv&quot;&gt;$var&lt;/span&gt;/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.cs&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;fi
+  fi
+done
+       
+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;NAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;backup_&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;date&lt;/span&gt; +&lt;span class=&quot;s2&quot;&gt;&quot;%y%m%d&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.zip&quot;&lt;/span&gt;
+zip &lt;span class=&quot;nv&quot;&gt;$NAME&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;targetFiles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[@]&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; ./log.txt 2&amp;gt;&amp;amp;1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;            &lt;/div&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;SCP명령어에서 패스워드 입력없이 바로 사용할 수 있도록 SSH Key 방식을 사용했다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;공개키와 개인키로 이루어지는 SSH Key 인증 방식을 공부하고, 정리하여 포스팅했다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;계획에 없던 개인 스케줄로 인해, 목표한 책을 펴지도 않았고, 알고리즘 2문제를 풀지도 못했다.&lt;/li&gt;
+  &lt;li&gt;세운 계획이 구체적이지도 못하고 하루에 소화할만 한 양이 아닌 것 같다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;SSH key 인증이 어떻게 이루어지는지 찾아보고, 실제 적용하여 쉘 스크립트를 완전 자동화 하였다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;계획을 어떤 식으로 세워야 할지가 고민이다.
+    &lt;ul&gt;
+      &lt;li&gt;너무 대충 세운 계획이나 무리한 계획을 세우지 말고, 오늘 공부할 주제만 정하고 시간에 충실하게 공부하는게 어떨까 싶다.&lt;/li&gt;
+      &lt;li&gt;예를 들어, 프로그래머스 2문제를 푸는게 계획이면 어려운 문제가 걸리면 계획에 맞추기 힘들 수 있다.&lt;/li&gt;
+      &lt;li&gt;책 읽기도 하루에 몇페이지를 읽어야 한다기보다, 공부하는 시간에 충실하게 읽는 것을 목표로 하는게 어떨까?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;매일 공부한 것 중에 기억할 만한 개념을 글로 정리하고 있는데, 글 재주가 없어서 그런지 글로 정리하는데 시간이 너무 많이 쓰인다.
+    &lt;ul&gt;
+      &lt;li&gt;내가 공부하고 공부한 것을 기억하는 것이 중요하기 때문에, 시간을 절약하려면 나만 알아볼 수 있는 수준만큼만 작성하는게 어떨까 싶다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;알고리즘 공부&lt;/li&gt;
+  &lt;li&gt;자바의정석 책 공부&lt;/li&gt;
+  &lt;li&gt;TCP/IP 공부&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="SSH" /><category term="shell" /></entry><entry><title type="html">Shell의 종류</title><link href="http://localhost:4000/linux/2021/01/08/Shell-type.html" rel="alternate" type="text/html" title="Shell의 종류" /><published>2021-01-08T00:00:00+09:00</published><updated>2021-01-08T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/08/Shell-type</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/08/Shell-type.html">&lt;p&gt;&lt;strong&gt;1. sh (bourne shell)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;가장 기본적인 쉘로 유닉스의 초기부터 사용되어 온 쉘이며 스크립트를 지원한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. ksh (korn shell)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;본 쉘을 확장한 쉘로 본 쉘 명령어를 모두 인식한다. 히스토리(history) 기능과 앨리어스(alias), 작업 제어 등의 기능이 추가되었다. 일반적으로 유닉스에서 가장 많이 사용되는 쉘이라고 한다. 명령행 편집기능을 제공&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. bash (Bourne Again Shell)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;리눅스에서 가장 많이 사용하는 쉘이다. C 쉘과 콘 쉘의 장점을 결합하여 작성되었으며, Bourne 쉘 문법의 명령어 셋을 제공하여 Bourne Shell과 호환되는 쉘로 GNU 프로젝트에 의해 만들어지고 배포되었다. 명령행 편집기능을 제공&lt;/p&gt;
+
+&lt;h3 id=&quot;c-쉘-계열의-쉘&quot;&gt;C 쉘 계열의 쉘&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;1. csh (C Shell)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;명령행 편집기능을 제공하지 않는다. C 언어 위주의 쉘로 처음 작성되었을 때에는 본 쉘이 가지고 있지 못한 기능들(작업제어, 명령어 히스토리 등)을 가지고 있었기 때문에 많이 사용되었다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. tcsh (TC Shell)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;csh의 기능을 강화한 쉘입니다. 명령행 편집기능을 제공한다.&lt;/p&gt;
+
+&lt;h3 id=&quot;centos-sulinux-asianux-등의-레드햇-계열의-리눅스-배포판에서-기본으로-사용되지-않는-쉘&quot;&gt;CentOS, SULinux, Asianux 등의 레드햇 계열의 리눅스 배포판에서 기본으로 사용되지 않는 쉘&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;1. Zsh 쉘&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;로그인쉘 및 쉘스크립트 명령어 프로세서로서 이용 가능한 유닉스 쉘입니다. 표준 쉘들 중에서 zsh는 ksh와 가장 유사하지만 많은 개선들을 포함합니다. zsh는 명령행 편집, 내장 스펠링 수정, history 등의 기능을 가집니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. ash 쉘&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;추가적인 기능들이 없이 본 쉘에 가장 부합하는 쉘입니다. 본 쉘은 상업적인 유닉스 시스템들에서 사용가능하므로, ash는 쉘 스크립트가 본 쉘에 잘 부합하는지 시험할 때 유용합니다. 또한 이것은 다른 sh- 호환 쉘에 비해 적은 메모리와 공간을 요구합니다.&lt;/p&gt;</content><author><name></name></author><category term="Linux" /><category term="Shell" /></entry><entry><title type="html">21년 1월 7일</title><link href="http://localhost:4000/til/2021/01/07/TIL4.html" rel="alternate" type="text/html" title="21년 1월 7일" /><published>2021-01-07T00:00:00+09:00</published><updated>2021-01-07T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/07/TIL4</id><content type="html" xml:base="http://localhost:4000/til/2021/01/07/TIL4.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Linux SSH 서버 설치 및 config 방법 (Ubuntu)&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;linux에 SSH가 설치되어 있지 않는 경우 SSH를 설치한다&lt;/p&gt;
+
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#SSH 서버 클라이언트 모두 설치&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get ssh
+&lt;span class=&quot;c&quot;&gt;#서버만 설치하고 싶으면&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get openssh-server
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;/etc/ssh/sshd_config 파일을 통해 SSH 설정을 변경할 수 있다.&lt;/p&gt;
+
+        &lt;p&gt;참고: &lt;a href=&quot;http://programmingskills.net/archives/315&quot;&gt;http://programmingskills.net/archives/315&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Virtual Box으로 실행한 ubuntu에 ssh로 접속하기 (MAC 기준)&lt;/p&gt;
 
     &lt;ul&gt;
       &lt;li&gt;
-        &lt;p&gt;나의 경우 root 비밀번호 설정을 하지 않아서 나는 에러였다.&lt;/p&gt;
+        &lt;p&gt;VM 내부 ubuntu에서 ifconfig 명령어로 사설 IP를 확인한다.&lt;/p&gt;
+
+        &lt;p&gt;&lt;img src=&quot;/public/img/210107/1.png&quot; alt=&quot;image-20210107133137703&quot; style=&quot;zoom:33%;&quot; /&gt;&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
-        &lt;p&gt;root 비밀번호를 설정한다.&lt;/p&gt;
+        &lt;p&gt;기존 OS (host OS) 에서 사설 IP를 확인한다.&lt;/p&gt;
 
-        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;passwd root
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+        &lt;ul&gt;
+          &lt;li&gt;맥은 터미널에서 ifconfg 또는 시스템환경설정 - 네트워크에서 확인&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;VirtualBox 에서 ubuntu 설정 - 네트워크 - 고급 - 포트포워드 클릭&lt;/p&gt;
+
+        &lt;p&gt;&lt;img src=&quot;/public/img/210107/2.png&quot; alt=&quot;image-20210107134958414&quot; style=&quot;zoom: 33%;&quot; /&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;호스트 IP에 원래 OS의 IP주소, 호스트 포트에 접속할 때 사용할 호스트 포트를 입력한다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;게스트 IP에 vm내부의 ubuntu IP주소를 입력하고, 게스트 포트에는 22를 입력한다.(SSH의 기본 포트는 22이고, unbuntu내에서 ssh 포트를 수정하였다면 수정한 포트 번호를 입력한다.)&lt;/p&gt;
+
+        &lt;p&gt;&lt;img src=&quot;/public/img/210107/3.png&quot; alt=&quot;image-20210107135348581&quot; style=&quot;zoom:50%;&quot; /&gt;&lt;/p&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Linux" /></entry><entry><title type="html">NAT이란? Static NAT, Dynamic NAT, PAT 비교</title><link href="http://localhost:4000/network/2021/01/07/NAT.html" rel="alternate" type="text/html" title="NAT이란? Static NAT, Dynamic NAT, PAT 비교" /><published>2021-01-07T00:00:00+09:00</published><updated>2021-01-07T00:00:00+09:00</updated><id>http://localhost:4000/network/2021/01/07/NAT</id><content type="html" xml:base="http://localhost:4000/network/2021/01/07/NAT.html">&lt;h1 id=&quot;nat&quot;&gt;NAT&lt;/h1&gt;
+  &lt;li&gt;
+    &lt;p&gt;맥에는 기본적으로 tree명령어가 없기 때문에 tree명령어를 설치해보았다.&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;Homebrew는 Apple에서 제공하지 않는 패키지 관리자를 설치할 수 있다.&lt;/p&gt;
+
+        &lt;p&gt;Homebrew를 설치한다&lt;/p&gt;
+
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/bin/bash &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;homebrew를 통해 tree명령어를 설치한다&lt;/p&gt;
+
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;tree
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;코드스쿼드 미션으로 간단한 shell script를 짜보았다.&lt;/p&gt;
+
+    &lt;p&gt;사용한 것은 아래에 적어놓았고 기본적인 쉘스크립트 문법은 구글링해서 익히자.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;해당 폴더가 존재하는지 확인&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if [ ! -d &amp;lt;폴더명&amp;gt; ]; then
+  #do
+fi
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;해당 파일이 존재하는지 확인&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if [ ! -f &amp;lt;파일명&amp;gt; ]; then
+  #do
+fi
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;특정 형식의 파일이 존재하는지 확인&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if [ $(find &amp;lt;폴더&amp;gt; -name &amp;lt;파일형식(*.cs 등)&amp;gt; | wc -l) -eq 0 ]; then
+	#do
+fi
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;특정 형식의 파일만 zip로 압축 (tar도 거의 동일)&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;find &amp;lt;폴더&amp;gt; -name &amp;lt;파일형식(*.cs 등)&amp;gt; | xargs zip &amp;lt;압축파일명&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;scp로 remote에 파일 복사&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scp -P &amp;lt;포트번호&amp;gt; &amp;lt;복사할 파일명&amp;gt; &amp;lt;remote계정&amp;gt;@&amp;lt;remote IP&amp;gt;:&amp;lt;remote 파일경로(이 경로의 파일명으로 복사됨)&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;프로그래머스에서 [다리를 지나는 트럭], [프린터] 2문제를 풀었다.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;두 문제 다 queue를 이용하여 푸는 문제였다. 이미 풀었던 문제를 Java로 풀어보았다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Java의 정석과 TCP/IP 더 쉽게 책을 보지 못했다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;VM을 설치하여 ubuntu를 설치하고, SSH를 연결한 후, 호스트에서 특정 파일을 압축하여 게스트OS로 보내는 과정을 쉘 스크립트로 자동화 하였다.
+    &lt;ul&gt;
+      &lt;li&gt;SSH를 연결하는 과정에서 포트포워딩을 해보았고 이를 통해 NAT이라는 네트워크 개념을 익힌 후 글로 정리하였다.&lt;/li&gt;
+      &lt;li&gt;SCP로 파일을 전송하는 과정에서 permission denied를 겪었고 이를 통해, Linux에서 Directory의 소유자, 그룹에 따른 권한이 어떻게 적용되는지 알게 되었다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;코드스쿼드에서 준 미션을 단순히 풀기만 함으로써 네트워크 관련 지식을 검색하고 알게 되어 좋았다.&lt;/li&gt;
+  &lt;li&gt;내가 정한 계획을 지키지 못했지만, 게을러서 지키지 못했다기보다 다른 공부거리가 생겨 이를 하다 보니 시간이 늦어버렸다.
+    &lt;ul&gt;
+      &lt;li&gt;오늘 호눅스가 얘기한 말을 기억하며,
+        &lt;ol&gt;
+          &lt;li&gt;전에 세웠던 계획을 다 소화 못하면 그것을 뒤로 미루지 말고 계획을 줄여서 새로 세우자!&lt;/li&gt;
+          &lt;li&gt;내가 지치면 암것도 못한다. 길게 보고 최선을 다하자&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;프로그래머스 2문제 풀기&lt;/li&gt;
+  &lt;li&gt;Java의 정석 읽기&lt;/li&gt;
+  &lt;li&gt;TCP/IP쉽게 더쉽게 읽기&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Blog" /><category term="jekyll" /><category term="Github" /><category term="Git" /></entry><entry><title type="html">SSH root 권한으로 접속 허용하기</title><link href="http://localhost:4000/linux/2021/01/07/permitSSH_Root.html" rel="alternate" type="text/html" title="SSH root 권한으로 접속 허용하기" /><published>2021-01-07T00:00:00+09:00</published><updated>2021-01-07T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/07/permitSSH_Root</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/07/permitSSH_Root.html">&lt;h2 id=&quot;ssh-root-권한으로-접속-허용하기&quot;&gt;SSH root 권한으로 접속 허용하기&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;SCP 명령어로 remote의 특정 폴더에 접근하려면 root권한이 필요할 때가 있다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;분명히 root 비밀번호가 맞았는데도 자꾸 Permission denied, please try again. 가 뜬다면 ssh 설정을 확인해야한다.&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;remote(ubuntu 기준) 로 들어가서 /etc/ssh/sshd_config 파일을 연다&lt;/p&gt;
+
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vi /etc/ssh/sshd_config
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;파일 내의 PermitRootLogin 을 yes로 바꿔준다. (없으면 추가한다.)&lt;/p&gt;
+
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;PermitRootLogin &lt;span class=&quot;nb&quot;&gt;yes&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;데몬 명령어로 ssh를 재시작시켜 변경된 설정을 적용한다.&lt;/p&gt;
+
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;systemctl restart ssh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Linux" /><category term="SSH" /></entry><entry><title type="html">NAT이란? Static NAT, Dynamic NAT, PAT 비교</title><link href="http://localhost:4000/network/2021/01/07/NAT.html" rel="alternate" type="text/html" title="NAT이란? Static NAT, Dynamic NAT, PAT 비교" /><published>2021-01-07T00:00:00+09:00</published><updated>2021-01-07T00:00:00+09:00</updated><id>http://localhost:4000/network/2021/01/07/NAT</id><content type="html" xml:base="http://localhost:4000/network/2021/01/07/NAT.html">&lt;h1 id=&quot;nat&quot;&gt;NAT&lt;/h1&gt;
 
 &lt;p&gt;NAT은 Network Address Translation의 약자로, 네트워크 주소를 변환해주는 방식이라고 할 수 있다.&lt;/p&gt;
 
@@ -210,78 +478,28 @@ SSH를 인증하는 방식은 다음과 같다.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;이런 식으로 맵핑하여 하나의 공인 IP로 여러 대의 PC를 사용할 수 있게 된다.&lt;/p&gt;</content><author><name></name></author><category term="Network" /><category term="NAT" /></entry><entry><title type="html">SSH root 권한으로 접속 허용하기</title><link href="http://localhost:4000/linux/2021/01/07/permitSSH_Root.html" rel="alternate" type="text/html" title="SSH root 권한으로 접속 허용하기" /><published>2021-01-07T00:00:00+09:00</published><updated>2021-01-07T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/07/permitSSH_Root</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/07/permitSSH_Root.html">&lt;h2 id=&quot;ssh-root-권한으로-접속-허용하기&quot;&gt;SSH root 권한으로 접속 허용하기&lt;/h2&gt;
+&lt;p&gt;이런 식으로 맵핑하여 하나의 공인 IP로 여러 대의 PC를 사용할 수 있게 된다.&lt;/p&gt;</content><author><name></name></author><category term="Network" /><category term="NAT" /></entry><entry><title type="html">su: Authentication failure 발생하는 이유</title><link href="http://localhost:4000/linux/2021/01/07/rootPwdSet.html" rel="alternate" type="text/html" title="su: Authentication failure 발생하는 이유" /><published>2021-01-07T00:00:00+09:00</published><updated>2021-01-07T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/07/rootPwdSet</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/07/rootPwdSet.html">&lt;h1 id=&quot;root-비번-설정&quot;&gt;Root 비번 설정&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;SCP 명령어로 remote의 특정 폴더에 접근하려면 root권한이 필요할 때가 있다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;분명히 root 비밀번호가 맞았는데도 자꾸 Permission denied, please try again. 가 뜬다면 ssh 설정을 확인해야한다.&lt;/p&gt;
+    &lt;p&gt;ubuntu를 깔고 사용자 등록 후 su 명령어를 통해 root로 전환하려는데 에러가 났다.&lt;/p&gt;
 
-    &lt;ol&gt;
-      &lt;li&gt;
-        &lt;p&gt;remote(ubuntu 기준) 로 들어가서 /etc/ssh/sshd_config 파일을 연다&lt;/p&gt;
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;su : Authentication failure
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
 
-        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vi /etc/ssh/sshd_config
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;파일 내의 PermitRootLogin 을 yes로 바꿔준다. (없으면 추가한다.)&lt;/p&gt;
-
-        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;PermitRootLogin &lt;span class=&quot;nb&quot;&gt;yes&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;데몬 명령어로 ssh를 재시작시켜 변경된 설정을 적용한다.&lt;/p&gt;
-
-        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;systemctl restart ssh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Linux" /><category term="SSH" /></entry><entry><title type="html">21년 1월 8일</title><link href="http://localhost:4000/til/2021/01/07/TIL4.html" rel="alternate" type="text/html" title="21년 1월 8일" /><published>2021-01-07T00:00:00+09:00</published><updated>2021-01-07T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/07/TIL4</id><content type="html" xml:base="http://localhost:4000/til/2021/01/07/TIL4.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;어제 코드스쿼드 미션으로 나온&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Java의 정석과 TCP/IP 더 쉽게 책을 보지 못했다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;VM을 설치하여 ubuntu를 설치하고, SSH를 연결한 후, 호스트에서 특정 파일을 압축하여 게스트OS로 보내는 과정을 쉘 스크립트로 자동화 하였다.
     &lt;ul&gt;
-      &lt;li&gt;SSH를 연결하는 과정에서 포트포워딩을 해보았고 이를 통해 NAT이라는 네트워크 개념을 익힌 후 글로 정리하였다.&lt;/li&gt;
-      &lt;li&gt;SCP로 파일을 전송하는 과정에서 permission denied를 겪었고 이를 통해, Linux에서 Directory의 소유자, 그룹에 따른 권한이 어떻게 적용되는지 알게 되었다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;나의 경우 root 비밀번호 설정을 하지 않아서 나는 에러였다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;root 비밀번호를 설정한다.&lt;/p&gt;
 
-&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;코드스쿼드에서 준 미션을 단순히 풀기만 함으로써 네트워크 관련 지식을 검색하고 알게 되어 좋았다.&lt;/li&gt;
-  &lt;li&gt;내가 정한 계획을 지키지 못했지만, 게을러서 지키지 못했다기보다 다른 공부거리가 생겨 이를 하다 보니 시간이 늦어버렸다.
-    &lt;ul&gt;
-      &lt;li&gt;오늘 호눅스가 얘기한 말을 기억하며,
-        &lt;ol&gt;
-          &lt;li&gt;전에 세웠던 계획을 다 소화 못하면 그것을 뒤로 미루지 말고 계획을 줄여서 새로 세우자!&lt;/li&gt;
-          &lt;li&gt;내가 지치면 암것도 못한다. 길게 보고 최선을 다하자&lt;/li&gt;
-        &lt;/ol&gt;
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;passwd root
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;프로그래머스 2문제 풀기&lt;/li&gt;
-  &lt;li&gt;Java의 정석 읽기&lt;/li&gt;
-  &lt;li&gt;TCP/IP쉽게 더쉽게 읽기&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="SSH" /><category term="shell" /></entry><entry><title type="html">21년 1월 6일</title><link href="http://localhost:4000/til/2021/01/06/TIL3.html" rel="alternate" type="text/html" title="21년 1월 6일" /><published>2021-01-06T00:00:00+09:00</published><updated>2021-01-06T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/06/TIL3</id><content type="html" xml:base="http://localhost:4000/til/2021/01/06/TIL3.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Linux" /></entry><entry><title type="html">21년 1월 6일</title><link href="http://localhost:4000/til/2021/01/06/TIL3.html" rel="alternate" type="text/html" title="21년 1월 6일" /><published>2021-01-06T00:00:00+09:00</published><updated>2021-01-06T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/06/TIL3</id><content type="html" xml:base="http://localhost:4000/til/2021/01/06/TIL3.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;백준 1009, 1076, 1052, 1757번 문제를 풀었다.&lt;/p&gt;
@@ -527,37 +745,4 @@ SSH를 인증하는 방식은 다음과 같다.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;programmers 알고리즘 문제 풀기&lt;/li&gt;
   &lt;li&gt;TCP/IP 쉽게, 더 쉽게 책 20일 완독 목표 (1월 6일부터 시작)&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Blog" /><category term="jekyll" /><category term="Github" /><category term="Git" /><summary type="html">byteadder, Program영역, git 설정, JVM</summary></entry><entry><title type="html">21년 1월 4일</title><link href="http://localhost:4000/til/2021/01/04/TIL1.html" rel="alternate" type="text/html" title="21년 1월 4일" /><published>2021-01-04T00:00:00+09:00</published><updated>2021-01-04T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/04/TIL1</id><content type="html" xml:base="http://localhost:4000/til/2021/01/04/TIL1.html">&lt;h1 id=&quot;한-일&quot;&gt;한 일&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;논리 회로의 반가산기와 전가산기 개념 이해&lt;/li&gt;
-  &lt;li&gt;반가산기를 직접 구현해보기 (입력: &lt;code class=&quot;highlighter-rouge&quot;&gt;boolean bit1&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;boolean bit2&lt;/code&gt;, 출력: &lt;code class=&quot;highlighter-rouge&quot;&gt;boolean sum&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;boolean carry&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;전가산기 구현해보기 (입력: &lt;code class=&quot;highlighter-rouge&quot;&gt;boolean1 bit1&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;boolean bit2&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;boolean carry&lt;/code&gt;, 출력: &lt;code class=&quot;highlighter-rouge&quot;&gt;boolean sum&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;boolean carry&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;전가산기를 이용하여 byte 덧셈 구현&lt;/li&gt;
-  &lt;li&gt;10진법 → 2진법, 2진법 → 10진법 변환 구현해보기&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;sum, carry 등의 작은 연산을 메소드로 만들지 않아 가독성이 떨어졌다&lt;/li&gt;
-  &lt;li&gt;반가산기, 전가산기의 출력을 Sum, Carry를 포함하는 boolean 배열로 반환하였는데, 0은 Sum, 1은 Carry로 정하였지만,  코드상에서 final int로 각 인덱스를 명시해주지 않아 가독성이 떨어졌다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;무작정 코딩을 하지 않고, 전가산기와 반가산기의 개념을 익힌 후(배경지식, 구글링) 구현하여 시행착오를 줄일 수 있었다.&lt;/li&gt;
-  &lt;li&gt;Intellij를 통해 JUnit으로 Test 코드를 작성하여 구현이 제대로 됐는지 확인하였다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;느낌&quot;&gt;느낌&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;강의식 교육에만 익숙했던지라 굉장히 낯설다.&lt;/li&gt;
-  &lt;li&gt;다른 사람들의 Git history를 보고 벌써부터 조급해지려고 한다.&lt;/li&gt;
-  &lt;li&gt;조급해지면 안된다. 나는 나의 진도에 맞게 꾸준히 하면 된다. &lt;em&gt;길게 보고 준비하자.&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;할것&quot;&gt;할것&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;github.io를 꾸며서 제대로 블로깅할지, 지금처럼 TIL에 md파일 업로드할지 정하기&lt;/li&gt;
-  &lt;li&gt;최소 하루에 2문제씩 프로그래머스 문제 풀기&lt;/li&gt;
-  &lt;li&gt;JAVA 기본문법부터 확실히 (JAVA의 정석 책 도착하면 공부시작)&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Blog" /><category term="jekyll" /><category term="Github" /><category term="Git" /><summary type="html">byteadder, fulladder</summary></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><category term="Blog" /><category term="jekyll" /><category term="Github" /><category term="Git" /><summary type="html">byteadder, Program영역, git 설정, JVM</summary></entry></feed>
