@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Dev.Isaac" /></head>
+<style>@import url(/public/css/syntax/monokai.css);</style>
+  <title>Dev.Isaac</title>
+  <!-- <link href="/public/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link href="/public/css/style.css" rel="stylesheet">
+  <body>
+  	<div class="container"> 
+		<div class="sidebar">
+			<div class="sidebar-item sidebar-header">
+	<div class='sidebar-brand'>
+		<a href="/about/">Dev.Isaac</a>
+	</div>
+	<p class="lead">정이삭 공부블로그</p></div>
+
+<div class="sidebar-item sidebar-nav">
+	<ul class="nav">
+      <li class="nav-title">Pages</li>
+	  <li>
+	  	<a class="nav-item" href="/">Articles</a>
+	  </li>
+	  
+	  
+	    
+	  
+	    
+	      
+	        <li>
+	        	<a class="nav-item" href="/about/">
+	            	About
+	            </a>
+	        </li>
+	      
+	    
+	  
+	    
+	      
+	    
+	  
+	    
+	  
+	    
+	  
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-nav">
+  	<ul class="nav">
+			<li class="nav-title">Categories</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#TIL">
+				<span class="name">TIL</span>
+				<span class="badge">4</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Linux">
+				<span class="name">Linux</span>
+				<span class="badge">3</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Network">
+				<span class="name">Network</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	  </nav>
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-footer">
+	<p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
+</div>
+		</div>
+		<div class="content">
+			<article class="post">
+	<header class="post-header">
+		<div class="post-title"> 
+			리눅스 group이란, group 변경
+		</div>
+		<time class="post-date dt-published" datetime="2021-01-08T00:00:00+09:00" itemprop="datePublished">2021/01/08
+		</time>		
+	</header>
+
+	<div class="post-content">
+		<h2 id="리눅스에서-group이란">리눅스에서 group이란</h2>
+
+<p>리눅스에선 group이라는 것이 있는데, 어떤 파일이나 폴더를 특정 User에게만 공유하고 싶을 때 사용한다.</p>
+
+<ul>
+  <li>root 디렉터리에서 ls -l 커맨드를 치면 아래와 같은 형식으로 폴더 및 파일 정보가 뜬다.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>drwxr-xr-x  93 root root     4096  Jan  8 01:25 etc
+</code></pre></div></div>
+<ol>
+  <li><code class="highlighter-rouge">rwxr-xr-x</code> 는 etc라는 폴더에 접근 권한이다.</li>
+  <li>3글자씩 잘라서, 소유자/그룹/타인 에 대한 접근 권한이다.</li>
+  <li><code class="highlighter-rouge">root root</code> 는 소유자/그룹 이 누구인지를 뜻한다.</li>
+</ol>
+
+<p>이 때, group1이라는 그룹에 속한 사용자들에게만 권한을 주고 싶다면,</p>
+
+<p>해당 폴더의 그룹을 group1으로 바꾸고 그룹에 대한 접근 권한을 설정해주면 된다.</p>
+
+<h3 id="현재-생성되어-있는-group-확인">현재 생성되어 있는 Group 확인</h3>
+
+<p>현재 생성되어 있는 group은 /etc/group 파일에서 확인할 수 있다.</p>
+
+<h3 id="특정-유저의-그룹-확인">특정 유저의 그룹 확인</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#id user1
+</code></pre></div></div>
+
+<h3 id="그룹-생성하기">그룹 생성하기</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#groupadd -g 777 group1
+</code></pre></div></div>
+
+<ul>
+  <li>GID가 777인 그룹 group1을 만든다.</li>
+</ul>
+
+<h3 id="유저를-그룹에-가입시키기">유저를 그룹에 가입시키기</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#usermod -G group1 user1
+</code></pre></div></div>
+
+<ul>
+  <li>user1을 group1에 가입시킨다.</li>
+  <li>user1이 세 개 이상 그룹에 가입하기 위해서는 /etc/group을 수정해야함</li>
+</ul>
+
+<h3 id="그룹-삭제하기">그룹 삭제하기</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#groupdel group1
+</code></pre></div></div>
+
+<ul>
+  <li>group1을 삭제 시킨다.</li>
+  <li>group1을 기본그룹으로 하는 user가 있다면 삭제가 안됨</li>
+</ul>
+
+
+	</div>
+</article>
+		</div>
+	</div>
+  </body>
+</html>
