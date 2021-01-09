@@ -1,4 +1,194 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-08T23:25:36+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">SSH key를 이용한 접속</title><link href="http://localhost:4000/linux/2021/01/08/SSH-Key-How.html" rel="alternate" type="text/html" title="SSH key를 이용한 접속" /><published>2021-01-08T00:00:00+09:00</published><updated>2021-01-08T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/08/SSH-Key-How</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/08/SSH-Key-How.html">&lt;h2 id=&quot;ssh-key란&quot;&gt;SSH Key란&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-09T20:35:48+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">JVM 구조와 Java 런타임 구조</title><link href="http://localhost:4000/java/2021/01/09/JVM_Memory_Structure.html" rel="alternate" type="text/html" title="JVM 구조와 Java 런타임 구조" /><published>2021-01-09T00:00:00+09:00</published><updated>2021-01-09T00:00:00+09:00</updated><id>http://localhost:4000/java/2021/01/09/JVM_Memory_Structure</id><content type="html" xml:base="http://localhost:4000/java/2021/01/09/JVM_Memory_Structure.html">&lt;h2 id=&quot;jvm-메모리-구조와-자바가-실행될-때-jvm에서-일어나는-일을-알아보자&quot;&gt;JVM 메모리 구조와 자바가 실행될 때 JVM에서 일어나는 일을 알아보자&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;출처: &lt;a href=&quot;https://jeong-pro.tistory.com/148&quot;&gt;https://jeong-pro.tistory.com/148&lt;/a&gt; (기본기를 쌓는 정아마추어 코딩블로그)&lt;/li&gt;
+  &lt;li&gt;추가 참고 자료: &lt;a href=&quot;https://sehun-kim.github.io/sehun/JVM/&quot;&gt;https://sehun-kim.github.io/sehun/JVM/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;JVM(Java Virtual Machine)&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;: 자바 가상 머신으로 &lt;strong&gt;자바 바이트 코드를 실행할 수 있는 주체&lt;/strong&gt;다.&lt;/p&gt;
+
+&lt;p&gt;CPU나 운영체제(플랫폼)의 종류와 무관하게 실행이 가능하다.&lt;/p&gt;
+
+&lt;p&gt;즉, 운영체제 위에서 동작하는 프로세스로 자바 코드를 컴파일해서 얻은 바이트 코드를 해당 운영체제가 이해할 수 있는 기계어로 바꿔 실행시켜주는 역할을 한다.&lt;/p&gt;
+
+&lt;p&gt;JVM의 구성을 살펴보면 크게 4가지(Class Loader, Execution Engine, Garbage Collector, Runtime Data Area)로 나뉜다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/9973563D5ACE031521&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. Class Loader&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;자바에서 소스를 작성하면 Person.java 처럼 .java파일이 생성된다.&lt;/p&gt;
+
+&lt;p&gt;.java 소스를 자바컴파일러가 컴파일하면 Person.class 같은 .class파일(바이트코드)이 생성된다.&lt;/p&gt;
+
+&lt;p&gt;이렇게 생성된 클래스파일들을 엮어서 JVM이 운영체제로부터 할당받은 메모리영역인 Runtime Data Area로 적재하는 역할을 Class Loader가 한다. (자바 애플리케이션이 &lt;strong&gt;실행중&lt;/strong&gt;일 때 이런 작업이 수행된다.)&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. Execution Engine&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Class Loader에 의해 메모리에 적재된 클래스(바이트 코드)들을 기계어로 변경해 명령어 단위로 실행하는 역할을 한다.&lt;/p&gt;
+
+&lt;p&gt;명령어를 하나 하나 실행하는 인터프리터(Interpreter)방식이 있고 JIT(Just-In-Time) 컴파일러를 이용하는 방식이 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;JIT 컴파일러는 적절한 시간에 전체 바이트 코드를 네이티브 코드로 변경해서 Execution Engine이 네이티브로 컴파일된 코드를 실행하는 것으로 성능을 높이는 방식이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. Garbage Collector&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Garbage Collector(GC)는 Heap 메모리 영역에 생성(적재)된 객체들 중에 참조되지 않는 객체들을 탐색 후 제거하는 역할을 한다.&lt;/p&gt;
+
+&lt;p&gt;GC가 역할을 하는 시간은 정확히 언제인지를 알 수 없다. (참조가 없어지자마자 해제되는 것을 보장하지 않음)&lt;/p&gt;
+
+&lt;p&gt;또 다른 특징은 GC가 수행되는 동안 GC를 수행하는 쓰레드가 아닌 다른 모든 쓰레드가 일시정지된다.&lt;/p&gt;
+
+&lt;p&gt;특히 Full GC가 일어나서 수 초간 모든 쓰레드가 정지한다면 장애로 이어지는 치명적인 문제가 생길 수 있는 것이다. (GC와 관련된 내용은 아래 Heap영역 메모리를 설명할 때 더 자세히 알아본다.)&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4. Runtime Data Area&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;JVM의 메모리 영역으로 자바 애플리케이션을 실행할 때 사용되는 데이터들을 적재하는 영역이다.&lt;/p&gt;
+
+&lt;p&gt;이 영역은 크게 Method Area, Heap Area, Stack Area, PC Register, Native Method Stack로 나눌 수 있다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;자바 런타임 메모리(Runtime Data area)구조&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/99AED1445ACE0E4B04&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. Method area (메소드 영역)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;클래스 멤버 변수의 이름, 데이터 타입, 접근 제어자 정보같은 필드 정보와 메소드의 이름, 리턴 타입, 파라미터, 접근 제어자 정보같은 메소드 정보, Type정보(Interface인지 class인지), Constant Pool(상수 풀 : 문자 상수, 타입, 필드, 객체 참조가 저장됨), static 변수, final class 변수등이 생성되는 영역이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. Heap area (힙 영역)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;new 키워드로 생성된 객체와 배열이 생성되는 영역이다.&lt;/p&gt;
+
+&lt;p&gt;메소드 영역에 로드된 클래스만 생성이 가능하고 Garbage Collector가 참조되지 않는 메모리를 확인하고 제거하는 영역이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. Stack area (스택 영역)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;지역 변수, 파라미터, 리턴 값, 연산에 사용되는 임시 값등이 생성되는 영역이다.&lt;/p&gt;
+
+&lt;p&gt;int a = 10; 이라는 소스를 작성했다면 정수값이 할당될 수 있는 메모리공간을 a라고 잡아두고 그 메모리 영역에 값이 10이 들어간다. 즉, 스택에 메모리에 이름이 a라고 붙여주고 값이 10인 메모리 공간을 만든다.&lt;/p&gt;
+
+&lt;p&gt;클래스 Person p = new Person(); 이라는 소스를 작성했다면 Person p는 스택 영역에 생성되고 new로 생성된 Person 클래스의 인스턴스는 힙 영역에 생성된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;그리고 스택영역에 생성된 p의 값으로 힙 영역의 주소값을 가지고 있다. 즉, 스택 영역에 생성된 p가 힙 영역에 생성된 객체를 가리키고(참조하고) 있는 것이다.&lt;/p&gt;
+
+&lt;p&gt;메소드를 호출할 때마다 개별적으로 스택이 생성된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4. PC Register (PC 레지스터)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Thread(쓰레드)가 생성될 때마다 생성되는 영역으로 Program Counter 즉, 현재 쓰레드가 실행되는 부분의 주소와 명령을 저장하고 있는 영역이다. (*CPU의 레지스터와 다름)&lt;/p&gt;
+
+&lt;p&gt;이것을 이용해서 쓰레드를 돌아가면서 수행할 수 있게 한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5. Native method stack&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;자바 외 언어로 작성된 네이티브 코드를 위한 메모리 영역이다.&lt;/p&gt;
+
+&lt;p&gt;보통 C/C++등의 코드를 수행하기 위한 스택이다. (JNI)&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;쓰레드가 생성되었을 때 기준으로&lt;/p&gt;
+
+&lt;p&gt;1,2번인 메소드 영역과 힙 영역을 모든 쓰레드가 공유하고,&lt;/p&gt;
+
+&lt;p&gt;3,4,5번인 스택 영역과 PC 레지스터, Native method stack은 각각의 쓰레드마다 생성되고 공유되지 않는다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Heap area &amp;amp; Garbage Collector&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;힙 영역은 좀 더 살펴봐야하는데 그 이유는 GC의 주요 대상이기 때문이다.&lt;/p&gt;
+
+&lt;p&gt;(Stack영역과 Method영역도 GC의 대상이 된다)&lt;/p&gt;
+
+&lt;p&gt;힙 영역은 우선 5개의 영역(eden, survivor1, survivor2, old, permanent)으로 나뉜다.&lt;/p&gt;
+
+&lt;p&gt;-&amp;gt; JDK7까지는 permanent영역이 heap에 존재했습니다. JDK8부터는 permanent 영역은 사라지고 일부가 “meta space 영역”으로 변경되었습니다.(위의 그림 JDK7 기준입니다.) meta space 영역은 Native stack 영역에 포함되었습니다.&lt;/p&gt;
+
+&lt;p&gt;(survivor영역의 숫자는 의미없고 두 개로 나뉜다는 것이 중요하다)&lt;/p&gt;
+
+&lt;p&gt;힙 영역을 굳이 5개로 나눈 이유는 효율적으로 GC가 일어나게 하기 위함이다. 자세한 것은 GC가 일어나는 프로세스를 보면서 설명한다.&lt;/p&gt;
+
+&lt;p&gt;GC는 Minor GC와 Major GC로 나뉜다.&lt;/p&gt;
+
+&lt;p&gt;- &lt;strong&gt;Minor GC : New 영역에서 일어나는 GC&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;최초에 객체가 생성되면 Eden영역에 생성된다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Eden영역에 객체가 가득차게 되면 첫 번째 CG가 일어난다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;survivor1 영역에 Eden영역의 메모리를 그대로 복사된다. 그리고 survivor1 영역을 제외한 다른 영역의 객체를 제거한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Eden영역도 가득차고 survivor1영역도 가득차게된다면, Eden영역에 생성된 객체와 survivor1영역에 생성된 객체 중에 참조되고 있는 객체가 있는지 검사한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;참조 되고있지 않은 객체는 내버려두고 참조되고 있는 객체만 survivor2영역에 복사한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;survivor2영역을 제외한 다른 영역의 객체들을 제거한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;위의 과정중에 일정 횟수이상 참조되고 있는 객체들을 survivor2에서 Old영역으로 이동시킨다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;- 위 과정을 계속 반복, survivor2영역까지 꽉차기 전에 계속해서 Old로 비움&lt;/p&gt;
+
+&lt;p&gt;- &lt;strong&gt;Major GC(Full GC) : Old 영역에서 일어나는 GC&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Old 영역에 있는 모든 객체들을 검사하며 참조되고 있는지 확인한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;참조되지 않은 객체들을 모아 한 번에 제거한다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;- Minor GC보다 시간이 훨씬 많이 걸리고 실행중에 GC를 제외한 모든 쓰레드가 중지한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;* Major GC(Full GC)가 일어나면,&lt;/p&gt;
+
+&lt;p&gt;Old영역에 있는 참조가 없는 객체들을 표시하고 그 해당 객체들을 모두 제거하게 된다.&lt;/p&gt;
+
+&lt;p&gt;그러면서 Heap 메모리 영역에 중간중간 구멍(제거되고 빈 메모리 공간)이 생기는데 이 부분을 없애기 위해 재구성을 하게 된다. (디스크 조각모음처럼 조각난 메모리를 정리함)&lt;/p&gt;
+
+&lt;p&gt;따라서 메모리를 옮기고 있는데 다른 쓰레드가 메모리를 사용해버리면 안되기 때문에 모든 쓰레드가 정지하게 되는 것이다.&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="JVM" /></entry><entry><title type="html">SSH key를 이용한 접속</title><link href="http://localhost:4000/linux/2021/01/08/SSH-Key-How.html" rel="alternate" type="text/html" title="SSH key를 이용한 접속" /><published>2021-01-08T00:00:00+09:00</published><updated>2021-01-08T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/08/SSH-Key-How</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/08/SSH-Key-How.html">&lt;h2 id=&quot;ssh-key란&quot;&gt;SSH Key란&lt;/h2&gt;
 
 &lt;p&gt;SSH 접속은 패스워드로도 할 수 있지만, 안전한 인증방식은 아니라고 한다.&lt;/p&gt;
 
@@ -43,63 +233,7 @@ SSH를 인증하는 방식은 다음과 같다.&lt;/p&gt;
   &lt;li&gt;클라이언트(나)는 전달받은 랜덤 스트링을 개인키로 암호화하여 서버에게 보낸다.&lt;/li&gt;
   &lt;li&gt;서버는 받은 암호를 authorized_keys에 등록된 공개키로 해석한 후, 2번에서 보냈던 랜덤 스트링과 일치하는지 확인한다.&lt;/li&gt;
   &lt;li&gt;일치한다면 클라이언트(나)는 authorized_keys에 등록된 authorized client 중 하나이므로 인증완료된다.&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="Linux" /><category term="SSH" /></entry><entry><title type="html">리눅스 group이란, group 변경</title><link href="http://localhost:4000/linux/2021/01/08/userGroup.html" rel="alternate" type="text/html" title="리눅스 group이란, group 변경" /><published>2021-01-08T00:00:00+09:00</published><updated>2021-01-08T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/08/userGroup</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/08/userGroup.html">&lt;h2 id=&quot;리눅스에서-group이란&quot;&gt;리눅스에서 group이란&lt;/h2&gt;
-
-&lt;p&gt;리눅스에선 group이라는 것이 있는데, 어떤 파일이나 폴더를 특정 User에게만 공유하고 싶을 때 사용한다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;root 디렉터리에서 ls -l 커맨드를 치면 아래와 같은 형식으로 폴더 및 파일 정보가 뜬다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;drwxr-xr-x  93 root root     4096  Jan  8 01:25 etc
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;rwxr-xr-x&lt;/code&gt; 는 etc라는 폴더에 접근 권한이다.&lt;/li&gt;
-  &lt;li&gt;3글자씩 잘라서, 소유자/그룹/타인 에 대한 접근 권한이다.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;root root&lt;/code&gt; 는 소유자/그룹 이 누구인지를 뜻한다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;이 때, group1이라는 그룹에 속한 사용자들에게만 권한을 주고 싶다면,&lt;/p&gt;
-
-&lt;p&gt;해당 폴더의 그룹을 group1으로 바꾸고 그룹에 대한 접근 권한을 설정해주면 된다.&lt;/p&gt;
-
-&lt;h3 id=&quot;현재-생성되어-있는-group-확인&quot;&gt;현재 생성되어 있는 Group 확인&lt;/h3&gt;
-
-&lt;p&gt;현재 생성되어 있는 group은 /etc/group 파일에서 확인할 수 있다.&lt;/p&gt;
-
-&lt;h3 id=&quot;특정-유저의-그룹-확인&quot;&gt;특정 유저의 그룹 확인&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#id user1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;그룹-생성하기&quot;&gt;그룹 생성하기&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#groupadd -g 777 group1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;GID가 777인 그룹 group1을 만든다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;유저를-그룹에-가입시키기&quot;&gt;유저를 그룹에 가입시키기&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#usermod -G group1 user1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;user1을 group1에 가입시킨다.&lt;/li&gt;
-  &lt;li&gt;user1이 세 개 이상 그룹에 가입하기 위해서는 /etc/group을 수정해야함&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;그룹-삭제하기&quot;&gt;그룹 삭제하기&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#groupdel group1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;group1을 삭제 시킨다.&lt;/li&gt;
-  &lt;li&gt;group1을 기본그룹으로 하는 user가 있다면 삭제가 안됨&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Linux" /><category term="group" /></entry><entry><title type="html">21년 1월 8일</title><link href="http://localhost:4000/til/2021/01/08/TIL5.html" rel="alternate" type="text/html" title="21년 1월 8일" /><published>2021-01-08T00:00:00+09:00</published><updated>2021-01-08T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/08/TIL5</id><content type="html" xml:base="http://localhost:4000/til/2021/01/08/TIL5.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="Linux" /><category term="SSH" /></entry><entry><title type="html">21년 1월 8일</title><link href="http://localhost:4000/til/2021/01/08/TIL5.html" rel="alternate" type="text/html" title="21년 1월 8일" /><published>2021-01-08T00:00:00+09:00</published><updated>2021-01-08T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/08/TIL5</id><content type="html" xml:base="http://localhost:4000/til/2021/01/08/TIL5.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;어제 코드스쿼드 미션으로 나온 쉘 스크립트의 부족한 부분을 수정했다&lt;/p&gt;
@@ -195,7 +329,63 @@ zip &lt;span class=&quot;nv&quot;&gt;$NAME&lt;/span&gt; &lt;span class=&quot;k&q
   &lt;li&gt;알고리즘 공부&lt;/li&gt;
   &lt;li&gt;자바의정석 책 공부&lt;/li&gt;
   &lt;li&gt;TCP/IP 공부&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="SSH" /><category term="shell" /></entry><entry><title type="html">Shell의 종류</title><link href="http://localhost:4000/linux/2021/01/08/Shell-type.html" rel="alternate" type="text/html" title="Shell의 종류" /><published>2021-01-08T00:00:00+09:00</published><updated>2021-01-08T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/08/Shell-type</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/08/Shell-type.html">&lt;p&gt;&lt;strong&gt;1. sh (bourne shell)&lt;/strong&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="SSH" /><category term="shell" /></entry><entry><title type="html">리눅스 group이란, group 변경</title><link href="http://localhost:4000/linux/2021/01/08/userGroup.html" rel="alternate" type="text/html" title="리눅스 group이란, group 변경" /><published>2021-01-08T00:00:00+09:00</published><updated>2021-01-08T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/08/userGroup</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/08/userGroup.html">&lt;h2 id=&quot;리눅스에서-group이란&quot;&gt;리눅스에서 group이란&lt;/h2&gt;
+
+&lt;p&gt;리눅스에선 group이라는 것이 있는데, 어떤 파일이나 폴더를 특정 User에게만 공유하고 싶을 때 사용한다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;root 디렉터리에서 ls -l 커맨드를 치면 아래와 같은 형식으로 폴더 및 파일 정보가 뜬다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;drwxr-xr-x  93 root root     4096  Jan  8 01:25 etc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;rwxr-xr-x&lt;/code&gt; 는 etc라는 폴더에 접근 권한이다.&lt;/li&gt;
+  &lt;li&gt;3글자씩 잘라서, 소유자/그룹/타인 에 대한 접근 권한이다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;root root&lt;/code&gt; 는 소유자/그룹 이 누구인지를 뜻한다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;이 때, group1이라는 그룹에 속한 사용자들에게만 권한을 주고 싶다면,&lt;/p&gt;
+
+&lt;p&gt;해당 폴더의 그룹을 group1으로 바꾸고 그룹에 대한 접근 권한을 설정해주면 된다.&lt;/p&gt;
+
+&lt;h3 id=&quot;현재-생성되어-있는-group-확인&quot;&gt;현재 생성되어 있는 Group 확인&lt;/h3&gt;
+
+&lt;p&gt;현재 생성되어 있는 group은 /etc/group 파일에서 확인할 수 있다.&lt;/p&gt;
+
+&lt;h3 id=&quot;특정-유저의-그룹-확인&quot;&gt;특정 유저의 그룹 확인&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#id user1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;그룹-생성하기&quot;&gt;그룹 생성하기&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#groupadd -g 777 group1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;GID가 777인 그룹 group1을 만든다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;유저를-그룹에-가입시키기&quot;&gt;유저를 그룹에 가입시키기&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#usermod -G group1 user1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;user1을 group1에 가입시킨다.&lt;/li&gt;
+  &lt;li&gt;user1이 세 개 이상 그룹에 가입하기 위해서는 /etc/group을 수정해야함&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;그룹-삭제하기&quot;&gt;그룹 삭제하기&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#groupdel group1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;group1을 삭제 시킨다.&lt;/li&gt;
+  &lt;li&gt;group1을 기본그룹으로 하는 user가 있다면 삭제가 안됨&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Linux" /><category term="group" /></entry><entry><title type="html">Shell의 종류</title><link href="http://localhost:4000/linux/2021/01/08/Shell-type.html" rel="alternate" type="text/html" title="Shell의 종류" /><published>2021-01-08T00:00:00+09:00</published><updated>2021-01-08T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/08/Shell-type</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/08/Shell-type.html">&lt;p&gt;&lt;strong&gt;1. sh (bourne shell)&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;가장 기본적인 쉘로 유닉스의 초기부터 사용되어 온 쉘이며 스크립트를 지원한다.&lt;/p&gt;
 
@@ -653,96 +843,4 @@ fi
   &lt;li&gt;프로그래머스 2문제 풀기&lt;/li&gt;
   &lt;li&gt;TCP/IP 10쪽 읽기&lt;/li&gt;
   &lt;li&gt;Java의 정석 완독하기 (구체적 계획을 세우자)&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Blog" /><category term="jekyll" /><category term="Github" /><category term="Git" /><summary type="html">IntelliJ,</summary></entry><entry><title type="html">21년 1월 5일</title><link href="http://localhost:4000/til/2021/01/05/TIL2.html" rel="alternate" type="text/html" title="21년 1월 5일" /><published>2021-01-05T00:00:00+09:00</published><updated>2021-01-05T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/05/TIL2</id><content type="html" xml:base="http://localhost:4000/til/2021/01/05/TIL2.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;byteadder의 input으로 두 배열이 들어오는데, 두 배열의 크기가 다르게 들어올 경우 작은 배열을 큰 배열의 크기에 맞춰 늘려준 후 (새로 생긴 공간은 false로 채움) 두 배열을 더할 수 있게 수정하였다.&lt;/li&gt;
-  &lt;li&gt;Relay -&amp;gt; 논리회로(AND, OR, NOT) -&amp;gt; 진공관 -&amp;gt; 트랜지스터 -&amp;gt; ALU -&amp;gt; CPU(ALU+Register+cache) -&amp;gt; AP(CPU+GPU)로 이루어지는 컴퓨터 구조에 대해 맛보기 개념 학습&lt;/li&gt;
-  &lt;li&gt;Program을 메모리에 올리면 Process가 된다.
-    &lt;ol&gt;
-      &lt;li&gt;Code영역(Text)
-        &lt;ul&gt;
-          &lt;li&gt;실행할 코드가 저장되는 영역&lt;/li&gt;
-          &lt;li&gt;컴파일시에 크기 결정됨&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Data영역
-        &lt;ul&gt;
-          &lt;li&gt;전역(global) 변수, 정적(static) 변수, 정적 배열 등 컴파일시 크기가 결정되는 것들이 저장됨&lt;/li&gt;
-          &lt;li&gt;컴파일시에 크기 결정됨&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Heap영역에 동적할당해주는 변수들 (객체 등)
-        &lt;ul&gt;
-          &lt;li&gt;동적 할당되는 객체가 저장되는 영역&lt;/li&gt;
-          &lt;li&gt;런타임시에 크기 결정됨&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Stack영역에 지역변수 등
-        &lt;ul&gt;
-          &lt;li&gt;지역변수, 매개변수, 리턴 값과 같이 임시로 사용되는 값들이 저장되는 영역&lt;/li&gt;
-          &lt;li&gt;함수 호출이나 반복문 등의 스코프를 벗어나면 내부 변수는 사라짐&lt;/li&gt;
-          &lt;li&gt;런타임시에 크기 결정됨&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Github에서 21년 8월부터 Password 인증을 통한 Git operation인증이 안된다고 해서 two factor authenticator설정 하였다.
-    &lt;ul&gt;
-      &lt;li&gt;Two Factor authenticator 설정: https://jojoldu.tistory.com/449&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;로컬 git에 설정되어 있던 git 계정을 삭제 후 재등록 했고, Two Factor Authenticator 설정 후엔 password로 인증할 수 없기 때문에 개인 token을 발급하여 그 token을 password로 등록하였다.
-    &lt;ul&gt;
-      &lt;li&gt;기존 git credential(인증서)를 삭제한 후 재 로그인할 때, password로 발급한 token을 입력한다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;git credential 삭제하기
-    &lt;ol&gt;
-      &lt;li&gt;global에서 인증서 삭제
-        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--unset&lt;/span&gt; credential.helper
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
-      &lt;/li&gt;
-      &lt;li&gt;삭제 안되면, 시스템에서 인증서 삭제
-        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  git config &lt;span class=&quot;nt&quot;&gt;--system&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--unset&lt;/span&gt; credential.helper
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
-      &lt;/li&gt;
-      &lt;li&gt;키체인 접근 프로그램 들어간 후, github 관련 암호 모두 삭제&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;jekyll로 테마적용하고 github.io 홈페이지 만들기
-    &lt;ol&gt;
-      &lt;li&gt;원하는 jekyll 테마를 다운로드 or fork한 후 [git id].github.io 로 원격 repository를 만든다.&lt;/li&gt;
-      &lt;li&gt;_config.yml 파일을 자신에게 맞게 수정한 후 push한다.&lt;/li&gt;
-      &lt;li&gt;(!중요)jekyll을 통해 _site 폴더를 빌드 한 후 모든 폴더를 source 브랜치로 푸시한다.
-        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
-        &lt;p&gt;왜냐하면 github에서 자체적으로 빌드해주는 테마가 있는데, 그 외의 테마는 master로 빌드해도 빌드해주지 않는다.&lt;br /&gt;
- 따라서 로컬에서 빌드한 후, 빌드한 전체 웹사이트를 source 브랜치로 커밋한다. (자체 빌드해도 source 브랜치에 생성하는듯)&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;향후 posting할 문서는 _post폴더에 md파일 작성 후, jekyll 실행하여 빌드 후에 전체 푸시&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;하루종일 github.io 구축한다고 공부를 하지 못했다.&lt;/li&gt;
-  &lt;li&gt;오늘도 알고리즘 문제를 한문제도 하지 못했다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;음,, 딱히 잘한 건 떠오르지 않는다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;시간관리를 잘 못한다는 걸 절실히 느꼈다. 뭔가 해보고 목표한 시간을 초과하면 보류한 후 다음 할 일을 하자.&lt;/li&gt;
-  &lt;li&gt;끝내지 못한 일에 얽매여서 다른 스케줄에 영향을 끼치지 말자&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;programmers 알고리즘 문제 풀기&lt;/li&gt;
-  &lt;li&gt;TCP/IP 쉽게, 더 쉽게 책 20일 완독 목표 (1월 6일부터 시작)&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Blog" /><category term="jekyll" /><category term="Github" /><category term="Git" /><summary type="html">byteadder, Program영역, git 설정, JVM</summary></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><category term="Blog" /><category term="jekyll" /><category term="Github" /><category term="Git" /><summary type="html">IntelliJ,</summary></entry></feed>
