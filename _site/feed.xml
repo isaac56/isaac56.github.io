@@ -1,4 +1,118 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-09T21:21:28+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">JVM 구조와 Java 런타임 구조</title><link href="http://localhost:4000/java/2021/01/09/JVM_Memory_Structure.html" rel="alternate" type="text/html" title="JVM 구조와 Java 런타임 구조" /><published>2021-01-09T00:00:00+09:00</published><updated>2021-01-09T00:00:00+09:00</updated><id>http://localhost:4000/java/2021/01/09/JVM_Memory_Structure</id><content type="html" xml:base="http://localhost:4000/java/2021/01/09/JVM_Memory_Structure.html">&lt;h2 id=&quot;jvm-메모리-구조와-자바가-실행될-때-jvm에서-일어나는-일을-알아보자&quot;&gt;JVM 메모리 구조와 자바가 실행될 때 JVM에서 일어나는 일을 알아보자&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-10T20:06:31+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">내부 클래스의 종류와 특징</title><link href="http://localhost:4000/java/2021/01/10/InnerClass.html" rel="alternate" type="text/html" title="내부 클래스의 종류와 특징" /><published>2021-01-10T00:00:00+09:00</published><updated>2021-01-10T00:00:00+09:00</updated><id>http://localhost:4000/java/2021/01/10/InnerClass</id><content type="html" xml:base="http://localhost:4000/java/2021/01/10/InnerClass.html">&lt;h2 id=&quot;내부-클래스를-전혀-모르고-있었다&quot;&gt;내부 클래스를 전혀 모르고 있었다.&lt;/h2&gt;
+
+&lt;p&gt;프로그래머스 알고리즘 문제를 풀다가 코드 테스트 목적으로 main함수에서 내부클래스의 인스턴스를 선언하려했다.&lt;/p&gt;
+
+&lt;p&gt;다음과 같은 에러가 나고 말았다.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;codesquad&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isaac&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;OuterClass&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;InnerClass&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;InnerClass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;InnerClass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;span style=&quot;color:red&quot;&gt;&lt;strong&gt;java: non-static variable this cannot be referenced from a static context&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;클래스 변수가 아닌 this 변수를 static context에서 참조할 수 없다고?&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;지금까지 내부클래스는 일반적인 클래스랑 똑같고, 코드 위치가 클래스 안에 존재할 뿐이라고 생각했다.&lt;/p&gt;
+
+&lt;p&gt;그냥 InnerClass.java 파일을 만들기 귀찮아서 OuterClass 내부에 선언한 클래스일 뿐인데 왜 이런 에러가 나지? 라고 생각했다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;찾아보니 InnerClass는 코드 위치만 다를뿐인 단순한 개념은 아니었다.&lt;/p&gt;
+
+&lt;p&gt;InnerClass는 OuterClass와 밀첩되어 OuterClass의 private 멤버를 포함한 모든 멤버에 접근할 수 있었고,&lt;/p&gt;
+
+&lt;p&gt;당연히 OuterClass의 인스턴스가 특정되어야 인스턴스 Inner Class도 사용할 수 있었다.&lt;/p&gt;
+
+&lt;p&gt;Static Context에서 사용할 수 없었던 것이 당연했던 것이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;outer class 의 static method에서 인스턴스 inner class를 선언한다면,&lt;/p&gt;
+
+&lt;p&gt;그 inner class의 인스턴스는 자신이 어떤 outer class 인스턴스와 연관된지 모르기 때문이었다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;내부-클래스의-종류와-특징&quot;&gt;내부 클래스의 종류와 특징&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;클래스 선언 위치&lt;/th&gt;
+      &lt;th&gt;내부 클래스&lt;/th&gt;
+      &lt;th&gt;특 징&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;인스턴스 멤버 변수&lt;/td&gt;
+      &lt;td&gt;인스턴스 클래스&lt;br /&gt;(Instance Class)&lt;/td&gt;
+      &lt;td&gt;외부 클래스의 인스턴스 멤버처럼 다루어진다, 주로 외부 클래스의 &lt;br /&gt;인스턴스멤버들과 관련된 작업에 사용될 목적으로 선언된다.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;스태틱 멤버 변수&lt;/td&gt;
+      &lt;td&gt;스태틱 클래스&lt;br /&gt;(Static Class)&lt;/td&gt;
+      &lt;td&gt;외부 클래스의 static멤버처럼 다루어진다. 주로 외부 클래스의 static멤버&lt;br /&gt;들과 관련된 작업에 사용될 목적으로 선언된다.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;지역 변수&lt;/td&gt;
+      &lt;td&gt;지역 클래스&lt;br /&gt;(Local Class)&lt;/td&gt;
+      &lt;td&gt;외부 클래스의 생성자 또는 메소드 블럭에서 사용하며, 선언된 영역 내부에서만&lt;br /&gt;사용할 수있다.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;지역 변수&lt;/td&gt;
+      &lt;td&gt;익명 클래스&lt;br /&gt;(Anonymouse Class)&lt;/td&gt;
+      &lt;td&gt;클래스의 선언과 객체의 생성을 동시에 하는 이름없는 클래스(일회용)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;(출처: Java의 정석)&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;내부 Class의 선언 위치에 따라 해당 Class를 사용할 수 있는 Context가 정해진다고 생각하면 될 것 같다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;인스턴스 클래스
+    &lt;ul&gt;
+      &lt;li&gt;접근 가능한 외부 클래스 멤버: 자신이 속한 OuterClass 인스턴스의 인스턴스 멤버, 스태틱 멤버&lt;/li&gt;
+      &lt;li&gt;Context: non-static Context&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;스태틱 클래스&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;접근 가능한 외부 클래스 멤버: OuterClass의 스태틱 멤버&lt;/li&gt;
+      &lt;li&gt;Context: static Context&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;지역 클래스 &amp;amp; 익명 클래스&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;접근 가능한 외부 클래스 멤버: 자신을 선언된 생성자 또는 메소드에서 접근가능한 OuterClass 멤버&lt;/p&gt;
+
+        &lt;p&gt;​				(Static Method라면 OuterClass의 스태틱 멤버, 일반 Method라면 OuterClass의 인스턴스 멤버, 스태틱 멤버)&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="Inner Class" /><category term="Nested Class" /></entry><entry><title type="html">JVM 구조와 Java 런타임 구조</title><link href="http://localhost:4000/java/2021/01/09/JVM_Memory_Structure.html" rel="alternate" type="text/html" title="JVM 구조와 Java 런타임 구조" /><published>2021-01-09T00:00:00+09:00</published><updated>2021-01-09T00:00:00+09:00</updated><id>http://localhost:4000/java/2021/01/09/JVM_Memory_Structure</id><content type="html" xml:base="http://localhost:4000/java/2021/01/09/JVM_Memory_Structure.html">&lt;h2 id=&quot;jvm-메모리-구조와-자바가-실행될-때-jvm에서-일어나는-일을-알아보자&quot;&gt;JVM 메모리 구조와 자바가 실행될 때 JVM에서 일어나는 일을 알아보자&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;출처: &lt;a href=&quot;https://jeong-pro.tistory.com/148&quot;&gt;https://jeong-pro.tistory.com/148&lt;/a&gt; (기본기를 쌓는 정아마추어 코딩블로그)&lt;/li&gt;
@@ -390,7 +504,37 @@ SSH를 인증하는 방식은 다음과 같다.&lt;/p&gt;
   &lt;li&gt;클라이언트(나)는 전달받은 랜덤 스트링을 개인키로 암호화하여 서버에게 보낸다.&lt;/li&gt;
   &lt;li&gt;서버는 받은 암호를 authorized_keys에 등록된 공개키로 해석한 후, 2번에서 보냈던 랜덤 스트링과 일치하는지 확인한다.&lt;/li&gt;
   &lt;li&gt;일치한다면 클라이언트(나)는 authorized_keys에 등록된 authorized client 중 하나이므로 인증완료된다.&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="Linux" /><category term="SSH" /></entry><entry><title type="html">리눅스 group이란, group 변경</title><link href="http://localhost:4000/linux/2021/01/08/userGroup.html" rel="alternate" type="text/html" title="리눅스 group이란, group 변경" /><published>2021-01-08T00:00:00+09:00</published><updated>2021-01-08T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/08/userGroup</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/08/userGroup.html">&lt;h2 id=&quot;리눅스에서-group이란&quot;&gt;리눅스에서 group이란&lt;/h2&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="Linux" /><category term="SSH" /></entry><entry><title type="html">Shell의 종류</title><link href="http://localhost:4000/linux/2021/01/08/Shell-type.html" rel="alternate" type="text/html" title="Shell의 종류" /><published>2021-01-08T00:00:00+09:00</published><updated>2021-01-08T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/08/Shell-type</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/08/Shell-type.html">&lt;p&gt;&lt;strong&gt;1. sh (bourne shell)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;가장 기본적인 쉘로 유닉스의 초기부터 사용되어 온 쉘이며 스크립트를 지원한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. ksh (korn shell)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;본 쉘을 확장한 쉘로 본 쉘 명령어를 모두 인식한다. 히스토리(history) 기능과 앨리어스(alias), 작업 제어 등의 기능이 추가되었다. 일반적으로 유닉스에서 가장 많이 사용되는 쉘이라고 한다. 명령행 편집기능을 제공&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. bash (Bourne Again Shell)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;리눅스에서 가장 많이 사용하는 쉘이다. C 쉘과 콘 쉘의 장점을 결합하여 작성되었으며, Bourne 쉘 문법의 명령어 셋을 제공하여 Bourne Shell과 호환되는 쉘로 GNU 프로젝트에 의해 만들어지고 배포되었다. 명령행 편집기능을 제공&lt;/p&gt;
+
+&lt;h3 id=&quot;c-쉘-계열의-쉘&quot;&gt;C 쉘 계열의 쉘&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;1. csh (C Shell)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;명령행 편집기능을 제공하지 않는다. C 언어 위주의 쉘로 처음 작성되었을 때에는 본 쉘이 가지고 있지 못한 기능들(작업제어, 명령어 히스토리 등)을 가지고 있었기 때문에 많이 사용되었다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. tcsh (TC Shell)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;csh의 기능을 강화한 쉘입니다. 명령행 편집기능을 제공한다.&lt;/p&gt;
+
+&lt;h3 id=&quot;centos-sulinux-asianux-등의-레드햇-계열의-리눅스-배포판에서-기본으로-사용되지-않는-쉘&quot;&gt;CentOS, SULinux, Asianux 등의 레드햇 계열의 리눅스 배포판에서 기본으로 사용되지 않는 쉘&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;1. Zsh 쉘&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;로그인쉘 및 쉘스크립트 명령어 프로세서로서 이용 가능한 유닉스 쉘입니다. 표준 쉘들 중에서 zsh는 ksh와 가장 유사하지만 많은 개선들을 포함합니다. zsh는 명령행 편집, 내장 스펠링 수정, history 등의 기능을 가집니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. ash 쉘&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;추가적인 기능들이 없이 본 쉘에 가장 부합하는 쉘입니다. 본 쉘은 상업적인 유닉스 시스템들에서 사용가능하므로, ash는 쉘 스크립트가 본 쉘에 잘 부합하는지 시험할 때 유용합니다. 또한 이것은 다른 sh- 호환 쉘에 비해 적은 메모리와 공간을 요구합니다.&lt;/p&gt;</content><author><name></name></author><category term="Linux" /><category term="Shell" /></entry><entry><title type="html">리눅스 group이란, group 변경</title><link href="http://localhost:4000/linux/2021/01/08/userGroup.html" rel="alternate" type="text/html" title="리눅스 group이란, group 변경" /><published>2021-01-08T00:00:00+09:00</published><updated>2021-01-08T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/08/userGroup</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/08/userGroup.html">&lt;h2 id=&quot;리눅스에서-group이란&quot;&gt;리눅스에서 group이란&lt;/h2&gt;
 
 &lt;p&gt;리눅스에선 group이라는 것이 있는데, 어떤 파일이나 폴더를 특정 User에게만 공유하고 싶을 때 사용한다.&lt;/p&gt;
 
@@ -446,37 +590,7 @@ SSH를 인증하는 방식은 다음과 같다.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;group1을 삭제 시킨다.&lt;/li&gt;
   &lt;li&gt;group1을 기본그룹으로 하는 user가 있다면 삭제가 안됨&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Linux" /><category term="group" /></entry><entry><title type="html">Shell의 종류</title><link href="http://localhost:4000/linux/2021/01/08/Shell-type.html" rel="alternate" type="text/html" title="Shell의 종류" /><published>2021-01-08T00:00:00+09:00</published><updated>2021-01-08T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/08/Shell-type</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/08/Shell-type.html">&lt;p&gt;&lt;strong&gt;1. sh (bourne shell)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;가장 기본적인 쉘로 유닉스의 초기부터 사용되어 온 쉘이며 스크립트를 지원한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2. ksh (korn shell)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;본 쉘을 확장한 쉘로 본 쉘 명령어를 모두 인식한다. 히스토리(history) 기능과 앨리어스(alias), 작업 제어 등의 기능이 추가되었다. 일반적으로 유닉스에서 가장 많이 사용되는 쉘이라고 한다. 명령행 편집기능을 제공&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;3. bash (Bourne Again Shell)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;리눅스에서 가장 많이 사용하는 쉘이다. C 쉘과 콘 쉘의 장점을 결합하여 작성되었으며, Bourne 쉘 문법의 명령어 셋을 제공하여 Bourne Shell과 호환되는 쉘로 GNU 프로젝트에 의해 만들어지고 배포되었다. 명령행 편집기능을 제공&lt;/p&gt;
-
-&lt;h3 id=&quot;c-쉘-계열의-쉘&quot;&gt;C 쉘 계열의 쉘&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;1. csh (C Shell)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;명령행 편집기능을 제공하지 않는다. C 언어 위주의 쉘로 처음 작성되었을 때에는 본 쉘이 가지고 있지 못한 기능들(작업제어, 명령어 히스토리 등)을 가지고 있었기 때문에 많이 사용되었다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2. tcsh (TC Shell)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;csh의 기능을 강화한 쉘입니다. 명령행 편집기능을 제공한다.&lt;/p&gt;
-
-&lt;h3 id=&quot;centos-sulinux-asianux-등의-레드햇-계열의-리눅스-배포판에서-기본으로-사용되지-않는-쉘&quot;&gt;CentOS, SULinux, Asianux 등의 레드햇 계열의 리눅스 배포판에서 기본으로 사용되지 않는 쉘&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;1. Zsh 쉘&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;로그인쉘 및 쉘스크립트 명령어 프로세서로서 이용 가능한 유닉스 쉘입니다. 표준 쉘들 중에서 zsh는 ksh와 가장 유사하지만 많은 개선들을 포함합니다. zsh는 명령행 편집, 내장 스펠링 수정, history 등의 기능을 가집니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2. ash 쉘&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;추가적인 기능들이 없이 본 쉘에 가장 부합하는 쉘입니다. 본 쉘은 상업적인 유닉스 시스템들에서 사용가능하므로, ash는 쉘 스크립트가 본 쉘에 잘 부합하는지 시험할 때 유용합니다. 또한 이것은 다른 sh- 호환 쉘에 비해 적은 메모리와 공간을 요구합니다.&lt;/p&gt;</content><author><name></name></author><category term="Linux" /><category term="Shell" /></entry><entry><title type="html">21년 1월 7일</title><link href="http://localhost:4000/til/2021/01/07/TIL4.html" rel="alternate" type="text/html" title="21년 1월 7일" /><published>2021-01-07T00:00:00+09:00</published><updated>2021-01-07T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/07/TIL4</id><content type="html" xml:base="http://localhost:4000/til/2021/01/07/TIL4.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Linux" /><category term="group" /></entry><entry><title type="html">21년 1월 7일</title><link href="http://localhost:4000/til/2021/01/07/TIL4.html" rel="alternate" type="text/html" title="21년 1월 7일" /><published>2021-01-07T00:00:00+09:00</published><updated>2021-01-07T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/07/TIL4</id><content type="html" xml:base="http://localhost:4000/til/2021/01/07/TIL4.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;Linux SSH 서버 설치 및 config 방법 (Ubuntu)&lt;/p&gt;
@@ -690,64 +804,4 @@ fi
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Linux" /></entry><entry><title type="html">NAT이란? Static NAT, Dynamic NAT, PAT 비교</title><link href="http://localhost:4000/network/2021/01/07/NAT.html" rel="alternate" type="text/html" title="NAT이란? Static NAT, Dynamic NAT, PAT 비교" /><published>2021-01-07T00:00:00+09:00</published><updated>2021-01-07T00:00:00+09:00</updated><id>http://localhost:4000/network/2021/01/07/NAT</id><content type="html" xml:base="http://localhost:4000/network/2021/01/07/NAT.html">&lt;h1 id=&quot;nat&quot;&gt;NAT&lt;/h1&gt;
-
-&lt;p&gt;NAT은 Network Address Translation의 약자로, 네트워크 주소를 변환해주는 방식이라고 할 수 있다.&lt;/p&gt;
-
-&lt;p&gt;Network Address는 우리가 흔히 아는 IP주소라고 생각하면 되는데, 이러한 변환 방식이 생겨난 이유는 다음과 같다.&lt;/p&gt;
-
-&lt;p&gt;IPv4방식으로 표현할 수 있는 주소 개수에는 한계가 있는데, 때문에 현대의 수많은 장비(PC, 스마트폰 등)들을 수용할 수없다.&lt;/p&gt;
-
-&lt;p&gt;그렇다고 IPv6로 한번에 바꾸기에는 이미 IPv4를 사용하고 있는 수많은 서비스들에 장애가 발생할 수 있다.&lt;/p&gt;
-
-&lt;p&gt;따라서 여러 대의 기기들을 하나의 로컬 망으로 묶고 로컬 망 내의 사설 IP를 공인 IP로 맵핑시켜주는 방식을 통해,&lt;/p&gt;
-
-&lt;p&gt;적은 공인 IP를 더 많은 장비들이 사용할 수 있게 해준다.&lt;/p&gt;
-
-&lt;p&gt;여기서, 사설 IP와 공인 IP를 맵핑해주는 방식을 NAT이라고 한다.&lt;/p&gt;
-
-&lt;h2 id=&quot;static-nat&quot;&gt;Static NAT&lt;/h2&gt;
-
-&lt;p&gt;공인IP와 사설IP를 1:1로 맵핑시켜준다.&lt;/p&gt;
-
-&lt;p&gt;예를 들어, 192.168.0.20 이라는 사설 IP와 121.156.242.211이라는 공인 IP가 한번 맵핑 되면 192.168.0.20은 항상 121.156.242.211와 묶여있게 된다.&lt;/p&gt;
-
-&lt;p&gt;공인 IP주소와 실제로 사용하는 장비의 개수가 1:1이기 때문에, 공인 IP주소를 아낄수는 없다.&lt;/p&gt;
-
-&lt;h2 id=&quot;dynamic-nat&quot;&gt;Dynamic NAT&lt;/h2&gt;
-
-&lt;p&gt;공인IP와 사설IP를 1:1 맵핑 시켜주지만, 동적으로 맵핑되기 때문에 개념적으로 PC의 공인 IP는 고정되어 있지 않다.&lt;/p&gt;
-
-&lt;p&gt;PC가 사용중이면 그 PC의 사설IP와 공인IP가 맵핑되어 있지만, PC가 사용중이지 않는다면 맵핑되어 있는 공인 IP가 반환되고,&lt;/p&gt;
-
-&lt;p&gt;맵핑이 필요한 다른 PC가 해당 공인IP를 사용할 수 있게 된다.&lt;/p&gt;
-
-&lt;p&gt;이런 식으로 동적 할당해줌으로써 더 적은 공인IP로 여러 PC가 인터넷에 연결할 수 있게 된다.&lt;/p&gt;
-
-&lt;h2 id=&quot;patport-address-translation&quot;&gt;PAT(Port Address Translation)&lt;/h2&gt;
-
-&lt;p&gt;공인IP 1개와 사설 IP여러개를 맵핑하여 사용할 수 있게 해주는데, 공인IP의 포트번호 별로 사설IP의 특정 포트에 맵핑해주는 방식이다.&lt;/p&gt;
-
-&lt;p&gt;공유기에서 흔히 말하는 포트 포워딩이 이러한 방식이라고 볼 수 있다.&lt;/p&gt;
-
-&lt;p&gt;예를 들어, 사설 IP가 192.168.0.1~10 이고 공인 IP가 121.156.242.211이라고 하자.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;121.156.242.211:11 &amp;lt;=&amp;gt; 192.168.0.1:22&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;121.156.242.211:231 &amp;lt;=&amp;gt; 192.168.0.5:22&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;121.156.242.211:4000 &amp;lt;=&amp;gt; 192.168.0.3:900&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;121.156.242.211:3219 &amp;lt;=&amp;gt; 192.168.0.8:11&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;121.156.242.211:24442 &amp;lt;=&amp;gt; 192.168.0.10:22&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;이런 식으로 맵핑하여 하나의 공인 IP로 여러 대의 PC를 사용할 수 있게 된다.&lt;/p&gt;</content><author><name></name></author><category term="Network" /><category term="NAT" /></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><category term="Linux" /></entry></feed>

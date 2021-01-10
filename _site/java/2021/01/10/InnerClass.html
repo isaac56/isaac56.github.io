@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Dev.Isaac" /></head>
+<style>@import url(/public/css/syntax/monokai.css);</style>
+  <title>Dev.Isaac</title>
+  <!-- <link href="/public/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link href="/public/css/style.css" rel="stylesheet">
+  <body>
+  	<div class="container"> 
+		<div class="sidebar">
+			<div class="sidebar-item sidebar-header">
+	<div class='sidebar-brand'>
+		<a href="/about/">Dev.Isaac</a>
+	</div>
+	<p class="lead">정이삭 공부블로그</p></div>
+
+<div class="sidebar-item sidebar-nav">
+	<ul class="nav">
+      <li class="nav-title">Pages</li>
+	  <li>
+	  	<a class="nav-item" href="/">Articles</a>
+	  </li>
+	  
+	  
+	    
+	  
+	    
+	      
+	        <li>
+	        	<a class="nav-item" href="/about/">
+	            	About
+	            </a>
+	        </li>
+	      
+	    
+	  
+	    
+	      
+	    
+	  
+	    
+	  
+	    
+	  
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-nav">
+  	<ul class="nav">
+			<li class="nav-title">Categories</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#TIL">
+				<span class="name">TIL</span>
+				<span class="badge">6</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Linux">
+				<span class="name">Linux</span>
+				<span class="badge">5</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Network">
+				<span class="name">Network</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Java">
+				<span class="name">Java</span>
+				<span class="badge">2</span>
+	    	</a>
+ 		</li>
+	    
+	  </nav>
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-footer">
+	<p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
+</div>
+		</div>
+		<div class="content">
+			<article class="post">
+	<header class="post-header">
+		<div class="post-title"> 
+			내부 클래스의 종류와 특징
+		</div>
+		<time class="post-date dt-published" datetime="2021-01-10T00:00:00+09:00" itemprop="datePublished">2021/01/10
+		</time>		
+	</header>
+
+	<div class="post-content">
+		<h2 id="내부-클래스를-전혀-모르고-있었다">내부 클래스를 전혀 모르고 있었다.</h2>
+
+<p>프로그래머스 알고리즘 문제를 풀다가 코드 테스트 목적으로 main함수에서 내부클래스의 인스턴스를 선언하려했다.</p>
+
+<p>다음과 같은 에러가 나고 말았다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="n">codesquad</span><span class="o">.</span><span class="na">isaac</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">OuterClass</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="n">a1</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">InnerClass</span> <span class="n">t</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">InnerClass</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">InnerClass</span><span class="o">{</span>
+        <span class="kd">public</span> <span class="kt">int</span> <span class="n">b1</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><span style="color:red"><strong>java: non-static variable this cannot be referenced from a static context</strong></span></p>
+
+<p>클래스 변수가 아닌 this 변수를 static context에서 참조할 수 없다고?</p>
+
+<p><br /></p>
+
+<p>지금까지 내부클래스는 일반적인 클래스랑 똑같고, 코드 위치가 클래스 안에 존재할 뿐이라고 생각했다.</p>
+
+<p>그냥 InnerClass.java 파일을 만들기 귀찮아서 OuterClass 내부에 선언한 클래스일 뿐인데 왜 이런 에러가 나지? 라고 생각했다.</p>
+
+<p><br /></p>
+
+<p>찾아보니 InnerClass는 코드 위치만 다를뿐인 단순한 개념은 아니었다.</p>
+
+<p>InnerClass는 OuterClass와 밀첩되어 OuterClass의 private 멤버를 포함한 모든 멤버에 접근할 수 있었고,</p>
+
+<p>당연히 OuterClass의 인스턴스가 특정되어야 인스턴스 Inner Class도 사용할 수 있었다.</p>
+
+<p>Static Context에서 사용할 수 없었던 것이 당연했던 것이다.</p>
+
+<p><br /></p>
+
+<p>outer class 의 static method에서 인스턴스 inner class를 선언한다면,</p>
+
+<p>그 inner class의 인스턴스는 자신이 어떤 outer class 인스턴스와 연관된지 모르기 때문이었다.</p>
+
+<p><br /></p>
+
+<h2 id="내부-클래스의-종류와-특징">내부 클래스의 종류와 특징</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>클래스 선언 위치</th>
+      <th>내부 클래스</th>
+      <th>특 징</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>인스턴스 멤버 변수</td>
+      <td>인스턴스 클래스<br />(Instance Class)</td>
+      <td>외부 클래스의 인스턴스 멤버처럼 다루어진다, 주로 외부 클래스의 <br />인스턴스멤버들과 관련된 작업에 사용될 목적으로 선언된다.</td>
+    </tr>
+    <tr>
+      <td>스태틱 멤버 변수</td>
+      <td>스태틱 클래스<br />(Static Class)</td>
+      <td>외부 클래스의 static멤버처럼 다루어진다. 주로 외부 클래스의 static멤버<br />들과 관련된 작업에 사용될 목적으로 선언된다.</td>
+    </tr>
+    <tr>
+      <td>지역 변수</td>
+      <td>지역 클래스<br />(Local Class)</td>
+      <td>외부 클래스의 생성자 또는 메소드 블럭에서 사용하며, 선언된 영역 내부에서만<br />사용할 수있다.</td>
+    </tr>
+    <tr>
+      <td>지역 변수</td>
+      <td>익명 클래스<br />(Anonymouse Class)</td>
+      <td>클래스의 선언과 객체의 생성을 동시에 하는 이름없는 클래스(일회용)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>(출처: Java의 정석)</p>
+
+<p><br /></p>
+
+<p><strong>내부 Class의 선언 위치에 따라 해당 Class를 사용할 수 있는 Context가 정해진다고 생각하면 될 것 같다.</strong></p>
+
+<ul>
+  <li>인스턴스 클래스
+    <ul>
+      <li>접근 가능한 외부 클래스 멤버: 자신이 속한 OuterClass 인스턴스의 인스턴스 멤버, 스태틱 멤버</li>
+      <li>Context: non-static Context</li>
+    </ul>
+  </li>
+  <li>
+    <p>스태틱 클래스</p>
+
+    <ul>
+      <li>접근 가능한 외부 클래스 멤버: OuterClass의 스태틱 멤버</li>
+      <li>Context: static Context</li>
+    </ul>
+  </li>
+  <li>
+    <p>지역 클래스 &amp; 익명 클래스</p>
+
+    <ul>
+      <li>
+        <p>접근 가능한 외부 클래스 멤버: 자신을 선언된 생성자 또는 메소드에서 접근가능한 OuterClass 멤버</p>
+
+        <p>​				(Static Method라면 OuterClass의 스태틱 멤버, 일반 Method라면 OuterClass의 인스턴스 멤버, 스태틱 멤버)</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+	</div>
+</article>
+		</div>
+	</div>
+  </body>
+</html>
