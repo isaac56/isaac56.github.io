@@ -1,45 +1,146 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-11T00:02:36+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 1월 10일</title><link href="http://localhost:4000/til/2021/01/10/TIL7.html" rel="alternate" type="text/html" title="21년 1월 10일" /><published>2021-01-10T00:00:00+09:00</published><updated>2021-01-10T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/10/TIL7</id><content type="html" xml:base="http://localhost:4000/til/2021/01/10/TIL7.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-11T20:23:41+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">Linked List</title><link href="http://localhost:4000/data%20structure/2021/01/11/LinkedList.html" rel="alternate" type="text/html" title="Linked List" /><published>2021-01-11T00:00:00+09:00</published><updated>2021-01-11T00:00:00+09:00</updated><id>http://localhost:4000/data%20structure/2021/01/11/LinkedList</id><content type="html" xml:base="http://localhost:4000/data%20structure/2021/01/11/LinkedList.html">&lt;h2 id=&quot;linked-list&quot;&gt;Linked List&lt;/h2&gt;
+
+&lt;p&gt;Node 또는 Vertax라 불리는 자료형이 연결된 형태의 자료구조이다.&lt;/p&gt;
+
+&lt;p&gt;일반적으로 Node는 자신의 Data인 Value값과 자신의 다음 Node를 가리키는 포인터값(편의상 Next라고 하겠다.)으로 이루어져 있다.&lt;/p&gt;
+
+&lt;p&gt;Linked List의 장점은 삽입 및 삭제가 빠르다는 것인데, 삽입/삭제 행위의 시간복잡도는 O(1)이다.&lt;/p&gt;
+
+&lt;p&gt;단순히 추가하려는 위치의 Node의 Next값을 새로운 노드로 바꿔주거나, 지우려는 Node이전의 Next값을 바꿔주는 식으로 삽입/삭제가 이루어지기 때문이다.&lt;/p&gt;
+
+&lt;p&gt;(배열은 삽입/삭제 시 전체 Element를 옮겨줘야해서 시간복잡도가 O(n)이다.)&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;그러나 큰 착각을 할 수 있는게 Linked List는 맨 앞 요소부터 순차접근을 해야하기 때문에, 특정 위치에 삽입하거나 삭제하는 경우, 해당 위치를 찾아가는데 O(n)이 소요되어서 실질적으로 1.찾아서 2.지운다 의 행위는 O(n)이 걸린다고 할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;doubly-circular-linked-list-구현---java&quot;&gt;Doubly Circular Linked List 구현 - Java&lt;/h2&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;Java 내부클래스 개념 공부 (자바의 정석 책)&lt;/li&gt;
-  &lt;li&gt;Java 내부클래스 정리하여 게시 &lt;a href=&quot;https://isaac56.github.io/java/2021/01/10/InnerClass.html&quot;&gt;바로가기&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;프로그래머스 더맵게
-    &lt;ul&gt;
-      &lt;li&gt;PriorityQueue를 사용하여 푸는 간단한 문제이다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;프로그래머스 디스크컨트롤러
-    &lt;ul&gt;
-      &lt;li&gt;PrirorityQueue를 사용하여 풀었다.&lt;/li&gt;
-      &lt;li&gt;하드디스크에 요청작업이 들어왔을 때, 처리할 수 있는 요청중에서 작업시간이 가장 작은 것부터 처리해야 평균 처리시간이 가장 낮다는 사실을 알아야 한다.&lt;/li&gt;
-      &lt;li&gt;해당 사실을 모를때, 차트 상에서 시간이 누적되는 개념을 그림적으로 생각해 아이디어를 얻었다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+  &lt;li&gt;개념만 아는 상태에서 어떤 코드도 참조하지 않고 한번 구현해보았다. (add, remove만 구현)&lt;/li&gt;
+  &lt;li&gt;코드가 지저분하여 너무 찜찜하다 ㅠㅠ&lt;/li&gt;
+  &lt;li&gt;Java Collections에 있는 LinkedList와 API를 동일하게 구성하여 JUnit으로 테스트해보았다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DoublyCircularLinkedList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Node&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;조급하다. 자꾸 마음이 불안하다. 마인드 컨트롤이 필요하다.&lt;/li&gt;
-&lt;/ul&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Node&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Node&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;toAdd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;toAdd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;next&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;toAdd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;prev&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;toAdd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;prev&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;toAdd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;toAdd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;prev&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;next&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;toAdd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 
-&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;1아니면 0이라는 느낌으로 열심히 안하면 아예 안하려는 습관이 있었는데, 조금이라도 오늘 할 일을 하였다.&lt;/li&gt;
-&lt;/ul&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;Node&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;toAdd&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;toAdd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;next&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;toAdd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;toAdd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;prev&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;toAdd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;head&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;toAdd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;prev&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;toAdd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 
-&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;주말에 안 쉬면 평일에 힘들거 같다는 강박에 갖힌것 같다.&lt;/li&gt;
-  &lt;li&gt;주말 계획은 따로 세워서 널널하게 가보는게 어떨까 싶다.&lt;/li&gt;
-&lt;/ul&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 
-&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;코드스쿼드 미션 진행&lt;/li&gt;
-  &lt;li&gt;프로그래머스 알고리즘 풀기&lt;/li&gt;
-  &lt;li&gt;자바의정석 읽기&lt;/li&gt;
-  &lt;li&gt;TCP/IP 쉽게 더 쉽게 읽기&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="내부클래스" /></entry><entry><title type="html">내부 클래스의 종류와 특징</title><link href="http://localhost:4000/java/2021/01/10/InnerClass.html" rel="alternate" type="text/html" title="내부 클래스의 종류와 특징" /><published>2021-01-10T00:00:00+09:00</published><updated>2021-01-10T00:00:00+09:00</updated><id>http://localhost:4000/java/2021/01/10/InnerClass</id><content type="html" xml:base="http://localhost:4000/java/2021/01/10/InnerClass.html">&lt;h2 id=&quot;내부-클래스를-전혀-모르고-있었다&quot;&gt;내부 클래스를 전혀 모르고 있었다.&lt;/h2&gt;
+        &lt;span class=&quot;nc&quot;&gt;Node&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;toAdd&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;prev&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;toAdd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;head&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;toAdd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;nc&quot;&gt;Node&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;curNode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;curIdx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;curNode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;next&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;head&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;curIdx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;curNode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;curNode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;curIdx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;curNode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;toAdd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Node&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;prev&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;next&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;prev&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;prev&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;next&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;prev&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;Node&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;curNode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;curNode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;next&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;curNode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)){&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;curNode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;curNode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;curNode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)){&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;curNode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;curNode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;next&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;head&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;head&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;curNode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;curNode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Node&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Node&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prev&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;next&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Node&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getNext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Node&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getPrev&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;prev&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;그림으로-보면-이해가-쉬울-것-같아서-그림만-넣었다&quot;&gt;그림으로 보면 이해가 쉬울 것 같아서 그림만 넣었다.&lt;/h1&gt;
+
+&lt;h2 id=&quot;single-linked-list&quot;&gt;Single Linked List&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/LinkedList/1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;doubly-linked-list&quot;&gt;Doubly Linked List&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/LinkedList/2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;circular-linked-list&quot;&gt;Circular Linked List&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/LinkedList/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;doubly-circular-linked-list&quot;&gt;Doubly Circular Linked List&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/LinkedList/4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="자료구조" /><category term="Linked List" /></entry><entry><title type="html">내부 클래스의 종류와 특징</title><link href="http://localhost:4000/java/2021/01/10/InnerClass.html" rel="alternate" type="text/html" title="내부 클래스의 종류와 특징" /><published>2021-01-10T00:00:00+09:00</published><updated>2021-01-10T00:00:00+09:00</updated><id>http://localhost:4000/java/2021/01/10/InnerClass</id><content type="html" xml:base="http://localhost:4000/java/2021/01/10/InnerClass.html">&lt;h2 id=&quot;내부-클래스를-전혀-모르고-있었다&quot;&gt;내부 클래스를 전혀 모르고 있었다.&lt;/h2&gt;
 
 &lt;p&gt;프로그래머스 알고리즘 문제를 풀다가 코드 테스트 목적으로 main함수에서 내부클래스의 인스턴스를 선언하려했다.&lt;/p&gt;
 
@@ -153,7 +254,48 @@
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="Inner Class" /><category term="Nested Class" /></entry><entry><title type="html">JVM 구조와 Java 런타임 구조</title><link href="http://localhost:4000/java/2021/01/09/JVM_Memory_Structure.html" rel="alternate" type="text/html" title="JVM 구조와 Java 런타임 구조" /><published>2021-01-09T00:00:00+09:00</published><updated>2021-01-09T00:00:00+09:00</updated><id>http://localhost:4000/java/2021/01/09/JVM_Memory_Structure</id><content type="html" xml:base="http://localhost:4000/java/2021/01/09/JVM_Memory_Structure.html">&lt;h2 id=&quot;jvm-메모리-구조와-자바가-실행될-때-jvm에서-일어나는-일을-알아보자&quot;&gt;JVM 메모리 구조와 자바가 실행될 때 JVM에서 일어나는 일을 알아보자&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="Inner Class" /><category term="Nested Class" /></entry><entry><title type="html">21년 1월 10일</title><link href="http://localhost:4000/til/2021/01/10/TIL7.html" rel="alternate" type="text/html" title="21년 1월 10일" /><published>2021-01-10T00:00:00+09:00</published><updated>2021-01-10T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/10/TIL7</id><content type="html" xml:base="http://localhost:4000/til/2021/01/10/TIL7.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Java 내부클래스 개념 공부 (자바의 정석 책)&lt;/li&gt;
+  &lt;li&gt;Java 내부클래스 정리하여 게시 &lt;a href=&quot;https://isaac56.github.io/java/2021/01/10/InnerClass.html&quot;&gt;바로가기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;프로그래머스 더맵게
+    &lt;ul&gt;
+      &lt;li&gt;PriorityQueue를 사용하여 푸는 간단한 문제이다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;프로그래머스 디스크컨트롤러
+    &lt;ul&gt;
+      &lt;li&gt;PrirorityQueue를 사용하여 풀었다.&lt;/li&gt;
+      &lt;li&gt;하드디스크에 요청작업이 들어왔을 때, 처리할 수 있는 요청중에서 작업시간이 가장 작은 것부터 처리해야 평균 처리시간이 가장 낮다는 사실을 알아야 한다.&lt;/li&gt;
+      &lt;li&gt;해당 사실을 모를때, 차트 상에서 시간이 누적되는 개념을 그림적으로 생각해 아이디어를 얻었다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;조급하다. 자꾸 마음이 불안하다. 마인드 컨트롤이 필요하다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;1아니면 0이라는 느낌으로 열심히 안하면 아예 안하려는 습관이 있었는데, 조금이라도 오늘 할 일을 하였다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;주말에 안 쉬면 평일에 힘들거 같다는 강박에 갖힌것 같다.&lt;/li&gt;
+  &lt;li&gt;주말 계획은 따로 세워서 널널하게 가보는게 어떨까 싶다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;코드스쿼드 미션 진행&lt;/li&gt;
+  &lt;li&gt;프로그래머스 알고리즘 풀기&lt;/li&gt;
+  &lt;li&gt;자바의정석 읽기&lt;/li&gt;
+  &lt;li&gt;TCP/IP 쉽게 더 쉽게 읽기&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="내부클래스" /></entry><entry><title type="html">JVM 구조와 Java 런타임 구조</title><link href="http://localhost:4000/java/2021/01/09/JVM_Memory_Structure.html" rel="alternate" type="text/html" title="JVM 구조와 Java 런타임 구조" /><published>2021-01-09T00:00:00+09:00</published><updated>2021-01-09T00:00:00+09:00</updated><id>http://localhost:4000/java/2021/01/09/JVM_Memory_Structure</id><content type="html" xml:base="http://localhost:4000/java/2021/01/09/JVM_Memory_Structure.html">&lt;h2 id=&quot;jvm-메모리-구조와-자바가-실행될-때-jvm에서-일어나는-일을-알아보자&quot;&gt;JVM 메모리 구조와 자바가 실행될 때 JVM에서 일어나는 일을 알아보자&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;출처: &lt;a href=&quot;https://jeong-pro.tistory.com/148&quot;&gt;https://jeong-pro.tistory.com/148&lt;/a&gt; (기본기를 쌓는 정아마추어 코딩블로그)&lt;/li&gt;
@@ -631,55 +773,167 @@ zip &lt;span class=&quot;nv&quot;&gt;$NAME&lt;/span&gt; &lt;span class=&quot;k&q
   &lt;li&gt;알고리즘 공부&lt;/li&gt;
   &lt;li&gt;자바의정석 책 공부&lt;/li&gt;
   &lt;li&gt;TCP/IP 공부&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="SSH" /><category term="shell" /></entry><entry><title type="html">SSH root 권한으로 접속 허용하기</title><link href="http://localhost:4000/linux/2021/01/07/permitSSH_Root.html" rel="alternate" type="text/html" title="SSH root 권한으로 접속 허용하기" /><published>2021-01-07T00:00:00+09:00</published><updated>2021-01-07T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/07/permitSSH_Root</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/07/permitSSH_Root.html">&lt;h2 id=&quot;ssh-root-권한으로-접속-허용하기&quot;&gt;SSH root 권한으로 접속 허용하기&lt;/h2&gt;
-
+&lt;/ul&gt;</content><author><name></name></author><category term="SSH" /><category term="shell" /></entry><entry><title type="html">21년 1월 7일</title><link href="http://localhost:4000/til/2021/01/07/TIL4.html" rel="alternate" type="text/html" title="21년 1월 7일" /><published>2021-01-07T00:00:00+09:00</published><updated>2021-01-07T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/07/TIL4</id><content type="html" xml:base="http://localhost:4000/til/2021/01/07/TIL4.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;SCP 명령어로 remote의 특정 폴더에 접근하려면 root권한이 필요할 때가 있다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;분명히 root 비밀번호가 맞았는데도 자꾸 Permission denied, please try again. 가 뜬다면 ssh 설정을 확인해야한다.&lt;/p&gt;
+    &lt;p&gt;Linux SSH 서버 설치 및 config 방법 (Ubuntu)&lt;/p&gt;
 
     &lt;ol&gt;
       &lt;li&gt;
-        &lt;p&gt;remote(ubuntu 기준) 로 들어가서 /etc/ssh/sshd_config 파일을 연다&lt;/p&gt;
+        &lt;p&gt;linux에 SSH가 설치되어 있지 않는 경우 SSH를 설치한다&lt;/p&gt;
 
-        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vi /etc/ssh/sshd_config
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#SSH 서버 클라이언트 모두 설치&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get ssh
+&lt;span class=&quot;c&quot;&gt;#서버만 설치하고 싶으면&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get openssh-server
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
       &lt;/li&gt;
       &lt;li&gt;
-        &lt;p&gt;파일 내의 PermitRootLogin 을 yes로 바꿔준다. (없으면 추가한다.)&lt;/p&gt;
+        &lt;p&gt;/etc/ssh/sshd_config 파일을 통해 SSH 설정을 변경할 수 있다.&lt;/p&gt;
 
-        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;PermitRootLogin &lt;span class=&quot;nb&quot;&gt;yes&lt;/span&gt;
+        &lt;p&gt;참고: &lt;a href=&quot;http://programmingskills.net/archives/315&quot;&gt;http://programmingskills.net/archives/315&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Virtual Box으로 실행한 ubuntu에 ssh로 접속하기 (MAC 기준)&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;VM 내부 ubuntu에서 ifconfig 명령어로 사설 IP를 확인한다.&lt;/p&gt;
+
+        &lt;p&gt;&lt;img src=&quot;/public/img/210107/1.png&quot; alt=&quot;image-20210107133137703&quot; style=&quot;zoom:33%;&quot; /&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;기존 OS (host OS) 에서 사설 IP를 확인한다.&lt;/p&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;맥은 터미널에서 ifconfg 또는 시스템환경설정 - 네트워크에서 확인&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;VirtualBox 에서 ubuntu 설정 - 네트워크 - 고급 - 포트포워드 클릭&lt;/p&gt;
+
+        &lt;p&gt;&lt;img src=&quot;/public/img/210107/2.png&quot; alt=&quot;image-20210107134958414&quot; style=&quot;zoom: 33%;&quot; /&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;호스트 IP에 원래 OS의 IP주소, 호스트 포트에 접속할 때 사용할 호스트 포트를 입력한다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;게스트 IP에 vm내부의 ubuntu IP주소를 입력하고, 게스트 포트에는 22를 입력한다.(SSH의 기본 포트는 22이고, unbuntu내에서 ssh 포트를 수정하였다면 수정한 포트 번호를 입력한다.)&lt;/p&gt;
+
+        &lt;p&gt;&lt;img src=&quot;/public/img/210107/3.png&quot; alt=&quot;image-20210107135348581&quot; style=&quot;zoom:50%;&quot; /&gt;&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;맥에는 기본적으로 tree명령어가 없기 때문에 tree명령어를 설치해보았다.&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;Homebrew는 Apple에서 제공하지 않는 패키지 관리자를 설치할 수 있다.&lt;/p&gt;
+
+        &lt;p&gt;Homebrew를 설치한다&lt;/p&gt;
+
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/bin/bash &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
       &lt;/li&gt;
       &lt;li&gt;
-        &lt;p&gt;데몬 명령어로 ssh를 재시작시켜 변경된 설정을 적용한다.&lt;/p&gt;
+        &lt;p&gt;homebrew를 통해 tree명령어를 설치한다&lt;/p&gt;
 
-        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;systemctl restart ssh
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;tree
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
       &lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Linux" /><category term="SSH" /></entry><entry><title type="html">su: Authentication failure 발생하는 이유</title><link href="http://localhost:4000/linux/2021/01/07/rootPwdSet.html" rel="alternate" type="text/html" title="su: Authentication failure 발생하는 이유" /><published>2021-01-07T00:00:00+09:00</published><updated>2021-01-07T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/07/rootPwdSet</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/07/rootPwdSet.html">&lt;h1 id=&quot;root-비번-설정&quot;&gt;Root 비번 설정&lt;/h1&gt;
-
-&lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;ubuntu를 깔고 사용자 등록 후 su 명령어를 통해 root로 전환하려는데 에러가 났다.&lt;/p&gt;
+    &lt;p&gt;코드스쿼드 미션으로 간단한 shell script를 짜보았다.&lt;/p&gt;
 
-    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;su : Authentication failure
+    &lt;p&gt;사용한 것은 아래에 적어놓았고 기본적인 쉘스크립트 문법은 구글링해서 익히자.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;해당 폴더가 존재하는지 확인&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if [ ! -d &amp;lt;폴더명&amp;gt; ]; then
+  #do
+fi
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
 
     &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;나의 경우 root 비밀번호 설정을 하지 않아서 나는 에러였다.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;root 비밀번호를 설정한다.&lt;/p&gt;
+      &lt;li&gt;해당 파일이 존재하는지 확인&lt;/li&gt;
+    &lt;/ul&gt;
 
-        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;passwd root
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if [ ! -f &amp;lt;파일명&amp;gt; ]; then
+  #do
+fi
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;특정 형식의 파일이 존재하는지 확인&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if [ $(find &amp;lt;폴더&amp;gt; -name &amp;lt;파일형식(*.cs 등)&amp;gt; | wc -l) -eq 0 ]; then
+	#do
+fi
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;특정 형식의 파일만 zip로 압축 (tar도 거의 동일)&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;find &amp;lt;폴더&amp;gt; -name &amp;lt;파일형식(*.cs 등)&amp;gt; | xargs zip &amp;lt;압축파일명&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;scp로 remote에 파일 복사&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scp -P &amp;lt;포트번호&amp;gt; &amp;lt;복사할 파일명&amp;gt; &amp;lt;remote계정&amp;gt;@&amp;lt;remote IP&amp;gt;:&amp;lt;remote 파일경로(이 경로의 파일명으로 복사됨)&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;프로그래머스에서 [다리를 지나는 트럭], [프린터] 2문제를 풀었다.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;두 문제 다 queue를 이용하여 푸는 문제였다. 이미 풀었던 문제를 Java로 풀어보았다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Java의 정석과 TCP/IP 더 쉽게 책을 보지 못했다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;VM을 설치하여 ubuntu를 설치하고, SSH를 연결한 후, 호스트에서 특정 파일을 압축하여 게스트OS로 보내는 과정을 쉘 스크립트로 자동화 하였다.
+    &lt;ul&gt;
+      &lt;li&gt;SSH를 연결하는 과정에서 포트포워딩을 해보았고 이를 통해 NAT이라는 네트워크 개념을 익힌 후 글로 정리하였다.&lt;/li&gt;
+      &lt;li&gt;SCP로 파일을 전송하는 과정에서 permission denied를 겪었고 이를 통해, Linux에서 Directory의 소유자, 그룹에 따른 권한이 어떻게 적용되는지 알게 되었다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;코드스쿼드에서 준 미션을 단순히 풀기만 함으로써 네트워크 관련 지식을 검색하고 알게 되어 좋았다.&lt;/li&gt;
+  &lt;li&gt;내가 정한 계획을 지키지 못했지만, 게을러서 지키지 못했다기보다 다른 공부거리가 생겨 이를 하다 보니 시간이 늦어버렸다.
+    &lt;ul&gt;
+      &lt;li&gt;오늘 호눅스가 얘기한 말을 기억하며,
+        &lt;ol&gt;
+          &lt;li&gt;전에 세웠던 계획을 다 소화 못하면 그것을 뒤로 미루지 말고 계획을 줄여서 새로 세우자!&lt;/li&gt;
+          &lt;li&gt;내가 지치면 암것도 못한다. 길게 보고 최선을 다하자&lt;/li&gt;
+        &lt;/ol&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Linux" /></entry></feed>
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;프로그래머스 2문제 풀기&lt;/li&gt;
+  &lt;li&gt;Java의 정석 읽기&lt;/li&gt;
+  &lt;li&gt;TCP/IP쉽게 더쉽게 읽기&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Blog" /><category term="jekyll" /><category term="Github" /><category term="Git" /></entry></feed>
