@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-11T20:24:24+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">Linked List</title><link href="http://localhost:4000/data%20structure/2021/01/11/LinkedList.html" rel="alternate" type="text/html" title="Linked List" /><published>2021-01-11T00:00:00+09:00</published><updated>2021-01-11T00:00:00+09:00</updated><id>http://localhost:4000/data%20structure/2021/01/11/LinkedList</id><content type="html" xml:base="http://localhost:4000/data%20structure/2021/01/11/LinkedList.html">&lt;h2 id=&quot;linked-list&quot;&gt;Linked List&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-11T20:29:04+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">Linked List</title><link href="http://localhost:4000/data%20structure/2021/01/11/LinkedList.html" rel="alternate" type="text/html" title="Linked List" /><published>2021-01-11T00:00:00+09:00</published><updated>2021-01-11T00:00:00+09:00</updated><id>http://localhost:4000/data%20structure/2021/01/11/LinkedList</id><content type="html" xml:base="http://localhost:4000/data%20structure/2021/01/11/LinkedList.html">&lt;h2 id=&quot;linked-list&quot;&gt;Linked List&lt;/h2&gt;
 
 &lt;p&gt;Node 또는 Vertax라 불리는 자료형이 연결된 형태의 자료구조이다.&lt;/p&gt;
 
-&lt;p&gt;일반적으로 Node는 자신의 Data인 Value값과 자신의 다음 Node를 가리키는 포인터값(편의상 Next라고 하겠다.)으로 이루어져 있다.&lt;/p&gt;
+&lt;p&gt;일반적으로 Node는 자신의 Data인 Value값과 자신의 다음 Node를 가리키는 포인터값(편의상 Next라고 하겠다)으로 이루어져 있다.&lt;/p&gt;
 
 &lt;p&gt;Linked List의 장점은 삽입 및 삭제가 빠르다는 것인데, 삽입/삭제 행위의 시간복잡도는 O(1)이다.&lt;/p&gt;
 
@@ -12,7 +12,7 @@
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;그러나 큰 착각을 할 수 있는게 Linked List는 맨 앞 요소부터 순차접근을 해야하기 때문에, 특정 위치에 삽입하거나 삭제하는 경우, 해당 위치를 찾아가는데 O(n)이 소요되어서 실질적으로 1.찾아서 2.지운다 의 행위는 O(n)이 걸린다고 할 수 있다.&lt;/p&gt;
+&lt;p&gt;그러나 큰 착각을 할 수 있는게 Linked List는 맨 앞 요소부터 순차접근을 해야하기 때문에, 특정 위치에 삽입하거나 삭제하는 경우, 해당 위치를 찾아가는데 O(n)이 소요되어서 실질적으로 1.찾아서 2.삽입/삭제한다 의 행위는 O(n)이 걸린다고 할 수 있다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -20,7 +20,7 @@
 
 &lt;ul&gt;
   &lt;li&gt;개념만 아는 상태에서 어떤 코드도 참조하지 않고 한번 구현해보았다. (add, remove만 구현)&lt;/li&gt;
-  &lt;li&gt;코드가 지저분하여 너무 찜찜하다 ㅠㅠ&lt;/li&gt;
+  &lt;li&gt;코드가 좀 지저분한 것 같아 찜찜하다.&lt;/li&gt;
   &lt;li&gt;Java Collections에 있는 LinkedList와 API를 동일하게 구성하여 JUnit으로 테스트해보았다.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -140,7 +140,40 @@
 
 &lt;h2 id=&quot;doubly-circular-linked-list&quot;&gt;Doubly Circular Linked List&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;/public/img/LinkedList/4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="자료구조" /><category term="Linked List" /></entry><entry><title type="html">21년 1월 10일</title><link href="http://localhost:4000/til/2021/01/10/TIL7.html" rel="alternate" type="text/html" title="21년 1월 10일" /><published>2021-01-10T00:00:00+09:00</published><updated>2021-01-10T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/10/TIL7</id><content type="html" xml:base="http://localhost:4000/til/2021/01/10/TIL7.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/public/img/LinkedList/4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="자료구조" /><category term="Linked List" /></entry><entry><title type="html">21년 1월 11일</title><link href="http://localhost:4000/til/2021/01/11/TIL8.html" rel="alternate" type="text/html" title="21년 1월 11일" /><published>2021-01-11T00:00:00+09:00</published><updated>2021-01-11T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/11/TIL8</id><content type="html" xml:base="http://localhost:4000/til/2021/01/11/TIL8.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;코드스쿼드 미션으로 Linked List를 구현하여, 영상 편집 편집하기 컨셉의 간단한 CLI 프로그램을 만들었다.&lt;/li&gt;
+  &lt;li&gt;처음에 Single Linked List로 구현하였다가 Doubly Circular Linked List를 구현하였다.&lt;/li&gt;
+  &lt;li&gt;제너릭을 사용하여 Java Collections의 LinkedList처럼 사용할 수 있도록 노력하였다.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/data%20structure/2021/01/11/LinkedList.html&quot;&gt;Linked List&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;코드스쿼드 미션을 통해 Java의 다양한 기능등을 사용해보려고 하였다.&lt;/li&gt;
+  &lt;li&gt;단순히 요구사항에 맞춰서 구현한 것이 아니라, 제너릭으로 Linked List를 구현한 후 이를 상속도 해보고 내부클래스의 접근제한자도 바꿔가며 Java를 같이 공부하였다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;일요일 밤에 잠을 거의 2시간밖에 못자서 너무 피곤하다.&lt;/li&gt;
+  &lt;li&gt;피곤하다고 미루지 않고 오늘 할 일을 마쳐서 뿌듯하다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;코드스쿼드 미션 진행&lt;/li&gt;
+  &lt;li&gt;프로그래머스 알고리즘 풀기&lt;/li&gt;
+  &lt;li&gt;자바의정석 읽기&lt;/li&gt;
+  &lt;li&gt;TCP/IP 쉽게 더 쉽게 읽기&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="자료구조" /><category term="Linked List" /></entry><entry><title type="html">21년 1월 10일</title><link href="http://localhost:4000/til/2021/01/10/TIL7.html" rel="alternate" type="text/html" title="21년 1월 10일" /><published>2021-01-10T00:00:00+09:00</published><updated>2021-01-10T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/10/TIL7</id><content type="html" xml:base="http://localhost:4000/til/2021/01/10/TIL7.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;Java 내부클래스 개념 공부 (자바의 정석 책)&lt;/li&gt;
   &lt;li&gt;Java 내부클래스 정리하여 게시 &lt;a href=&quot;https://isaac56.github.io/java/2021/01/10/InnerClass.html&quot;&gt;바로가기&lt;/a&gt;&lt;/li&gt;
@@ -546,37 +579,52 @@
 
 &lt;p&gt;그러면서 Heap 메모리 영역에 중간중간 구멍(제거되고 빈 메모리 공간)이 생기는데 이 부분을 없애기 위해 재구성을 하게 된다. (디스크 조각모음처럼 조각난 메모리를 정리함)&lt;/p&gt;
 
-&lt;p&gt;따라서 메모리를 옮기고 있는데 다른 쓰레드가 메모리를 사용해버리면 안되기 때문에 모든 쓰레드가 정지하게 되는 것이다.&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="JVM" /></entry><entry><title type="html">Shell의 종류</title><link href="http://localhost:4000/linux/2021/01/08/Shell-type.html" rel="alternate" type="text/html" title="Shell의 종류" /><published>2021-01-08T00:00:00+09:00</published><updated>2021-01-08T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/08/Shell-type</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/08/Shell-type.html">&lt;p&gt;&lt;strong&gt;1. sh (bourne shell)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;따라서 메모리를 옮기고 있는데 다른 쓰레드가 메모리를 사용해버리면 안되기 때문에 모든 쓰레드가 정지하게 되는 것이다.&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="JVM" /></entry><entry><title type="html">SSH key를 이용한 접속</title><link href="http://localhost:4000/linux/2021/01/08/SSH-Key-How.html" rel="alternate" type="text/html" title="SSH key를 이용한 접속" /><published>2021-01-08T00:00:00+09:00</published><updated>2021-01-08T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/08/SSH-Key-How</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/08/SSH-Key-How.html">&lt;h2 id=&quot;ssh-key란&quot;&gt;SSH Key란&lt;/h2&gt;
 
-&lt;p&gt;가장 기본적인 쉘로 유닉스의 초기부터 사용되어 온 쉘이며 스크립트를 지원한다.&lt;/p&gt;
+&lt;p&gt;SSH 접속은 패스워드로도 할 수 있지만, 안전한 인증방식은 아니라고 한다.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;2. ksh (korn shell)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;컴퓨팅 파워가 증가하면서 password를 단순 대입하며 bruth force 방식으로 접속 시도를 할 수 있고,&lt;/p&gt;
 
-&lt;p&gt;본 쉘을 확장한 쉘로 본 쉘 명령어를 모두 인식한다. 히스토리(history) 기능과 앨리어스(alias), 작업 제어 등의 기능이 추가되었다. 일반적으로 유닉스에서 가장 많이 사용되는 쉘이라고 한다. 명령행 편집기능을 제공&lt;/p&gt;
+&lt;p&gt;사람이 기억할 만한 password는 대부분 burth force 방식을 막을만큼 충분히 길지 않기 때문이다.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;3. bash (Bourne Again Shell)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+이제, password 대신 ssh key라는 추가적인 보안 방식을 사용해보자.&lt;/p&gt;
 
-&lt;p&gt;리눅스에서 가장 많이 사용하는 쉘이다. C 쉘과 콘 쉘의 장점을 결합하여 작성되었으며, Bourne 쉘 문법의 명령어 셋을 제공하여 Bourne Shell과 호환되는 쉘로 GNU 프로젝트에 의해 만들어지고 배포되었다. 명령행 편집기능을 제공&lt;/p&gt;
+&lt;p&gt;ssh key는 공개키와 개인키로 나뉘어져 있다.&lt;/p&gt;
 
-&lt;h3 id=&quot;c-쉘-계열의-쉘&quot;&gt;C 쉘 계열의 쉘&lt;/h3&gt;
+&lt;p&gt;공개키와 개인키는 대칭키로, 각각의 키로 암호화한 암호는 대칭되는 키로만 해석이 가능하다.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;1. csh (C Shell)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;즉, 공개키로 암호화한 암호는 개인키로만 해석이 가능하고, 개인키로 암호화한 암호는 공개키로만 해석이 가능하다.&lt;/p&gt;
 
-&lt;p&gt;명령행 편집기능을 제공하지 않는다. C 언어 위주의 쉘로 처음 작성되었을 때에는 본 쉘이 가지고 있지 못한 기능들(작업제어, 명령어 히스토리 등)을 가지고 있었기 때문에 많이 사용되었다.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+공개키는 아무에게나 공개해도 되지만 개인키는 절대 타인에게 공개해서는 안되는데 그이유는 다음과 같다.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;2. tcsh (TC Shell)&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;공개키로 암호화한 암호는 개인키를 가진 나만이 해석할 수 있기 때문에, 나만 볼 수 있게 하기위한 비밀메세지와 같다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;공개키로 해석할 수 있는 암호는 개인키를 가진 나만이 만들 수 있기 때문에, 개인키로 암호화한 암호는 내가 나임을 인증하려는 인증서의 목적이 크다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;따라서 나의 개인키를 공개한다는 것은 아무나 나인척 할 수 있게 만드는 것이다&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;p&gt;csh의 기능을 강화한 쉘입니다. 명령행 편집기능을 제공한다.&lt;/p&gt;
+&lt;h2 id=&quot;ssh-서버에-ssh-key로-인증하는-방식&quot;&gt;SSH 서버에 SSH Key로 인증하는 방식&lt;/h2&gt;
 
-&lt;h3 id=&quot;centos-sulinux-asianux-등의-레드햇-계열의-리눅스-배포판에서-기본으로-사용되지-않는-쉘&quot;&gt;CentOS, SULinux, Asianux 등의 레드햇 계열의 리눅스 배포판에서 기본으로 사용되지 않는 쉘&lt;/h3&gt;
+&lt;p&gt;SSH Key로 인증을 위해 나의 공개키가 서버안의 authorized_keys 파일에 등록되었다고 가정하자.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;1. Zsh 쉘&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+SSH를 인증하는 방식은 다음과 같다.&lt;/p&gt;
 
-&lt;p&gt;로그인쉘 및 쉘스크립트 명령어 프로세서로서 이용 가능한 유닉스 쉘입니다. 표준 쉘들 중에서 zsh는 ksh와 가장 유사하지만 많은 개선들을 포함합니다. zsh는 명령행 편집, 내장 스펠링 수정, history 등의 기능을 가집니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2. ash 쉘&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;추가적인 기능들이 없이 본 쉘에 가장 부합하는 쉘입니다. 본 쉘은 상업적인 유닉스 시스템들에서 사용가능하므로, ash는 쉘 스크립트가 본 쉘에 잘 부합하는지 시험할 때 유용합니다. 또한 이것은 다른 sh- 호환 쉘에 비해 적은 메모리와 공간을 요구합니다.&lt;/p&gt;</content><author><name></name></author><category term="Linux" /><category term="Shell" /></entry><entry><title type="html">리눅스 group이란, group 변경</title><link href="http://localhost:4000/linux/2021/01/08/userGroup.html" rel="alternate" type="text/html" title="리눅스 group이란, group 변경" /><published>2021-01-08T00:00:00+09:00</published><updated>2021-01-08T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/08/userGroup</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/08/userGroup.html">&lt;h2 id=&quot;리눅스에서-group이란&quot;&gt;리눅스에서 group이란&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;클라이언트(나)가 서버에 SSH연결을 요청한다.&lt;/li&gt;
+  &lt;li&gt;서버는 랜덤 스트링을 생성하여 클라이언트에게 보낸다.&lt;/li&gt;
+  &lt;li&gt;클라이언트(나)는 전달받은 랜덤 스트링을 개인키로 암호화하여 서버에게 보낸다.&lt;/li&gt;
+  &lt;li&gt;서버는 받은 암호를 authorized_keys에 등록된 공개키로 해석한 후, 2번에서 보냈던 랜덤 스트링과 일치하는지 확인한다.&lt;/li&gt;
+  &lt;li&gt;일치한다면 클라이언트(나)는 authorized_keys에 등록된 authorized client 중 하나이므로 인증완료된다.&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="Linux" /><category term="SSH" /></entry><entry><title type="html">리눅스 group이란, group 변경</title><link href="http://localhost:4000/linux/2021/01/08/userGroup.html" rel="alternate" type="text/html" title="리눅스 group이란, group 변경" /><published>2021-01-08T00:00:00+09:00</published><updated>2021-01-08T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/08/userGroup</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/08/userGroup.html">&lt;h2 id=&quot;리눅스에서-group이란&quot;&gt;리눅스에서 group이란&lt;/h2&gt;
 
 &lt;p&gt;리눅스에선 group이라는 것이 있는데, 어떤 파일이나 폴더를 특정 User에게만 공유하고 싶을 때 사용한다.&lt;/p&gt;
 
@@ -728,79 +776,34 @@ zip &lt;span class=&quot;nv&quot;&gt;$NAME&lt;/span&gt; &lt;span class=&quot;k&q
   &lt;li&gt;알고리즘 공부&lt;/li&gt;
   &lt;li&gt;자바의정석 책 공부&lt;/li&gt;
   &lt;li&gt;TCP/IP 공부&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="SSH" /><category term="shell" /></entry><entry><title type="html">SSH key를 이용한 접속</title><link href="http://localhost:4000/linux/2021/01/08/SSH-Key-How.html" rel="alternate" type="text/html" title="SSH key를 이용한 접속" /><published>2021-01-08T00:00:00+09:00</published><updated>2021-01-08T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/08/SSH-Key-How</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/08/SSH-Key-How.html">&lt;h2 id=&quot;ssh-key란&quot;&gt;SSH Key란&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="SSH" /><category term="shell" /></entry><entry><title type="html">Shell의 종류</title><link href="http://localhost:4000/linux/2021/01/08/Shell-type.html" rel="alternate" type="text/html" title="Shell의 종류" /><published>2021-01-08T00:00:00+09:00</published><updated>2021-01-08T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/08/Shell-type</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/08/Shell-type.html">&lt;p&gt;&lt;strong&gt;1. sh (bourne shell)&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;SSH 접속은 패스워드로도 할 수 있지만, 안전한 인증방식은 아니라고 한다.&lt;/p&gt;
+&lt;p&gt;가장 기본적인 쉘로 유닉스의 초기부터 사용되어 온 쉘이며 스크립트를 지원한다.&lt;/p&gt;
 
-&lt;p&gt;컴퓨팅 파워가 증가하면서 password를 단순 대입하며 bruth force 방식으로 접속 시도를 할 수 있고,&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. ksh (korn shell)&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;사람이 기억할 만한 password는 대부분 burth force 방식을 막을만큼 충분히 길지 않기 때문이다.&lt;/p&gt;
+&lt;p&gt;본 쉘을 확장한 쉘로 본 쉘 명령어를 모두 인식한다. 히스토리(history) 기능과 앨리어스(alias), 작업 제어 등의 기능이 추가되었다. 일반적으로 유닉스에서 가장 많이 사용되는 쉘이라고 한다. 명령행 편집기능을 제공&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;
-이제, password 대신 ssh key라는 추가적인 보안 방식을 사용해보자.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. bash (Bourne Again Shell)&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;ssh key는 공개키와 개인키로 나뉘어져 있다.&lt;/p&gt;
+&lt;p&gt;리눅스에서 가장 많이 사용하는 쉘이다. C 쉘과 콘 쉘의 장점을 결합하여 작성되었으며, Bourne 쉘 문법의 명령어 셋을 제공하여 Bourne Shell과 호환되는 쉘로 GNU 프로젝트에 의해 만들어지고 배포되었다. 명령행 편집기능을 제공&lt;/p&gt;
 
-&lt;p&gt;공개키와 개인키는 대칭키로, 각각의 키로 암호화한 암호는 대칭되는 키로만 해석이 가능하다.&lt;/p&gt;
+&lt;h3 id=&quot;c-쉘-계열의-쉘&quot;&gt;C 쉘 계열의 쉘&lt;/h3&gt;
 
-&lt;p&gt;즉, 공개키로 암호화한 암호는 개인키로만 해석이 가능하고, 개인키로 암호화한 암호는 공개키로만 해석이 가능하다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. csh (C Shell)&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;
-공개키는 아무에게나 공개해도 되지만 개인키는 절대 타인에게 공개해서는 안되는데 그이유는 다음과 같다.&lt;/p&gt;
+&lt;p&gt;명령행 편집기능을 제공하지 않는다. C 언어 위주의 쉘로 처음 작성되었을 때에는 본 쉘이 가지고 있지 못한 기능들(작업제어, 명령어 히스토리 등)을 가지고 있었기 때문에 많이 사용되었다.&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;공개키로 암호화한 암호는 개인키를 가진 나만이 해석할 수 있기 때문에, 나만 볼 수 있게 하기위한 비밀메세지와 같다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;공개키로 해석할 수 있는 암호는 개인키를 가진 나만이 만들 수 있기 때문에, 개인키로 암호화한 암호는 내가 나임을 인증하려는 인증서의 목적이 크다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;따라서 나의 개인키를 공개한다는 것은 아무나 나인척 할 수 있게 만드는 것이다&lt;/strong&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;2. tcsh (TC Shell)&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;ssh-서버에-ssh-key로-인증하는-방식&quot;&gt;SSH 서버에 SSH Key로 인증하는 방식&lt;/h2&gt;
+&lt;p&gt;csh의 기능을 강화한 쉘입니다. 명령행 편집기능을 제공한다.&lt;/p&gt;
 
-&lt;p&gt;SSH Key로 인증을 위해 나의 공개키가 서버안의 authorized_keys 파일에 등록되었다고 가정하자.&lt;/p&gt;
+&lt;h3 id=&quot;centos-sulinux-asianux-등의-레드햇-계열의-리눅스-배포판에서-기본으로-사용되지-않는-쉘&quot;&gt;CentOS, SULinux, Asianux 등의 레드햇 계열의 리눅스 배포판에서 기본으로 사용되지 않는 쉘&lt;/h3&gt;
 
-&lt;p&gt;&lt;br /&gt;
-SSH를 인증하는 방식은 다음과 같다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Zsh 쉘&lt;/strong&gt;&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;클라이언트(나)가 서버에 SSH연결을 요청한다.&lt;/li&gt;
-  &lt;li&gt;서버는 랜덤 스트링을 생성하여 클라이언트에게 보낸다.&lt;/li&gt;
-  &lt;li&gt;클라이언트(나)는 전달받은 랜덤 스트링을 개인키로 암호화하여 서버에게 보낸다.&lt;/li&gt;
-  &lt;li&gt;서버는 받은 암호를 authorized_keys에 등록된 공개키로 해석한 후, 2번에서 보냈던 랜덤 스트링과 일치하는지 확인한다.&lt;/li&gt;
-  &lt;li&gt;일치한다면 클라이언트(나)는 authorized_keys에 등록된 authorized client 중 하나이므로 인증완료된다.&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="Linux" /><category term="SSH" /></entry><entry><title type="html">SSH root 권한으로 접속 허용하기</title><link href="http://localhost:4000/linux/2021/01/07/permitSSH_Root.html" rel="alternate" type="text/html" title="SSH root 권한으로 접속 허용하기" /><published>2021-01-07T00:00:00+09:00</published><updated>2021-01-07T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/07/permitSSH_Root</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/07/permitSSH_Root.html">&lt;h2 id=&quot;ssh-root-권한으로-접속-허용하기&quot;&gt;SSH root 권한으로 접속 허용하기&lt;/h2&gt;
+&lt;p&gt;로그인쉘 및 쉘스크립트 명령어 프로세서로서 이용 가능한 유닉스 쉘입니다. 표준 쉘들 중에서 zsh는 ksh와 가장 유사하지만 많은 개선들을 포함합니다. zsh는 명령행 편집, 내장 스펠링 수정, history 등의 기능을 가집니다.&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;SCP 명령어로 remote의 특정 폴더에 접근하려면 root권한이 필요할 때가 있다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;분명히 root 비밀번호가 맞았는데도 자꾸 Permission denied, please try again. 가 뜬다면 ssh 설정을 확인해야한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. ash 쉘&lt;/strong&gt;&lt;/p&gt;
 
-    &lt;ol&gt;
-      &lt;li&gt;
-        &lt;p&gt;remote(ubuntu 기준) 로 들어가서 /etc/ssh/sshd_config 파일을 연다&lt;/p&gt;
-
-        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vi /etc/ssh/sshd_config
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;파일 내의 PermitRootLogin 을 yes로 바꿔준다. (없으면 추가한다.)&lt;/p&gt;
-
-        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;PermitRootLogin &lt;span class=&quot;nb&quot;&gt;yes&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;데몬 명령어로 ssh를 재시작시켜 변경된 설정을 적용한다.&lt;/p&gt;
-
-        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;systemctl restart ssh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Linux" /><category term="SSH" /></entry></feed>
+&lt;p&gt;추가적인 기능들이 없이 본 쉘에 가장 부합하는 쉘입니다. 본 쉘은 상업적인 유닉스 시스템들에서 사용가능하므로, ash는 쉘 스크립트가 본 쉘에 잘 부합하는지 시험할 때 유용합니다. 또한 이것은 다른 sh- 호환 쉘에 비해 적은 메모리와 공간을 요구합니다.&lt;/p&gt;</content><author><name></name></author><category term="Linux" /><category term="Shell" /></entry></feed>
