@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-11T20:29:04+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">Linked List</title><link href="http://localhost:4000/data%20structure/2021/01/11/LinkedList.html" rel="alternate" type="text/html" title="Linked List" /><published>2021-01-11T00:00:00+09:00</published><updated>2021-01-11T00:00:00+09:00</updated><id>http://localhost:4000/data%20structure/2021/01/11/LinkedList</id><content type="html" xml:base="http://localhost:4000/data%20structure/2021/01/11/LinkedList.html">&lt;h2 id=&quot;linked-list&quot;&gt;Linked List&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-11T21:17:51+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">Linked List</title><link href="http://localhost:4000/data%20structure/2021/01/11/LinkedList.html" rel="alternate" type="text/html" title="Linked List" /><published>2021-01-11T00:00:00+09:00</published><updated>2021-01-11T00:00:00+09:00</updated><id>http://localhost:4000/data%20structure/2021/01/11/LinkedList</id><content type="html" xml:base="http://localhost:4000/data%20structure/2021/01/11/LinkedList.html">&lt;h2 id=&quot;linked-list&quot;&gt;Linked List&lt;/h2&gt;
 
 &lt;p&gt;Node 또는 Vertax라 불리는 자료형이 연결된 형태의 자료구조이다.&lt;/p&gt;
 
@@ -146,25 +146,26 @@
   &lt;li&gt;처음에 Single Linked List로 구현하였다가 Doubly Circular Linked List를 구현하였다.&lt;/li&gt;
   &lt;li&gt;제너릭을 사용하여 Java Collections의 LinkedList처럼 사용할 수 있도록 노력하였다.&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/data%20structure/2021/01/11/LinkedList.html&quot;&gt;Linked List&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;프로그래머스 이중우선순위큐, K번째수, 가장 큰 수 풀었다.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;TCP/IP책을 읽지 않았다.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;코드스쿼드 미션을 통해 Java의 다양한 기능등을 사용해보려고 하였다.&lt;/li&gt;
   &lt;li&gt;단순히 요구사항에 맞춰서 구현한 것이 아니라, 제너릭으로 Linked List를 구현한 후 이를 상속도 해보고 내부클래스의 접근제한자도 바꿔가며 Java를 같이 공부하였다.&lt;/li&gt;
+  &lt;li&gt;피곤하다고 미루지 않고 오늘 할 일을 마쳤다..&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;일요일 밤에 잠을 거의 2시간밖에 못자서 너무 피곤하다.&lt;/li&gt;
-  &lt;li&gt;피곤하다고 미루지 않고 오늘 할 일을 마쳐서 뿌듯하다.&lt;/li&gt;
+  &lt;li&gt;책 읽을 시간이 너무 없다. 주말에 책 읽을 시간으로 빼는게 나을까 고민된다.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
@@ -172,7 +173,6 @@
   &lt;li&gt;코드스쿼드 미션 진행&lt;/li&gt;
   &lt;li&gt;프로그래머스 알고리즘 풀기&lt;/li&gt;
   &lt;li&gt;자바의정석 읽기&lt;/li&gt;
-  &lt;li&gt;TCP/IP 쉽게 더 쉽게 읽기&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="자료구조" /><category term="Linked List" /></entry><entry><title type="html">21년 1월 10일</title><link href="http://localhost:4000/til/2021/01/10/TIL7.html" rel="alternate" type="text/html" title="21년 1월 10일" /><published>2021-01-10T00:00:00+09:00</published><updated>2021-01-10T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/10/TIL7</id><content type="html" xml:base="http://localhost:4000/til/2021/01/10/TIL7.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;Java 내부클래스 개념 공부 (자바의 정석 책)&lt;/li&gt;
