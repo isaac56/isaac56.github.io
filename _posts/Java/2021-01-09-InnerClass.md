@@ -90,6 +90,8 @@ outer class 의 static method에서 인스턴스 inner class를 선언한다면,
 
 - 지역 클래스 & 익명 클래스
 
-  - 접근 가능한 외부 클래스 멤버: 자신을 선언된 생성자 또는 메소드에서 접근가능한 OuterClass 멤버 
+  - 접근 가능한 외부 클래스 멤버: 자신을 선언한 생성자 또는 메소드에서 접근가능한 OuterClass 멤버 
 
     ​				(Static Method라면 OuterClass의 스태틱 멤버, 일반 Method라면 OuterClass의 인스턴스 멤버, 스태틱 멤버)
+  
+  - 자신을 선언한 생성자 또는 메소드의 지역 변수 중, 배열 형태의 변수에도 접근이 가능하던데 왜 그런지는 나중에 찾아봐야겠다.

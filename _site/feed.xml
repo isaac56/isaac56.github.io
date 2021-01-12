@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-12T20:12:46+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">시간복잡도 표기법</title><link href="http://localhost:4000/algorithm/2021/01/12/TimeComplexity.html" rel="alternate" type="text/html" title="시간복잡도 표기법" /><published>2021-01-12T00:00:00+09:00</published><updated>2021-01-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/2021/01/12/TimeComplexity</id><content type="html" xml:base="http://localhost:4000/algorithm/2021/01/12/TimeComplexity.html">&lt;h2 id=&quot;시간복잡도-표기법을-간단히-정리해보았다&quot;&gt;시간복잡도 표기법을 간단히 정리해보았다.&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-12T20:30:24+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">시간복잡도 표기법</title><link href="http://localhost:4000/algorithm/2021/01/12/TimeComplexity.html" rel="alternate" type="text/html" title="시간복잡도 표기법" /><published>2021-01-12T00:00:00+09:00</published><updated>2021-01-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/2021/01/12/TimeComplexity</id><content type="html" xml:base="http://localhost:4000/algorithm/2021/01/12/TimeComplexity.html">&lt;h2 id=&quot;시간복잡도-표기법을-간단히-정리해보았다&quot;&gt;시간복잡도 표기법을 간단히 정리해보았다.&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -488,9 +488,12 @@ java: method() in ChildClass cannot override method() in SuperClass
 
     &lt;ul&gt;
       &lt;li&gt;
-        &lt;p&gt;접근 가능한 외부 클래스 멤버: 자신을 선언된 생성자 또는 메소드에서 접근가능한 OuterClass 멤버&lt;/p&gt;
+        &lt;p&gt;접근 가능한 외부 클래스 멤버: 자신을 선언한 생성자 또는 메소드에서 접근가능한 OuterClass 멤버&lt;/p&gt;
 
         &lt;p&gt;​				(Static Method라면 OuterClass의 스태틱 멤버, 일반 Method라면 OuterClass의 인스턴스 멤버, 스태틱 멤버)&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;자신을 선언한 생성자 또는 메소드의 지역 변수 중, 배열 형태의 변수에도 접근이 가능하던데 왜 그런지는 나중에 찾아봐야겠다.&lt;/p&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
