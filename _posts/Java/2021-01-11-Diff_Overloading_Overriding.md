@@ -93,6 +93,50 @@ last_modified_at: 2021-01-12
     return type int is not compatible with void
   ```
 
+- 부모 메소드의 한정자보다 자식 클래스에서 오버라이드하려는 메소드의 한정자가 더 제한적이면 다음과 같은 에러 발생
+
+  ```
+  //부모클래스 메소드의 한정자는 public, 자식클래스 메소드의 한정자는 private일 때,
+  java: method() in ChildClass cannot override method() in SuperClass
+    attempting to assign weaker access privileges; was public
+  ```
+
+  - 부모 메소드의 한정자보다 자식 메소드의 한정자가 덜 제한적이면 오버라이딩 가능함
+
+    (부모 메소드는 protected, 자식 메소드는 public)
+
+  <br>
+
+- 부모 메소드의 한정자가 private으로 제한된다면 오버라이딩이 불가하며 아래와 같은 결과가 나온다.
+
+  ```java
+  public class SuperClass {
+      private void method(){
+          System.out.println("this is superclass.");
+      }
+  
+      public void show() {
+          this.method();
+      }
+  }
+  
+  public class ChildClass extends SuperClass{
+      private void method(){
+          System.out.println("this is ChildClass");
+      }
+  }
+  
+  public class Main {
+      public static void main(String[] args) {
+          SuperClass t1 = new SuperClass();
+          SuperClass t2 = new ChildClass();
+  
+          t1.show(); //this is superclass 출력
+          t2.show(); //this is superclass 출력
+      }
+  }
+  ```
+
   
 
 ### Override 어노테이션에 관하여

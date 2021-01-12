@@ -194,6 +194,54 @@ java: method() in ChildClass cannot override method() in SuperClass
   return type int is not compatible with void
 </code></pre></div>    </div>
   </li>
+  <li>
+    <p>부모 메소드의 한정자보다 자식 클래스에서 오버라이드하려는 메소드의 한정자가 더 제한적이면 다음과 같은 에러 발생</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//부모클래스 메소드의 한정자는 public, 자식클래스 메소드의 한정자는 private일 때,
+java: method() in ChildClass cannot override method() in SuperClass
+  attempting to assign weaker access privileges; was public
+</code></pre></div>    </div>
+
+    <ul>
+      <li>
+        <p>부모 메소드의 한정자보다 자식 메소드의 한정자가 덜 제한적이면 오버라이딩 가능함</p>
+
+        <p>(부모 메소드는 protected, 자식 메소드는 public)</p>
+      </li>
+    </ul>
+
+    <p><br /></p>
+  </li>
+  <li>
+    <p>부모 메소드의 한정자가 private으로 제한된다면 오버라이딩이 불가하며 아래와 같은 결과가 나온다.</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">SuperClass</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">method</span><span class="o">(){</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"this is superclass."</span><span class="o">);</span>
+    <span class="o">}</span>
+  
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">show</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">method</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+  
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ChildClass</span> <span class="kd">extends</span> <span class="nc">SuperClass</span><span class="o">{</span>
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">method</span><span class="o">(){</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"this is ChildClass"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+  
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">SuperClass</span> <span class="n">t1</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SuperClass</span><span class="o">();</span>
+        <span class="nc">SuperClass</span> <span class="n">t2</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ChildClass</span><span class="o">();</span>
+  
+        <span class="n">t1</span><span class="o">.</span><span class="na">show</span><span class="o">();</span> <span class="c1">//this is superclass 출력</span>
+        <span class="n">t2</span><span class="o">.</span><span class="na">show</span><span class="o">();</span> <span class="c1">//this is superclass 출력</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <h3 id="override-어노테이션에-관하여">Override 어노테이션에 관하여</h3>
