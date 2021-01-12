@@ -33,124 +33,209 @@ Linked List의 장점은 삽입 및 삭제가 빠르다는 것인데, 삽입/삭
 
 <br>
 
-## Doubly Circular Linked List 구현 - Java
+## Single Linked List
 
-- 개념만 아는 상태에서 어떤 코드도 참조하지 않고 한번 구현해보았다. (add, remove만 구현)
-- 코드가 좀 지저분한 것 같아 찜찜하다.
-- Java Collections에 있는 LinkedList와 API를 동일하게 구성하여 JUnit으로 테스트해보았다.
+![](/public/img/LinkedList/1.jpeg)
 
 ```java
-public class DoublyCircularLinkedList<T> {
-    protected Node head;
+import java.util.ArrayList;
+import java.util.List;
 
-    private void add(Node node, Node toAdd) {
-        toAdd.next = node.next;
-        toAdd.prev = node;
-        toAdd.next.prev = toAdd;
-        toAdd.prev.next = toAdd;
+public class SingleLinkedList<T>{
+    private Node head;
+    private int size;
+
+    public SingleLinkedList(){
+        head = new Node(null);
+        size = 0;
+    }
+
+    public int getSize(){
+        return size;
+    }
+
+    private void add(Node node, Node newNode) {
+        newNode.next = node.next;
+        node.next = newNode;
+
+        size++;
     }
 
     public void add(T val) {
-        Node toAdd = new Node(val);
-        if(head == null) {
-            toAdd.next = toAdd;
-            toAdd.prev = toAdd;
-            head = toAdd;
+        Node curNode = head;
+        while(curNode.next != null) {
+            curNode = curNode.next;
         }
-        else{
-            add(head.prev, toAdd);
-        }
+        add(curNode, new Node(val));
     }
 
-    public void add(int index, T val) {
+    public void add(int index, T val) throws IndexOutOfBoundsException {
         if(index < 0)
-            return;
-        if(head == null) {
-            add(val);
-            return;
-        }
-
-        Node toAdd = new Node(val);
-        if(index == 0) {
-            add(head.prev, toAdd);
-            head = toAdd;
-            return;
-        }
+            throw new IndexOutOfBoundsException("Index can't be lower than 0");
 
         Node curNode = head;
-        int curIdx = 0;
-        while(curNode.next != head && curIdx < index-1) {
+        int curIdx = -1;
+        while(curNode.next != null && curIdx < index-1) {
             curNode = curNode.next;
             curIdx++;
         }
-        add(curNode, toAdd);
+        add(curNode, new Node(val));
     }
 
-    private void remove(Node node){
-        node.prev.next = node.next;
-        node.next.prev = node.prev;
-        node.next = null;
-        node.prev = null;
+    private void remove(Node prev) {
+        prev.next = prev.next.next;
+
+        size--;
     }
 
-    public void remove(T val){
-        if(head == null)
-            return;
+    public boolean remove(T val) {
         Node curNode = head;
-        while(curNode.next != head){
-            if(curNode.value.equals(val)){
-                break;
+        while(curNode.next != null) {
+            if(curNode.next.value.equals(val))
+            {
+                remove(curNode);
+                return true;
             }
             curNode = curNode.next;
         }
-        if(curNode.value.equals(val)){
-            if(curNode == head) {
-                if(curNode.next == head)
-                    head = null;
-                else
-                    head = curNode.next;
-            }
-            remove(curNode);
-            return;
-        }
+        return false;
     }
 
-    protected class Node{
+    public List<T> getList() {
+        ArrayList<T> list = new ArrayList<>();
+        Node curNode = head.next;
+        while(curNode != null) {
+            list.add(curNode.value);
+            curNode = curNode.next;
+        }
+        return list;
+    }
+
+    protected class Node {
         private T value;
         private Node next;
-        private Node prev;
 
-        public Node(T value) {
+        private Node(T value) {
             this.value = value;
-            next = null;
         }
 
-        protected T getValue(){
-            return this.value;
-        }
-
-        protected Node getNext(){
-            return this.next;
-        }
-
-        protected Node getPrev(){
-            return this.prev;
-        }
+        protected T getValue(){ return value; }
+        protected Node getNext(){ return next; }
     }
 }
 ```
 
 
 
-# 그림으로 보면 이해가 쉬울 것 같아서 그림만 넣었다.
-
-## Single Linked List
-
-![](/public/img/LinkedList/1.jpeg)
-
 ## Doubly Linked List
 
 ![](/public/img/LinkedList/2.jpeg)
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class DoubleLinkedList<T>{
+    private Node head;
+    private Node tail;
+    int size;
+
+    public DoubleLinkedList(){
+        head = new Node(null);
+        tail = new Node(null);
+        size = 0;
+    }
+
+    public int getSize(){
+        return size;
+    }
+
+    private void add(Node node, Node newNode) {
+        newNode.next = node.next;
+        newNode.prev = node;
+        if(newNode.next != null)
+            newNode.next.prev = newNode;
+        if(newNode.prev != null)
+            newNode.prev.next = newNode;
+
+        if(newNode.next == null)
+            tail.next = newNode;
+
+        size++;
+    }
+
+    public void add(T val) {
+        if(tail.next != null)
+            add(tail.next, new Node(val));
+        else
+            add(head, new Node(val));
+    }
+
+    public void add(int index, T val) throws IndexOutOfBoundsException {
+        if(index < 0)
+            throw new IndexOutOfBoundsException("Index can't be lower than 0");
+
+        Node curNode = head;
+        int curIdx = -1;
+        while(curNode.next != null && curIdx < index-1) {
+            curNode = curNode.next;
+            curIdx++;
+        }
+        add(curNode, new Node(val));
+    }
+
+    private void remove(Node node) {
+        if(node.next == null)
+            tail.next = node.prev;
+
+        if(node.prev != null)
+            node.prev.next = node.next;
+        if(node.next != null)
+            node.next.prev = node.prev;
+        node.next = null;
+        node.prev = null;
+
+        size--;
+    }
+
+    public boolean remove(T val) {
+        Node curNode = head.next;
+        while(curNode != null) {
+            if(curNode.value.equals(val))
+            {
+                remove(curNode);
+                return true;
+            }
+            curNode = curNode.next;
+        }
+        return false;
+    }
+
+    public List<T> getList() {
+        ArrayList<T> list = new ArrayList<>();
+        Node curNode = head.next;
+        while(curNode != null) {
+            list.add(curNode.value);
+            curNode = curNode.next;
+        }
+        return list;
+    }
+
+    protected class Node {
+        private T value;
+        private Node next;
+        private Node prev;
+
+        private Node(T value) {
+            this.value = value;
+        }
+
+        protected T getValue(){ return value; }
+        protected Node getNext(){ return next; }
+        protected Node getPrev(){ return prev;}
+    }
+}
+```
 
 ## Circular Linked List
 
@@ -159,4 +244,96 @@ public class DoublyCircularLinkedList<T> {
 ## Doubly Circular Linked List
 
 ![](/public/img/LinkedList/4.jpeg)
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class DoublyCircularLinkedList<T>{
+    protected Node head;
+    private int size;
+
+    public DoublyCircularLinkedList(){
+        head = new Node(null);
+        head.next = head;
+        head.prev = head;
+    }
+
+    public int getSize(){
+        return size;
+    }
+
+    private void add(Node node, Node newNode) {
+        newNode.next = node.next;
+        newNode.prev = node;
+        newNode.next.prev = newNode;
+        newNode.prev.next = newNode;
+
+        size++;
+    }
+
+    public void add(T val) {
+        add(head.prev, new Node(val));
+    }
+
+    public void add(int index, T val) throws IndexOutOfBoundsException {
+        if(index < 0)
+            throw new IndexOutOfBoundsException("Index can't be lower than 0.");
+
+        Node curNode = head;
+        int curIdx = -1;
+        while(curNode.next != head && curIdx < index-1) {
+            curNode = curNode.next;
+            curIdx++;
+        }
+        add(curNode, new Node(val));
+    }
+
+    private void remove(Node node){
+        node.prev.next = node.next;
+        node.next.prev = node.prev;
+        node.next = null;
+        node.prev = null;
+
+        size--;
+    }
+
+    public boolean remove(T val){
+        Node curNode = head.next;
+        while(curNode != head) {
+            if(curNode.value.equals(val)){
+                remove(curNode);
+                return true;
+            }
+            curNode = curNode.next;
+        }
+        return false;
+    }
+
+    public List<T> getList(){
+        List<T> list = new ArrayList<>();
+        Node curNode = head.next;
+        while(curNode != head) {
+            list.add(curNode.value);
+            curNode = curNode.next;
+        }
+        return list;
+    }
+
+    protected class Node{
+        private T value;
+        private Node next;
+        private Node prev;
+
+        protected Node(T value) {
+            this.value = value;
+            next = null;
+        }
+
+        protected T getValue(){ return this.value; }
+        protected Node getNext(){ return this.next; }
+        protected Node getPrev(){ return this.prev; }
+    }
+}
+```
 

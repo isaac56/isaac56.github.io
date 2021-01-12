@@ -131,123 +131,205 @@
 
 <p><br /></p>
 
-<h2 id="doubly-circular-linked-list-구현---java">Doubly Circular Linked List 구현 - Java</h2>
-
-<ul>
-  <li>개념만 아는 상태에서 어떤 코드도 참조하지 않고 한번 구현해보았다. (add, remove만 구현)</li>
-  <li>코드가 좀 지저분한 것 같아 찜찜하다.</li>
-  <li>Java Collections에 있는 LinkedList와 API를 동일하게 구성하여 JUnit으로 테스트해보았다.</li>
-</ul>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DoublyCircularLinkedList</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="o">{</span>
-    <span class="kd">protected</span> <span class="nc">Node</span> <span class="n">head</span><span class="o">;</span>
-
-    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="nc">Node</span> <span class="n">node</span><span class="o">,</span> <span class="nc">Node</span> <span class="n">toAdd</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">toAdd</span><span class="o">.</span><span class="na">next</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
-        <span class="n">toAdd</span><span class="o">.</span><span class="na">prev</span> <span class="o">=</span> <span class="n">node</span><span class="o">;</span>
-        <span class="n">toAdd</span><span class="o">.</span><span class="na">next</span><span class="o">.</span><span class="na">prev</span> <span class="o">=</span> <span class="n">toAdd</span><span class="o">;</span>
-        <span class="n">toAdd</span><span class="o">.</span><span class="na">prev</span><span class="o">.</span><span class="na">next</span> <span class="o">=</span> <span class="n">toAdd</span><span class="o">;</span>
-    <span class="o">}</span>
-
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="no">T</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
-        <span class="nc">Node</span> <span class="n">toAdd</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Node</span><span class="o">(</span><span class="n">val</span><span class="o">);</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">head</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-            <span class="n">toAdd</span><span class="o">.</span><span class="na">next</span> <span class="o">=</span> <span class="n">toAdd</span><span class="o">;</span>
-            <span class="n">toAdd</span><span class="o">.</span><span class="na">prev</span> <span class="o">=</span> <span class="n">toAdd</span><span class="o">;</span>
-            <span class="n">head</span> <span class="o">=</span> <span class="n">toAdd</span><span class="o">;</span>
-        <span class="o">}</span>
-        <span class="k">else</span><span class="o">{</span>
-            <span class="n">add</span><span class="o">(</span><span class="n">head</span><span class="o">.</span><span class="na">prev</span><span class="o">,</span> <span class="n">toAdd</span><span class="o">);</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
-
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="kt">int</span> <span class="n">index</span><span class="o">,</span> <span class="no">T</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">index</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span>
-            <span class="k">return</span><span class="o">;</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">head</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-            <span class="n">add</span><span class="o">(</span><span class="n">val</span><span class="o">);</span>
-            <span class="k">return</span><span class="o">;</span>
-        <span class="o">}</span>
-
-        <span class="nc">Node</span> <span class="n">toAdd</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Node</span><span class="o">(</span><span class="n">val</span><span class="o">);</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">index</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
-            <span class="n">add</span><span class="o">(</span><span class="n">head</span><span class="o">.</span><span class="na">prev</span><span class="o">,</span> <span class="n">toAdd</span><span class="o">);</span>
-            <span class="n">head</span> <span class="o">=</span> <span class="n">toAdd</span><span class="o">;</span>
-            <span class="k">return</span><span class="o">;</span>
-        <span class="o">}</span>
-
-        <span class="nc">Node</span> <span class="n">curNode</span> <span class="o">=</span> <span class="n">head</span><span class="o">;</span>
-        <span class="kt">int</span> <span class="n">curIdx</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-        <span class="k">while</span><span class="o">(</span><span class="n">curNode</span><span class="o">.</span><span class="na">next</span> <span class="o">!=</span> <span class="n">head</span> <span class="o">&amp;&amp;</span> <span class="n">curIdx</span> <span class="o">&lt;</span> <span class="n">index</span><span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
-            <span class="n">curNode</span> <span class="o">=</span> <span class="n">curNode</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
-            <span class="n">curIdx</span><span class="o">++;</span>
-        <span class="o">}</span>
-        <span class="n">add</span><span class="o">(</span><span class="n">curNode</span><span class="o">,</span> <span class="n">toAdd</span><span class="o">);</span>
-    <span class="o">}</span>
-
-    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">remove</span><span class="o">(</span><span class="nc">Node</span> <span class="n">node</span><span class="o">){</span>
-        <span class="n">node</span><span class="o">.</span><span class="na">prev</span><span class="o">.</span><span class="na">next</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
-        <span class="n">node</span><span class="o">.</span><span class="na">next</span><span class="o">.</span><span class="na">prev</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="na">prev</span><span class="o">;</span>
-        <span class="n">node</span><span class="o">.</span><span class="na">next</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
-        <span class="n">node</span><span class="o">.</span><span class="na">prev</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
-    <span class="o">}</span>
-
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">remove</span><span class="o">(</span><span class="no">T</span> <span class="n">val</span><span class="o">){</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">head</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span>
-            <span class="k">return</span><span class="o">;</span>
-        <span class="nc">Node</span> <span class="n">curNode</span> <span class="o">=</span> <span class="n">head</span><span class="o">;</span>
-        <span class="k">while</span><span class="o">(</span><span class="n">curNode</span><span class="o">.</span><span class="na">next</span> <span class="o">!=</span> <span class="n">head</span><span class="o">){</span>
-            <span class="k">if</span><span class="o">(</span><span class="n">curNode</span><span class="o">.</span><span class="na">value</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">val</span><span class="o">)){</span>
-                <span class="k">break</span><span class="o">;</span>
-            <span class="o">}</span>
-            <span class="n">curNode</span> <span class="o">=</span> <span class="n">curNode</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
-        <span class="o">}</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">curNode</span><span class="o">.</span><span class="na">value</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">val</span><span class="o">)){</span>
-            <span class="k">if</span><span class="o">(</span><span class="n">curNode</span> <span class="o">==</span> <span class="n">head</span><span class="o">)</span> <span class="o">{</span>
-                <span class="k">if</span><span class="o">(</span><span class="n">curNode</span><span class="o">.</span><span class="na">next</span> <span class="o">==</span> <span class="n">head</span><span class="o">)</span>
-                    <span class="n">head</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
-                <span class="k">else</span>
-                    <span class="n">head</span> <span class="o">=</span> <span class="n">curNode</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
-            <span class="o">}</span>
-            <span class="n">remove</span><span class="o">(</span><span class="n">curNode</span><span class="o">);</span>
-            <span class="k">return</span><span class="o">;</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
-
-    <span class="kd">protected</span> <span class="kd">class</span> <span class="nc">Node</span><span class="o">{</span>
-        <span class="kd">private</span> <span class="no">T</span> <span class="n">value</span><span class="o">;</span>
-        <span class="kd">private</span> <span class="nc">Node</span> <span class="n">next</span><span class="o">;</span>
-        <span class="kd">private</span> <span class="nc">Node</span> <span class="n">prev</span><span class="o">;</span>
-
-        <span class="kd">public</span> <span class="nf">Node</span><span class="o">(</span><span class="no">T</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
-            <span class="k">this</span><span class="o">.</span><span class="na">value</span> <span class="o">=</span> <span class="n">value</span><span class="o">;</span>
-            <span class="n">next</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
-        <span class="o">}</span>
-
-        <span class="kd">protected</span> <span class="no">T</span> <span class="nf">getValue</span><span class="o">(){</span>
-            <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">value</span><span class="o">;</span>
-        <span class="o">}</span>
-
-        <span class="kd">protected</span> <span class="nc">Node</span> <span class="nf">getNext</span><span class="o">(){</span>
-            <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
-        <span class="o">}</span>
-
-        <span class="kd">protected</span> <span class="nc">Node</span> <span class="nf">getPrev</span><span class="o">(){</span>
-            <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">prev</span><span class="o">;</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<h1 id="그림으로-보면-이해가-쉬울-것-같아서-그림만-넣었다">그림으로 보면 이해가 쉬울 것 같아서 그림만 넣었다.</h1>
-
 <h2 id="single-linked-list">Single Linked List</h2>
 
 <p><img src="/public/img/LinkedList/1.jpeg" alt="" /></p>
 
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SingleLinkedList</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;{</span>
+    <span class="kd">private</span> <span class="nc">Node</span> <span class="n">head</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">size</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">SingleLinkedList</span><span class="o">(){</span>
+        <span class="n">head</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Node</span><span class="o">(</span><span class="kc">null</span><span class="o">);</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getSize</span><span class="o">(){</span>
+        <span class="k">return</span> <span class="n">size</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="nc">Node</span> <span class="n">node</span><span class="o">,</span> <span class="nc">Node</span> <span class="n">newNode</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">newNode</span><span class="o">.</span><span class="na">next</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
+        <span class="n">node</span><span class="o">.</span><span class="na">next</span> <span class="o">=</span> <span class="n">newNode</span><span class="o">;</span>
+
+        <span class="n">size</span><span class="o">++;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="no">T</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Node</span> <span class="n">curNode</span> <span class="o">=</span> <span class="n">head</span><span class="o">;</span>
+        <span class="k">while</span><span class="o">(</span><span class="n">curNode</span><span class="o">.</span><span class="na">next</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">curNode</span> <span class="o">=</span> <span class="n">curNode</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="n">add</span><span class="o">(</span><span class="n">curNode</span><span class="o">,</span> <span class="k">new</span> <span class="nc">Node</span><span class="o">(</span><span class="n">val</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="kt">int</span> <span class="n">index</span><span class="o">,</span> <span class="no">T</span> <span class="n">val</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IndexOutOfBoundsException</span> <span class="o">{</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">index</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">IndexOutOfBoundsException</span><span class="o">(</span><span class="s">"Index can't be lower than 0"</span><span class="o">);</span>
+
+        <span class="nc">Node</span> <span class="n">curNode</span> <span class="o">=</span> <span class="n">head</span><span class="o">;</span>
+        <span class="kt">int</span> <span class="n">curIdx</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">;</span>
+        <span class="k">while</span><span class="o">(</span><span class="n">curNode</span><span class="o">.</span><span class="na">next</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">curIdx</span> <span class="o">&lt;</span> <span class="n">index</span><span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">curNode</span> <span class="o">=</span> <span class="n">curNode</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
+            <span class="n">curIdx</span><span class="o">++;</span>
+        <span class="o">}</span>
+        <span class="n">add</span><span class="o">(</span><span class="n">curNode</span><span class="o">,</span> <span class="k">new</span> <span class="nc">Node</span><span class="o">(</span><span class="n">val</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">remove</span><span class="o">(</span><span class="nc">Node</span> <span class="n">prev</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">prev</span><span class="o">.</span><span class="na">next</span> <span class="o">=</span> <span class="n">prev</span><span class="o">.</span><span class="na">next</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
+
+        <span class="n">size</span><span class="o">--;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">remove</span><span class="o">(</span><span class="no">T</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Node</span> <span class="n">curNode</span> <span class="o">=</span> <span class="n">head</span><span class="o">;</span>
+        <span class="k">while</span><span class="o">(</span><span class="n">curNode</span><span class="o">.</span><span class="na">next</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">if</span><span class="o">(</span><span class="n">curNode</span><span class="o">.</span><span class="na">next</span><span class="o">.</span><span class="na">value</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">val</span><span class="o">))</span>
+            <span class="o">{</span>
+                <span class="n">remove</span><span class="o">(</span><span class="n">curNode</span><span class="o">);</span>
+                <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+            <span class="o">}</span>
+            <span class="n">curNode</span> <span class="o">=</span> <span class="n">curNode</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="nc">List</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="nf">getList</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+        <span class="nc">Node</span> <span class="n">curNode</span> <span class="o">=</span> <span class="n">head</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
+        <span class="k">while</span><span class="o">(</span><span class="n">curNode</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">curNode</span><span class="o">.</span><span class="na">value</span><span class="o">);</span>
+            <span class="n">curNode</span> <span class="o">=</span> <span class="n">curNode</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">list</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">protected</span> <span class="kd">class</span> <span class="nc">Node</span> <span class="o">{</span>
+        <span class="kd">private</span> <span class="no">T</span> <span class="n">value</span><span class="o">;</span>
+        <span class="kd">private</span> <span class="nc">Node</span> <span class="n">next</span><span class="o">;</span>
+
+        <span class="kd">private</span> <span class="nf">Node</span><span class="o">(</span><span class="no">T</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">value</span> <span class="o">=</span> <span class="n">value</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="kd">protected</span> <span class="no">T</span> <span class="nf">getValue</span><span class="o">(){</span> <span class="k">return</span> <span class="n">value</span><span class="o">;</span> <span class="o">}</span>
+        <span class="kd">protected</span> <span class="nc">Node</span> <span class="nf">getNext</span><span class="o">(){</span> <span class="k">return</span> <span class="n">next</span><span class="o">;</span> <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
 <h2 id="doubly-linked-list">Doubly Linked List</h2>
 
 <p><img src="/public/img/LinkedList/2.jpeg" alt="" /></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">DoubleLinkedList</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;{</span>
+    <span class="kd">private</span> <span class="nc">Node</span> <span class="n">head</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">Node</span> <span class="n">tail</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="n">size</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">DoubleLinkedList</span><span class="o">(){</span>
+        <span class="n">head</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Node</span><span class="o">(</span><span class="kc">null</span><span class="o">);</span>
+        <span class="n">tail</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Node</span><span class="o">(</span><span class="kc">null</span><span class="o">);</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getSize</span><span class="o">(){</span>
+        <span class="k">return</span> <span class="n">size</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="nc">Node</span> <span class="n">node</span><span class="o">,</span> <span class="nc">Node</span> <span class="n">newNode</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">newNode</span><span class="o">.</span><span class="na">next</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
+        <span class="n">newNode</span><span class="o">.</span><span class="na">prev</span> <span class="o">=</span> <span class="n">node</span><span class="o">;</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">newNode</span><span class="o">.</span><span class="na">next</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span>
+            <span class="n">newNode</span><span class="o">.</span><span class="na">next</span><span class="o">.</span><span class="na">prev</span> <span class="o">=</span> <span class="n">newNode</span><span class="o">;</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">newNode</span><span class="o">.</span><span class="na">prev</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span>
+            <span class="n">newNode</span><span class="o">.</span><span class="na">prev</span><span class="o">.</span><span class="na">next</span> <span class="o">=</span> <span class="n">newNode</span><span class="o">;</span>
+
+        <span class="k">if</span><span class="o">(</span><span class="n">newNode</span><span class="o">.</span><span class="na">next</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span>
+            <span class="n">tail</span><span class="o">.</span><span class="na">next</span> <span class="o">=</span> <span class="n">newNode</span><span class="o">;</span>
+
+        <span class="n">size</span><span class="o">++;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="no">T</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">tail</span><span class="o">.</span><span class="na">next</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span>
+            <span class="n">add</span><span class="o">(</span><span class="n">tail</span><span class="o">.</span><span class="na">next</span><span class="o">,</span> <span class="k">new</span> <span class="nc">Node</span><span class="o">(</span><span class="n">val</span><span class="o">));</span>
+        <span class="k">else</span>
+            <span class="nf">add</span><span class="o">(</span><span class="n">head</span><span class="o">,</span> <span class="k">new</span> <span class="nc">Node</span><span class="o">(</span><span class="n">val</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="kt">int</span> <span class="n">index</span><span class="o">,</span> <span class="no">T</span> <span class="n">val</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IndexOutOfBoundsException</span> <span class="o">{</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">index</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">IndexOutOfBoundsException</span><span class="o">(</span><span class="s">"Index can't be lower than 0"</span><span class="o">);</span>
+
+        <span class="nc">Node</span> <span class="n">curNode</span> <span class="o">=</span> <span class="n">head</span><span class="o">;</span>
+        <span class="kt">int</span> <span class="n">curIdx</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">;</span>
+        <span class="k">while</span><span class="o">(</span><span class="n">curNode</span><span class="o">.</span><span class="na">next</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">curIdx</span> <span class="o">&lt;</span> <span class="n">index</span><span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">curNode</span> <span class="o">=</span> <span class="n">curNode</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
+            <span class="n">curIdx</span><span class="o">++;</span>
+        <span class="o">}</span>
+        <span class="n">add</span><span class="o">(</span><span class="n">curNode</span><span class="o">,</span> <span class="k">new</span> <span class="nc">Node</span><span class="o">(</span><span class="n">val</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">remove</span><span class="o">(</span><span class="nc">Node</span> <span class="n">node</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">next</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span>
+            <span class="n">tail</span><span class="o">.</span><span class="na">next</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="na">prev</span><span class="o">;</span>
+
+        <span class="k">if</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">prev</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span>
+            <span class="n">node</span><span class="o">.</span><span class="na">prev</span><span class="o">.</span><span class="na">next</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">next</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span>
+            <span class="n">node</span><span class="o">.</span><span class="na">next</span><span class="o">.</span><span class="na">prev</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="na">prev</span><span class="o">;</span>
+        <span class="n">node</span><span class="o">.</span><span class="na">next</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="n">node</span><span class="o">.</span><span class="na">prev</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+
+        <span class="n">size</span><span class="o">--;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">remove</span><span class="o">(</span><span class="no">T</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Node</span> <span class="n">curNode</span> <span class="o">=</span> <span class="n">head</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
+        <span class="k">while</span><span class="o">(</span><span class="n">curNode</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">if</span><span class="o">(</span><span class="n">curNode</span><span class="o">.</span><span class="na">value</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">val</span><span class="o">))</span>
+            <span class="o">{</span>
+                <span class="n">remove</span><span class="o">(</span><span class="n">curNode</span><span class="o">);</span>
+                <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+            <span class="o">}</span>
+            <span class="n">curNode</span> <span class="o">=</span> <span class="n">curNode</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="nc">List</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="nf">getList</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+        <span class="nc">Node</span> <span class="n">curNode</span> <span class="o">=</span> <span class="n">head</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
+        <span class="k">while</span><span class="o">(</span><span class="n">curNode</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">curNode</span><span class="o">.</span><span class="na">value</span><span class="o">);</span>
+            <span class="n">curNode</span> <span class="o">=</span> <span class="n">curNode</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">list</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">protected</span> <span class="kd">class</span> <span class="nc">Node</span> <span class="o">{</span>
+        <span class="kd">private</span> <span class="no">T</span> <span class="n">value</span><span class="o">;</span>
+        <span class="kd">private</span> <span class="nc">Node</span> <span class="n">next</span><span class="o">;</span>
+        <span class="kd">private</span> <span class="nc">Node</span> <span class="n">prev</span><span class="o">;</span>
+
+        <span class="kd">private</span> <span class="nf">Node</span><span class="o">(</span><span class="no">T</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">value</span> <span class="o">=</span> <span class="n">value</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="kd">protected</span> <span class="no">T</span> <span class="nf">getValue</span><span class="o">(){</span> <span class="k">return</span> <span class="n">value</span><span class="o">;</span> <span class="o">}</span>
+        <span class="kd">protected</span> <span class="nc">Node</span> <span class="nf">getNext</span><span class="o">(){</span> <span class="k">return</span> <span class="n">next</span><span class="o">;</span> <span class="o">}</span>
+        <span class="kd">protected</span> <span class="nc">Node</span> <span class="nf">getPrev</span><span class="o">(){</span> <span class="k">return</span> <span class="n">prev</span><span class="o">;}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <h2 id="circular-linked-list">Circular Linked List</h2>
 
@@ -256,6 +338,97 @@
 <h2 id="doubly-circular-linked-list">Doubly Circular Linked List</h2>
 
 <p><img src="/public/img/LinkedList/4.jpeg" alt="" /></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">DoublyCircularLinkedList</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;{</span>
+    <span class="kd">protected</span> <span class="nc">Node</span> <span class="n">head</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">size</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">DoublyCircularLinkedList</span><span class="o">(){</span>
+        <span class="n">head</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Node</span><span class="o">(</span><span class="kc">null</span><span class="o">);</span>
+        <span class="n">head</span><span class="o">.</span><span class="na">next</span> <span class="o">=</span> <span class="n">head</span><span class="o">;</span>
+        <span class="n">head</span><span class="o">.</span><span class="na">prev</span> <span class="o">=</span> <span class="n">head</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getSize</span><span class="o">(){</span>
+        <span class="k">return</span> <span class="n">size</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="nc">Node</span> <span class="n">node</span><span class="o">,</span> <span class="nc">Node</span> <span class="n">newNode</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">newNode</span><span class="o">.</span><span class="na">next</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
+        <span class="n">newNode</span><span class="o">.</span><span class="na">prev</span> <span class="o">=</span> <span class="n">node</span><span class="o">;</span>
+        <span class="n">newNode</span><span class="o">.</span><span class="na">next</span><span class="o">.</span><span class="na">prev</span> <span class="o">=</span> <span class="n">newNode</span><span class="o">;</span>
+        <span class="n">newNode</span><span class="o">.</span><span class="na">prev</span><span class="o">.</span><span class="na">next</span> <span class="o">=</span> <span class="n">newNode</span><span class="o">;</span>
+
+        <span class="n">size</span><span class="o">++;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="no">T</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">add</span><span class="o">(</span><span class="n">head</span><span class="o">.</span><span class="na">prev</span><span class="o">,</span> <span class="k">new</span> <span class="nc">Node</span><span class="o">(</span><span class="n">val</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="kt">int</span> <span class="n">index</span><span class="o">,</span> <span class="no">T</span> <span class="n">val</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IndexOutOfBoundsException</span> <span class="o">{</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">index</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">IndexOutOfBoundsException</span><span class="o">(</span><span class="s">"Index can't be lower than 0."</span><span class="o">);</span>
+
+        <span class="nc">Node</span> <span class="n">curNode</span> <span class="o">=</span> <span class="n">head</span><span class="o">;</span>
+        <span class="kt">int</span> <span class="n">curIdx</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">;</span>
+        <span class="k">while</span><span class="o">(</span><span class="n">curNode</span><span class="o">.</span><span class="na">next</span> <span class="o">!=</span> <span class="n">head</span> <span class="o">&amp;&amp;</span> <span class="n">curIdx</span> <span class="o">&lt;</span> <span class="n">index</span><span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">curNode</span> <span class="o">=</span> <span class="n">curNode</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
+            <span class="n">curIdx</span><span class="o">++;</span>
+        <span class="o">}</span>
+        <span class="n">add</span><span class="o">(</span><span class="n">curNode</span><span class="o">,</span> <span class="k">new</span> <span class="nc">Node</span><span class="o">(</span><span class="n">val</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">remove</span><span class="o">(</span><span class="nc">Node</span> <span class="n">node</span><span class="o">){</span>
+        <span class="n">node</span><span class="o">.</span><span class="na">prev</span><span class="o">.</span><span class="na">next</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
+        <span class="n">node</span><span class="o">.</span><span class="na">next</span><span class="o">.</span><span class="na">prev</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="na">prev</span><span class="o">;</span>
+        <span class="n">node</span><span class="o">.</span><span class="na">next</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="n">node</span><span class="o">.</span><span class="na">prev</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+
+        <span class="n">size</span><span class="o">--;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">remove</span><span class="o">(</span><span class="no">T</span> <span class="n">val</span><span class="o">){</span>
+        <span class="nc">Node</span> <span class="n">curNode</span> <span class="o">=</span> <span class="n">head</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
+        <span class="k">while</span><span class="o">(</span><span class="n">curNode</span> <span class="o">!=</span> <span class="n">head</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">if</span><span class="o">(</span><span class="n">curNode</span><span class="o">.</span><span class="na">value</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">val</span><span class="o">)){</span>
+                <span class="n">remove</span><span class="o">(</span><span class="n">curNode</span><span class="o">);</span>
+                <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+            <span class="o">}</span>
+            <span class="n">curNode</span> <span class="o">=</span> <span class="n">curNode</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="nc">List</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="nf">getList</span><span class="o">(){</span>
+        <span class="nc">List</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+        <span class="nc">Node</span> <span class="n">curNode</span> <span class="o">=</span> <span class="n">head</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
+        <span class="k">while</span><span class="o">(</span><span class="n">curNode</span> <span class="o">!=</span> <span class="n">head</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">curNode</span><span class="o">.</span><span class="na">value</span><span class="o">);</span>
+            <span class="n">curNode</span> <span class="o">=</span> <span class="n">curNode</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">list</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">protected</span> <span class="kd">class</span> <span class="nc">Node</span><span class="o">{</span>
+        <span class="kd">private</span> <span class="no">T</span> <span class="n">value</span><span class="o">;</span>
+        <span class="kd">private</span> <span class="nc">Node</span> <span class="n">next</span><span class="o">;</span>
+        <span class="kd">private</span> <span class="nc">Node</span> <span class="n">prev</span><span class="o">;</span>
+
+        <span class="kd">protected</span> <span class="nf">Node</span><span class="o">(</span><span class="no">T</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">value</span> <span class="o">=</span> <span class="n">value</span><span class="o">;</span>
+            <span class="n">next</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="kd">protected</span> <span class="no">T</span> <span class="nf">getValue</span><span class="o">(){</span> <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">value</span><span class="o">;</span> <span class="o">}</span>
+        <span class="kd">protected</span> <span class="nc">Node</span> <span class="nf">getNext</span><span class="o">(){</span> <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">next</span><span class="o">;</span> <span class="o">}</span>
+        <span class="kd">protected</span> <span class="nc">Node</span> <span class="nf">getPrev</span><span class="o">(){</span> <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">prev</span><span class="o">;</span> <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 
 	</div>
