@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Dev.Isaac" /></head>
+<style>@import url(/public/css/syntax/monokai.css);</style>
+  <title>Dev.Isaac</title>
+  <!-- <link href="/public/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link href="/public/css/style.css" rel="stylesheet">
+  <body>
+  	<div class="container"> 
+		<div class="sidebar">
+			<div class="sidebar-item sidebar-header">
+	<div class='sidebar-brand'>
+		<a href="/about/">Dev.Isaac</a>
+	</div>
+	<p class="lead">정이삭 공부블로그</p></div>
+
+<div class="sidebar-item sidebar-nav">
+	<ul class="nav">
+      <li class="nav-title">Pages</li>
+	  <li>
+	  	<a class="nav-item" href="/">Articles</a>
+	  </li>
+	  
+	  
+	    
+	  
+	    
+	      
+	        <li>
+	        	<a class="nav-item" href="/about/">
+	            	About
+	            </a>
+	        </li>
+	      
+	    
+	  
+	    
+	      
+	    
+	  
+	    
+	  
+	    
+	  
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-nav">
+  	<ul class="nav">
+			<li class="nav-title">Categories</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#TIL">
+				<span class="name">TIL</span>
+				<span class="badge">8</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Linux">
+				<span class="name">Linux</span>
+				<span class="badge">5</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Network">
+				<span class="name">Network</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Java">
+				<span class="name">Java</span>
+				<span class="badge">3</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Data Structure">
+				<span class="name">Data Structure</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Algorithm">
+				<span class="name">Algorithm</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	  </nav>
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-footer">
+	<p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
+</div>
+		</div>
+		<div class="content">
+			<article class="post">
+	<header class="post-header">
+		<div class="post-title"> 
+			오버로딩과 오버라이딩
+		</div>
+		<time class="post-date dt-published" datetime="2021-01-12T00:00:00+09:00" itemprop="datePublished">2021/01/12
+		</time>		
+	</header>
+
+	<div class="post-content">
+		<h2 id="오버로딩과-오버라이딩-차이">오버로딩과 오버라이딩 차이</h2>
+
+<h3 id="오버로딩">오버로딩</h3>
+
+<ul>
+  <li>
+    <p>같은 클래스 내에서 메소드명은 같지만 파라미터가 다른 경우 오버로딩이라고 할 수 있다.</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">method</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"method1"</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">method</span><span class="o">(</span><span class="kt">char</span> <span class="n">a</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"method2"</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">method</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"method3"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+  
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Test</span> <span class="n">test</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Test</span><span class="o">();</span>
+  
+        <span class="n">test</span><span class="o">.</span><span class="na">method</span><span class="o">();</span>    <span class="c1">//method1 출력</span>
+        <span class="n">test</span><span class="o">.</span><span class="na">method</span><span class="o">(</span><span class="sc">'a'</span><span class="o">);</span> <span class="c1">//method2 출력</span>
+        <span class="n">test</span><span class="o">.</span><span class="na">method</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>   <span class="c1">//method3 출력</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p>위에서 세 메소드 모두 이름이 method지만 파라미터가 달라 같은 이름으로 다양한 메소드 구현이 가능하다.</p>
+  </li>
+</ul>
+
+<h3 id="오버라이딩">오버라이딩</h3>
+
+<ul>
+  <li>
+    <p>부모 클래스와 상속받은 자식 클래스 내에서 이루어진다.</p>
+  </li>
+  <li>
+    <p>부모 클래스에서 구현된 메소드와 형태(이름, 리턴타입, 파라미터)가 같은 메소드를 자식 클래스에서 재정의할 경우 오버라이딩된다.</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">SuperClass</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">method</span><span class="o">(){</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"this is superclass."</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+  
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ChildClass</span> <span class="kd">extends</span> <span class="nc">SuperClass</span><span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">method</span><span class="o">(){</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"this is ChildClass"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+  
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span><span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">SuperClass</span> <span class="n">test1</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SuperClass</span><span class="o">();</span>
+        <span class="nc">SuperClass</span> <span class="n">test2</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ChildClass</span><span class="o">();</span>
+        <span class="nc">ChildClass</span> <span class="n">test3</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ChildClass</span><span class="o">();</span>
+
+        <span class="n">test1</span><span class="o">.</span><span class="na">method</span><span class="o">()</span> <span class="c1">//this is superclass. 출력</span>
+        <span class="n">test2</span><span class="o">.</span><span class="na">method</span><span class="o">()</span> <span class="c1">//this is ChildClass 출력</span>
+        <span class="n">test3</span><span class="o">.</span><span class="na">method</span><span class="o">()</span> <span class="c1">//this is ChildClass 출력</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p>위의 결과에서 알 수 있듯이, 오버라이딩을 하면 부모클래스의 메소드를 오버라이딩한 메소드로 대체하게 된다.</p>
+
+    <p><br /></p>
+  </li>
+  <li>
+    <p>부모 클래스에서 정의된 메소드와 이름, 파라미터는 동일하지만 리턴 타입이 다를 경우에는 다음과 같은 에러가 발생함</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//부모클래스 메소드의 리턴타입은 void, 자식클래스 메소드의 리턴타입이 int일 때,
+java: method() in ChildClass cannot override method() in SuperClass
+  return type int is not compatible with void
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="override-어노테이션에-관하여">Override 어노테이션에 관하여</h3>
+
+<ul>
+  <li>나는 @Override 어노테이션이 있어야만 오버라이드가 되는 줄 알았다.</li>
+  <li>@Override 어노테이션은 컴파일러에게 “지금부터 이 메소드를 오버라이딩 할거야” 라고 알려주는 용도이다.</li>
+  <li>이때, 컴파일러는 부모 클래스에 동일한 메소드가 없을 경우 에러를 발생시키기 때문에, 안전한 코딩을 위해 @Override를 사용하는 것이 좋다.</li>
+  <li>@Override 어노테이션이 없어도 오버라이딩은 잘 된다.</li>
+</ul>
+
+
+	</div>
+</article>
+		</div>
+	</div>
+  </body>
+</html>

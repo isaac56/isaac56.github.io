@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-12T12:45:17+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">시간복잡도 표기법</title><link href="http://localhost:4000/algorithm/2021/01/12/TimeComplexity.html" rel="alternate" type="text/html" title="시간복잡도 표기법" /><published>2021-01-12T00:00:00+09:00</published><updated>2021-01-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/2021/01/12/TimeComplexity</id><content type="html" xml:base="http://localhost:4000/algorithm/2021/01/12/TimeComplexity.html">&lt;h2 id=&quot;시간복잡도-표기법을-간단히-정리해보았다&quot;&gt;시간복잡도 표기법을 간단히 정리해보았다.&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-12T18:18:14+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">시간복잡도 표기법</title><link href="http://localhost:4000/algorithm/2021/01/12/TimeComplexity.html" rel="alternate" type="text/html" title="시간복잡도 표기법" /><published>2021-01-12T00:00:00+09:00</published><updated>2021-01-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/2021/01/12/TimeComplexity</id><content type="html" xml:base="http://localhost:4000/algorithm/2021/01/12/TimeComplexity.html">&lt;h2 id=&quot;시간복잡도-표기법을-간단히-정리해보았다&quot;&gt;시간복잡도 표기법을 간단히 정리해보았다.&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -67,40 +67,97 @@
       &lt;li&gt;평균적으로 이정도 성능이 나온다는 의미&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /></entry><entry><title type="html">21년 1월 11일</title><link href="http://localhost:4000/til/2021/01/11/TIL8.html" rel="alternate" type="text/html" title="21년 1월 11일" /><published>2021-01-11T00:00:00+09:00</published><updated>2021-01-11T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/11/TIL8</id><content type="html" xml:base="http://localhost:4000/til/2021/01/11/TIL8.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /></entry><entry><title type="html">오버로딩과 오버라이딩</title><link href="http://localhost:4000/java/2021/01/12/Diff_Overloading_Overriding.html" rel="alternate" type="text/html" title="오버로딩과 오버라이딩" /><published>2021-01-12T00:00:00+09:00</published><updated>2021-01-12T00:00:00+09:00</updated><id>http://localhost:4000/java/2021/01/12/Diff_Overloading_Overriding</id><content type="html" xml:base="http://localhost:4000/java/2021/01/12/Diff_Overloading_Overriding.html">&lt;h2 id=&quot;오버로딩과-오버라이딩-차이&quot;&gt;오버로딩과 오버라이딩 차이&lt;/h2&gt;
+
+&lt;h3 id=&quot;오버로딩&quot;&gt;오버로딩&lt;/h3&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;코드스쿼드 미션으로 Linked List를 구현하여, 영상 편집 편집하기 컨셉의 간단한 CLI 프로그램을 만들었다.&lt;/li&gt;
-  &lt;li&gt;처음에 Single Linked List로 구현하였다가 Doubly Circular Linked List를 구현하였다.&lt;/li&gt;
-  &lt;li&gt;제너릭을 사용하여 Java Collections의 LinkedList처럼 사용할 수 있도록 노력하였다.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/data%20structure/2021/01/11/LinkedList.html&quot;&gt;Linked List&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;프로그래머스 이중우선순위큐, K번째수, 가장 큰 수 풀었다.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;같은 클래스 내에서 메소드명은 같지만 파라미터가 다른 경우 오버로딩이라고 할 수 있다.&lt;/p&gt;
+
+    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Test&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;method1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;method2&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;method3&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;Test&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  
+        &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;//method1 출력&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//method2 출력&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;//method3 출력&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;위에서 세 메소드 모두 이름이 method지만 파라미터가 달라 같은 이름으로 다양한 메소드 구현이 가능하다.&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
+&lt;h3 id=&quot;오버라이딩&quot;&gt;오버라이딩&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;TCP/IP책을 읽지 않았다.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;부모 클래스와 상속받은 자식 클래스 내에서 이루어진다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;부모 클래스에서 구현된 메소드와 형태(이름, 리턴타입, 파라미터)가 같은 메소드를 자식 클래스에서 재정의할 경우 오버라이딩된다.&lt;/p&gt;
+
+    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SuperClass&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;this is superclass.&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ChildClass&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SuperClass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;this is ChildClass&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;SuperClass&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SuperClass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;SuperClass&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ChildClass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;ChildClass&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ChildClass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;test1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//this is superclass. 출력&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;test2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//this is ChildClass 출력&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;test3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//this is ChildClass 출력&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;위의 결과에서 알 수 있듯이, 오버라이딩을 하면 부모클래스의 메소드를 오버라이딩한 메소드로 대체하게 된다.&lt;/p&gt;
+
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;부모 클래스에서 정의된 메소드와 이름, 파라미터는 동일하지만 리턴 타입이 다를 경우에는 다음과 같은 에러가 발생함&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//부모클래스 메소드의 리턴타입은 void, 자식클래스 메소드의 리턴타입이 int일 때,
+java: method() in ChildClass cannot override method() in SuperClass
+  return type int is not compatible with void
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;코드스쿼드 미션을 통해 Java의 다양한 기능등을 사용해보려고 하였다.&lt;/li&gt;
-  &lt;li&gt;단순히 요구사항에 맞춰서 구현한 것이 아니라, 제너릭으로 Linked List를 구현한 후 이를 상속도 해보고 내부클래스의 접근제한자도 바꿔가며 Java를 같이 공부하였다.&lt;/li&gt;
-  &lt;li&gt;피곤하다고 미루지 않고 오늘 할 일을 마쳤다..&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&quot;override-어노테이션에-관하여&quot;&gt;Override 어노테이션에 관하여&lt;/h3&gt;
 
-&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;일요일 밤에 잠을 거의 2시간밖에 못자서 너무 피곤하다.&lt;/li&gt;
-  &lt;li&gt;책 읽을 시간이 너무 없다. 주말에 책 읽을 시간으로 빼는게 나을까 고민된다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;코드스쿼드 미션 진행&lt;/li&gt;
-  &lt;li&gt;프로그래머스 알고리즘 풀기&lt;/li&gt;
-  &lt;li&gt;자바의정석 읽기&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="자료구조" /><category term="Linked List" /></entry><entry><title type="html">Linked List</title><link href="http://localhost:4000/data%20structure/2021/01/11/LinkedList.html" rel="alternate" type="text/html" title="Linked List" /><published>2021-01-11T00:00:00+09:00</published><updated>2021-01-11T00:00:00+09:00</updated><id>http://localhost:4000/data%20structure/2021/01/11/LinkedList</id><content type="html" xml:base="http://localhost:4000/data%20structure/2021/01/11/LinkedList.html">&lt;h2 id=&quot;linked-list&quot;&gt;Linked List&lt;/h2&gt;
+  &lt;li&gt;나는 @Override 어노테이션이 있어야만 오버라이드가 되는 줄 알았다.&lt;/li&gt;
+  &lt;li&gt;@Override 어노테이션은 컴파일러에게 “지금부터 이 메소드를 오버라이딩 할거야” 라고 알려주는 용도이다.&lt;/li&gt;
+  &lt;li&gt;이때, 컴파일러는 부모 클래스에 동일한 메소드가 없을 경우 에러를 발생시키기 때문에, 안전한 코딩을 위해 @Override를 사용하는 것이 좋다.&lt;/li&gt;
+  &lt;li&gt;@Override 어노테이션이 없어도 오버라이딩은 잘 된다.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Java" /></entry><entry><title type="html">Linked List</title><link href="http://localhost:4000/data%20structure/2021/01/11/LinkedList.html" rel="alternate" type="text/html" title="Linked List" /><published>2021-01-11T00:00:00+09:00</published><updated>2021-01-11T00:00:00+09:00</updated><id>http://localhost:4000/data%20structure/2021/01/11/LinkedList</id><content type="html" xml:base="http://localhost:4000/data%20structure/2021/01/11/LinkedList.html">&lt;h2 id=&quot;linked-list&quot;&gt;Linked List&lt;/h2&gt;
 
 &lt;p&gt;Node 또는 Vertax라 불리는 자료형이 연결된 형태의 자료구조이다.&lt;/p&gt;
 
@@ -242,39 +299,32 @@
 
 &lt;h2 id=&quot;doubly-circular-linked-list&quot;&gt;Doubly Circular Linked List&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;/public/img/LinkedList/4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="자료구조" /><category term="Linked List" /></entry><entry><title type="html">21년 1월 10일</title><link href="http://localhost:4000/til/2021/01/10/TIL7.html" rel="alternate" type="text/html" title="21년 1월 10일" /><published>2021-01-10T00:00:00+09:00</published><updated>2021-01-10T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/10/TIL7</id><content type="html" xml:base="http://localhost:4000/til/2021/01/10/TIL7.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/public/img/LinkedList/4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="자료구조" /><category term="Linked List" /></entry><entry><title type="html">21년 1월 11일</title><link href="http://localhost:4000/til/2021/01/11/TIL8.html" rel="alternate" type="text/html" title="21년 1월 11일" /><published>2021-01-11T00:00:00+09:00</published><updated>2021-01-11T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/11/TIL8</id><content type="html" xml:base="http://localhost:4000/til/2021/01/11/TIL8.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;Java 내부클래스 개념 공부 (자바의 정석 책)&lt;/li&gt;
-  &lt;li&gt;Java 내부클래스 정리하여 게시 &lt;a href=&quot;https://isaac56.github.io/java/2021/01/10/InnerClass.html&quot;&gt;바로가기&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;프로그래머스 더맵게
-    &lt;ul&gt;
-      &lt;li&gt;PriorityQueue를 사용하여 푸는 간단한 문제이다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;프로그래머스 디스크컨트롤러
-    &lt;ul&gt;
-      &lt;li&gt;PrirorityQueue를 사용하여 풀었다.&lt;/li&gt;
-      &lt;li&gt;하드디스크에 요청작업이 들어왔을 때, 처리할 수 있는 요청중에서 작업시간이 가장 작은 것부터 처리해야 평균 처리시간이 가장 낮다는 사실을 알아야 한다.&lt;/li&gt;
-      &lt;li&gt;해당 사실을 모를때, 차트 상에서 시간이 누적되는 개념을 그림적으로 생각해 아이디어를 얻었다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+  &lt;li&gt;코드스쿼드 미션으로 Linked List를 구현하여, 영상 편집 편집하기 컨셉의 간단한 CLI 프로그램을 만들었다.&lt;/li&gt;
+  &lt;li&gt;처음에 Single Linked List로 구현하였다가 Doubly Circular Linked List를 구현하였다.&lt;/li&gt;
+  &lt;li&gt;제너릭을 사용하여 Java Collections의 LinkedList처럼 사용할 수 있도록 노력하였다.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/data%20structure/2021/01/11/LinkedList.html&quot;&gt;Linked List&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;프로그래머스 이중우선순위큐, K번째수, 가장 큰 수 풀었다.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;조급하다. 자꾸 마음이 불안하다. 마인드 컨트롤이 필요하다.&lt;/li&gt;
+  &lt;li&gt;TCP/IP책을 읽지 않았다.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;1아니면 0이라는 느낌으로 열심히 안하면 아예 안하려는 습관이 있었는데, 조금이라도 오늘 할 일을 하였다.&lt;/li&gt;
+  &lt;li&gt;코드스쿼드 미션을 통해 Java의 다양한 기능등을 사용해보려고 하였다.&lt;/li&gt;
+  &lt;li&gt;단순히 요구사항에 맞춰서 구현한 것이 아니라, 제너릭으로 Linked List를 구현한 후 이를 상속도 해보고 내부클래스의 접근제한자도 바꿔가며 Java를 같이 공부하였다.&lt;/li&gt;
+  &lt;li&gt;피곤하다고 미루지 않고 오늘 할 일을 마쳤다..&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;주말에 안 쉬면 평일에 힘들거 같다는 강박에 갖힌것 같다.&lt;/li&gt;
-  &lt;li&gt;주말 계획은 따로 세워서 널널하게 가보는게 어떨까 싶다.&lt;/li&gt;
+  &lt;li&gt;일요일 밤에 잠을 거의 2시간밖에 못자서 너무 피곤하다.&lt;/li&gt;
+  &lt;li&gt;책 읽을 시간이 너무 없다. 주말에 책 읽을 시간으로 빼는게 나을까 고민된다.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
@@ -282,8 +332,7 @@
   &lt;li&gt;코드스쿼드 미션 진행&lt;/li&gt;
   &lt;li&gt;프로그래머스 알고리즘 풀기&lt;/li&gt;
   &lt;li&gt;자바의정석 읽기&lt;/li&gt;
-  &lt;li&gt;TCP/IP 쉽게 더 쉽게 읽기&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="내부클래스" /></entry><entry><title type="html">내부 클래스의 종류와 특징</title><link href="http://localhost:4000/java/2021/01/10/InnerClass.html" rel="alternate" type="text/html" title="내부 클래스의 종류와 특징" /><published>2021-01-10T00:00:00+09:00</published><updated>2021-01-10T00:00:00+09:00</updated><id>http://localhost:4000/java/2021/01/10/InnerClass</id><content type="html" xml:base="http://localhost:4000/java/2021/01/10/InnerClass.html">&lt;h2 id=&quot;내부-클래스를-전혀-모르고-있었다&quot;&gt;내부 클래스를 전혀 모르고 있었다.&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="자료구조" /><category term="Linked List" /></entry><entry><title type="html">내부 클래스의 종류와 특징</title><link href="http://localhost:4000/java/2021/01/10/InnerClass.html" rel="alternate" type="text/html" title="내부 클래스의 종류와 특징" /><published>2021-01-10T00:00:00+09:00</published><updated>2021-01-10T00:00:00+09:00</updated><id>http://localhost:4000/java/2021/01/10/InnerClass</id><content type="html" xml:base="http://localhost:4000/java/2021/01/10/InnerClass.html">&lt;h2 id=&quot;내부-클래스를-전혀-모르고-있었다&quot;&gt;내부 클래스를 전혀 모르고 있었다.&lt;/h2&gt;
 
 &lt;p&gt;프로그래머스 알고리즘 문제를 풀다가 코드 테스트 목적으로 main함수에서 내부클래스의 인스턴스를 선언하려했다.&lt;/p&gt;
 
@@ -397,7 +446,48 @@
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="Inner Class" /><category term="Nested Class" /></entry><entry><title type="html">21년 1월 9일</title><link href="http://localhost:4000/til/2021/01/09/TIL6.html" rel="alternate" type="text/html" title="21년 1월 9일" /><published>2021-01-09T00:00:00+09:00</published><updated>2021-01-09T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/09/TIL6</id><content type="html" xml:base="http://localhost:4000/til/2021/01/09/TIL6.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="Inner Class" /><category term="Nested Class" /></entry><entry><title type="html">21년 1월 10일</title><link href="http://localhost:4000/til/2021/01/10/TIL7.html" rel="alternate" type="text/html" title="21년 1월 10일" /><published>2021-01-10T00:00:00+09:00</published><updated>2021-01-10T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/10/TIL7</id><content type="html" xml:base="http://localhost:4000/til/2021/01/10/TIL7.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Java 내부클래스 개념 공부 (자바의 정석 책)&lt;/li&gt;
+  &lt;li&gt;Java 내부클래스 정리하여 게시 &lt;a href=&quot;https://isaac56.github.io/java/2021/01/10/InnerClass.html&quot;&gt;바로가기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;프로그래머스 더맵게
+    &lt;ul&gt;
+      &lt;li&gt;PriorityQueue를 사용하여 푸는 간단한 문제이다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;프로그래머스 디스크컨트롤러
+    &lt;ul&gt;
+      &lt;li&gt;PrirorityQueue를 사용하여 풀었다.&lt;/li&gt;
+      &lt;li&gt;하드디스크에 요청작업이 들어왔을 때, 처리할 수 있는 요청중에서 작업시간이 가장 작은 것부터 처리해야 평균 처리시간이 가장 낮다는 사실을 알아야 한다.&lt;/li&gt;
+      &lt;li&gt;해당 사실을 모를때, 차트 상에서 시간이 누적되는 개념을 그림적으로 생각해 아이디어를 얻었다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;조급하다. 자꾸 마음이 불안하다. 마인드 컨트롤이 필요하다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;1아니면 0이라는 느낌으로 열심히 안하면 아예 안하려는 습관이 있었는데, 조금이라도 오늘 할 일을 하였다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;주말에 안 쉬면 평일에 힘들거 같다는 강박에 갖힌것 같다.&lt;/li&gt;
+  &lt;li&gt;주말 계획은 따로 세워서 널널하게 가보는게 어떨까 싶다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;코드스쿼드 미션 진행&lt;/li&gt;
+  &lt;li&gt;프로그래머스 알고리즘 풀기&lt;/li&gt;
+  &lt;li&gt;자바의정석 읽기&lt;/li&gt;
+  &lt;li&gt;TCP/IP 쉽게 더 쉽게 읽기&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="내부클래스" /></entry><entry><title type="html">21년 1월 9일</title><link href="http://localhost:4000/til/2021/01/09/TIL6.html" rel="alternate" type="text/html" title="21년 1월 9일" /><published>2021-01-09T00:00:00+09:00</published><updated>2021-01-09T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/09/TIL6</id><content type="html" xml:base="http://localhost:4000/til/2021/01/09/TIL6.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;JVM의 메모리 구조와 Java Application이 실행되는 과정을 공부하였다.&lt;/p&gt;
@@ -693,156 +783,34 @@ SSH를 인증하는 방식은 다음과 같다.&lt;/p&gt;
   &lt;li&gt;클라이언트(나)는 전달받은 랜덤 스트링을 개인키로 암호화하여 서버에게 보낸다.&lt;/li&gt;
   &lt;li&gt;서버는 받은 암호를 authorized_keys에 등록된 공개키로 해석한 후, 2번에서 보냈던 랜덤 스트링과 일치하는지 확인한다.&lt;/li&gt;
   &lt;li&gt;일치한다면 클라이언트(나)는 authorized_keys에 등록된 authorized client 중 하나이므로 인증완료된다.&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="Linux" /><category term="SSH" /></entry><entry><title type="html">리눅스 group이란, group 변경</title><link href="http://localhost:4000/linux/2021/01/08/userGroup.html" rel="alternate" type="text/html" title="리눅스 group이란, group 변경" /><published>2021-01-08T00:00:00+09:00</published><updated>2021-01-08T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/08/userGroup</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/08/userGroup.html">&lt;h2 id=&quot;리눅스에서-group이란&quot;&gt;리눅스에서 group이란&lt;/h2&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="Linux" /><category term="SSH" /></entry><entry><title type="html">Shell의 종류</title><link href="http://localhost:4000/linux/2021/01/08/Shell-type.html" rel="alternate" type="text/html" title="Shell의 종류" /><published>2021-01-08T00:00:00+09:00</published><updated>2021-01-08T00:00:00+09:00</updated><id>http://localhost:4000/linux/2021/01/08/Shell-type</id><content type="html" xml:base="http://localhost:4000/linux/2021/01/08/Shell-type.html">&lt;p&gt;&lt;strong&gt;1. sh (bourne shell)&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;리눅스에선 group이라는 것이 있는데, 어떤 파일이나 폴더를 특정 User에게만 공유하고 싶을 때 사용한다.&lt;/p&gt;
+&lt;p&gt;가장 기본적인 쉘로 유닉스의 초기부터 사용되어 온 쉘이며 스크립트를 지원한다.&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;root 디렉터리에서 ls -l 커맨드를 치면 아래와 같은 형식으로 폴더 및 파일 정보가 뜬다.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2. ksh (korn shell)&lt;/strong&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;drwxr-xr-x  93 root root     4096  Jan  8 01:25 etc
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;rwxr-xr-x&lt;/code&gt; 는 etc라는 폴더에 접근 권한이다.&lt;/li&gt;
-  &lt;li&gt;3글자씩 잘라서, 소유자/그룹/타인 에 대한 접근 권한이다.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;root root&lt;/code&gt; 는 소유자/그룹 이 누구인지를 뜻한다.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;본 쉘을 확장한 쉘로 본 쉘 명령어를 모두 인식한다. 히스토리(history) 기능과 앨리어스(alias), 작업 제어 등의 기능이 추가되었다. 일반적으로 유닉스에서 가장 많이 사용되는 쉘이라고 한다. 명령행 편집기능을 제공&lt;/p&gt;
 
-&lt;p&gt;이 때, group1이라는 그룹에 속한 사용자들에게만 권한을 주고 싶다면,&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. bash (Bourne Again Shell)&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;해당 폴더의 그룹을 group1으로 바꾸고 그룹에 대한 접근 권한을 설정해주면 된다.&lt;/p&gt;
+&lt;p&gt;리눅스에서 가장 많이 사용하는 쉘이다. C 쉘과 콘 쉘의 장점을 결합하여 작성되었으며, Bourne 쉘 문법의 명령어 셋을 제공하여 Bourne Shell과 호환되는 쉘로 GNU 프로젝트에 의해 만들어지고 배포되었다. 명령행 편집기능을 제공&lt;/p&gt;
 
-&lt;h3 id=&quot;현재-생성되어-있는-group-확인&quot;&gt;현재 생성되어 있는 Group 확인&lt;/h3&gt;
+&lt;h3 id=&quot;c-쉘-계열의-쉘&quot;&gt;C 쉘 계열의 쉘&lt;/h3&gt;
 
-&lt;p&gt;현재 생성되어 있는 group은 /etc/group 파일에서 확인할 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. csh (C Shell)&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;특정-유저의-그룹-확인&quot;&gt;특정 유저의 그룹 확인&lt;/h3&gt;
+&lt;p&gt;명령행 편집기능을 제공하지 않는다. C 언어 위주의 쉘로 처음 작성되었을 때에는 본 쉘이 가지고 있지 못한 기능들(작업제어, 명령어 히스토리 등)을 가지고 있었기 때문에 많이 사용되었다.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#id user1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;2. tcsh (TC Shell)&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;그룹-생성하기&quot;&gt;그룹 생성하기&lt;/h3&gt;
+&lt;p&gt;csh의 기능을 강화한 쉘입니다. 명령행 편집기능을 제공한다.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#groupadd -g 777 group1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;centos-sulinux-asianux-등의-레드햇-계열의-리눅스-배포판에서-기본으로-사용되지-않는-쉘&quot;&gt;CentOS, SULinux, Asianux 등의 레드햇 계열의 리눅스 배포판에서 기본으로 사용되지 않는 쉘&lt;/h3&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;GID가 777인 그룹 group1을 만든다.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;1. Zsh 쉘&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;유저를-그룹에-가입시키기&quot;&gt;유저를 그룹에 가입시키기&lt;/h3&gt;
+&lt;p&gt;로그인쉘 및 쉘스크립트 명령어 프로세서로서 이용 가능한 유닉스 쉘입니다. 표준 쉘들 중에서 zsh는 ksh와 가장 유사하지만 많은 개선들을 포함합니다. zsh는 명령행 편집, 내장 스펠링 수정, history 등의 기능을 가집니다.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#usermod -G group1 user1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;2. ash 쉘&lt;/strong&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;user1을 group1에 가입시킨다.&lt;/li&gt;
-  &lt;li&gt;user1이 세 개 이상 그룹에 가입하기 위해서는 /etc/group을 수정해야함&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;그룹-삭제하기&quot;&gt;그룹 삭제하기&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#groupdel group1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;group1을 삭제 시킨다.&lt;/li&gt;
-  &lt;li&gt;group1을 기본그룹으로 하는 user가 있다면 삭제가 안됨&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Linux" /><category term="group" /></entry><entry><title type="html">21년 1월 8일</title><link href="http://localhost:4000/til/2021/01/08/TIL5.html" rel="alternate" type="text/html" title="21년 1월 8일" /><published>2021-01-08T00:00:00+09:00</published><updated>2021-01-08T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/08/TIL5</id><content type="html" xml:base="http://localhost:4000/til/2021/01/08/TIL5.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;어제 코드스쿼드 미션으로 나온 쉘 스크립트의 부족한 부분을 수정했다&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;
-        &lt;p&gt;현재 폴더에 위치한 day1 ~ day16 폴더의 .cs 파일만을 복사해야 하는데,&lt;/p&gt;
-
-        &lt;p&gt;어제의 스크립트는 현재 폴더 하위에 위치한 모든 .cs 파일을 압축했었다.&lt;/p&gt;
-
-        &lt;ul&gt;
-          &lt;li&gt;
-            &lt;p&gt;변경전 쉘 스크립트&lt;/p&gt;
-
-            &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;var &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;1..16&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;do
-  if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;day&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$var&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
-    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;day&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$var&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; not exists&quot;&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;else
-    if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; day&lt;span class=&quot;nv&quot;&gt;$var&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; .cs | &lt;span class=&quot;nb&quot;&gt;wc&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-eq&lt;/span&gt; 0 &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
-      &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;day&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$var&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; is empty&quot;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;fi
-  fi
-done
-       
-&lt;/span&gt;find &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-name&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;*.cs&quot;&lt;/span&gt; | xargs zip &lt;span class=&quot;nv&quot;&gt;$NAME&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; log.txt 2&amp;gt;&amp;amp;1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;            &lt;/div&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;p&gt;변경후 쉘 스크립트&lt;/p&gt;
-
-            &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;targetFiles&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=()&lt;/span&gt;
-       
-&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;var &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;1..16&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;do
-  if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;day&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$var&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
-    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;day&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$var&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; not exists&quot;&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;else
-    if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; day&lt;span class=&quot;nv&quot;&gt;$var&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; .cs | &lt;span class=&quot;nb&quot;&gt;wc&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-eq&lt;/span&gt; 0 &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
-      &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;day&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$var&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; is empty&quot;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;else
-      &lt;/span&gt;targetFiles+&lt;span class=&quot;o&quot;&gt;=(&lt;/span&gt;day&lt;span class=&quot;nv&quot;&gt;$var&lt;/span&gt;/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.cs&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;fi
-  fi
-done
-       
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;NAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;backup_&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;date&lt;/span&gt; +&lt;span class=&quot;s2&quot;&gt;&quot;%y%m%d&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.zip&quot;&lt;/span&gt;
-zip &lt;span class=&quot;nv&quot;&gt;$NAME&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;targetFiles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[@]&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; ./log.txt 2&amp;gt;&amp;amp;1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;            &lt;/div&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;SCP명령어에서 패스워드 입력없이 바로 사용할 수 있도록 SSH Key 방식을 사용했다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;공개키와 개인키로 이루어지는 SSH Key 인증 방식을 공부하고, 정리하여 포스팅했다.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;계획에 없던 개인 스케줄로 인해, 목표한 책을 펴지도 않았고, 알고리즘 2문제를 풀지도 못했다.&lt;/li&gt;
-  &lt;li&gt;세운 계획이 구체적이지도 못하고 하루에 소화할만 한 양이 아닌 것 같다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;SSH key 인증이 어떻게 이루어지는지 찾아보고, 실제 적용하여 쉘 스크립트를 완전 자동화 하였다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;계획을 어떤 식으로 세워야 할지가 고민이다.
-    &lt;ul&gt;
-      &lt;li&gt;너무 대충 세운 계획이나 무리한 계획을 세우지 말고, 오늘 공부할 주제만 정하고 시간에 충실하게 공부하는게 어떨까 싶다.&lt;/li&gt;
-      &lt;li&gt;예를 들어, 프로그래머스 2문제를 푸는게 계획이면 어려운 문제가 걸리면 계획에 맞추기 힘들 수 있다.&lt;/li&gt;
-      &lt;li&gt;책 읽기도 하루에 몇페이지를 읽어야 한다기보다, 공부하는 시간에 충실하게 읽는 것을 목표로 하는게 어떨까?&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;매일 공부한 것 중에 기억할 만한 개념을 글로 정리하고 있는데, 글 재주가 없어서 그런지 글로 정리하는데 시간이 너무 많이 쓰인다.
-    &lt;ul&gt;
-      &lt;li&gt;내가 공부하고 공부한 것을 기억하는 것이 중요하기 때문에, 시간을 절약하려면 나만 알아볼 수 있는 수준만큼만 작성하는게 어떨까 싶다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;알고리즘 공부&lt;/li&gt;
-  &lt;li&gt;자바의정석 책 공부&lt;/li&gt;
-  &lt;li&gt;TCP/IP 공부&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="SSH" /><category term="shell" /></entry></feed>
+&lt;p&gt;추가적인 기능들이 없이 본 쉘에 가장 부합하는 쉘입니다. 본 쉘은 상업적인 유닉스 시스템들에서 사용가능하므로, ash는 쉘 스크립트가 본 쉘에 잘 부합하는지 시험할 때 유용합니다. 또한 이것은 다른 sh- 호환 쉘에 비해 적은 메모리와 공간을 요구합니다.&lt;/p&gt;</content><author><name></name></author><category term="Linux" /><category term="Shell" /></entry></feed>
