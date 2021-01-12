@@ -106,44 +106,83 @@
 			<article class="post">
 	<header class="post-header">
 		<div class="post-title"> 
-			Shell의 종류
+			시간복잡도 표기법
 		</div>
-		<time class="post-date dt-published" datetime="2021-01-08T00:00:00+09:00" itemprop="datePublished">2021/01/08
+		<time class="post-date dt-published" datetime="2021-01-12T00:00:00+09:00" itemprop="datePublished">2021/01/12
 		</time>		
 	</header>
 
 	<div class="post-content">
-		<p><strong>1. sh (bourne shell)</strong></p>
+		<h2 id="시간복잡도-표기법을-간단히-정리해보았다">시간복잡도 표기법을 간단히 정리해보았다.</h2>
 
-<p>가장 기본적인 쉘로 유닉스의 초기부터 사용되어 온 쉘이며 스크립트를 지원한다.</p>
+<ul>
+  <li>
+    <p>Big-O Notation (빅 오 표기법)</p>
 
-<p><strong>2. ksh (korn shell)</strong></p>
+    <ul>
+      <li>
+        <p>정의</p>
 
-<p>본 쉘을 확장한 쉘로 본 쉘 명령어를 모두 인식한다. 히스토리(history) 기능과 앨리어스(alias), 작업 제어 등의 기능이 추가되었다. 일반적으로 유닉스에서 가장 많이 사용되는 쉘이라고 한다. 명령행 편집기능을 제공</p>
+        <ul>
+          <li>
+            <p><code class="highlighter-rouge">|f(x)| &lt;= C|g(x)| (for all x &gt; N)</code></p>
+          </li>
+          <li>
+            <p>어떤 지s점 N에 대해서 N보다 큰 모든 x에 대해서 <code class="highlighter-rouge">|</code>f(x)<code class="highlighter-rouge">|</code> &lt;= C<code class="highlighter-rouge">|</code>g(x)<code class="highlighter-rouge">|</code> 인 N과 C가 존재하면</p>
 
-<p><strong>3. bash (Bourne Again Shell)</strong></p>
+            <p>f(x) = O(g(x)) 라 표기 가능하다.</p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>최악의 경우에도 이정도 성능(g(x)은 보장된다는 의미</p>
+      </li>
+    </ul>
+  </li>
+</ul>
 
-<p>리눅스에서 가장 많이 사용하는 쉘이다. C 쉘과 콘 쉘의 장점을 결합하여 작성되었으며, Bourne 쉘 문법의 명령어 셋을 제공하여 Bourne Shell과 호환되는 쉘로 GNU 프로젝트에 의해 만들어지고 배포되었다. 명령행 편집기능을 제공</p>
+<p><br /></p>
 
-<h3 id="c-쉘-계열의-쉘">C 쉘 계열의 쉘</h3>
+<ul>
+  <li>
+    <p>Big-Ω Notation(빅 오메가 표기법)</p>
 
-<p><strong>1. csh (C Shell)</strong></p>
+    <ul>
+      <li>
+        <p>정의</p>
 
-<p>명령행 편집기능을 제공하지 않는다. C 언어 위주의 쉘로 처음 작성되었을 때에는 본 쉘이 가지고 있지 못한 기능들(작업제어, 명령어 히스토리 등)을 가지고 있었기 때문에 많이 사용되었다.</p>
+        <ul>
+          <li>
+            <p><code class="highlighter-rouge">|f(x)| &gt;= C|g(x)| (for all x &gt; N)</code></p>
+          </li>
+          <li>
+            <p>어떤 지점 N에 대해서 N보다 큰 모든 x에 대해서 <code class="highlighter-rouge">|</code>f(x)<code class="highlighter-rouge">|</code> &gt;= C<code class="highlighter-rouge">|</code>g(x)<code class="highlighter-rouge">|</code> 인 N과 C가 존재하면</p>
 
-<p><strong>2. tcsh (TC Shell)</strong></p>
+            <p>f(x) = Ω(g(x)) 라 표기 가능하다.</p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>최상의 경우에도 이정도 성능(g(x)보다 같거나 느리다는 의미</p>
+      </li>
+    </ul>
+  </li>
+</ul>
 
-<p>csh의 기능을 강화한 쉘입니다. 명령행 편집기능을 제공한다.</p>
+<p><br /></p>
 
-<h3 id="centos-sulinux-asianux-등의-레드햇-계열의-리눅스-배포판에서-기본으로-사용되지-않는-쉘">CentOS, SULinux, Asianux 등의 레드햇 계열의 리눅스 배포판에서 기본으로 사용되지 않는 쉘</h3>
-
-<p><strong>1. Zsh 쉘</strong></p>
-
-<p>로그인쉘 및 쉘스크립트 명령어 프로세서로서 이용 가능한 유닉스 쉘입니다. 표준 쉘들 중에서 zsh는 ksh와 가장 유사하지만 많은 개선들을 포함합니다. zsh는 명령행 편집, 내장 스펠링 수정, history 등의 기능을 가집니다.</p>
-
-<p><strong>2. ash 쉘</strong></p>
-
-<p>추가적인 기능들이 없이 본 쉘에 가장 부합하는 쉘입니다. 본 쉘은 상업적인 유닉스 시스템들에서 사용가능하므로, ash는 쉘 스크립트가 본 쉘에 잘 부합하는지 시험할 때 유용합니다. 또한 이것은 다른 sh- 호환 쉘에 비해 적은 메모리와 공간을 요구합니다.</p>
+<ul>
+  <li>Big-θ Notation(빅 세타 표기법)
+    <ul>
+      <li>정의
+        <ul>
+          <li>f(x) = O(g(x))와 f(x) = Ω(g(x))가 모두 참일 때 f(x) = θ(g(x))</li>
+        </ul>
+      </li>
+      <li>평균적으로 이정도 성능이 나온다는 의미</li>
+    </ul>
+  </li>
+</ul>
 
 	</div>
 </article>
