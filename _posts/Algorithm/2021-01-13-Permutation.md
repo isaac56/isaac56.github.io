@@ -90,6 +90,27 @@ public class Permutation {
 
 <br>
 
+## String의 Permutation을 매우 간단하게 구현
+
+[프로그래머스 - 소수찾기](https://programmers.co.kr/learn/courses/30/lessons/42839)를 풀다가 String을 매우 간단하게 permutation한 함수를 발견하여 추가해놓았다.
+
+위와 핵심은 똑같다, 맨 앞자리부터 들어갈 수 있는 요소들을 집어넣는 것.
+
+그러나 자바에서 String 은 +로 쉽게 String끼리 이어붙일 수 있기 때문에 아래와 같은 구현이 가능했다.
+
+```java
+//사용법 permutation("",str);
+public void permutation(String prefix, String str){
+    if(str.equals("")) System.out.println(prefix);
+    
+    for(int i = 0; i < str.length(); i++) {
+        permutation(prefix + str.charAt(i), str.substring(0, i) + str.substring(i+1, str.length()));
+    }
+}
+```
+
+<br>
+
 ## C++ STL과 같이 next_permutation을 구현하기
 
 또 다른 방법으로 STL의 next_permutation을 구현할 수 있다고 한다.
