@@ -1,4 +1,85 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-13T23:19:54+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">Java로 순열 구현</title><link href="http://localhost:4000/algorithm/2021/01/13/Permutation.html" rel="alternate" type="text/html" title="Java로 순열 구현" /><published>2021-01-13T00:00:00+09:00</published><updated>2021-01-13T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/2021/01/13/Permutation</id><content type="html" xml:base="http://localhost:4000/algorithm/2021/01/13/Permutation.html">&lt;h2 id=&quot;자바에는-기본제공-순열-함수가-없다-ㅠㅠ&quot;&gt;자바에는 기본제공 순열 함수가 없다 ㅠㅠ&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-13T23:40:12+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 1월 13일</title><link href="http://localhost:4000/til/2021/01/13/TIL10.html" rel="alternate" type="text/html" title="21년 1월 13일" /><published>2021-01-13T00:00:00+09:00</published><updated>2021-01-13T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/13/TIL10</id><content type="html" xml:base="http://localhost:4000/til/2021/01/13/TIL10.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;오늘은 하루종일 알고리즘만 풀었다.&lt;/li&gt;
+  &lt;li&gt;코드스쿼드 미션으로 나온 문제들(릿코드):
+    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;https://leetcode.com/problems/two-sum/&quot;&gt;two-sum&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://leetcode.com/problems/reverse-integer/&quot;&gt;Reverse Integer&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;StringBuilder를 이용하여 풀었는데, 다른 풀이가 훨씬 간단했다.&lt;/li&gt;
+          &lt;li&gt;다른 풀이에서는 Integer 자체를 가지고 %와 /를 사용하여 reverse Integer를 구했다.&lt;/li&gt;
+          &lt;li&gt;음수 나머지 연산도 -가 붙을 뿐 아예 똑같다는 것을 기억하자
+            &lt;ul&gt;
+              &lt;li&gt;-9 % 2 = -1, -20 % 3 = -2&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://leetcode.com/problems/remove-duplicates-from-sorted-list/&quot;&gt;Remove Duplicates from sorted list&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://leetcode.com/problems/palindrome-number/&quot;&gt;Palindrome number&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://leetcode.com/problems/longest-common-prefix/&quot;&gt;Longest common prefix&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Suffix Array를 통해 LCD를 구하는 건지 잘못알고 엄청 공부했다.&lt;/li&gt;
+          &lt;li&gt;Suffix Array를 통해 구하는 문제가 아니었다.&lt;/li&gt;
+          &lt;li&gt;Suffix Array를 검색하여 딱 개념만 겨우 이해했다.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://leetcode.com/problems/linked-list-cycle/&quot;&gt;Linked List cycle&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Cycle을 검사하는데 공간복잡도가 O(1)으로 풀 수 있다는 걸 처음 알았다.
+            &lt;ol&gt;
+              &lt;li&gt;linked list에서 한칸씩 이동하는 slow와 두칸씩 이동하는 fast가 같은 지점에서 출발한다고 가정하자.&lt;/li&gt;
+              &lt;li&gt;linked list가 cycle이 형성되어 있다면 slow와 fast는 언젠가 무조건 만난다.&lt;/li&gt;
+            &lt;/ol&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;프로그래머스 문제:
+    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42839&quot;&gt;소수찾기&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;예전에 풀었던 완전탐색 문제인데, permutation 알고리즘이 필요한 문제이다.&lt;/li&gt;
+          &lt;li&gt;STL엔 next_permutation함수가 있어서 쉽게 풀었었는데, Java엔 순열 함수가 없어서 직접 구현하여 풀었다.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Permutation 알고리즘 포스팅하였다.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/algorithm/2021/01/13/Permutation.html&quot;&gt;https://isaac56.github.io/algorithm/2021/01/13/Permutation.html&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;선택과 집중을 잘 못하는 것 같다.&lt;/li&gt;
+  &lt;li&gt;Suffix Array가 지금 당장 나에게 중요한 알고리즘이 아닌데도 이해해보겠다고 많은 시간을 썼고 지쳤다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;드디어 Permutation 알고리즘을 이해하고 찜찜함을 풀었다. (원래 permutation은 STL에 의존하다 보니 찜찜했다.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;그냥 알고리즘은 자바로 풀기로 정했다. 그만 방황하고 알고리즘 테스트를 열심히 준비하자&lt;/li&gt;
+  &lt;li&gt;코드스쿼드 Java 백엔드 과정에 대한 학습 목표를 봤는데, 저 목표를 모두 이룰 수 있을까 걱정이 됐다.&lt;/li&gt;
+  &lt;li&gt;5시~7시까지 자신이 없어지고 집중이 안되서 낮잠을 잤다.&lt;/li&gt;
+  &lt;li&gt;쫄지말자 꾸준히 하면 언젠가 할 수 있겠지&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;코드스쿼드 미션 진행&lt;/li&gt;
+  &lt;li&gt;프로그래머스 알고리즘 풀기&lt;/li&gt;
+  &lt;li&gt;자바의정석 읽기&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /></entry><entry><title type="html">Java로 순열 구현</title><link href="http://localhost:4000/algorithm/2021/01/13/Permutation.html" rel="alternate" type="text/html" title="Java로 순열 구현" /><published>2021-01-13T00:00:00+09:00</published><updated>2021-01-13T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/2021/01/13/Permutation</id><content type="html" xml:base="http://localhost:4000/algorithm/2021/01/13/Permutation.html">&lt;h2 id=&quot;자바에는-기본제공-순열-함수가-없다-ㅠㅠ&quot;&gt;자바에는 기본제공 순열 함수가 없다 ㅠㅠ&lt;/h2&gt;
 
 &lt;p&gt;C++로 코딩테스트를 풀다가 자바로 넘어갔을 때 가장 당황했던 것이었다.&lt;/p&gt;
 
@@ -192,7 +273,76 @@
   &lt;li&gt;코드스쿼드 미션 진행&lt;/li&gt;
   &lt;li&gt;프로그래머스 알고리즘 풀기&lt;/li&gt;
   &lt;li&gt;자바의정석 읽기&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="Linked List" /><category term="Overloading" /><category term="Overriding" /></entry><entry><title type="html">오버로딩과 오버라이딩</title><link href="http://localhost:4000/java/2021/01/12/Diff_Overloading_Overriding.html" rel="alternate" type="text/html" title="오버로딩과 오버라이딩" /><published>2021-01-12T00:00:00+09:00</published><updated>2021-01-12T00:00:00+09:00</updated><id>http://localhost:4000/java/2021/01/12/Diff_Overloading_Overriding</id><content type="html" xml:base="http://localhost:4000/java/2021/01/12/Diff_Overloading_Overriding.html">&lt;h2 id=&quot;오버로딩과-오버라이딩-차이&quot;&gt;오버로딩과 오버라이딩 차이&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="Linked List" /><category term="Overloading" /><category term="Overriding" /></entry><entry><title type="html">시간복잡도 표기법</title><link href="http://localhost:4000/algorithm/2021/01/12/TimeComplexity.html" rel="alternate" type="text/html" title="시간복잡도 표기법" /><published>2021-01-12T00:00:00+09:00</published><updated>2021-01-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/2021/01/12/TimeComplexity</id><content type="html" xml:base="http://localhost:4000/algorithm/2021/01/12/TimeComplexity.html">&lt;h2 id=&quot;시간복잡도-표기법을-간단히-정리해보았다&quot;&gt;시간복잡도 표기법을 간단히 정리해보았다.&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Big-O Notation (빅 오 표기법)&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;정의&lt;/p&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;|f(x)| &amp;lt;= C|g(x)| (for all x &amp;gt; N)&lt;/code&gt;&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;어떤 지s점 N에 대해서 N보다 큰 모든 x에 대해서 &lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt;f(x)&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt; &amp;lt;= C&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt;g(x)&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt; 인 N과 C가 존재하면&lt;/p&gt;
+
+            &lt;p&gt;f(x) = O(g(x)) 라 표기 가능하다.&lt;/p&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;최악의 경우에도 이정도 성능(g(x)은 보장된다는 의미&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Big-Ω Notation(빅 오메가 표기법)&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;정의&lt;/p&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;|f(x)| &amp;gt;= C|g(x)| (for all x &amp;gt; N)&lt;/code&gt;&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;어떤 지점 N에 대해서 N보다 큰 모든 x에 대해서 &lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt;f(x)&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt; &amp;gt;= C&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt;g(x)&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt; 인 N과 C가 존재하면&lt;/p&gt;
+
+            &lt;p&gt;f(x) = Ω(g(x)) 라 표기 가능하다.&lt;/p&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;최상의 경우에도 이정도 성능(g(x)보다 같거나 느리다는 의미&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Big-θ Notation(빅 세타 표기법)
+    &lt;ul&gt;
+      &lt;li&gt;정의
+        &lt;ul&gt;
+          &lt;li&gt;f(x) = O(g(x))와 f(x) = Ω(g(x))가 모두 참일 때 f(x) = θ(g(x))&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;평균적으로 이정도 성능이 나온다는 의미&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /></entry><entry><title type="html">오버로딩과 오버라이딩</title><link href="http://localhost:4000/java/2021/01/12/Diff_Overloading_Overriding.html" rel="alternate" type="text/html" title="오버로딩과 오버라이딩" /><published>2021-01-12T00:00:00+09:00</published><updated>2021-01-12T00:00:00+09:00</updated><id>http://localhost:4000/java/2021/01/12/Diff_Overloading_Overriding</id><content type="html" xml:base="http://localhost:4000/java/2021/01/12/Diff_Overloading_Overriding.html">&lt;h2 id=&quot;오버로딩과-오버라이딩-차이&quot;&gt;오버로딩과 오버라이딩 차이&lt;/h2&gt;
 
 &lt;h3 id=&quot;오버로딩&quot;&gt;오버로딩&lt;/h3&gt;
 
@@ -330,76 +480,40 @@ java: method() in ChildClass cannot override method() in SuperClass
   &lt;li&gt;@Override 어노테이션은 컴파일러에게 “지금부터 이 메소드를 오버라이딩 할거야” 라고 알려주는 용도이다.&lt;/li&gt;
   &lt;li&gt;이때, 컴파일러는 부모 클래스에 동일한 메소드가 없을 경우 에러를 발생시키기 때문에, 안전한 코딩을 위해 @Override를 사용하는 것이 좋다.&lt;/li&gt;
   &lt;li&gt;@Override 어노테이션이 없어도 오버라이딩은 잘 된다.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Java" /></entry><entry><title type="html">시간복잡도 표기법</title><link href="http://localhost:4000/algorithm/2021/01/12/TimeComplexity.html" rel="alternate" type="text/html" title="시간복잡도 표기법" /><published>2021-01-12T00:00:00+09:00</published><updated>2021-01-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/2021/01/12/TimeComplexity</id><content type="html" xml:base="http://localhost:4000/algorithm/2021/01/12/TimeComplexity.html">&lt;h2 id=&quot;시간복잡도-표기법을-간단히-정리해보았다&quot;&gt;시간복잡도 표기법을 간단히 정리해보았다.&lt;/h2&gt;
-
+&lt;/ul&gt;</content><author><name></name></author><category term="Java" /></entry><entry><title type="html">21년 1월 11일</title><link href="http://localhost:4000/til/2021/01/11/TIL8.html" rel="alternate" type="text/html" title="21년 1월 11일" /><published>2021-01-11T00:00:00+09:00</published><updated>2021-01-11T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/11/TIL8</id><content type="html" xml:base="http://localhost:4000/til/2021/01/11/TIL8.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Big-O Notation (빅 오 표기법)&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;정의&lt;/p&gt;
-
-        &lt;ul&gt;
-          &lt;li&gt;
-            &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;|f(x)| &amp;lt;= C|g(x)| (for all x &amp;gt; N)&lt;/code&gt;&lt;/p&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;p&gt;어떤 지s점 N에 대해서 N보다 큰 모든 x에 대해서 &lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt;f(x)&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt; &amp;lt;= C&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt;g(x)&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt; 인 N과 C가 존재하면&lt;/p&gt;
-
-            &lt;p&gt;f(x) = O(g(x)) 라 표기 가능하다.&lt;/p&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;최악의 경우에도 이정도 성능(g(x)은 보장된다는 의미&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+  &lt;li&gt;코드스쿼드 미션으로 Linked List를 구현하여, 영상 편집 편집하기 컨셉의 간단한 CLI 프로그램을 만들었다.&lt;/li&gt;
+  &lt;li&gt;처음에 Single Linked List로 구현하였다가 Doubly Circular Linked List를 구현하였다.&lt;/li&gt;
+  &lt;li&gt;제너릭을 사용하여 Java Collections의 LinkedList처럼 사용할 수 있도록 노력하였다.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/data%20structure/2021/01/11/LinkedList.html&quot;&gt;Linked List&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;프로그래머스 이중우선순위큐, K번째수, 가장 큰 수 풀었다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Big-Ω Notation(빅 오메가 표기법)&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;정의&lt;/p&gt;
-
-        &lt;ul&gt;
-          &lt;li&gt;
-            &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;|f(x)| &amp;gt;= C|g(x)| (for all x &amp;gt; N)&lt;/code&gt;&lt;/p&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;p&gt;어떤 지점 N에 대해서 N보다 큰 모든 x에 대해서 &lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt;f(x)&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt; &amp;gt;= C&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt;g(x)&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt; 인 N과 C가 존재하면&lt;/p&gt;
-
-            &lt;p&gt;f(x) = Ω(g(x)) 라 표기 가능하다.&lt;/p&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;최상의 경우에도 이정도 성능(g(x)보다 같거나 느리다는 의미&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+  &lt;li&gt;TCP/IP책을 읽지 않았다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
+&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;Big-θ Notation(빅 세타 표기법)
-    &lt;ul&gt;
-      &lt;li&gt;정의
-        &lt;ul&gt;
-          &lt;li&gt;f(x) = O(g(x))와 f(x) = Ω(g(x))가 모두 참일 때 f(x) = θ(g(x))&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;평균적으로 이정도 성능이 나온다는 의미&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /></entry><entry><title type="html">Linked List</title><link href="http://localhost:4000/data%20structure/2021/01/11/LinkedList.html" rel="alternate" type="text/html" title="Linked List" /><published>2021-01-11T00:00:00+09:00</published><updated>2021-01-11T00:00:00+09:00</updated><id>http://localhost:4000/data%20structure/2021/01/11/LinkedList</id><content type="html" xml:base="http://localhost:4000/data%20structure/2021/01/11/LinkedList.html">&lt;h2 id=&quot;linked-list&quot;&gt;Linked List&lt;/h2&gt;
+  &lt;li&gt;코드스쿼드 미션을 통해 Java의 다양한 기능등을 사용해보려고 하였다.&lt;/li&gt;
+  &lt;li&gt;단순히 요구사항에 맞춰서 구현한 것이 아니라, 제너릭으로 Linked List를 구현한 후 이를 상속도 해보고 내부클래스의 접근제한자도 바꿔가며 Java를 같이 공부하였다.&lt;/li&gt;
+  &lt;li&gt;피곤하다고 미루지 않고 오늘 할 일을 마쳤다..&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;일요일 밤에 잠을 거의 2시간밖에 못자서 너무 피곤하다.&lt;/li&gt;
+  &lt;li&gt;책 읽을 시간이 너무 없다. 주말에 책 읽을 시간으로 빼는게 나을까 고민된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;코드스쿼드 미션 진행&lt;/li&gt;
+  &lt;li&gt;프로그래머스 알고리즘 풀기&lt;/li&gt;
+  &lt;li&gt;자바의정석 읽기&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="자료구조" /><category term="Linked List" /></entry><entry><title type="html">Linked List</title><link href="http://localhost:4000/data%20structure/2021/01/11/LinkedList.html" rel="alternate" type="text/html" title="Linked List" /><published>2021-01-11T00:00:00+09:00</published><updated>2021-01-11T00:00:00+09:00</updated><id>http://localhost:4000/data%20structure/2021/01/11/LinkedList</id><content type="html" xml:base="http://localhost:4000/data%20structure/2021/01/11/LinkedList.html">&lt;h2 id=&quot;linked-list&quot;&gt;Linked List&lt;/h2&gt;
 
 &lt;p&gt;Node 또는 Vertax라 불리는 자료형이 연결된 형태의 자료구조이다.&lt;/p&gt;
 
@@ -714,81 +828,7 @@ java: method() in ChildClass cannot override method() in SuperClass
         &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Node&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getPrev&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;prev&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="Java" /><category term="자료구조" /><category term="Linked List" /></entry><entry><title type="html">21년 1월 11일</title><link href="http://localhost:4000/til/2021/01/11/TIL8.html" rel="alternate" type="text/html" title="21년 1월 11일" /><published>2021-01-11T00:00:00+09:00</published><updated>2021-01-11T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/11/TIL8</id><content type="html" xml:base="http://localhost:4000/til/2021/01/11/TIL8.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;코드스쿼드 미션으로 Linked List를 구현하여, 영상 편집 편집하기 컨셉의 간단한 CLI 프로그램을 만들었다.&lt;/li&gt;
-  &lt;li&gt;처음에 Single Linked List로 구현하였다가 Doubly Circular Linked List를 구현하였다.&lt;/li&gt;
-  &lt;li&gt;제너릭을 사용하여 Java Collections의 LinkedList처럼 사용할 수 있도록 노력하였다.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/data%20structure/2021/01/11/LinkedList.html&quot;&gt;Linked List&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;프로그래머스 이중우선순위큐, K번째수, 가장 큰 수 풀었다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;TCP/IP책을 읽지 않았다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;코드스쿼드 미션을 통해 Java의 다양한 기능등을 사용해보려고 하였다.&lt;/li&gt;
-  &lt;li&gt;단순히 요구사항에 맞춰서 구현한 것이 아니라, 제너릭으로 Linked List를 구현한 후 이를 상속도 해보고 내부클래스의 접근제한자도 바꿔가며 Java를 같이 공부하였다.&lt;/li&gt;
-  &lt;li&gt;피곤하다고 미루지 않고 오늘 할 일을 마쳤다..&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;일요일 밤에 잠을 거의 2시간밖에 못자서 너무 피곤하다.&lt;/li&gt;
-  &lt;li&gt;책 읽을 시간이 너무 없다. 주말에 책 읽을 시간으로 빼는게 나을까 고민된다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;코드스쿼드 미션 진행&lt;/li&gt;
-  &lt;li&gt;프로그래머스 알고리즘 풀기&lt;/li&gt;
-  &lt;li&gt;자바의정석 읽기&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="자료구조" /><category term="Linked List" /></entry><entry><title type="html">21년 1월 10일</title><link href="http://localhost:4000/til/2021/01/10/TIL7.html" rel="alternate" type="text/html" title="21년 1월 10일" /><published>2021-01-10T00:00:00+09:00</published><updated>2021-01-10T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/10/TIL7</id><content type="html" xml:base="http://localhost:4000/til/2021/01/10/TIL7.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Java 내부클래스 개념 공부 (자바의 정석 책)&lt;/li&gt;
-  &lt;li&gt;Java 내부클래스 정리하여 게시 &lt;a href=&quot;https://isaac56.github.io/java/2021/01/10/InnerClass.html&quot;&gt;바로가기&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;프로그래머스 더맵게
-    &lt;ul&gt;
-      &lt;li&gt;PriorityQueue를 사용하여 푸는 간단한 문제이다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;프로그래머스 디스크컨트롤러
-    &lt;ul&gt;
-      &lt;li&gt;PrirorityQueue를 사용하여 풀었다.&lt;/li&gt;
-      &lt;li&gt;하드디스크에 요청작업이 들어왔을 때, 처리할 수 있는 요청중에서 작업시간이 가장 작은 것부터 처리해야 평균 처리시간이 가장 낮다는 사실을 알아야 한다.&lt;/li&gt;
-      &lt;li&gt;해당 사실을 모를때, 차트 상에서 시간이 누적되는 개념을 그림적으로 생각해 아이디어를 얻었다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;조급하다. 자꾸 마음이 불안하다. 마인드 컨트롤이 필요하다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;1아니면 0이라는 느낌으로 열심히 안하면 아예 안하려는 습관이 있었는데, 조금이라도 오늘 할 일을 하였다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;주말에 안 쉬면 평일에 힘들거 같다는 강박에 갖힌것 같다.&lt;/li&gt;
-  &lt;li&gt;주말 계획은 따로 세워서 널널하게 가보는게 어떨까 싶다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;코드스쿼드 미션 진행&lt;/li&gt;
-  &lt;li&gt;프로그래머스 알고리즘 풀기&lt;/li&gt;
-  &lt;li&gt;자바의정석 읽기&lt;/li&gt;
-  &lt;li&gt;TCP/IP 쉽게 더 쉽게 읽기&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="내부클래스" /></entry><entry><title type="html">내부 클래스의 종류와 특징</title><link href="http://localhost:4000/java/2021/01/10/InnerClass.html" rel="alternate" type="text/html" title="내부 클래스의 종류와 특징" /><published>2021-01-10T00:00:00+09:00</published><updated>2021-01-10T00:00:00+09:00</updated><id>http://localhost:4000/java/2021/01/10/InnerClass</id><content type="html" xml:base="http://localhost:4000/java/2021/01/10/InnerClass.html">&lt;h2 id=&quot;내부-클래스를-전혀-모르고-있었다&quot;&gt;내부 클래스를 전혀 모르고 있었다.&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="Java" /><category term="자료구조" /><category term="Linked List" /></entry><entry><title type="html">내부 클래스의 종류와 특징</title><link href="http://localhost:4000/java/2021/01/10/InnerClass.html" rel="alternate" type="text/html" title="내부 클래스의 종류와 특징" /><published>2021-01-10T00:00:00+09:00</published><updated>2021-01-10T00:00:00+09:00</updated><id>http://localhost:4000/java/2021/01/10/InnerClass</id><content type="html" xml:base="http://localhost:4000/java/2021/01/10/InnerClass.html">&lt;h2 id=&quot;내부-클래스를-전혀-모르고-있었다&quot;&gt;내부 클래스를 전혀 모르고 있었다.&lt;/h2&gt;
 
 &lt;p&gt;프로그래머스 알고리즘 문제를 풀다가 코드 테스트 목적으로 main함수에서 내부클래스의 인스턴스를 선언하려했다.&lt;/p&gt;
 
@@ -905,197 +945,48 @@ java: method() in ChildClass cannot override method() in SuperClass
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="Inner Class" /><category term="Nested Class" /></entry><entry><title type="html">JVM 구조와 Java 런타임 구조</title><link href="http://localhost:4000/java/2021/01/09/JVM_Memory_Structure.html" rel="alternate" type="text/html" title="JVM 구조와 Java 런타임 구조" /><published>2021-01-09T00:00:00+09:00</published><updated>2021-01-09T00:00:00+09:00</updated><id>http://localhost:4000/java/2021/01/09/JVM_Memory_Structure</id><content type="html" xml:base="http://localhost:4000/java/2021/01/09/JVM_Memory_Structure.html">&lt;h2 id=&quot;jvm-메모리-구조와-자바가-실행될-때-jvm에서-일어나는-일을-알아보자&quot;&gt;JVM 메모리 구조와 자바가 실행될 때 JVM에서 일어나는 일을 알아보자&lt;/h2&gt;
-
+&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="Inner Class" /><category term="Nested Class" /></entry><entry><title type="html">21년 1월 10일</title><link href="http://localhost:4000/til/2021/01/10/TIL7.html" rel="alternate" type="text/html" title="21년 1월 10일" /><published>2021-01-10T00:00:00+09:00</published><updated>2021-01-10T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/10/TIL7</id><content type="html" xml:base="http://localhost:4000/til/2021/01/10/TIL7.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;출처: &lt;a href=&quot;https://jeong-pro.tistory.com/148&quot;&gt;https://jeong-pro.tistory.com/148&lt;/a&gt; (기본기를 쌓는 정아마추어 코딩블로그)&lt;/li&gt;
-  &lt;li&gt;추가 참고 자료: &lt;a href=&quot;https://sehun-kim.github.io/sehun/JVM/&quot;&gt;https://sehun-kim.github.io/sehun/JVM/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Java 내부클래스 개념 공부 (자바의 정석 책)&lt;/li&gt;
+  &lt;li&gt;Java 내부클래스 정리하여 게시 &lt;a href=&quot;https://isaac56.github.io/java/2021/01/10/InnerClass.html&quot;&gt;바로가기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;프로그래머스 더맵게
+    &lt;ul&gt;
+      &lt;li&gt;PriorityQueue를 사용하여 푸는 간단한 문제이다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;프로그래머스 디스크컨트롤러
+    &lt;ul&gt;
+      &lt;li&gt;PrirorityQueue를 사용하여 풀었다.&lt;/li&gt;
+      &lt;li&gt;하드디스크에 요청작업이 들어왔을 때, 처리할 수 있는 요청중에서 작업시간이 가장 작은 것부터 처리해야 평균 처리시간이 가장 낮다는 사실을 알아야 한다.&lt;/li&gt;
+      &lt;li&gt;해당 사실을 모를때, 차트 상에서 시간이 누적되는 개념을 그림적으로 생각해 아이디어를 얻었다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;JVM(Java Virtual Machine)&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;: 자바 가상 머신으로 &lt;strong&gt;자바 바이트 코드를 실행할 수 있는 주체&lt;/strong&gt;다.&lt;/p&gt;
-
-&lt;p&gt;CPU나 운영체제(플랫폼)의 종류와 무관하게 실행이 가능하다.&lt;/p&gt;
-
-&lt;p&gt;즉, 운영체제 위에서 동작하는 프로세스로 자바 코드를 컴파일해서 얻은 바이트 코드를 해당 운영체제가 이해할 수 있는 기계어로 바꿔 실행시켜주는 역할을 한다.&lt;/p&gt;
-
-&lt;p&gt;JVM의 구성을 살펴보면 크게 4가지(Class Loader, Execution Engine, Garbage Collector, Runtime Data Area)로 나뉜다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/9973563D5ACE031521&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;1. Class Loader&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;자바에서 소스를 작성하면 Person.java 처럼 .java파일이 생성된다.&lt;/p&gt;
-
-&lt;p&gt;.java 소스를 자바컴파일러가 컴파일하면 Person.class 같은 .class파일(바이트코드)이 생성된다.&lt;/p&gt;
-
-&lt;p&gt;이렇게 생성된 클래스파일들을 엮어서 JVM이 운영체제로부터 할당받은 메모리영역인 Runtime Data Area로 적재하는 역할을 Class Loader가 한다. (자바 애플리케이션이 &lt;strong&gt;실행중&lt;/strong&gt;일 때 이런 작업이 수행된다.)&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2. Execution Engine&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Class Loader에 의해 메모리에 적재된 클래스(바이트 코드)들을 기계어로 변경해 명령어 단위로 실행하는 역할을 한다.&lt;/p&gt;
-
-&lt;p&gt;명령어를 하나 하나 실행하는 인터프리터(Interpreter)방식이 있고 JIT(Just-In-Time) 컴파일러를 이용하는 방식이 있다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;JIT 컴파일러는 적절한 시간에 전체 바이트 코드를 네이티브 코드로 변경해서 Execution Engine이 네이티브로 컴파일된 코드를 실행하는 것으로 성능을 높이는 방식이다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;3. Garbage Collector&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Garbage Collector(GC)는 Heap 메모리 영역에 생성(적재)된 객체들 중에 참조되지 않는 객체들을 탐색 후 제거하는 역할을 한다.&lt;/p&gt;
-
-&lt;p&gt;GC가 역할을 하는 시간은 정확히 언제인지를 알 수 없다. (참조가 없어지자마자 해제되는 것을 보장하지 않음)&lt;/p&gt;
-
-&lt;p&gt;또 다른 특징은 GC가 수행되는 동안 GC를 수행하는 쓰레드가 아닌 다른 모든 쓰레드가 일시정지된다.&lt;/p&gt;
-
-&lt;p&gt;특히 Full GC가 일어나서 수 초간 모든 쓰레드가 정지한다면 장애로 이어지는 치명적인 문제가 생길 수 있는 것이다. (GC와 관련된 내용은 아래 Heap영역 메모리를 설명할 때 더 자세히 알아본다.)&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;4. Runtime Data Area&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;JVM의 메모리 영역으로 자바 애플리케이션을 실행할 때 사용되는 데이터들을 적재하는 영역이다.&lt;/p&gt;
-
-&lt;p&gt;이 영역은 크게 Method Area, Heap Area, Stack Area, PC Register, Native Method Stack로 나눌 수 있다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;자바 런타임 메모리(Runtime Data area)구조&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/99AED1445ACE0E4B04&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;1. Method area (메소드 영역)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;클래스 멤버 변수의 이름, 데이터 타입, 접근 제어자 정보같은 필드 정보와 메소드의 이름, 리턴 타입, 파라미터, 접근 제어자 정보같은 메소드 정보, Type정보(Interface인지 class인지), Constant Pool(상수 풀 : 문자 상수, 타입, 필드, 객체 참조가 저장됨), static 변수, final class 변수등이 생성되는 영역이다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2. Heap area (힙 영역)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;new 키워드로 생성된 객체와 배열이 생성되는 영역이다.&lt;/p&gt;
-
-&lt;p&gt;메소드 영역에 로드된 클래스만 생성이 가능하고 Garbage Collector가 참조되지 않는 메모리를 확인하고 제거하는 영역이다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;3. Stack area (스택 영역)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;지역 변수, 파라미터, 리턴 값, 연산에 사용되는 임시 값등이 생성되는 영역이다.&lt;/p&gt;
-
-&lt;p&gt;int a = 10; 이라는 소스를 작성했다면 정수값이 할당될 수 있는 메모리공간을 a라고 잡아두고 그 메모리 영역에 값이 10이 들어간다. 즉, 스택에 메모리에 이름이 a라고 붙여주고 값이 10인 메모리 공간을 만든다.&lt;/p&gt;
-
-&lt;p&gt;클래스 Person p = new Person(); 이라는 소스를 작성했다면 Person p는 스택 영역에 생성되고 new로 생성된 Person 클래스의 인스턴스는 힙 영역에 생성된다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;그리고 스택영역에 생성된 p의 값으로 힙 영역의 주소값을 가지고 있다. 즉, 스택 영역에 생성된 p가 힙 영역에 생성된 객체를 가리키고(참조하고) 있는 것이다.&lt;/p&gt;
-
-&lt;p&gt;메소드를 호출할 때마다 개별적으로 스택이 생성된다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;4. PC Register (PC 레지스터)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Thread(쓰레드)가 생성될 때마다 생성되는 영역으로 Program Counter 즉, 현재 쓰레드가 실행되는 부분의 주소와 명령을 저장하고 있는 영역이다. (*CPU의 레지스터와 다름)&lt;/p&gt;
-
-&lt;p&gt;이것을 이용해서 쓰레드를 돌아가면서 수행할 수 있게 한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;5. Native method stack&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;자바 외 언어로 작성된 네이티브 코드를 위한 메모리 영역이다.&lt;/p&gt;
-
-&lt;p&gt;보통 C/C++등의 코드를 수행하기 위한 스택이다. (JNI)&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;쓰레드가 생성되었을 때 기준으로&lt;/p&gt;
-
-&lt;p&gt;1,2번인 메소드 영역과 힙 영역을 모든 쓰레드가 공유하고,&lt;/p&gt;
-
-&lt;p&gt;3,4,5번인 스택 영역과 PC 레지스터, Native method stack은 각각의 쓰레드마다 생성되고 공유되지 않는다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Heap area &amp;amp; Garbage Collector&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;힙 영역은 좀 더 살펴봐야하는데 그 이유는 GC의 주요 대상이기 때문이다.&lt;/p&gt;
-
-&lt;p&gt;(Stack영역과 Method영역도 GC의 대상이 된다)&lt;/p&gt;
-
-&lt;p&gt;힙 영역은 우선 5개의 영역(eden, survivor1, survivor2, old, permanent)으로 나뉜다.&lt;/p&gt;
-
-&lt;p&gt;-&amp;gt; JDK7까지는 permanent영역이 heap에 존재했습니다. JDK8부터는 permanent 영역은 사라지고 일부가 “meta space 영역”으로 변경되었습니다.(위의 그림 JDK7 기준입니다.) meta space 영역은 Native stack 영역에 포함되었습니다.&lt;/p&gt;
-
-&lt;p&gt;(survivor영역의 숫자는 의미없고 두 개로 나뉜다는 것이 중요하다)&lt;/p&gt;
-
-&lt;p&gt;힙 영역을 굳이 5개로 나눈 이유는 효율적으로 GC가 일어나게 하기 위함이다. 자세한 것은 GC가 일어나는 프로세스를 보면서 설명한다.&lt;/p&gt;
-
-&lt;p&gt;GC는 Minor GC와 Major GC로 나뉜다.&lt;/p&gt;
-
-&lt;p&gt;- &lt;strong&gt;Minor GC : New 영역에서 일어나는 GC&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;최초에 객체가 생성되면 Eden영역에 생성된다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Eden영역에 객체가 가득차게 되면 첫 번째 CG가 일어난다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;survivor1 영역에 Eden영역의 메모리를 그대로 복사된다. 그리고 survivor1 영역을 제외한 다른 영역의 객체를 제거한다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Eden영역도 가득차고 survivor1영역도 가득차게된다면, Eden영역에 생성된 객체와 survivor1영역에 생성된 객체 중에 참조되고 있는 객체가 있는지 검사한다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;참조 되고있지 않은 객체는 내버려두고 참조되고 있는 객체만 survivor2영역에 복사한다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;survivor2영역을 제외한 다른 영역의 객체들을 제거한다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;위의 과정중에 일정 횟수이상 참조되고 있는 객체들을 survivor2에서 Old영역으로 이동시킨다.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;- 위 과정을 계속 반복, survivor2영역까지 꽉차기 전에 계속해서 Old로 비움&lt;/p&gt;
-
-&lt;p&gt;- &lt;strong&gt;Major GC(Full GC) : Old 영역에서 일어나는 GC&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Old 영역에 있는 모든 객체들을 검사하며 참조되고 있는지 확인한다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;참조되지 않은 객체들을 모아 한 번에 제거한다.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;- Minor GC보다 시간이 훨씬 많이 걸리고 실행중에 GC를 제외한 모든 쓰레드가 중지한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;* Major GC(Full GC)가 일어나면,&lt;/p&gt;
-
-&lt;p&gt;Old영역에 있는 참조가 없는 객체들을 표시하고 그 해당 객체들을 모두 제거하게 된다.&lt;/p&gt;
-
-&lt;p&gt;그러면서 Heap 메모리 영역에 중간중간 구멍(제거되고 빈 메모리 공간)이 생기는데 이 부분을 없애기 위해 재구성을 하게 된다. (디스크 조각모음처럼 조각난 메모리를 정리함)&lt;/p&gt;
-
-&lt;p&gt;따라서 메모리를 옮기고 있는데 다른 쓰레드가 메모리를 사용해버리면 안되기 때문에 모든 쓰레드가 정지하게 되는 것이다.&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="JVM" /></entry><entry><title type="html">21년 1월 9일</title><link href="http://localhost:4000/til/2021/01/09/TIL6.html" rel="alternate" type="text/html" title="21년 1월 9일" /><published>2021-01-09T00:00:00+09:00</published><updated>2021-01-09T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/09/TIL6</id><content type="html" xml:base="http://localhost:4000/til/2021/01/09/TIL6.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;조급하다. 자꾸 마음이 불안하다. 마인드 컨트롤이 필요하다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;1아니면 0이라는 느낌으로 열심히 안하면 아예 안하려는 습관이 있었는데, 조금이라도 오늘 할 일을 하였다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;주말에 안 쉬면 평일에 힘들거 같다는 강박에 갖힌것 같다.&lt;/li&gt;
+  &lt;li&gt;주말 계획은 따로 세워서 널널하게 가보는게 어떨까 싶다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;코드스쿼드 미션 진행&lt;/li&gt;
+  &lt;li&gt;프로그래머스 알고리즘 풀기&lt;/li&gt;
+  &lt;li&gt;자바의정석 읽기&lt;/li&gt;
+  &lt;li&gt;TCP/IP 쉽게 더 쉽게 읽기&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="내부클래스" /></entry><entry><title type="html">21년 1월 9일</title><link href="http://localhost:4000/til/2021/01/09/TIL6.html" rel="alternate" type="text/html" title="21년 1월 9일" /><published>2021-01-09T00:00:00+09:00</published><updated>2021-01-09T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/09/TIL6</id><content type="html" xml:base="http://localhost:4000/til/2021/01/09/TIL6.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;JVM의 메모리 구조와 Java Application이 실행되는 과정을 공부하였다.&lt;/p&gt;
