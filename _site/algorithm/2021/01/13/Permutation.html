@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Dev.Isaac" /></head>
+<style>@import url(/public/css/syntax/monokai.css);</style>
+  <title>Dev.Isaac</title>
+  <!-- <link href="/public/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link href="/public/css/style.css" rel="stylesheet">
+  <body>
+  	<div class="container"> 
+		<div class="sidebar">
+			<div class="sidebar-item sidebar-header">
+	<div class='sidebar-brand'>
+		<a href="/about/">Dev.Isaac</a>
+	</div>
+	<p class="lead">정이삭 공부블로그</p></div>
+
+<div class="sidebar-item sidebar-nav">
+	<ul class="nav">
+      <li class="nav-title">Pages</li>
+	  <li>
+	  	<a class="nav-item" href="/">Articles</a>
+	  </li>
+	  
+	  
+	    
+	  
+	    
+	      
+	        <li>
+	        	<a class="nav-item" href="/about/">
+	            	About
+	            </a>
+	        </li>
+	      
+	    
+	  
+	    
+	      
+	    
+	  
+	    
+	  
+	    
+	  
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-nav">
+  	<ul class="nav">
+			<li class="nav-title">Categories</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#TIL">
+				<span class="name">TIL</span>
+				<span class="badge">9</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Linux">
+				<span class="name">Linux</span>
+				<span class="badge">5</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Network">
+				<span class="name">Network</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Java">
+				<span class="name">Java</span>
+				<span class="badge">3</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Data Structure">
+				<span class="name">Data Structure</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Algorithm">
+				<span class="name">Algorithm</span>
+				<span class="badge">2</span>
+	    	</a>
+ 		</li>
+	    
+	  </nav>
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-footer">
+	<p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
+</div>
+		</div>
+		<div class="content">
+			<article class="post">
+	<header class="post-header">
+		<div class="post-title"> 
+			Java로 순열 구현
+		</div>
+		<time class="post-date dt-published" datetime="2021-01-13T00:00:00+09:00" itemprop="datePublished">2021/01/13
+		</time>		
+	</header>
+
+	<div class="post-content">
+		<h2 id="자바에는-기본제공-순열-함수가-없다-ㅠㅠ">자바에는 기본제공 순열 함수가 없다 ㅠㅠ</h2>
+
+<p>C++로 코딩테스트를 풀다가 자바로 넘어갔을 때 가장 당황했던 것이었다.</p>
+
+<p>그러나 진즉에 알고 있었어야 하는 기본 알고리즘이다.</p>
+
+<p>STL에 의존해서 알아보려고 하지 않았던 Permutation에 대하여 알아보고 구현해보겠다.</p>
+
+<p><br /></p>
+
+<h2 id="abc를-가지고-상황을-생각해보자">ABC를 가지고 상황을 생각해보자</h2>
+
+<p>[A, B, C] -&gt; 이렇게 생긴 리스트를 가지고 만들 수 있는 순열을 생각해보자.</p>
+
+<p><img src="/public/img/Permutation/1.gif" alt="1" /></p>
+
+<blockquote>
+  <p>출처 : <a href="http://www.eandbsoftware.org/print-all-permutations-of-a-given-string/">http://www.eandbsoftware.org/print-all-permutations-of-a-given-string/</a></p>
+</blockquote>
+
+<p>초기 상태가 A라고 한다면 다음과 같이 경우의 수가 나온다.</p>
+
+<ol>
+  <li>첫번째에 A가 위치
+    <ol>
+      <li>두번째에 B가 위치
+        <ul>
+          <li>ABC</li>
+        </ul>
+      </li>
+      <li>두번째에 C가 위치
+        <ul>
+          <li>ACB</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <li>첫번째에 B가 위치
+    <ol>
+      <li>두번째에 A가 위치
+        <ul>
+          <li>BAC</li>
+        </ul>
+      </li>
+      <li>두번째에 C가 위치
+        <ul>
+          <li>BCA</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <li>첫번째에 C가 위치
+    <ol>
+      <li>두번째에 B가 위치
+        <ul>
+          <li>CBA</li>
+        </ul>
+      </li>
+      <li>두번째에 A가 위치
+        <ul>
+          <li>CAB</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<p>위 과정을 이해하고 코드로 구현하면 아래와 같이 간단하게 구현이 가능하다</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Permutation</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">permutation</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="o">,</span> <span class="kt">int</span> <span class="n">depth</span><span class="o">){</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">depth</span> <span class="o">==</span> <span class="n">arr</span><span class="o">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="o">)</span>
+            <span class="n">printArr</span><span class="o">(</span><span class="n">arr</span><span class="o">);</span>
+
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">depth</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="n">swap</span><span class="o">(</span><span class="n">arr</span><span class="o">,</span> <span class="n">depth</span><span class="o">,</span> <span class="n">i</span><span class="o">);</span>
+            <span class="n">permutation</span><span class="o">(</span><span class="n">arr</span><span class="o">,</span> <span class="n">depth</span><span class="o">+</span><span class="mi">1</span><span class="o">);</span>
+            <span class="n">swap</span><span class="o">(</span><span class="n">arr</span><span class="o">,</span> <span class="n">depth</span><span class="o">,</span> <span class="n">i</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">printArr</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="o">){</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">e</span> <span class="o">:</span> <span class="n">arr</span><span class="o">)</span> <span class="o">{</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">e</span> <span class="o">+</span> <span class="s">" "</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">swap</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">list</span><span class="o">,</span> <span class="kt">int</span> <span class="n">i</span><span class="o">,</span> <span class="kt">int</span> <span class="n">j</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">list</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+        <span class="n">list</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">list</span><span class="o">[</span><span class="n">j</span><span class="o">];</span>
+        <span class="n">list</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">temp</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[]{</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">};</span>
+        <span class="n">permutation</span><span class="o">(</span><span class="n">arr</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="c-stl과-같이-next_permutation을-구현하기">C++ STL과 같이 next_permutation을 구현하기</h2>
+
+<p>또 다른 방법으로 STL의 next_permutation을 구현할 수 있다고 한다.</p>
+
+<p>일단 위의 백트래킹으로 구현한 permutation을 사용할 예정이므로 next_permutation은 참고할 만한 글의 주소를 남겨놓아야겠다.</p>
+
+<p>(나중에 공부해야겠다.)</p>
+
+<p><a href="https://velog.io/@junhok82/Java로-순열Permutation-구현하기">https://velog.io/@junhok82/Java로-순열Permutation-구현하기</a></p>
+
+
+	</div>
+</article>
+		</div>
+	</div>
+  </body>
+</html>
