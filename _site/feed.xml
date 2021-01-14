@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-14T13:07:51+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">OOP의 기본 개념</title><link href="http://localhost:4000/java/2021/01/14/OOP%EA%B8%B0%EB%B3%B8%EA%B0%9C%EB%85%90.html" rel="alternate" type="text/html" title="OOP의 기본 개념" /><published>2021-01-14T00:00:00+09:00</published><updated>2021-01-14T00:00:00+09:00</updated><id>http://localhost:4000/java/2021/01/14/OOP%EA%B8%B0%EB%B3%B8%EA%B0%9C%EB%85%90</id><content type="html" xml:base="http://localhost:4000/java/2021/01/14/OOP%EA%B8%B0%EB%B3%B8%EA%B0%9C%EB%85%90.html">&lt;h2 id=&quot;oop란-무엇인가&quot;&gt;OOP란 무엇인가?&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-14T13:10:22+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">OOP의 기본 개념</title><link href="http://localhost:4000/java/2021/01/14/OOP%EA%B8%B0%EB%B3%B8%EA%B0%9C%EB%85%90.html" rel="alternate" type="text/html" title="OOP의 기본 개념" /><published>2021-01-14T00:00:00+09:00</published><updated>2021-01-14T00:00:00+09:00</updated><id>http://localhost:4000/java/2021/01/14/OOP%EA%B8%B0%EB%B3%B8%EA%B0%9C%EB%85%90</id><content type="html" xml:base="http://localhost:4000/java/2021/01/14/OOP%EA%B8%B0%EB%B3%B8%EA%B0%9C%EB%85%90.html">&lt;h2 id=&quot;oop란-무엇인가&quot;&gt;OOP란 무엇인가?&lt;/h2&gt;
 
 &lt;p&gt;OOP(Object Oriendted Programming), 영어 그대로 해석하면 객체 지향 프로그래밍이라는 뜻이다.&lt;/p&gt;
 
@@ -168,9 +168,9 @@
         &lt;p&gt;상속받은 자식 클래스가 부모 클래스의 메소드를 덮어 씌우는 것을 의미한다.&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
-        &lt;p&gt;위에서 동물 클래스의 public void 달리기()라는 메소드가 있다고 한다면,&lt;/p&gt;
+        &lt;p&gt;위에서 Animal 클래스의 public void run()라는 메소드가 존재하는데,&lt;/p&gt;
 
-        &lt;p&gt;자식클래스에서 동일한 이름의 public void 달리기()를 정의함으로써 부모클래스의 달리기 메소드를 덮어씌울 수 있다.&lt;/p&gt;
+        &lt;p&gt;자식클래스에서 동일한 이름의 public void run()을 재정의함으로써 부모클래스의 run 메소드를 덮어씌울 수 있다.&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
         &lt;p&gt;참고: &lt;a href=&quot;https://isaac56.github.io/java/2021/01/12/Diff_Overloading_Overriding.html&quot;&gt;오버로딩과 오버라이딩 차이&lt;/a&gt;&lt;/p&gt;
