@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-14T23:15:18+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 1월 14일</title><link href="http://localhost:4000/til/2021/01/14/TIL11.html" rel="alternate" type="text/html" title="21년 1월 14일" /><published>2021-01-14T00:00:00+09:00</published><updated>2021-01-14T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/14/TIL11</id><content type="html" xml:base="http://localhost:4000/til/2021/01/14/TIL11.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-14T23:17:31+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 1월 14일</title><link href="http://localhost:4000/til/2021/01/14/TIL11.html" rel="alternate" type="text/html" title="21년 1월 14일" /><published>2021-01-14T00:00:00+09:00</published><updated>2021-01-14T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/14/TIL11</id><content type="html" xml:base="http://localhost:4000/til/2021/01/14/TIL11.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;코드스쿼드 미션으로 객체지향적으로 프로그래밍 하기를 해봤다.&lt;/p&gt;
@@ -38,7 +38,7 @@
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;프로그래머스 외벽구하기 문제 풀기 실패하였다.&lt;/p&gt;
+    &lt;p&gt;프로그래머스 외벽점검 문제 풀기 실패하였다.&lt;/p&gt;
 
     &lt;ul&gt;
       &lt;li&gt;C++로 BFS를 통해 풀었던 문제인데, 자바로 BFS를 통해 풀었더니 시간초과가 난다.&lt;/li&gt;
@@ -61,7 +61,7 @@
 &lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;알고리즘을 자바로 푸는게 맞는가 확신이 들지 않는다. ㅠㅠ&lt;/li&gt;
-  &lt;li&gt;전에 풀었던 외벽구하기 C++ 답과 똑같은 로직을 자바로 구현하여 시간을 재볼 것이다.&lt;/li&gt;
+  &lt;li&gt;전에 풀었던 외벽점검 C++ 답과 똑같은 로직을 자바로 구현하여 시간을 재볼 것이다.&lt;/li&gt;
   &lt;li&gt;똑같은 로직인데도 자바가 시간초과가 난다면, 파이썬이나 C++로 옮길 것이다&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -70,7 +70,7 @@
 &lt;ul&gt;
   &lt;li&gt;코드스쿼드 미션 진행&lt;/li&gt;
   &lt;li&gt;프로그래머스 알고리즘 풀기&lt;/li&gt;
-  &lt;li&gt;외벽구하기 문제 C++ 답안과 동일하게 자바로 구현해보기&lt;/li&gt;
+  &lt;li&gt;외벽점검 문제 C++ 답안과 동일하게 자바로 구현해보기&lt;/li&gt;
   &lt;li&gt;자바의정석 읽기&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /><category term="OOP" /></entry><entry><title type="html">OOP의 기본 개념</title><link href="http://localhost:4000/java/2021/01/14/OOP_basic_concept.html" rel="alternate" type="text/html" title="OOP의 기본 개념" /><published>2021-01-14T00:00:00+09:00</published><updated>2021-01-14T00:00:00+09:00</updated><id>http://localhost:4000/java/2021/01/14/OOP_basic_concept</id><content type="html" xml:base="http://localhost:4000/java/2021/01/14/OOP_basic_concept.html">&lt;h2 id=&quot;oop란-무엇인가&quot;&gt;OOP란 무엇인가?&lt;/h2&gt;
 
