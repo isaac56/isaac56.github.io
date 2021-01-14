@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Dev.Isaac" /></head>
+<style>@import url(/public/css/syntax/monokai.css);</style>
+  <title>Dev.Isaac</title>
+  <!-- <link href="/public/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link href="/public/css/style.css" rel="stylesheet">
+  <body>
+  	<div class="container"> 
+		<div class="sidebar">
+			<div class="sidebar-item sidebar-header">
+	<div class='sidebar-brand'>
+		<a href="/about/">Dev.Isaac</a>
+	</div>
+	<p class="lead">정이삭 공부블로그</p></div>
+
+<div class="sidebar-item sidebar-nav">
+	<ul class="nav">
+      <li class="nav-title">Pages</li>
+	  <li>
+	  	<a class="nav-item" href="/">Articles</a>
+	  </li>
+	  
+	  
+	    
+	  
+	    
+	      
+	        <li>
+	        	<a class="nav-item" href="/about/">
+	            	About
+	            </a>
+	        </li>
+	      
+	    
+	  
+	    
+	      
+	    
+	  
+	    
+	  
+	    
+	  
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-nav">
+  	<ul class="nav">
+			<li class="nav-title">Categories</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#TIL">
+				<span class="name">TIL</span>
+				<span class="badge">10</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Linux">
+				<span class="name">Linux</span>
+				<span class="badge">5</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Network">
+				<span class="name">Network</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Java">
+				<span class="name">Java</span>
+				<span class="badge">4</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Data Structure">
+				<span class="name">Data Structure</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Algorithm">
+				<span class="name">Algorithm</span>
+				<span class="badge">2</span>
+	    	</a>
+ 		</li>
+	    
+	  </nav>
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-footer">
+	<p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
+</div>
+		</div>
+		<div class="content">
+			<article class="post">
+	<header class="post-header">
+		<div class="post-title"> 
+			OOP의 기본 개념
+		</div>
+		<time class="post-date dt-published" datetime="2021-01-14T00:00:00+09:00" itemprop="datePublished">2021/01/14
+		</time>		
+	</header>
+
+	<div class="post-content">
+		<h2 id="oop란-무엇인가">OOP란 무엇인가?</h2>
+
+<p>OOP(Object Oriendted Programming), 영어 그대로 해석하면 객체 지향 프로그래밍이라는 뜻이다.</p>
+
+<p>객체 지향 프로그래밍을 이해하기 위한 기본 용어(자바 기준)인 객체, 클래스, 인스턴스를 설명하자면 다음과 같다.</p>
+
+<ul>
+  <li><strong>객체</strong>란 현실 세계의 사물을 개념적으로 추상화한 것이라고 할 수 있다.</li>
+  <li><strong>클래스</strong>란 그 객체가 기능하기 위한 프로퍼티(상태), 메소드(행동)을 모아 만든 설계도이다.</li>
+  <li><strong>인스턴스</strong>란 클래스라는 설계도를 기반으로 메모리에 생성한 하나 하나의 객체라고 할 수 있다.</li>
+</ul>
+
+<p><br /></p>
+
+<p>절차 지향 프로그래밍은 함수 단위의 순서대로 진행된다는 점에서 컴퓨터의 관점에 가까운 프로그래밍 방법이다.</p>
+
+<p>반면, 객체 지향 프로그래밍은 사물을 객체로 추상화하고, 각 객체들이 상호작용하며 실행된다는 점에서 보다 사람의 관점에 가까운 프로그래밍 방법이라고 할 수 있다.</p>
+
+<p><br /></p>
+
+<p>이 포스팅에서는 객체 지향 프로그래밍 특징으로 자주 언급되는 <strong>캡슐화</strong>, <strong>상속</strong>, <strong>다형성</strong>에 대해서만 다루고,</p>
+
+<p>자세한 내용은 참고 글의 링크를 남기는 것으로 대체하겠다.</p>
+
+<p>(자세한 내용: <a href="https://asfirstalways.tistory.com/177">https://asfirstalways.tistory.com/177</a>)</p>
+
+<p><br /></p>
+
+<h2 id="캡슐화">캡슐화</h2>
+
+<ul>
+  <li>객체가 기능하기 위해서 필요한 메소드와 변수들을 하나의 클래스 안에 묶는 것을 말한다.</li>
+  <li>예를 들어, 자판기에서 “동전을 받아 커피를 준다”는 기능이 필요하다고 생각해보자
+    <ul>
+      <li>동작하기 위한 간단한 메소드는 다음과 같이 생각할 수 있다.
+        <ol>
+          <li>받은 동전이 충분한지 확인한다.</li>
+          <li>컵을 내린다.</li>
+          <li>커피가루를 컵에 붓는다.</li>
+          <li>뜨거운 물을 컵에 붓는다.</li>
+        </ol>
+      </li>
+      <li>여기서 1,2,3,4 메소드는 모두 자판기 클래스안에 구현하는 것을 캡슐화라고 할 수 있다.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<ul>
+  <li>
+    <p><strong>은닉성</strong></p>
+
+    <p>흔히 은닉성과 캡슐화를 같은 말이라고 착각하는 경우가 많은데 이 둘은 동일한 개념이 아니다.</p>
+
+    <p>정보의 은닉성은 캡슐화를 잘 지키면 따라오는 장점이라고 할 수 있다.</p>
+
+    <p><br /></p>
+
+    <p>위의 자판기의 경우, “동전을 받아 커피를 준다”는 기능에 필요한 메소드들이 내부에 구현되어 있고,</p>
+
+    <p>외부에는 “동전을 받아 커피를 준다” 는 메소드만 노출하면 되기 때문에,</p>
+
+    <p>실제 기능에 필요한 내부 메소드들은 외부에 공개하지 않음으로써 정보를 은닉할 수 있다.</p>
+
+    <p><br /></p>
+
+    <p>이러한 은닉성을 통해, 외부에서 내부 상태나 로직에 관여하여 오동작하는 것을 방지할 수 있다.</p>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="상속">상속</h2>
+
+<p>실제 세계에서 상속이 부모의 재산을 물려받는다는 뜻과 같이 이해하면 된다.</p>
+
+<p>상속해주는 클래스를 부모 클래스, 상속받는 클래스를 자식 클래스라고 할 수 있는데,</p>
+
+<p>여기서 자식 클래스는 부모 클래스의 모든 것(변수, 메소드)를 물려받아서 사용할 수 있게 된다.</p>
+
+<p><br /></p>
+
+<blockquote>
+  <h3 id="상속이-필요한-이유">상속이 필요한 이유</h3>
+
+  <p>상속이 필요한 이유는 <strong>코드의 중복을 없애기 위함</strong>이다.</p>
+
+  <p>코드의 중복이 많아지면 개발 단계에서도 피곤하지만, 유지 보수에서도 많은 비용이 들게 된다.</p>
+
+  <p>그래서 개발을 할때 코드의 중복은 받느시 피해야한다.</p>
+
+  <p><br /></p>
+
+  <p>OOP에서는 상속을 통해 코드의 중복 문제를 일부 해결할 수 있다.</p>
+
+  <p>포유류 클래스에 여러 속성들을 정의해 놓고 포유류에 해당하는 종, 예를 들면 강아지 클래스가 필요한 경우 포유류 클래스와 상속 관계를 맺는다.</p>
+
+  <p>상속 관계를 맺으면 자식 객체를 생성할 때 부모 클래스의 속성들을 자동으로 물려 받기 때문에 자식 클래스에서 또 정의할 필요가 없다.</p>
+
+  <p>이것이 상속이 필요한 이유이다.</p>
+
+  <p>출처: <a href="https://velog.io/@hkoo9329/OOPObject-Oriented-Programming-객체-지향-프로그래밍-이란">https://velog.io/@hkoo9329/OOPObject-Oriented-Programming-객체-지향-프로그래밍-이란</a></p>
+</blockquote>
+
+<p><br /></p>
+
+<h2 id="다형성">다형성</h2>
+
+<p>다형성의 사전적 정의를 찾아보면 다음과 같다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>동일종(同一種)의 생물이면서도 형태나 성질이 다양성을 보이는 상태. 암수에 의한 크기·형태·색깔 등의 차이와 꿀벌에서의 여왕벌과 일벌 같은 것.
+</code></pre></div></div>
+
+<p>이를 OOP의 개념으로 해석하면 “같은 클래스임에도 형태나 성질이 다양성을 보이는 상태”라고 할 수 있을 것이다.</p>
+
+<p>즉, 같은 클래스의 동일한 메소드임에도 다양한 행위를 할 수 있다는 뜻인데, 이러한 다형성은 상속과 오버라이딩을 통해 이룰 수 있다.</p>
+
+<p><br /></p>
+
+<p>다형성을 이해하기 위해서는 우선 <strong>Up Casting</strong>과 <strong>Overriding</strong>에 대한 이해가 필요하다.</p>
+
+<ul>
+  <li>
+    <p>Up Casting</p>
+
+    <ul>
+      <li>
+        <p>자식클래스를 부모클래스로 Casting하는 것을 의미한다.</p>
+      </li>
+      <li>
+        <p>예를 들어 동물이라는 클래스가 있고, 이를 상속받은 사자라는 클래스가 있다고 하자</p>
+
+        <ul>
+          <li>“동물은 사자다”는 명제는 항상 참일 수 없지만, “사자는 동물이다”는 명제는 항상 참이다.</li>
+          <li>즉, 자식 클래스는 항상 부모 클래스라고도 할 수 있는 것이다.</li>
+        </ul>
+      </li>
+      <li>
+        <p>간단한 Java 코드는 다음과 같다.</p>
+
+        <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Animal</span> <span class="o">{</span>
+		<span class="c1">//변수, 메소드 정의</span>
+		<span class="c1">//...</span>
+		<span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">(){</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"동물이 달립니다."</span><span class="o">);</span>
+		<span class="o">}</span>
+<span class="o">}</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Rion</span> <span class="kd">extends</span> <span class="nc">Animal</span><span class="o">{</span>
+  	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">(){</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"사자가 달립니다."</span><span class="o">)</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+    
+<span class="c1">//메인 함수</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+  <span class="nc">Animal</span> <span class="n">animal1</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Rion</span><span class="o">();</span> <span class="c1">//Up Casting</span>
+<span class="o">}</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Overriding</p>
+
+    <ul>
+      <li>
+        <p>상속받은 자식 클래스가 부모 클래스의 메소드를 덮어 씌우는 것을 의미한다.</p>
+      </li>
+      <li>
+        <p>위에서 동물 클래스의 public void 달리기()라는 메소드가 있다고 한다면,</p>
+
+        <p>자식클래스에서 동일한 이름의 public void 달리기()를 정의함으로써 부모클래스의 달리기 메소드를 덮어씌울 수 있다.</p>
+      </li>
+      <li>
+        <p>참고: <a href="https://isaac56.github.io/java/2021/01/12/Diff_Overloading_Overriding.html">오버로딩과 오버라이딩 차이</a></p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<p>이러한 Up Casting과 Overriding을 통해, 같은 클래스의 동일한 메소드라도 다양한 행동을 할 수 있는 것이다.</p>
+
+<p><br /></p>
+
+<p>위의 Animal과 Rion 클래스를 예로 들자면,</p>
+
+<p>아래와 같이 animal1과 animal2 모두 Animal 변수임에도 다른 결과가 나온다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//메인 함수</span>
+<span class="nc">Animal</span> <span class="n">animal1</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Animal</span><span class="o">();</span>
+<span class="nc">Animal</span> <span class="n">animal2</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Rion</span><span class="o">();</span>
+<span class="n">animal1</span><span class="o">.</span><span class="na">run</span><span class="o">();</span> <span class="c1">// "동물이 달립니다."" 출력</span>
+<span class="n">animal2</span><span class="o">.</span><span class="na">run</span><span class="o">();</span> <span class="c1">// "사자가 달립니다."" 출력</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p>이렇게 다형성을 이용하면 자식 클래스가 새로운 메소드를 만들 필요 없이 부모 메소드를 수정함으로써</p>
+
+<p>불필요한 메소드명의 낭비를 줄일 수 있게 된다.</p>
+
+
+	</div>
+</article>
+		</div>
+	</div>
+  </body>
+</html>
