@@ -82,6 +82,8 @@ OOP(Object Oriendted Programming), 영어 그대로 해석하면 객체 지향 �
 
 여기서 자식 클래스는 부모 클래스의 모든 것(변수, 메소드)를 물려받아서 사용할 수 있게 된다.
 
+(엄밀히 말하면 접근제한자가 public, protected로 선언된 모든 것을 사용할 수 있게 된다.)
+
 <br>
 
 > ### 상속이 필요한 이유
@@ -153,7 +155,6 @@ OOP(Object Oriendted Programming), 영어 그대로 해석하면 객체 지향 �
     }
     ```
 
-    
 - Overriding
 
   - 상속받은 자식 클래스가 부모 클래스의 메소드를 덮어 씌우는 것을 의미한다.

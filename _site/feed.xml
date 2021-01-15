@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-14T23:17:31+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 1월 14일</title><link href="http://localhost:4000/til/2021/01/14/TIL11.html" rel="alternate" type="text/html" title="21년 1월 14일" /><published>2021-01-14T00:00:00+09:00</published><updated>2021-01-14T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/14/TIL11</id><content type="html" xml:base="http://localhost:4000/til/2021/01/14/TIL11.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-15T15:28:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 1월 14일</title><link href="http://localhost:4000/til/2021/01/14/TIL11.html" rel="alternate" type="text/html" title="21년 1월 14일" /><published>2021-01-14T00:00:00+09:00</published><updated>2021-01-14T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/14/TIL11</id><content type="html" xml:base="http://localhost:4000/til/2021/01/14/TIL11.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;코드스쿼드 미션으로 객체지향적으로 프로그래밍 하기를 해봤다.&lt;/p&gt;
@@ -152,6 +152,8 @@
 &lt;p&gt;상속해주는 클래스를 부모 클래스, 상속받는 클래스를 자식 클래스라고 할 수 있는데,&lt;/p&gt;
 
 &lt;p&gt;여기서 자식 클래스는 부모 클래스의 모든 것(변수, 메소드)를 물려받아서 사용할 수 있게 된다.&lt;/p&gt;
+
+&lt;p&gt;(엄밀히 말하면 접근제한자가 public, protected로 선언된 모든 것을 사용할 수 있게 된다.)&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
