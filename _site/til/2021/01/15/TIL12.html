@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Dev.Isaac" /></head>
+<style>@import url(/public/css/syntax/monokai.css);</style>
+  <title>Dev.Isaac</title>
+  <!-- <link href="/public/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link href="/public/css/style.css" rel="stylesheet">
+  <body>
+  	<div class="container"> 
+		<div class="sidebar">
+			<div class="sidebar-item sidebar-header">
+	<div class='sidebar-brand'>
+		<a href="/about/">Dev.Isaac</a>
+	</div>
+	<p class="lead">정이삭 공부블로그</p></div>
+
+<div class="sidebar-item sidebar-nav">
+	<ul class="nav">
+      <li class="nav-title">Pages</li>
+	  <li>
+	  	<a class="nav-item" href="/">Articles</a>
+	  </li>
+	  
+	  
+	    
+	  
+	    
+	      
+	        <li>
+	        	<a class="nav-item" href="/about/">
+	            	About
+	            </a>
+	        </li>
+	      
+	    
+	  
+	    
+	      
+	    
+	  
+	    
+	  
+	    
+	  
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-nav">
+  	<ul class="nav">
+			<li class="nav-title">Categories</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#TIL">
+				<span class="name">TIL</span>
+				<span class="badge">12</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Linux">
+				<span class="name">Linux</span>
+				<span class="badge">5</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Network">
+				<span class="name">Network</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Java">
+				<span class="name">Java</span>
+				<span class="badge">4</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Data Structure">
+				<span class="name">Data Structure</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Algorithm">
+				<span class="name">Algorithm</span>
+				<span class="badge">2</span>
+	    	</a>
+ 		</li>
+	    
+	  </nav>
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-footer">
+	<p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
+</div>
+		</div>
+		<div class="content">
+			<article class="post">
+	<header class="post-header">
+		<div class="post-title"> 
+			21년 1월 15일
+		</div>
+		<time class="post-date dt-published" datetime="2021-01-15T00:00:00+09:00" itemprop="datePublished">2021/01/15
+		</time>		
+	</header>
+
+	<div class="post-content">
+		<h2 id="한-일">한 일</h2>
+<ul>
+  <li>
+    <p>코드스쿼드 미션으로 객체지향적으로 프로그래밍 하기를 완성했다.</p>
+
+    <ul>
+      <li>
+        <p>접근제한자 중 protected는 본인 또는 상속받은 class만 접근 가능한 줄 알았다..(같은 패키지 또는 상속받은 클래스였다.)</p>
+      </li>
+      <li>
+        <p>도형이라는 추상클래스를 만들고 멤버변수로 점의 배열, 추상메소드로 isValid, getSize, getSizeString을 넣었다.</p>
+      </li>
+      <li>
+        <p>도형을 상속받은 선, 삼각형, 직사각형 등은 isValid를 통해 해당 점으로 본인이 생성 가능한지 판단하고,</p>
+
+        <p>아니라고 판단하면 Exception을 throw하게 했다.</p>
+      </li>
+      <li>
+        <p>도형이라는 추상클래스 안에 static 메소드로 getInstance를 만들어 입력 받은 점의 배열의 갯수에 따라,</p>
+
+        <p>2개면 선, 3개면 삼각형, 4개는 사각형을 반환하도록 하고, try catch문으로 해당 instance 생성에 Exception이</p>
+
+        <p>발생하면 null을 반환하게 하였다.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<ul>
+  <li>
+    <p>프로그래머스 외벽점검 문제를 다양하게 풀어봤다.</p>
+
+    <ul>
+      <li>
+        <p>C++을 풀었던 답을 자바로 재현해봤더니 조금 느리긴 했지만 큰 차이는 없었다.</p>
+      </li>
+      <li>
+        <p>문제에서 주어진 weak 또는 dist 둘 중 하나를 기준으로 BFS 돌리면 dist를 기준으로 했을 때 훨씬 빨랐다.</p>
+      </li>
+      <li>
+        <p>또 BFS 중 queue에서 뽑으면서 행위를 하느냐, 행위를 하고 queue에 넣느냐에 따라 시간이 달랐다.</p>
+
+        <p>(이 문제에서는 queue에 뽑으면서 행위를 하는게 더 빨랐다.)</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="잘못한-것">잘못한 것</h2>
+
+<ul>
+  <li>뭔가 집중을 하면, 다른 일로 전환이 잘 안된다.</li>
+  <li>오늘도 코테 공부하다가 책도 못읽었다.</li>
+  <li>시간을 정해놓고 의식적으로 안되면 끊고 다음 일 하기를 연습해야겠다.</li>
+</ul>
+
+<h2 id="잘한-것">잘한 것</h2>
+<ul>
+  <li>그래도 꾸준히 성실하게 공부하고 있다.</li>
+</ul>
+
+<h2 id="느낌">느낌</h2>
+<ul>
+  <li>자바로 풀어서 틀린게 아니었다, 로직이 틀린 것이었다.</li>
+  <li>같은 BFS인데도 어떤걸 기준으로 잡느냐에 따라 답이다르고, 행위를 queue에서 뺄때 또는 넣기 전에 하느냐에 따라 속도가 달랐다.
+    <ul>
+      <li>아직 왜 이런 차이가 생기는지 모르겠다.</li>
+    </ul>
+  </li>
+  <li>할 일이 산더미다 ㅠㅠ 코딩 테스트만 좀 잘한다면 코테말고 다른 공부를 하고 싶다.</li>
+  <li>학습방법 등에 대한 JK의 강의를 들었는데, 어제의 나보다 오늘의 내가 성장했냐를 판단한다면 아직은 잘 모르겠다.</li>
+  <li>내 학습방법에 대해 의심을 해봐야겠다.</li>
+</ul>
+
+<h2 id="할-일">할 일</h2>
+
+<ul>
+  <li>프로그래머스 알고리즘 풀기</li>
+  <li>외벽점검 문제 푸는 방법에 따른 속도차이 생각해보기</li>
+  <li>자바의정석 읽기</li>
+</ul>
+
+	</div>
+</article>
+		</div>
+	</div>
+  </body>
+</html>
