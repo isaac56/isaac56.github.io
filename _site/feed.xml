@@ -1,4 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-15T23:53:46+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 1월 15일</title><link href="http://localhost:4000/til/2021/01/15/TIL12.html" rel="alternate" type="text/html" title="21년 1월 15일" /><published>2021-01-15T00:00:00+09:00</published><updated>2021-01-15T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/15/TIL12</id><content type="html" xml:base="http://localhost:4000/til/2021/01/15/TIL12.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-16T21:47:30+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 1월 16일</title><link href="http://localhost:4000/til/2021/01/16/TIL13.html" rel="alternate" type="text/html" title="21년 1월 16일" /><published>2021-01-16T00:00:00+09:00</published><updated>2021-01-16T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/16/TIL13</id><content type="html" xml:base="http://localhost:4000/til/2021/01/16/TIL13.html">&lt;ul&gt;
+  &lt;li&gt;
+    &lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;프로그래머스 외벽점검에서 같은 BFS라도 어떤 기준으로 푸느냐에 따라 오답이 될 수 있는 이유를 알아내었다.&lt;/p&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;p&gt;글로 설명하긴 어렵다.&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;외벽점검 문제에서 weak포인트 배열을 기준으로 BFS를 돌리는데 첫 시작을 제일 능력있는 친구를 넣어놓고,&lt;/p&gt;
+
+            &lt;p&gt;그 다음부터 아무 친구씩 다음 weak포인트에 배치하는 식으로 돌리면 속도가 빠르다.&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;자바로 풀었던 방법은 dist 배열(친구들)을 기준으로 BFS를 돌리는데 첫 시작을 제일 능력있는 친구를 넣는건 같지만,&lt;/p&gt;
+
+            &lt;p&gt;다음으로 능력있는 친구를 아무 weak포인트에 배치하게 풀어서 경우의 수가 너무 많아지고 시간초과로 오답이 된다.&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;이 문제를 C++로 풀었을 때는 쉽게 풀었었는데, 다시 풀다보니까 BFS돌리는 기준을 잘못 잡아서 시간초과로 틀렸다.&lt;/li&gt;
+          &lt;li&gt;처음 이 문제를 만났을 때, DFS 또는 BFS로 풀어야 한다는 생각은 들지만 위의 사소한 조건을 딱 맞혀서 풀 자신이 없다.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;strong&gt;&lt;em&gt;오늘은 거북목 때문인지 목이 너무 뻐근해서 하루를 쉬어버렸다..&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;하루를 쉬고 공부를 못했다.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;길게 보고 꾸준히 하기 위해서 아플때 쉬는 건 잘한 것 같다.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;지금 내 실력으로 실제 코테에서 외벽점검같은 문제를 만났을 때 정답을 맞히는건 운이 좀 필요할 것 같다.&lt;/li&gt;
+      &lt;li&gt;실력이 좋아진다면 문제를 보고 설계하는 단계에서 저런 정확한 방법을 찾을 수 있을까 잘 모르겠다.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;프로그래머스 알고리즘 풀기&lt;/li&gt;
+      &lt;li&gt;TCP/IP 쉽게 더 쉽게 읽기&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /><category term="Rest" /></entry><entry><title type="html">21년 1월 15일</title><link href="http://localhost:4000/til/2021/01/15/TIL12.html" rel="alternate" type="text/html" title="21년 1월 15일" /><published>2021-01-15T00:00:00+09:00</published><updated>2021-01-15T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/15/TIL12</id><content type="html" xml:base="http://localhost:4000/til/2021/01/15/TIL12.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;코드스쿼드 미션으로 객체지향적으로 프로그래밍 하기를 완성했다.&lt;/p&gt;
@@ -79,6 +136,80 @@
 &lt;ul&gt;
   &lt;li&gt;프로그래머스 알고리즘 풀기&lt;/li&gt;
   &lt;li&gt;외벽점검 문제 푸는 방법에 따른 속도차이 생각해보기&lt;/li&gt;
+  &lt;li&gt;자바의정석 읽기&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /><category term="OOP" /></entry><entry><title type="html">21년 1월 14일</title><link href="http://localhost:4000/til/2021/01/14/TIL11.html" rel="alternate" type="text/html" title="21년 1월 14일" /><published>2021-01-14T00:00:00+09:00</published><updated>2021-01-14T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/14/TIL11</id><content type="html" xml:base="http://localhost:4000/til/2021/01/14/TIL11.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;코드스쿼드 미션으로 객체지향적으로 프로그래밍 하기를 해봤다.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;입력으로 (x, y) 좌표들을 받는다.&lt;/li&gt;
+      &lt;li&gt;좌표가 2개면 선의 길이, 좌표가 3개면 삼각형 넓이, 좌표가 4개면 직사각형 넓이(직사각형인지 검사)를 출력한다.&lt;/li&gt;
+      &lt;li&gt;점부터, 선, 삼각형, 직사각형 등을 클래스로 설계하고 상속과 다형성을 사용하여 객체지향적으로 프로그래밍해야한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;미션을 끝까지 하지 못했다.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;삼각형과 직사각형은 도형이라는 추상클래스를 공통 부모 클래스로 두면 될 것 같은데,&lt;/p&gt;
+
+        &lt;p&gt;선은 삼각형이나 직사각형과 전혀 달라서 설계가 안된다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;도형이라는 추상클래스에 높이, 너비, 넓이를 구하는 메소드를 정의하고 삼각형과 직사각형은 이를 오버라이드하게 하였다.&lt;/li&gt;
+      &lt;li&gt;선은 단순히 길이를 구할 뿐인데, 선은 도형과 전혀 다르지 않나?? 선,삼각형,직사각형 세 타입을 어떻게 묶어야 하는지 모르겠다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;OOP의 기본개념을 정리하여 포스팅하였다.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/java/2021/01/14/OOP_basic_concept.html&quot;&gt;https://isaac56.github.io/java/2021/01/14/OOP_basic_concept.html&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;프로그래머스 기둥과 보 설치 문제를 풀었다.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;단순 시뮬레이션 문제였다.&lt;/li&gt;
+      &lt;li&gt;푸는 방법보다 구현이 복잡한 문제여서, 꼼꼼하게 경우의 수를 생각하고 꼼꼼한 코딩을 해야 하는 문제이다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;프로그래머스 외벽점검 문제 풀기 실패하였다.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;C++로 BFS를 통해 풀었던 문제인데, 자바로 BFS를 통해 풀었더니 시간초과가 난다.&lt;/li&gt;
+      &lt;li&gt;BFS로 푸는과정에서 예전과 로직이 달라서 시간초과인지, 자바로 풀어서 시간초과가 난건지(그럴 확률은 낮지만) 내일 확인하려한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;저녁에 코딩테스트 공부가 길어지다보니, 계획했던 다른 공부를 전혀 하지 못한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;알고리즘을 자바로 푸는게 맞는가 확신이 들지 않는다. ㅠㅠ&lt;/li&gt;
+  &lt;li&gt;전에 풀었던 외벽점검 C++ 답과 똑같은 로직을 자바로 구현하여 시간을 재볼 것이다.&lt;/li&gt;
+  &lt;li&gt;똑같은 로직인데도 자바가 시간초과가 난다면, 파이썬이나 C++로 옮길 것이다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;코드스쿼드 미션 진행&lt;/li&gt;
+  &lt;li&gt;프로그래머스 알고리즘 풀기&lt;/li&gt;
+  &lt;li&gt;외벽점검 문제 C++ 답안과 동일하게 자바로 구현해보기&lt;/li&gt;
   &lt;li&gt;자바의정석 읽기&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /><category term="OOP" /></entry><entry><title type="html">OOP의 기본 개념</title><link href="http://localhost:4000/java/2021/01/14/OOP_basic_concept.html" rel="alternate" type="text/html" title="OOP의 기본 개념" /><published>2021-01-14T00:00:00+09:00</published><updated>2021-01-14T00:00:00+09:00</updated><id>http://localhost:4000/java/2021/01/14/OOP_basic_concept</id><content type="html" xml:base="http://localhost:4000/java/2021/01/14/OOP_basic_concept.html">&lt;h2 id=&quot;oop란-무엇인가&quot;&gt;OOP란 무엇인가?&lt;/h2&gt;
 
@@ -284,81 +415,7 @@
 
 &lt;p&gt;이렇게 다형성을 이용하면 자식 클래스가 새로운 메소드를 만들 필요 없이 부모 메소드를 수정함으로써&lt;/p&gt;
 
-&lt;p&gt;불필요한 메소드명의 낭비를 줄일 수 있게 된다.&lt;/p&gt;</content><author><name></name></author><category term="OOP" /></entry><entry><title type="html">21년 1월 14일</title><link href="http://localhost:4000/til/2021/01/14/TIL11.html" rel="alternate" type="text/html" title="21년 1월 14일" /><published>2021-01-14T00:00:00+09:00</published><updated>2021-01-14T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/14/TIL11</id><content type="html" xml:base="http://localhost:4000/til/2021/01/14/TIL11.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;코드스쿼드 미션으로 객체지향적으로 프로그래밍 하기를 해봤다.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;입력으로 (x, y) 좌표들을 받는다.&lt;/li&gt;
-      &lt;li&gt;좌표가 2개면 선의 길이, 좌표가 3개면 삼각형 넓이, 좌표가 4개면 직사각형 넓이(직사각형인지 검사)를 출력한다.&lt;/li&gt;
-      &lt;li&gt;점부터, 선, 삼각형, 직사각형 등을 클래스로 설계하고 상속과 다형성을 사용하여 객체지향적으로 프로그래밍해야한다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;미션을 끝까지 하지 못했다.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;삼각형과 직사각형은 도형이라는 추상클래스를 공통 부모 클래스로 두면 될 것 같은데,&lt;/p&gt;
-
-        &lt;p&gt;선은 삼각형이나 직사각형과 전혀 달라서 설계가 안된다.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;도형이라는 추상클래스에 높이, 너비, 넓이를 구하는 메소드를 정의하고 삼각형과 직사각형은 이를 오버라이드하게 하였다.&lt;/li&gt;
-      &lt;li&gt;선은 단순히 길이를 구할 뿐인데, 선은 도형과 전혀 다르지 않나?? 선,삼각형,직사각형 세 타입을 어떻게 묶어야 하는지 모르겠다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;OOP의 기본개념을 정리하여 포스팅하였다.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/java/2021/01/14/OOP_basic_concept.html&quot;&gt;https://isaac56.github.io/java/2021/01/14/OOP_basic_concept.html&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;프로그래머스 기둥과 보 설치 문제를 풀었다.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;단순 시뮬레이션 문제였다.&lt;/li&gt;
-      &lt;li&gt;푸는 방법보다 구현이 복잡한 문제여서, 꼼꼼하게 경우의 수를 생각하고 꼼꼼한 코딩을 해야 하는 문제이다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;프로그래머스 외벽점검 문제 풀기 실패하였다.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;C++로 BFS를 통해 풀었던 문제인데, 자바로 BFS를 통해 풀었더니 시간초과가 난다.&lt;/li&gt;
-      &lt;li&gt;BFS로 푸는과정에서 예전과 로직이 달라서 시간초과인지, 자바로 풀어서 시간초과가 난건지(그럴 확률은 낮지만) 내일 확인하려한다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;저녁에 코딩테스트 공부가 길어지다보니, 계획했던 다른 공부를 전혀 하지 못한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;알고리즘을 자바로 푸는게 맞는가 확신이 들지 않는다. ㅠㅠ&lt;/li&gt;
-  &lt;li&gt;전에 풀었던 외벽점검 C++ 답과 똑같은 로직을 자바로 구현하여 시간을 재볼 것이다.&lt;/li&gt;
-  &lt;li&gt;똑같은 로직인데도 자바가 시간초과가 난다면, 파이썬이나 C++로 옮길 것이다&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;코드스쿼드 미션 진행&lt;/li&gt;
-  &lt;li&gt;프로그래머스 알고리즘 풀기&lt;/li&gt;
-  &lt;li&gt;외벽점검 문제 C++ 답안과 동일하게 자바로 구현해보기&lt;/li&gt;
-  &lt;li&gt;자바의정석 읽기&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /><category term="OOP" /></entry><entry><title type="html">21년 1월 13일</title><link href="http://localhost:4000/til/2021/01/13/TIL10.html" rel="alternate" type="text/html" title="21년 1월 13일" /><published>2021-01-13T00:00:00+09:00</published><updated>2021-01-13T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/13/TIL10</id><content type="html" xml:base="http://localhost:4000/til/2021/01/13/TIL10.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;p&gt;불필요한 메소드명의 낭비를 줄일 수 있게 된다.&lt;/p&gt;</content><author><name></name></author><category term="OOP" /></entry><entry><title type="html">21년 1월 13일</title><link href="http://localhost:4000/til/2021/01/13/TIL10.html" rel="alternate" type="text/html" title="21년 1월 13일" /><published>2021-01-13T00:00:00+09:00</published><updated>2021-01-13T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/13/TIL10</id><content type="html" xml:base="http://localhost:4000/til/2021/01/13/TIL10.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;오늘은 하루종일 알고리즘만 풀었다.&lt;/li&gt;
   &lt;li&gt;코드스쿼드 미션으로 나온 문제들(릿코드):
@@ -572,7 +629,137 @@
 
 &lt;p&gt;(나중에 공부해야겠다.)&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://velog.io/@junhok82/Java로-순열Permutation-구현하기&quot;&gt;https://velog.io/@junhok82/Java로-순열Permutation-구현하기&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="Permutation" /></entry><entry><title type="html">오버로딩과 오버라이딩</title><link href="http://localhost:4000/java/2021/01/12/Diff_Overloading_Overriding.html" rel="alternate" type="text/html" title="오버로딩과 오버라이딩" /><published>2021-01-12T00:00:00+09:00</published><updated>2021-01-12T00:00:00+09:00</updated><id>http://localhost:4000/java/2021/01/12/Diff_Overloading_Overriding</id><content type="html" xml:base="http://localhost:4000/java/2021/01/12/Diff_Overloading_Overriding.html">&lt;h2 id=&quot;오버로딩과-오버라이딩-차이&quot;&gt;오버로딩과 오버라이딩 차이&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://velog.io/@junhok82/Java로-순열Permutation-구현하기&quot;&gt;https://velog.io/@junhok82/Java로-순열Permutation-구현하기&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="Permutation" /></entry><entry><title type="html">21년 1월 12일</title><link href="http://localhost:4000/til/2021/01/12/TIL9.html" rel="alternate" type="text/html" title="21년 1월 12일" /><published>2021-01-12T00:00:00+09:00</published><updated>2021-01-12T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/12/TIL9</id><content type="html" xml:base="http://localhost:4000/til/2021/01/12/TIL9.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/data%20structure/2021/01/11/LinkedList.html&quot;&gt;Linked List&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;코드스쿼드 미션으로 Doubly Circular LinkedList를 구현했었던 걸 보다 간략하게 수정하였다.
+        &lt;ul&gt;
+          &lt;li&gt;head를 sentinal node를 가리키게 하여 코드를 더 단순화 하였다.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Single LinkedList와 Double LinkedList도 구현해 보았다&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Overloading 과 Overriding에 대해 오해하고 있던게 있어서 해당 내용 정리하여 포스트 했다.
+    &lt;ul&gt;
+      &lt;li&gt;@Override annotation이 필수인 줄 알았다.&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/java/2021/01/12/Diff_Overloading_Overriding.html&quot;&gt;https://isaac56.github.io/java/2021/01/12/Diff_Overloading_Overriding.html&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;프로그래머스 H-index, 모의고사 문제를 풀었다.
+    &lt;ol&gt;
+      &lt;li&gt;H-index는 구현보다 문제이해가 힘든 문제였다.
+        &lt;ul&gt;
+          &lt;li&gt;제약 조건의 input 개수가 1000이라 O(n^2)으로 풀어도 1,000,000(약 0.1초) 연산이었다.&lt;/li&gt;
+          &lt;li&gt;저기서 더 빨리 풀어보겠다고 잔머리쓰다가 틀렸다.&lt;/li&gt;
+          &lt;li&gt;아주 조그만 시간 아끼겠다고 틀리지 말자&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;모의고사는 레벨1짜리 매우 간단한 문제였는데, 자바로 푸니 코드가 지저분한 느낌이다.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;오버로딩과 오버라이딩을 정확히 알게 되었다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;자바로 알고리즘 문제 풀까, 파이썬으로 바꿔서 연습해야 되나 고민된다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;자바는 답으로 제출하는 아웃풋이 주로 배열이기 때문에, 리스트를 포문돌려서 배열에 넣어주는 과정이 너무 귀찮다..&lt;/p&gt;
+
+    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;mapToInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;intValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//java8부터는 스트림을 이용하여 이렇게 바꿀수 있긴 하다.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;코드스쿼드 미션 진행&lt;/li&gt;
+  &lt;li&gt;프로그래머스 알고리즘 풀기&lt;/li&gt;
+  &lt;li&gt;자바의정석 읽기&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="Linked List" /><category term="Overloading" /><category term="Overriding" /></entry><entry><title type="html">시간복잡도 표기법</title><link href="http://localhost:4000/algorithm/2021/01/12/TimeComplexity.html" rel="alternate" type="text/html" title="시간복잡도 표기법" /><published>2021-01-12T00:00:00+09:00</published><updated>2021-01-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/2021/01/12/TimeComplexity</id><content type="html" xml:base="http://localhost:4000/algorithm/2021/01/12/TimeComplexity.html">&lt;h2 id=&quot;시간복잡도-표기법을-간단히-정리해보았다&quot;&gt;시간복잡도 표기법을 간단히 정리해보았다.&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Big-O Notation (빅 오 표기법)&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;정의&lt;/p&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;|f(x)| &amp;lt;= C|g(x)| (for all x &amp;gt; N)&lt;/code&gt;&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;어떤 지s점 N에 대해서 N보다 큰 모든 x에 대해서 &lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt;f(x)&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt; &amp;lt;= C&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt;g(x)&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt; 인 N과 C가 존재하면&lt;/p&gt;
+
+            &lt;p&gt;f(x) = O(g(x)) 라 표기 가능하다.&lt;/p&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;최악의 경우에도 이정도 성능(g(x)은 보장된다는 의미&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Big-Ω Notation(빅 오메가 표기법)&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;정의&lt;/p&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;|f(x)| &amp;gt;= C|g(x)| (for all x &amp;gt; N)&lt;/code&gt;&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;어떤 지점 N에 대해서 N보다 큰 모든 x에 대해서 &lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt;f(x)&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt; &amp;gt;= C&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt;g(x)&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt; 인 N과 C가 존재하면&lt;/p&gt;
+
+            &lt;p&gt;f(x) = Ω(g(x)) 라 표기 가능하다.&lt;/p&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;최상의 경우에도 이정도 성능(g(x)보다 같거나 느리다는 의미&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Big-θ Notation(빅 세타 표기법)
+    &lt;ul&gt;
+      &lt;li&gt;정의
+        &lt;ul&gt;
+          &lt;li&gt;f(x) = O(g(x))와 f(x) = Ω(g(x))가 모두 참일 때 f(x) = θ(g(x))&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;평균적으로 이정도 성능이 나온다는 의미&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /></entry><entry><title type="html">오버로딩과 오버라이딩</title><link href="http://localhost:4000/java/2021/01/12/Diff_Overloading_Overriding.html" rel="alternate" type="text/html" title="오버로딩과 오버라이딩" /><published>2021-01-12T00:00:00+09:00</published><updated>2021-01-12T00:00:00+09:00</updated><id>http://localhost:4000/java/2021/01/12/Diff_Overloading_Overriding</id><content type="html" xml:base="http://localhost:4000/java/2021/01/12/Diff_Overloading_Overriding.html">&lt;h2 id=&quot;오버로딩과-오버라이딩-차이&quot;&gt;오버로딩과 오버라이딩 차이&lt;/h2&gt;
 
 &lt;h3 id=&quot;오버로딩&quot;&gt;오버로딩&lt;/h3&gt;
 
@@ -710,170 +897,7 @@ java: method() in ChildClass cannot override method() in SuperClass
   &lt;li&gt;@Override 어노테이션은 컴파일러에게 “지금부터 이 메소드를 오버라이딩 할거야” 라고 알려주는 용도이다.&lt;/li&gt;
   &lt;li&gt;이때, 컴파일러는 부모 클래스에 동일한 메소드가 없을 경우 에러를 발생시키기 때문에, 안전한 코딩을 위해 @Override를 사용하는 것이 좋다.&lt;/li&gt;
   &lt;li&gt;@Override 어노테이션이 없어도 오버라이딩은 잘 된다.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Java" /></entry><entry><title type="html">시간복잡도 표기법</title><link href="http://localhost:4000/algorithm/2021/01/12/TimeComplexity.html" rel="alternate" type="text/html" title="시간복잡도 표기법" /><published>2021-01-12T00:00:00+09:00</published><updated>2021-01-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/2021/01/12/TimeComplexity</id><content type="html" xml:base="http://localhost:4000/algorithm/2021/01/12/TimeComplexity.html">&lt;h2 id=&quot;시간복잡도-표기법을-간단히-정리해보았다&quot;&gt;시간복잡도 표기법을 간단히 정리해보았다.&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Big-O Notation (빅 오 표기법)&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;정의&lt;/p&gt;
-
-        &lt;ul&gt;
-          &lt;li&gt;
-            &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;|f(x)| &amp;lt;= C|g(x)| (for all x &amp;gt; N)&lt;/code&gt;&lt;/p&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;p&gt;어떤 지s점 N에 대해서 N보다 큰 모든 x에 대해서 &lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt;f(x)&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt; &amp;lt;= C&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt;g(x)&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt; 인 N과 C가 존재하면&lt;/p&gt;
-
-            &lt;p&gt;f(x) = O(g(x)) 라 표기 가능하다.&lt;/p&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;최악의 경우에도 이정도 성능(g(x)은 보장된다는 의미&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Big-Ω Notation(빅 오메가 표기법)&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;정의&lt;/p&gt;
-
-        &lt;ul&gt;
-          &lt;li&gt;
-            &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;|f(x)| &amp;gt;= C|g(x)| (for all x &amp;gt; N)&lt;/code&gt;&lt;/p&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;p&gt;어떤 지점 N에 대해서 N보다 큰 모든 x에 대해서 &lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt;f(x)&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt; &amp;gt;= C&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt;g(x)&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt; 인 N과 C가 존재하면&lt;/p&gt;
-
-            &lt;p&gt;f(x) = Ω(g(x)) 라 표기 가능하다.&lt;/p&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;최상의 경우에도 이정도 성능(g(x)보다 같거나 느리다는 의미&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Big-θ Notation(빅 세타 표기법)
-    &lt;ul&gt;
-      &lt;li&gt;정의
-        &lt;ul&gt;
-          &lt;li&gt;f(x) = O(g(x))와 f(x) = Ω(g(x))가 모두 참일 때 f(x) = θ(g(x))&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;평균적으로 이정도 성능이 나온다는 의미&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /></entry><entry><title type="html">21년 1월 12일</title><link href="http://localhost:4000/til/2021/01/12/TIL9.html" rel="alternate" type="text/html" title="21년 1월 12일" /><published>2021-01-12T00:00:00+09:00</published><updated>2021-01-12T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/12/TIL9</id><content type="html" xml:base="http://localhost:4000/til/2021/01/12/TIL9.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/data%20structure/2021/01/11/LinkedList.html&quot;&gt;Linked List&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;코드스쿼드 미션으로 Doubly Circular LinkedList를 구현했었던 걸 보다 간략하게 수정하였다.
-        &lt;ul&gt;
-          &lt;li&gt;head를 sentinal node를 가리키게 하여 코드를 더 단순화 하였다.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Single LinkedList와 Double LinkedList도 구현해 보았다&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Overloading 과 Overriding에 대해 오해하고 있던게 있어서 해당 내용 정리하여 포스트 했다.
-    &lt;ul&gt;
-      &lt;li&gt;@Override annotation이 필수인 줄 알았다.&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/java/2021/01/12/Diff_Overloading_Overriding.html&quot;&gt;https://isaac56.github.io/java/2021/01/12/Diff_Overloading_Overriding.html&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;프로그래머스 H-index, 모의고사 문제를 풀었다.
-    &lt;ol&gt;
-      &lt;li&gt;H-index는 구현보다 문제이해가 힘든 문제였다.
-        &lt;ul&gt;
-          &lt;li&gt;제약 조건의 input 개수가 1000이라 O(n^2)으로 풀어도 1,000,000(약 0.1초) 연산이었다.&lt;/li&gt;
-          &lt;li&gt;저기서 더 빨리 풀어보겠다고 잔머리쓰다가 틀렸다.&lt;/li&gt;
-          &lt;li&gt;아주 조그만 시간 아끼겠다고 틀리지 말자&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;모의고사는 레벨1짜리 매우 간단한 문제였는데, 자바로 푸니 코드가 지저분한 느낌이다.&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;오버로딩과 오버라이딩을 정확히 알게 되었다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;자바로 알고리즘 문제 풀까, 파이썬으로 바꿔서 연습해야 되나 고민된다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;자바는 답으로 제출하는 아웃풋이 주로 배열이기 때문에, 리스트를 포문돌려서 배열에 넣어주는 과정이 너무 귀찮다..&lt;/p&gt;
-
-    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;mapToInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;intValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//java8부터는 스트림을 이용하여 이렇게 바꿀수 있긴 하다.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;코드스쿼드 미션 진행&lt;/li&gt;
-  &lt;li&gt;프로그래머스 알고리즘 풀기&lt;/li&gt;
-  &lt;li&gt;자바의정석 읽기&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="Linked List" /><category term="Overloading" /><category term="Overriding" /></entry><entry><title type="html">21년 1월 11일</title><link href="http://localhost:4000/til/2021/01/11/TIL8.html" rel="alternate" type="text/html" title="21년 1월 11일" /><published>2021-01-11T00:00:00+09:00</published><updated>2021-01-11T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/11/TIL8</id><content type="html" xml:base="http://localhost:4000/til/2021/01/11/TIL8.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;코드스쿼드 미션으로 Linked List를 구현하여, 영상 편집 편집하기 컨셉의 간단한 CLI 프로그램을 만들었다.&lt;/li&gt;
-  &lt;li&gt;처음에 Single Linked List로 구현하였다가 Doubly Circular Linked List를 구현하였다.&lt;/li&gt;
-  &lt;li&gt;제너릭을 사용하여 Java Collections의 LinkedList처럼 사용할 수 있도록 노력하였다.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/data%20structure/2021/01/11/LinkedList.html&quot;&gt;Linked List&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;프로그래머스 이중우선순위큐, K번째수, 가장 큰 수 풀었다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;TCP/IP책을 읽지 않았다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;코드스쿼드 미션을 통해 Java의 다양한 기능등을 사용해보려고 하였다.&lt;/li&gt;
-  &lt;li&gt;단순히 요구사항에 맞춰서 구현한 것이 아니라, 제너릭으로 Linked List를 구현한 후 이를 상속도 해보고 내부클래스의 접근제한자도 바꿔가며 Java를 같이 공부하였다.&lt;/li&gt;
-  &lt;li&gt;피곤하다고 미루지 않고 오늘 할 일을 마쳤다..&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;일요일 밤에 잠을 거의 2시간밖에 못자서 너무 피곤하다.&lt;/li&gt;
-  &lt;li&gt;책 읽을 시간이 너무 없다. 주말에 책 읽을 시간으로 빼는게 나을까 고민된다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;코드스쿼드 미션 진행&lt;/li&gt;
-  &lt;li&gt;프로그래머스 알고리즘 풀기&lt;/li&gt;
-  &lt;li&gt;자바의정석 읽기&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="자료구조" /><category term="Linked List" /></entry><entry><title type="html">Linked List</title><link href="http://localhost:4000/data%20structure/2021/01/11/LinkedList.html" rel="alternate" type="text/html" title="Linked List" /><published>2021-01-11T00:00:00+09:00</published><updated>2021-01-11T00:00:00+09:00</updated><id>http://localhost:4000/data%20structure/2021/01/11/LinkedList</id><content type="html" xml:base="http://localhost:4000/data%20structure/2021/01/11/LinkedList.html">&lt;h2 id=&quot;linked-list&quot;&gt;Linked List&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Java" /></entry><entry><title type="html">Linked List</title><link href="http://localhost:4000/data%20structure/2021/01/11/LinkedList.html" rel="alternate" type="text/html" title="Linked List" /><published>2021-01-11T00:00:00+09:00</published><updated>2021-01-11T00:00:00+09:00</updated><id>http://localhost:4000/data%20structure/2021/01/11/LinkedList</id><content type="html" xml:base="http://localhost:4000/data%20structure/2021/01/11/LinkedList.html">&lt;h2 id=&quot;linked-list&quot;&gt;Linked List&lt;/h2&gt;
 
 &lt;p&gt;Node 또는 Vertax라 불리는 자료형이 연결된 형태의 자료구조이다.&lt;/p&gt;
 
