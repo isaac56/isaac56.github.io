@@ -217,8 +217,9 @@ public class Main {
 
 즉, 함수형 프로그래밍에서는 핵심 로직(함수)만 인자로 넘겨줌으로써 코드를 간결하게 하고 로직에 집중할 수 있게 해준다.
 
-그리고 자바8부터는 stream을 제공하여 위와 같은 과정을 쉽게 구현할 수 있다.
+그리고 자바8부터는 stream과 Functional Interface를 제공하여 위와 같은 과정을 쉽게 구현할 수 있다.
 
 - [자바8 stream 사용법](https://futurecreator.github.io/2018/08/26/java-8-streams/)
+- [Functional Interface 사용법](https://codechacha.com/ko/java8-functional-interface/)
 
 <br>
