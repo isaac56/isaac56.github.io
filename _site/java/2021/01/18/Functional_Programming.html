@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Dev.Isaac" /></head>
+<style>@import url(/public/css/syntax/monokai.css);</style>
+  <title>Dev.Isaac</title>
+  <!-- <link href="/public/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link href="/public/css/style.css" rel="stylesheet">
+  <body>
+  	<div class="container"> 
+		<div class="sidebar">
+			<div class="sidebar-item sidebar-header">
+	<div class='sidebar-brand'>
+		<a href="/about/">Dev.Isaac</a>
+	</div>
+	<p class="lead">정이삭 공부블로그</p></div>
+
+<div class="sidebar-item sidebar-nav">
+	<ul class="nav">
+      <li class="nav-title">Pages</li>
+	  <li>
+	  	<a class="nav-item" href="/">Articles</a>
+	  </li>
+	  
+	  
+	    
+	  
+	    
+	      
+	        <li>
+	        	<a class="nav-item" href="/about/">
+	            	About
+	            </a>
+	        </li>
+	      
+	    
+	  
+	    
+	      
+	    
+	  
+	    
+	  
+	    
+	  
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-nav">
+  	<ul class="nav">
+			<li class="nav-title">Categories</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#TIL">
+				<span class="name">TIL</span>
+				<span class="badge">14</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Linux">
+				<span class="name">Linux</span>
+				<span class="badge">5</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Network">
+				<span class="name">Network</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Java">
+				<span class="name">Java</span>
+				<span class="badge">5</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Data Structure">
+				<span class="name">Data Structure</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Algorithm">
+				<span class="name">Algorithm</span>
+				<span class="badge">2</span>
+	    	</a>
+ 		</li>
+	    
+	  </nav>
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-footer">
+	<p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
+</div>
+		</div>
+		<div class="content">
+			<article class="post">
+	<header class="post-header">
+		<div class="post-title"> 
+			함수형 프로그래밍
+		</div>
+		<time class="post-date dt-published" datetime="2021-01-18T00:00:00+09:00" itemprop="datePublished">2021/01/18
+		</time>		
+	</header>
+
+	<div class="post-content">
+		<h2 id="함수형-프로그래밍이란">함수형 프로그래밍이란?</h2>
+
+<blockquote>
+  <p>객체지향은 동작하는 부분을 캡슐화해서 이해할 수 있게 하고, 함수형 프로그래밍은 동작하는 부분을 최소화해서 코드 이해를 돕는다.</p>
+
+  <ul>
+    <li><strong>Michael Feathers</strong> ‘레거시 코드 활용 전략’ 저자</li>
+  </ul>
+</blockquote>
+
+<p>객체지향 프로그래밍에서는 각 객체안에 자신이 기능하기 위한 상태(변수)와 메소드 들이 캡슐화 되어있고,</p>
+
+<p>그러한 객체 간의 상호작용을 통해 프로그램이 동작하게 된다.</p>
+
+<p><br /></p>
+
+<p>여기서 객체의 메소드는 객체안의 상태(멤버 변수)에 따라 같은 파라미터를 입력하더라도 결과값이 다를 수 있고,</p>
+
+<p>비동기 프로그래밍을 위해서는 특정 변수에 Lock을 걸어 스레드간의 충돌이 일어나지 않도록 신경써야 한다.</p>
+
+<p>즉, 객체의 상태에 따른 side effect를 주의하여야 하며, 여러 스레드에서 같은 상태(멤버 변수)에 접근하여 side effect가 발생하지 않도록 주의해야 한다.</p>
+
+<p><br /></p>
+
+<p>이렇게 side effect를 걱정하며 신경 쓸 거리를 줄이고, 코드를 간결하게 하기 위해 나온 패러다임이 함수형 프로그래밍이라고 할 수 있다.</p>
+
+<p><br /></p>
+
+<h2 id="함수형-프로그래밍의-컨셉">함수형 프로그래밍의 컨셉</h2>
+
+<ol>
+  <li>변경 가능한 상태를 불변상태(Immutable)로 만들어 SideEffect를 없애자.</li>
+  <li>모든 것은 객체이다.</li>
+  <li>코드를 간결하게 하고 가독성을 높여 구현할 로직에 집중 시키자.</li>
+  <li>동시성 작업을 보다 쉽게 안전하게 구현 하자.</li>
+</ol>
+
+<h3 id="변경-가능한-상태를-불변상태immutable로-만들어-sideeffect를-없애자">변경 가능한 상태를 불변상태(Immutable)로 만들어 SideEffect를 없애자.</h3>
+
+<p>함수형 프로그래밍에서 함수는 자체적인 상태를 관리하지 않는다.</p>
+
+<p>인자로 들어온 변수와 상수만을 이용하여 결과를 출력함으로써, 동일한 인풋일 때 항상 같은 결과임을 보장한다.</p>
+
+<p>코드로 표현하면 아래와 같다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 함수형 프로그래밍에서는 아래와 같이</span>
+<span class="c1">// 동일한 인자를 입력받으면 항상 동일한 결과를 반환하여야 한다.</span>
+<span class="c1">// x=1, y=1일 경우 func는 항상 2르르 반환한다.</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">func</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">,</span> <span class="kt">int</span> <span class="n">y</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+
+<span class="c1">// 객체지향 프로그래밍에서는 아래와 같이</span>
+<span class="c1">// 동일한 인자를 입력받더라도 객체의 상태에 따라 다른 결과를 반환할 수 있다.</span>
+<span class="c1">// 예제에서는 state가 변경될 때 발생할 수 있는 side effect를 주의하며 코딩해야 한다.</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">state</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">func</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">,</span> <span class="kt">int</span> <span class="n">y</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">state</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span>
+            <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">;</span>
+        <span class="k">else</span>
+            <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h3 id="모든-것은-객체이다">모든 것은 객체이다.</h3>
+
+<p>함수형 프로그래밍에서는 함수 또한 1급 객체로 사용할 수 있어야 한다.</p>
+
+<p>1급 객체가 되려면 값으로 할당 할 수 있고, 파라미터로 다른 함수에 넘길 수 있고, 리턴값으로 반환할 수 있어야 한다.</p>
+
+<p><br /></p>
+
+<p>안타깝게도, 자바에서는 함수를 1급 객체로 취급하지 않기 때문에 함수(메소드)를 담은 인스턴스를 넘기는 방식으로</p>
+
+<p>메소드를 인자로 전달하거나 결과로 반환받을 수 있다.</p>
+
+<p><br /></p>
+
+<p>다만 자바 8부터는 람다식을 통해, 마치 메소드를 인자로 넘기는 것처럼 인스턴스를 넘길 수 있게 되었다.</p>
+
+<ul>
+  <li>자바8부터 메소드가 하나뿐인 인터페이스는, 람다식으로 익명 클래스를 간단하게 선언할 수 있다.</li>
+  <li>실제 동작은 람다식으로 익명 클래스를 생성하고, 그 익명 클래스를 넘겨주는 것이다.</li>
+</ul>
+
+<p><br /></p>
+
+<p>예제는 다음과 같다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 메소드가 하나뿐인 인터페이스만</span>
+<span class="c1">// 람다식을 통해 익명 클래스로 선언될 수 있다.</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Calculator</span><span class="o">{</span>
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">calculate</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CalcService</span><span class="o">{</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">service</span><span class="o">(</span><span class="nc">Calculator</span> <span class="n">c</span><span class="o">,</span> <span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">){</span>
+    <span class="k">return</span> <span class="n">c</span><span class="o">.</span><span class="na">caculate</span><span class="o">(</span><span class="n">a</span><span class="o">,</span><span class="n">b</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span><span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">CalcService</span> <span class="n">calc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">CalcService</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="na">service</span><span class="o">((</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">5</span><span class="o">);</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">result</span><span class="o">);</span> <span class="c1">//15출력</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h3 id="코드를-간결하게-하고-가독성을-높여-구현할-로직에-집중-시키자">코드를 간결하게 하고 가독성을 높여 구현할 로직에 집중 시키자.</h3>
+
+<p>아예 변경하지 않고 재사용하거나, 아주 일부만을 변경하여 재사용하는 코드들을 보일러 플레이트 코드라고 한다.</p>
+
+<p><br /></p>
+
+<p>예를 들어, List에 있는 모든 변수들에 어떤 처리를 해주기 위해서는 List를 포문으로 순회하며 처리해야 한다.</p>
+
+<p>이때 “처리”에 해당하는 부분만 변경될 뿐 포문은 항상 재사용되기 때문에 포문을 보일러 플레이트 코드라고 할 수 있다.</p>
+
+<p><br /></p>
+
+<p>함수형 프로그래밍에서는 “처리”에 해당하는 함수를 인자로 받는 고계함수를 만들어서 보일러 플레이트 코드를 없앨 수 있다.</p>
+
+<p>(고계함수는 함수를 처리하는 함수라는 뜻으로, 함수를 인자로 받아 사용하거나 함수를 반환하는 등의 행위를 할 수 있다.)</p>
+
+<p><br /></p>
+
+<p>예를 들어, Integer의 List에 있는 모든 요소를 제곱으로 변경해보겠다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">HandleType</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="no">T</span> <span class="nf">func</span><span class="o">(</span><span class="no">T</span> <span class="n">x</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ForStatement</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">change</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">,</span> <span class="nc">HandleType</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="n">handle</span><span class="o">){</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">list</span><span class="o">.</span><span class="na">size</span><span class="o">();</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="n">list</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">i</span><span class="o">,</span> <span class="n">handle</span><span class="o">.</span><span class="na">func</span><span class="o">((</span><span class="n">list</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">))));</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+        <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+        <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+        <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">3</span><span class="o">);</span>
+        <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">4</span><span class="o">);</span>
+        <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">5</span><span class="o">);</span>
+        <span class="n">list</span><span class="o">.</span><span class="na">stream</span><span class="o">().</span><span class="na">forEach</span><span class="o">();</span>
+
+        <span class="nc">ForStatement</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">forStatement</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ForStatement</span><span class="o">&lt;&gt;();</span>
+        <span class="n">forStatement</span><span class="o">.</span><span class="na">change</span><span class="o">(</span><span class="n">list</span><span class="o">,(</span><span class="nc">Integer</span> <span class="n">i</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="o">);</span> <span class="c1">// 모든 요소를 제곱으로 변경</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>이처럼 ForStatement와 같은 클래스를 한번 정의해두면,</p>
+
+<p>앞으로 List 전체 요소를 변경할 일이 있을 때 for문을 작성할 필요 없이 간단하게 원하는 값으로 변경할 수 있다.</p>
+
+<p><br /></p>
+
+<p>즉, 함수형 프로그래밍에서는 핵심 로직(함수)만 인자로 넘겨줌으로써 코드를 간결하게 하고 로직에 집중할 수 있게 해준다.</p>
+
+<p>그리고 자바8부터는 stream을 제공하여 위와 같은 과정을 쉽게 구현할 수 있다.</p>
+
+<ul>
+  <li><a href="https://futurecreator.github.io/2018/08/26/java-8-streams/">자바8 stream 사용법</a></li>
+</ul>
+
+<p><br /></p>
+
+<h3 id="동시성-작업을-보다-쉽게-구현-하자">동시성 작업을 보다 쉽게 구현 하자</h3>
+
+<p>함수형 프로그래밍에서 함수는 별도의 상태에 영향을 받지 않는다.</p>
+
+<p>파라미터로 받은 인풋에 의해 값이 결정되기 때문에 동시에 여러 스레드에서 접근하더라도 Side Effect가 발생하지 않는다.</p>
+
+<p>별도의 Lock, Unlock을 할 필요도 없어, 동시성 작업이 보다 간결해지는 것이다.</p>
+
+
+	</div>
+</article>
+		</div>
+	</div>
+  </body>
+</html>
