@@ -17,6 +17,14 @@ last_modified_at: 2021-01-18
 ---
 ## 함수형 프로그래밍이란?
 
+함수형 프로그래밍은 프로그램을 수학적 함수의 조합으로 생각하는 방식이라고 할 수 있다.
+
+여기서 수학적 함수란, 수학의 함수와 같이 인풋을 받아 아웃풋을 반환하는 것을 말하며, 
+
+같은 인풋일 때는 항상 같은 아웃풋을 반환해야 하고(순수 함수), 함수 외부의 값을 변경할 수 없다(불변성).
+
+## 함수형 프로그래밍의 이점?
+
 > 객체지향은 동작하는 부분을 캡슐화해서 이해할 수 있게 하고, 함수형 프로그래밍은 동작하는 부분을 최소화해서 코드 이해를 돕는다.
 >
 > - **Michael Feathers** ‘레거시 코드 활용 전략' 저자
@@ -35,56 +43,75 @@ last_modified_at: 2021-01-18
 
 <br>
 
-이렇게 side effect를 걱정하며 신경 쓸 거리를 줄이고, 코드를 간결하게 하기 위해 나온 패러다임이 함수형 프로그래밍이라고 할 수 있다.
+그러나 함수형 프로그래밍에서 각 함수는 불변성과 순수 함수라는 특징을 갖기 때문에,
+
+멤버 변수의 변화나 여러 스레드의 접근에 따른 side effect를 걱정하지 않고 프로그래밍을 할 수 있다.
 
 <br>
 
 ## 함수형 프로그래밍의 컨셉
 
-1. 변경 가능한 상태를 불변상태(Immutable)로 만들어 SideEffect를 없애자.
-2. 모든 것은 객체이다.
-3. 코드를 간결하게 하고 가독성을 높여 구현할 로직에 집중 시키자.
-4. 동시성 작업을 보다 쉽게 안전하게 구현 하자.
+1. 불변성과 순수함수라는 특징은 상태에 따른 Side Effect를 없애준다.
+2. 함수도 객체이다.
+3. 코드를 간결하게 하고 구현할 로직에 집중할 수 있다.
 
-### 변경 가능한 상태를 불변상태(Immutable)로 만들어 SideEffect를 없애자.
+### 불변성과 순수함수라는 특징은 상태에 따른 Side Effect를 없애준다.
 
-함수형 프로그래밍에서 함수는 자체적인 상태를 관리하지 않는다.
+함수형 프로그래밍의 함수는 불변성(Immutablility)과 순수함수(Pure Function)이라는 특징이 있다.
 
-인자로 들어온 변수와 상수만을 이용하여 결과를 출력함으로써, 동일한 인풋일 때 항상 같은 결과임을 보장한다.
+이러한 특징에 의해 함수는 상태에 영향을 받지 않기 때문에 상태에 따른 side effect를 걱정하지 않아도 된다. 
 
-코드로 표현하면 아래와 같다.
+- 불변성(Immutablility)
 
-```java
-// 함수형 프로그래밍에서는 아래와 같이
-// 동일한 인자를 입력받으면 항상 동일한 결과를 반환하여야 한다.
-// x=1, y=1일 경우 func는 항상 2르르 반환한다.
-public class Test {
-    public int func(int x, int y) {
-        return x + y;
-    }
-}
+  1. 함수형 프로그래밍에서는 데이터가 변할 수 없는데, 이를 불변성 데이터라고 한다. 
 
+  2. 데이터 변경이 필요한 경우, 원본 데이터 구조를 변경하지 않고 그 데이터를 복사본을 만들어 그 일부를 변경하고, 변경한 복사본을 사용해 작업을 진행한다.
 
-// 객체지향 프로그래밍에서는 아래와 같이
-// 동일한 인자를 입력받더라도 객체의 상태에 따라 다른 결과를 반환할 수 있다.
-// 예제에서는 state가 변경될 때 발생할 수 있는 side effect를 주의하며 코딩해야 한다.
-public class Test {
-    int state = 0;
+  불변성은 함수에 파라미터로 넘어온 값의 원본데이터는 변하지 않는다는 특징이다.
 
-    public int func(int x, int y) {
-        if(state == 0)
-            return x + y;
-        else
-            return x * y;
-    }
-}
-```
+  일반적인 Call by Value를 생각하면 이해하기 쉽고, 
 
-<br>
+  만약 자바의 인스턴스를 인자로 받을 경우 인스턴스의 복사본을 통해 작업을 진행해야 원본 데이터의 변경을 피할 수 있을 것이다.
 
-### 모든 것은 객체이다.
+- 순수 함수(Pure Function)
 
-함수형 프로그래밍에서는 함수 또한 1급 객체로 사용할 수 있어야 한다. 
+  함수형 프로그래밍에서 함수는 자체적인 상태를 관리하지 않는다.
+
+  인자로 들어온 변수와 상수만을 이용하여 결과를 출력함으로써, 동일한 인풋일 때 항상 같은 결과임을 보장한다.
+
+  코드로 표현하면 아래와 같다.
+
+  ```java
+  // 함수형 프로그래밍에서는 아래와 같이
+  // 동일한 인자를 입력받으면 항상 동일한 결과를 반환하여야 한다.
+  // x=1, y=1일 경우 func는 항상 2를 반환한다.
+  public class Test {
+      public int func(int x, int y) {
+          return x + y;
+      }
+  }
+  
+  
+  // 객체지향 프로그래밍에서는 아래와 같이
+  // 동일한 인자를 입력받더라도 객체의 상태에 따라 다른 결과를 반환할 수 있다.
+  // 예제에서는 state가 변경될 때 발생할 수 있는 side effect를 주의하며 코딩해야 한다.
+  public class Test {
+      int state = 0;
+  
+      public int func(int x, int y) {
+          if(state == 0)
+              return x + y;
+          else
+              return x * y;
+      }
+  }
+  ```
+
+  <br>
+
+### 함수도 객체이다.
+
+함수형 프로그래밍에서 함수는 1급 객체이다.
 
 1급 객체가 되려면 값으로 할당 할 수 있고, 파라미터로 다른 함수에 넘길 수 있고, 리턴값으로 반환할 수 있어야 한다.
 
@@ -157,10 +184,12 @@ public interface HandleType<T> {
 }
 
 public class ForStatement<T> {
-    public void change(List<T> list, HandleType<T> handle){
+    public List<T> getArrayList(List<T> list, HandleType<T> handle){
+        List<T> result = new ArrayList<>();
         for(int i = 0; i < list.size(); i++) {
-            list.set(i, handle.func((list.get(i))));
+            result.add(handle.func((list.get(i))));
         }
+        return result;
     }
 }
 
@@ -172,10 +201,10 @@ public class Main {
         list.add(3);
         list.add(4);
         list.add(5);
-        list.stream().forEach();
 
         ForStatement<Integer> forStatement = new ForStatement<>();
-        forStatement.change(list,(Integer i) -> i*i); // 모든 요소를 제곱으로 변경
+        // 모든 요소가 제곱이 된 리스트
+        List<Integer> powList = forStatement.getArrayList(list,(Integer i) -> i*i);
     }
 }
 ```
@@ -193,12 +222,3 @@ public class Main {
 - [자바8 stream 사용법](https://futurecreator.github.io/2018/08/26/java-8-streams/)
 
 <br>
-
-### 동시성 작업을 보다 쉽게 구현 하자
-
-함수형 프로그래밍에서 함수는 별도의 상태에 영향을 받지 않는다.
-
-파라미터로 받은 인풋에 의해 값이 결정되기 때문에 동시에 여러 스레드에서 접근하더라도 Side Effect가 발생하지 않는다.
-
-별도의 Lock, Unlock을 할 필요도 없어, 동시성 작업이 보다 간결해지는 것이다.
-
