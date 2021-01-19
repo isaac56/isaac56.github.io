@@ -1,4 +1,140 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-18T23:59:30+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">함수형 프로그래밍</title><link href="http://localhost:4000/java/2021/01/18/Functional_Programming.html" rel="alternate" type="text/html" title="함수형 프로그래밍" /><published>2021-01-18T00:00:00+09:00</published><updated>2021-01-18T00:00:00+09:00</updated><id>http://localhost:4000/java/2021/01/18/Functional_Programming</id><content type="html" xml:base="http://localhost:4000/java/2021/01/18/Functional_Programming.html">&lt;h2 id=&quot;함수형-프로그래밍이란&quot;&gt;함수형 프로그래밍이란?&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-20T01:21:38+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 1월 19일</title><link href="http://localhost:4000/til/2021/01/19/TIL16.html" rel="alternate" type="text/html" title="21년 1월 19일" /><published>2021-01-19T00:00:00+09:00</published><updated>2021-01-19T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/19/TIL16</id><content type="html" xml:base="http://localhost:4000/til/2021/01/19/TIL16.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;자바8부터 함수형 프로그래밍을 지원하기 위해 나온 함수형 인터페이스에 대해 공부하였다.&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;자바의 정석 Chapter 14를 참고하였다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;클로저는 단순히 익명함수가 아니라, 익명함수가 선언될 당시의 외부스코프(lexical Envirionment)를 포함한 것이다.&lt;/p&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;함수라고 할 수도 있고, 자료구조라고 할 수도 있다.&lt;/li&gt;
+          &lt;li&gt;자바에서 클로저에 담긴 외부스코프의 변수는 final취급이 된다.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;사실 람다식은 익명 클래스이자 익명 객체의 생성자이고,&lt;/p&gt;
+
+        &lt;p&gt;이와 일치하는 인터페이스에 대입해줘야 컴파일러가 알아서 해당 인터페이스로 형변환을 해준다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Runnable, Supplier, Function, UnaryOperator 등 자바에서는 함수형 프로그래밍을 지원하기 위해&lt;/p&gt;
+
+        &lt;p&gt;다양한 Functional Interface를 준비해두었다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;준비된 Functional Interface외에 필요한 게 생긴다면 직접 구현해서 사용해도 된다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;특정 메소드를 참조하기만 하는 람다식은 메소드 참조 식으로 바꿀 수 있다.&lt;/p&gt;
+
+        &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.function.Consumer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+     
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Test&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; method&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+     
+&lt;span class=&quot;c1&quot;&gt;//두 식 모두 동일&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;Consumer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;con1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;Consumer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;con2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;Test:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;프로그래머스의 체육복, 조이스틱, 큰수만들기를 풀었다.&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;체육복:
+        &lt;ul&gt;
+          &lt;li&gt;앞에서부터 순회하며 당장 빌려줄 체육복이 있으면 빌려줄 사람이 있는지 확인하고 왼쪽, 오른쪽 순으로 빌려주면 된다.&lt;/li&gt;
+          &lt;li&gt;간단한 greedy 문제이다.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;조이스틱:&lt;/p&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;위 아래 버튼으로 인한 최소 입력개수는 정해져 있어서 어려울게 없다.&lt;/li&gt;
+          &lt;li&gt;왼쪽 오른쪽 버튼으로 인한 최소 입력개수를 구하기 위해서는 이동하는 범위를 그림적으로 생각해야 한다.&lt;/li&gt;
+          &lt;li&gt;0인덱스를 제외하고, 순회하며 ‘A’가 아닌 P1과 그 다음 ‘A’가 아닌 P2를 통해 수평 버튼이 눌릴 수 있는 경우의 수를 생각한다.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;큰수만들기:&lt;/p&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;p&gt;이건 정말 어려워서 결국 못 풀고 답을 봤다.&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;빼야하는 k개와 남아있어야 하는 n-k개를 나눈 후,&lt;/p&gt;
+
+            &lt;p&gt;k개의 뒤쪽 기준으로  n-k개의 앞쪽부터 하나하나 비교하며 swap 해줘야 기존의 숫자 순서를 오염시키지 않고 k개를 빼는게 가능하다.&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;글로 설명이 힘들어서 코드를 봐야 이해할 수 있을 것이다.&lt;/p&gt;
+
+            &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;charArr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toCharArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--){&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;charArr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;charArr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;charArr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]){&lt;/span&gt;
+                    &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;charArr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;charArr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;charArr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;charArr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+       
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;valueOf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Arrays&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;copyOfRange&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;charArr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;charArr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;            &lt;/div&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;알고리즘 문제를 또 오래 잡고있다보니 시간조절이 안되었다.&lt;/li&gt;
+  &lt;li&gt;이건 고질적인 문제라서 할말이없다. ㅠㅠ&lt;/li&gt;
+  &lt;li&gt;시간 조절하는 연습을 꼭 할것이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;너무 피곤해서 오늘은 쉴까 생각했었는데, 그래도 다시 정상 궤도로 돌아왔다.&lt;/li&gt;
+  &lt;li&gt;꾸준히 하는게 중요한데 꾸준히 하고 있어서 다행이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;함수형 프로그래밍은 함수를 객체처럼 사용할 수 있어야 하기 때문에, Functional Interface를 사용해야 한다고 생각한다.&lt;/li&gt;
+  &lt;li&gt;함수형 프로그래밍은 지금 내 수준으로 완벽히 이해하기 힘들고, 그런 식으로 구현하기도 힘들것 같다.&lt;/li&gt;
+  &lt;li&gt;그냥 그런 패러다임이 있구나 자바에선 이런걸 제공하는 구나 정도만 알고 넘어가야겠다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;코드스쿼드 미션하기&lt;/li&gt;
+  &lt;li&gt;프로그래머스 문제 풀기&lt;/li&gt;
+  &lt;li&gt;TCP/IP 쉽게 더쉽게 읽기&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Functional Interface" /><category term="Algorithm" /></entry><entry><title type="html">함수형 프로그래밍</title><link href="http://localhost:4000/java/2021/01/18/Functional_Programming.html" rel="alternate" type="text/html" title="함수형 프로그래밍" /><published>2021-01-18T00:00:00+09:00</published><updated>2021-01-18T00:00:00+09:00</updated><id>http://localhost:4000/java/2021/01/18/Functional_Programming</id><content type="html" xml:base="http://localhost:4000/java/2021/01/18/Functional_Programming.html">&lt;h2 id=&quot;함수형-프로그래밍이란&quot;&gt;함수형 프로그래밍이란?&lt;/h2&gt;
 
 &lt;p&gt;함수형 프로그래밍은 프로그램을 수학적 함수의 조합으로 생각하는 방식이라고 할 수 있다.&lt;/p&gt;
 
@@ -497,6 +633,80 @@
   &lt;li&gt;프로그래머스 알고리즘 풀기&lt;/li&gt;
   &lt;li&gt;외벽점검 문제 푸는 방법에 따른 속도차이 생각해보기&lt;/li&gt;
   &lt;li&gt;자바의정석 읽기&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /><category term="OOP" /></entry><entry><title type="html">21년 1월 14일</title><link href="http://localhost:4000/til/2021/01/14/TIL11.html" rel="alternate" type="text/html" title="21년 1월 14일" /><published>2021-01-14T00:00:00+09:00</published><updated>2021-01-14T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/14/TIL11</id><content type="html" xml:base="http://localhost:4000/til/2021/01/14/TIL11.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;코드스쿼드 미션으로 객체지향적으로 프로그래밍 하기를 해봤다.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;입력으로 (x, y) 좌표들을 받는다.&lt;/li&gt;
+      &lt;li&gt;좌표가 2개면 선의 길이, 좌표가 3개면 삼각형 넓이, 좌표가 4개면 직사각형 넓이(직사각형인지 검사)를 출력한다.&lt;/li&gt;
+      &lt;li&gt;점부터, 선, 삼각형, 직사각형 등을 클래스로 설계하고 상속과 다형성을 사용하여 객체지향적으로 프로그래밍해야한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;미션을 끝까지 하지 못했다.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;삼각형과 직사각형은 도형이라는 추상클래스를 공통 부모 클래스로 두면 될 것 같은데,&lt;/p&gt;
+
+        &lt;p&gt;선은 삼각형이나 직사각형과 전혀 달라서 설계가 안된다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;도형이라는 추상클래스에 높이, 너비, 넓이를 구하는 메소드를 정의하고 삼각형과 직사각형은 이를 오버라이드하게 하였다.&lt;/li&gt;
+      &lt;li&gt;선은 단순히 길이를 구할 뿐인데, 선은 도형과 전혀 다르지 않나?? 선,삼각형,직사각형 세 타입을 어떻게 묶어야 하는지 모르겠다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;OOP의 기본개념을 정리하여 포스팅하였다.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/java/2021/01/14/OOP_basic_concept.html&quot;&gt;https://isaac56.github.io/java/2021/01/14/OOP_basic_concept.html&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;프로그래머스 기둥과 보 설치 문제를 풀었다.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;단순 시뮬레이션 문제였다.&lt;/li&gt;
+      &lt;li&gt;푸는 방법보다 구현이 복잡한 문제여서, 꼼꼼하게 경우의 수를 생각하고 꼼꼼한 코딩을 해야 하는 문제이다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;프로그래머스 외벽점검 문제 풀기 실패하였다.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;C++로 BFS를 통해 풀었던 문제인데, 자바로 BFS를 통해 풀었더니 시간초과가 난다.&lt;/li&gt;
+      &lt;li&gt;BFS로 푸는과정에서 예전과 로직이 달라서 시간초과인지, 자바로 풀어서 시간초과가 난건지(그럴 확률은 낮지만) 내일 확인하려한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;저녁에 코딩테스트 공부가 길어지다보니, 계획했던 다른 공부를 전혀 하지 못한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;알고리즘을 자바로 푸는게 맞는가 확신이 들지 않는다. ㅠㅠ&lt;/li&gt;
+  &lt;li&gt;전에 풀었던 외벽점검 C++ 답과 똑같은 로직을 자바로 구현하여 시간을 재볼 것이다.&lt;/li&gt;
+  &lt;li&gt;똑같은 로직인데도 자바가 시간초과가 난다면, 파이썬이나 C++로 옮길 것이다&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;코드스쿼드 미션 진행&lt;/li&gt;
+  &lt;li&gt;프로그래머스 알고리즘 풀기&lt;/li&gt;
+  &lt;li&gt;외벽점검 문제 C++ 답안과 동일하게 자바로 구현해보기&lt;/li&gt;
+  &lt;li&gt;자바의정석 읽기&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /><category term="OOP" /></entry><entry><title type="html">OOP의 기본 개념</title><link href="http://localhost:4000/java/2021/01/14/OOP_basic_concept.html" rel="alternate" type="text/html" title="OOP의 기본 개념" /><published>2021-01-14T00:00:00+09:00</published><updated>2021-01-14T00:00:00+09:00</updated><id>http://localhost:4000/java/2021/01/14/OOP_basic_concept</id><content type="html" xml:base="http://localhost:4000/java/2021/01/14/OOP_basic_concept.html">&lt;h2 id=&quot;oop란-무엇인가&quot;&gt;OOP란 무엇인가?&lt;/h2&gt;
 
 &lt;p&gt;OOP(Object Oriendted Programming), 영어 그대로 해석하면 객체 지향 프로그래밍이라는 뜻이다.&lt;/p&gt;
@@ -701,81 +911,7 @@
 
 &lt;p&gt;이렇게 다형성을 이용하면 자식 클래스가 새로운 메소드를 만들 필요 없이 부모 메소드를 수정함으로써&lt;/p&gt;
 
-&lt;p&gt;불필요한 메소드명의 낭비를 줄일 수 있게 된다.&lt;/p&gt;</content><author><name></name></author><category term="OOP" /></entry><entry><title type="html">21년 1월 14일</title><link href="http://localhost:4000/til/2021/01/14/TIL11.html" rel="alternate" type="text/html" title="21년 1월 14일" /><published>2021-01-14T00:00:00+09:00</published><updated>2021-01-14T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/14/TIL11</id><content type="html" xml:base="http://localhost:4000/til/2021/01/14/TIL11.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;코드스쿼드 미션으로 객체지향적으로 프로그래밍 하기를 해봤다.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;입력으로 (x, y) 좌표들을 받는다.&lt;/li&gt;
-      &lt;li&gt;좌표가 2개면 선의 길이, 좌표가 3개면 삼각형 넓이, 좌표가 4개면 직사각형 넓이(직사각형인지 검사)를 출력한다.&lt;/li&gt;
-      &lt;li&gt;점부터, 선, 삼각형, 직사각형 등을 클래스로 설계하고 상속과 다형성을 사용하여 객체지향적으로 프로그래밍해야한다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;미션을 끝까지 하지 못했다.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;삼각형과 직사각형은 도형이라는 추상클래스를 공통 부모 클래스로 두면 될 것 같은데,&lt;/p&gt;
-
-        &lt;p&gt;선은 삼각형이나 직사각형과 전혀 달라서 설계가 안된다.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;도형이라는 추상클래스에 높이, 너비, 넓이를 구하는 메소드를 정의하고 삼각형과 직사각형은 이를 오버라이드하게 하였다.&lt;/li&gt;
-      &lt;li&gt;선은 단순히 길이를 구할 뿐인데, 선은 도형과 전혀 다르지 않나?? 선,삼각형,직사각형 세 타입을 어떻게 묶어야 하는지 모르겠다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;OOP의 기본개념을 정리하여 포스팅하였다.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/java/2021/01/14/OOP_basic_concept.html&quot;&gt;https://isaac56.github.io/java/2021/01/14/OOP_basic_concept.html&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;프로그래머스 기둥과 보 설치 문제를 풀었다.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;단순 시뮬레이션 문제였다.&lt;/li&gt;
-      &lt;li&gt;푸는 방법보다 구현이 복잡한 문제여서, 꼼꼼하게 경우의 수를 생각하고 꼼꼼한 코딩을 해야 하는 문제이다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;프로그래머스 외벽점검 문제 풀기 실패하였다.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;C++로 BFS를 통해 풀었던 문제인데, 자바로 BFS를 통해 풀었더니 시간초과가 난다.&lt;/li&gt;
-      &lt;li&gt;BFS로 푸는과정에서 예전과 로직이 달라서 시간초과인지, 자바로 풀어서 시간초과가 난건지(그럴 확률은 낮지만) 내일 확인하려한다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;저녁에 코딩테스트 공부가 길어지다보니, 계획했던 다른 공부를 전혀 하지 못한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;알고리즘을 자바로 푸는게 맞는가 확신이 들지 않는다. ㅠㅠ&lt;/li&gt;
-  &lt;li&gt;전에 풀었던 외벽점검 C++ 답과 똑같은 로직을 자바로 구현하여 시간을 재볼 것이다.&lt;/li&gt;
-  &lt;li&gt;똑같은 로직인데도 자바가 시간초과가 난다면, 파이썬이나 C++로 옮길 것이다&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;코드스쿼드 미션 진행&lt;/li&gt;
-  &lt;li&gt;프로그래머스 알고리즘 풀기&lt;/li&gt;
-  &lt;li&gt;외벽점검 문제 C++ 답안과 동일하게 자바로 구현해보기&lt;/li&gt;
-  &lt;li&gt;자바의정석 읽기&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /><category term="OOP" /></entry><entry><title type="html">Java로 순열 구현</title><link href="http://localhost:4000/algorithm/2021/01/13/Permutation.html" rel="alternate" type="text/html" title="Java로 순열 구현" /><published>2021-01-13T00:00:00+09:00</published><updated>2021-01-13T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/2021/01/13/Permutation</id><content type="html" xml:base="http://localhost:4000/algorithm/2021/01/13/Permutation.html">&lt;h2 id=&quot;자바에는-기본제공-순열-함수가-없다-ㅠㅠ&quot;&gt;자바에는 기본제공 순열 함수가 없다 ㅠㅠ&lt;/h2&gt;
+&lt;p&gt;불필요한 메소드명의 낭비를 줄일 수 있게 된다.&lt;/p&gt;</content><author><name></name></author><category term="OOP" /></entry><entry><title type="html">Java로 순열 구현</title><link href="http://localhost:4000/algorithm/2021/01/13/Permutation.html" rel="alternate" type="text/html" title="Java로 순열 구현" /><published>2021-01-13T00:00:00+09:00</published><updated>2021-01-13T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/2021/01/13/Permutation</id><content type="html" xml:base="http://localhost:4000/algorithm/2021/01/13/Permutation.html">&lt;h2 id=&quot;자바에는-기본제공-순열-함수가-없다-ㅠㅠ&quot;&gt;자바에는 기본제공 순열 함수가 없다 ㅠㅠ&lt;/h2&gt;
 
 &lt;p&gt;C++로 코딩테스트를 풀다가 자바로 넘어갔을 때 가장 당황했던 것이었다.&lt;/p&gt;
 
@@ -989,65 +1125,4 @@
   &lt;li&gt;코드스쿼드 미션 진행&lt;/li&gt;
   &lt;li&gt;프로그래머스 알고리즘 풀기&lt;/li&gt;
   &lt;li&gt;자바의정석 읽기&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /></entry><entry><title type="html">21년 1월 12일</title><link href="http://localhost:4000/til/2021/01/12/TIL9.html" rel="alternate" type="text/html" title="21년 1월 12일" /><published>2021-01-12T00:00:00+09:00</published><updated>2021-01-12T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/12/TIL9</id><content type="html" xml:base="http://localhost:4000/til/2021/01/12/TIL9.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/data%20structure/2021/01/11/LinkedList.html&quot;&gt;Linked List&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;코드스쿼드 미션으로 Doubly Circular LinkedList를 구현했었던 걸 보다 간략하게 수정하였다.
-        &lt;ul&gt;
-          &lt;li&gt;head를 sentinal node를 가리키게 하여 코드를 더 단순화 하였다.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Single LinkedList와 Double LinkedList도 구현해 보았다&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Overloading 과 Overriding에 대해 오해하고 있던게 있어서 해당 내용 정리하여 포스트 했다.
-    &lt;ul&gt;
-      &lt;li&gt;@Override annotation이 필수인 줄 알았다.&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/java/2021/01/12/Diff_Overloading_Overriding.html&quot;&gt;https://isaac56.github.io/java/2021/01/12/Diff_Overloading_Overriding.html&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;프로그래머스 H-index, 모의고사 문제를 풀었다.
-    &lt;ol&gt;
-      &lt;li&gt;H-index는 구현보다 문제이해가 힘든 문제였다.
-        &lt;ul&gt;
-          &lt;li&gt;제약 조건의 input 개수가 1000이라 O(n^2)으로 풀어도 1,000,000(약 0.1초) 연산이었다.&lt;/li&gt;
-          &lt;li&gt;저기서 더 빨리 풀어보겠다고 잔머리쓰다가 틀렸다.&lt;/li&gt;
-          &lt;li&gt;아주 조그만 시간 아끼겠다고 틀리지 말자&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;모의고사는 레벨1짜리 매우 간단한 문제였는데, 자바로 푸니 코드가 지저분한 느낌이다.&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;오버로딩과 오버라이딩을 정확히 알게 되었다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;자바로 알고리즘 문제 풀까, 파이썬으로 바꿔서 연습해야 되나 고민된다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;자바는 답으로 제출하는 아웃풋이 주로 배열이기 때문에, 리스트를 포문돌려서 배열에 넣어주는 과정이 너무 귀찮다..&lt;/p&gt;
-
-    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;mapToInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;intValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//java8부터는 스트림을 이용하여 이렇게 바꿀수 있긴 하다.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;코드스쿼드 미션 진행&lt;/li&gt;
-  &lt;li&gt;프로그래머스 알고리즘 풀기&lt;/li&gt;
-  &lt;li&gt;자바의정석 읽기&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="Linked List" /><category term="Overloading" /><category term="Overriding" /></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /></entry></feed>

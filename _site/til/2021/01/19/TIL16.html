@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Dev.Isaac" /></head>
+<style>@import url(/public/css/syntax/monokai.css);</style>
+  <title>Dev.Isaac</title>
+  <!-- <link href="/public/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link href="/public/css/style.css" rel="stylesheet">
+  <body>
+  	<div class="container"> 
+		<div class="sidebar">
+			<div class="sidebar-item sidebar-header">
+	<div class='sidebar-brand'>
+		<a href="/about/">Dev.Isaac</a>
+	</div>
+	<p class="lead">정이삭 공부블로그</p></div>
+
+<div class="sidebar-item sidebar-nav">
+	<ul class="nav">
+      <li class="nav-title">Pages</li>
+	  <li>
+	  	<a class="nav-item" href="/">Articles</a>
+	  </li>
+	  
+	  
+	    
+	  
+	    
+	      
+	        <li>
+	        	<a class="nav-item" href="/about/">
+	            	About
+	            </a>
+	        </li>
+	      
+	    
+	  
+	    
+	      
+	    
+	  
+	    
+	  
+	    
+	  
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-nav">
+  	<ul class="nav">
+			<li class="nav-title">Categories</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#TIL">
+				<span class="name">TIL</span>
+				<span class="badge">16</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Linux">
+				<span class="name">Linux</span>
+				<span class="badge">5</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Network">
+				<span class="name">Network</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Java">
+				<span class="name">Java</span>
+				<span class="badge">5</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Data Structure">
+				<span class="name">Data Structure</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Algorithm">
+				<span class="name">Algorithm</span>
+				<span class="badge">2</span>
+	    	</a>
+ 		</li>
+	    
+	  </nav>
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-footer">
+	<p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
+</div>
+		</div>
+		<div class="content">
+			<article class="post">
+	<header class="post-header">
+		<div class="post-title"> 
+			21년 1월 19일
+		</div>
+		<time class="post-date dt-published" datetime="2021-01-19T00:00:00+09:00" itemprop="datePublished">2021/01/19
+		</time>		
+	</header>
+
+	<div class="post-content">
+		<h2 id="한-일">한 일</h2>
+
+<ul>
+  <li>
+    <p>자바8부터 함수형 프로그래밍을 지원하기 위해 나온 함수형 인터페이스에 대해 공부하였다.</p>
+
+    <ol>
+      <li>
+        <p>자바의 정석 Chapter 14를 참고하였다.</p>
+      </li>
+      <li>
+        <p>클로저는 단순히 익명함수가 아니라, 익명함수가 선언될 당시의 외부스코프(lexical Envirionment)를 포함한 것이다.</p>
+
+        <ul>
+          <li>함수라고 할 수도 있고, 자료구조라고 할 수도 있다.</li>
+          <li>자바에서 클로저에 담긴 외부스코프의 변수는 final취급이 된다.</li>
+        </ul>
+      </li>
+      <li>
+        <p>사실 람다식은 익명 클래스이자 익명 객체의 생성자이고,</p>
+
+        <p>이와 일치하는 인터페이스에 대입해줘야 컴파일러가 알아서 해당 인터페이스로 형변환을 해준다.</p>
+      </li>
+      <li>
+        <p>Runnable, Supplier, Function, UnaryOperator 등 자바에서는 함수형 프로그래밍을 지원하기 위해</p>
+
+        <p>다양한 Functional Interface를 준비해두었다.</p>
+      </li>
+      <li>
+        <p>준비된 Functional Interface외에 필요한 게 생긴다면 직접 구현해서 사용해도 된다.</p>
+      </li>
+      <li>
+        <p>특정 메소드를 참조하기만 하는 람다식은 메소드 참조 식으로 바꿀 수 있다.</p>
+
+        <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.function.Consumer</span><span class="o">;</span>
+     
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">method</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">){</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">i</span> <span class="o">+</span> <span class="s">" method"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+     
+<span class="c1">//두 식 모두 동일</span>
+<span class="nc">Consumer</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">con1</span> <span class="o">=</span> <span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span> <span class="nc">Test</span><span class="o">.</span><span class="na">method</span><span class="o">(</span><span class="n">i</span><span class="o">);</span> <span class="o">};</span>
+<span class="nc">Consumer</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">con2</span> <span class="o">=</span> <span class="nl">Test:</span><span class="o">:</span><span class="n">method</span><span class="o">;</span>
+</code></pre></div>        </div>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>프로그래머스의 체육복, 조이스틱, 큰수만들기를 풀었다.</p>
+
+    <ol>
+      <li>체육복:
+        <ul>
+          <li>앞에서부터 순회하며 당장 빌려줄 체육복이 있으면 빌려줄 사람이 있는지 확인하고 왼쪽, 오른쪽 순으로 빌려주면 된다.</li>
+          <li>간단한 greedy 문제이다.</li>
+        </ul>
+      </li>
+      <li>
+        <p>조이스틱:</p>
+
+        <ul>
+          <li>위 아래 버튼으로 인한 최소 입력개수는 정해져 있어서 어려울게 없다.</li>
+          <li>왼쪽 오른쪽 버튼으로 인한 최소 입력개수를 구하기 위해서는 이동하는 범위를 그림적으로 생각해야 한다.</li>
+          <li>0인덱스를 제외하고, 순회하며 ‘A’가 아닌 P1과 그 다음 ‘A’가 아닌 P2를 통해 수평 버튼이 눌릴 수 있는 경우의 수를 생각한다.</li>
+        </ul>
+      </li>
+      <li>
+        <p>큰수만들기:</p>
+
+        <ul>
+          <li>
+            <p>이건 정말 어려워서 결국 못 풀고 답을 봤다.</p>
+          </li>
+          <li>
+            <p>빼야하는 k개와 남아있어야 하는 n-k개를 나눈 후,</p>
+
+            <p>k개의 뒤쪽 기준으로  n-k개의 앞쪽부터 하나하나 비교하며 swap 해줘야 기존의 숫자 순서를 오염시키지 않고 k개를 빼는게 가능하다.</p>
+          </li>
+          <li>
+            <p>글로 설명이 힘들어서 코드를 봐야 이해할 수 있을 것이다.</p>
+
+            <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">solution</span><span class="o">(</span><span class="nc">String</span> <span class="n">number</span><span class="o">,</span> <span class="kt">int</span> <span class="n">k</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">char</span><span class="o">[]</span> <span class="n">charArr</span> <span class="o">=</span> <span class="n">number</span><span class="o">.</span><span class="na">toCharArray</span><span class="o">();</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&gt;=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">--){</span>
+            <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">k</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">charArr</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+                <span class="k">if</span><span class="o">(</span><span class="n">charArr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&gt;=</span> <span class="n">charArr</span><span class="o">[</span><span class="n">j</span><span class="o">]){</span>
+                    <span class="kt">char</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">charArr</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+                    <span class="n">charArr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">charArr</span><span class="o">[</span><span class="n">j</span><span class="o">];</span>
+                    <span class="n">charArr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">temp</span><span class="o">;</span>
+                <span class="o">}</span>
+                <span class="k">else</span>
+                    <span class="k">break</span><span class="o">;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+       
+        <span class="k">return</span> <span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">copyOfRange</span><span class="o">(</span><span class="n">charArr</span><span class="o">,</span> <span class="n">k</span><span class="o">,</span> <span class="n">charArr</span><span class="o">.</span><span class="na">length</span><span class="o">));</span>
+    <span class="o">}</span>
+</code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<h2 id="잘못한-것">잘못한 것</h2>
+
+<ul>
+  <li>알고리즘 문제를 또 오래 잡고있다보니 시간조절이 안되었다.</li>
+  <li>이건 고질적인 문제라서 할말이없다. ㅠㅠ</li>
+  <li>시간 조절하는 연습을 꼭 할것이다.</li>
+</ul>
+
+<h2 id="잘한-것">잘한 것</h2>
+
+<ul>
+  <li>너무 피곤해서 오늘은 쉴까 생각했었는데, 그래도 다시 정상 궤도로 돌아왔다.</li>
+  <li>꾸준히 하는게 중요한데 꾸준히 하고 있어서 다행이다.</li>
+</ul>
+
+<h2 id="느낌">느낌</h2>
+
+<ul>
+  <li>함수형 프로그래밍은 함수를 객체처럼 사용할 수 있어야 하기 때문에, Functional Interface를 사용해야 한다고 생각한다.</li>
+  <li>함수형 프로그래밍은 지금 내 수준으로 완벽히 이해하기 힘들고, 그런 식으로 구현하기도 힘들것 같다.</li>
+  <li>그냥 그런 패러다임이 있구나 자바에선 이런걸 제공하는 구나 정도만 알고 넘어가야겠다.</li>
+</ul>
+
+<h2 id="할-일">할 일</h2>
+
+<ul>
+  <li>코드스쿼드 미션하기</li>
+  <li>프로그래머스 문제 풀기</li>
+  <li>TCP/IP 쉽게 더쉽게 읽기</li>
+</ul>
+
+	</div>
+</article>
+		</div>
+	</div>
+  </body>
+</html>
