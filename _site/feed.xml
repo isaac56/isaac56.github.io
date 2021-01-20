@@ -1,4 +1,118 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-20T01:21:38+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 1월 19일</title><link href="http://localhost:4000/til/2021/01/19/TIL16.html" rel="alternate" type="text/html" title="21년 1월 19일" /><published>2021-01-19T00:00:00+09:00</published><updated>2021-01-19T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/19/TIL16</id><content type="html" xml:base="http://localhost:4000/til/2021/01/19/TIL16.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-20T22:06:42+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 1월 20일</title><link href="http://localhost:4000/til/2021/01/20/TIL17.html" rel="alternate" type="text/html" title="21년 1월 20일" /><published>2021-01-20T00:00:00+09:00</published><updated>2021-01-20T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/20/TIL17</id><content type="html" xml:base="http://localhost:4000/til/2021/01/20/TIL17.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;프로그래머스의 크레인 인형뽑기 게임, 이상한 문자 만들기, 구명보트, 섬 연결하기를 풀었다.&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;크레인 인형뽑기 게임:
+        &lt;ul&gt;
+          &lt;li&gt;주어진 규칙에 맞게 구현만 하면 되는 레벨1짜리 문제였다.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;이상한 문자 만들기:&lt;/p&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;p&gt;마찬가지로 주어진 구현만 하면 되는 쉬운 문제였다.&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;하지만 문제를 자의적으로 해석해 틀리고 말았다.&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;공백으로 구분된 문자들을 기준으로 짝수번째는 대문자 홀수번째는 소문자로 바꾸는 문제였다.&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;쉬운 문제였는데 틀리고 말았다.&lt;/p&gt;
+
+            &lt;ol&gt;
+              &lt;li&gt;
+                &lt;p&gt;나는 자의적으로 해석하여, 공백을 기준으로 단어를 split한 후 대문자,소문자를 적용하고나서 다시 공백으로 합쳤다.&lt;/p&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;p&gt;문제에서 각 문자들이 공백 하나로만 구분된다거나 맨마지막 단어 뒤에 공백이 없다는 조건이 없었다.&lt;/p&gt;
+              &lt;/li&gt;
+            &lt;/ol&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;문제를 제대로 읽고, 문제에서 제약조건으로 알려주지 않은 모든 경우의 수를 생각하며 풀어야 한다.&lt;/p&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;구명보트:&lt;/p&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;p&gt;풀었던 문제인데도 효율성에서 시간초과가 나서 결국 답을 보고 풀었다.&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;무게순으로 정렬 후 순회하며 풀어나가는 문제이다.&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;순회하는 기준을 어디로 두냐의 문제였다.&lt;/p&gt;
+
+            &lt;ol&gt;
+              &lt;li&gt;
+                &lt;p&gt;무게가 작은 사람을 기준으로 순회한다면, 같이 보트를 태울 사람을 최대무게부터&lt;/p&gt;
+
+                &lt;p&gt;현재 무게 더해도 한계를 안넘는 사람을 찾을 때까지 줄여나가며 찾아야 한고 못 찾으면 현재 무게만 태운다.&lt;/p&gt;
+
+                &lt;p&gt;(모든 사람의 무게가 limit인 경우 항상 이중포문을 돌게 된다.)&lt;/p&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;p&gt;무게를 큰 사람을 기준으로 순회한다면, 같이 보트를 태울 사람을 찾을 때, 최소무게+현재무게가 한계를 안넘으면 태우고,&lt;/p&gt;
+
+                &lt;p&gt;한계를 넘으면 현재 무게만 보트에 태우면 된다.(무게가 큰 사람부터 순회하기 때문)&lt;/p&gt;
+              &lt;/li&gt;
+            &lt;/ol&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;시간초과가 나는 것을 보고, 도저히 해결못하겠다고 생각했는데 기준만 다르게 생각하면 되는 문제였다 ㅠㅠ&lt;/p&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;섬 연결하기:&lt;/p&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;그냥 크루스칼 알고리즘으로 풀라고 던져준 문제 같았다.&lt;/li&gt;
+          &lt;li&gt;union-find 기법과 kruskal 알고리즘으로 간단하게 풀 수 있었다.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;한달의 중간을 안쉬고 달렸다는 핑계로 쉬는 시간이 많았다.&lt;/li&gt;
+  &lt;li&gt;책을 아예 안보고 있다. 조금이라도 전진하는 것과 멈추는 것은 다른 문제인데..&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;그래도 오늘 하기로 계획한 알고리즘 문제는 모두 풀었다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;완독하기로 한 책을 조금씩이라도 읽어야 발전하는데 아예 진행을 안하고 있다.&lt;/li&gt;
+  &lt;li&gt;진짜 고질적인 문제인데, 계획한 시간을 넘으면 잠시 멈추고 하기로 한 일을 진행해야 한다.&lt;/li&gt;
+  &lt;li&gt;걱정이 많이 된다. 쉴 땐 쉬고 할 땐 하는 연습이 필요하다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;코드스쿼드 미션하기&lt;/li&gt;
+  &lt;li&gt;프로그래머스 문제 풀기&lt;/li&gt;
+  &lt;li&gt;TCP/IP 쉽게 더쉽게 읽기&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /></entry><entry><title type="html">21년 1월 19일</title><link href="http://localhost:4000/til/2021/01/19/TIL16.html" rel="alternate" type="text/html" title="21년 1월 19일" /><published>2021-01-19T00:00:00+09:00</published><updated>2021-01-19T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/19/TIL16</id><content type="html" xml:base="http://localhost:4000/til/2021/01/19/TIL16.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -134,7 +248,112 @@
   &lt;li&gt;코드스쿼드 미션하기&lt;/li&gt;
   &lt;li&gt;프로그래머스 문제 풀기&lt;/li&gt;
   &lt;li&gt;TCP/IP 쉽게 더쉽게 읽기&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Functional Interface" /><category term="Algorithm" /></entry><entry><title type="html">함수형 프로그래밍</title><link href="http://localhost:4000/java/2021/01/18/Functional_Programming.html" rel="alternate" type="text/html" title="함수형 프로그래밍" /><published>2021-01-18T00:00:00+09:00</published><updated>2021-01-18T00:00:00+09:00</updated><id>http://localhost:4000/java/2021/01/18/Functional_Programming</id><content type="html" xml:base="http://localhost:4000/java/2021/01/18/Functional_Programming.html">&lt;h2 id=&quot;함수형-프로그래밍이란&quot;&gt;함수형 프로그래밍이란?&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Functional Interface" /><category term="Algorithm" /></entry><entry><title type="html">21년 1월 18일</title><link href="http://localhost:4000/til/2021/01/18/TIL15.html" rel="alternate" type="text/html" title="21년 1월 18일" /><published>2021-01-18T00:00:00+09:00</published><updated>2021-01-18T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/18/TIL15</id><content type="html" xml:base="http://localhost:4000/til/2021/01/18/TIL15.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;함수형 프로그래밍이 무엇인지 학습하고 정리하였다.&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;프로그램을 함수의 조합으로 바라보는 패러다임이다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;여기서 함수는 불변성과 순수함수라는 특징이 있어, 어떤 상태인지에 따른 side effect가 발생하지 않는다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;비동기 프로그래밍에 있어서도 side effect가 발생하지 않는다.&lt;/p&gt;
+
+        &lt;p&gt;(인풋에 의해 결정되는 함수들의 조합이기 때문에 thread간에 공유되는 변수가 없다.)&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;자바에서 함수형 프로그래밍을 위해 인터페이스 생성자로 람다식을 사용하고, 메소드처럼 취급할 수 있는&lt;/p&gt;
+
+        &lt;p&gt;여러 인터페이스를 구현해놓았다는 것을 알게 되었다.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/java/2021/01/18/Functional_Programming.html&quot;&gt;https://isaac56.github.io/java/2021/01/18/Functional_Programming.html&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;프로그래머스의 길찾기 게임과 카펫 문제를 풀었다.&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;길찾기 게임:
+        &lt;ul&gt;
+          &lt;li&gt;단순한 구현 문제이다.&lt;/li&gt;
+          &lt;li&gt;y값으로 내림차순 정렬을 한 후 이진 탐색 트리에 삽입한다.&lt;/li&gt;
+          &lt;li&gt;pre-order, post-order 순서로 각각 탐색한 후 결과를 반환한다.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;카펫:
+        &lt;ul&gt;
+          &lt;li&gt;단순한 완전탐색 문제이다.&lt;/li&gt;
+          &lt;li&gt;yellow의 형태에 따라 결정되는 brown갯수를 알면 쉽다.&lt;/li&gt;
+          &lt;li&gt;주어진 yellow개수로 취할수 있는 yellow의 형태를 바꿔가며 brown개수가 일치하는 순간 답을 반환한다.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;TCP/IP 쉽게 30페이지까지 읽었다.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;각각 계층이 자신의 역할만 하고 나머지는 다른 계층에 위임한다.&lt;/li&gt;
+      &lt;li&gt;이런 위임을 통해 마치 자신의 계층만 있는 것처럼 통신할 수 있다.&lt;/li&gt;
+      &lt;li&gt;애플리케이션 계층, 트랜스포트 게층, 인터넷 계층, 네트워크 인터페이스 계층에서 사용하는 프로토콜들을 확인하였다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;자바에서 함수형 프로그래밍을 위해 꼭 Functional Interface를 사용해야하는 건지 모르겠다.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;미션에서 주어진 조건을 만족하기 위해서는 굳이 Functional Interface가 필요한지 모르겠다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;함수형 프로그래밍으로 Refactoring하는 목적에 코드의 간소화도 있을텐데, Functional Interface를 남발하면&lt;/p&gt;
+
+        &lt;p&gt;코드가 더 복잡해지는 것 같다.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;TCP/IP 책을 읽었는데 엄청 꼼꼼하게 읽기보다 쓱쓱 여러번 읽는 방향으로 진행하려고 한다.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;부담없이 쓱쓱 읽으니까 잘 읽히고, 좋다.&lt;/li&gt;
+      &lt;li&gt;여러번 읽음으로써 체득하려고 한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;코드스쿼드 마스터즈 수업듣기&lt;/li&gt;
+  &lt;li&gt;코드스쿼드 미션 개선해보기&lt;/li&gt;
+  &lt;li&gt;프로그래머스 문제 풀기&lt;/li&gt;
+  &lt;li&gt;TCP/IP 쉽게 더쉽게 읽기&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Functional Interface" /><category term="Algorithm" /><category term="Network" /></entry><entry><title type="html">함수형 프로그래밍</title><link href="http://localhost:4000/java/2021/01/18/Functional_Programming.html" rel="alternate" type="text/html" title="함수형 프로그래밍" /><published>2021-01-18T00:00:00+09:00</published><updated>2021-01-18T00:00:00+09:00</updated><id>http://localhost:4000/java/2021/01/18/Functional_Programming</id><content type="html" xml:base="http://localhost:4000/java/2021/01/18/Functional_Programming.html">&lt;h2 id=&quot;함수형-프로그래밍이란&quot;&gt;함수형 프로그래밍이란?&lt;/h2&gt;
 
 &lt;p&gt;함수형 프로그래밍은 프로그램을 수학적 함수의 조합으로 생각하는 방식이라고 할 수 있다.&lt;/p&gt;
 
@@ -358,112 +577,7 @@
   &lt;li&gt;&lt;a href=&quot;https://codechacha.com/ko/java8-functional-interface/&quot;&gt;Functional Interface 사용법&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="Functinal Programming" /></entry><entry><title type="html">21년 1월 18일</title><link href="http://localhost:4000/til/2021/01/18/TIL15.html" rel="alternate" type="text/html" title="21년 1월 18일" /><published>2021-01-18T00:00:00+09:00</published><updated>2021-01-18T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/18/TIL15</id><content type="html" xml:base="http://localhost:4000/til/2021/01/18/TIL15.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;함수형 프로그래밍이 무엇인지 학습하고 정리하였다.&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;
-        &lt;p&gt;프로그램을 함수의 조합으로 바라보는 패러다임이다.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;여기서 함수는 불변성과 순수함수라는 특징이 있어, 어떤 상태인지에 따른 side effect가 발생하지 않는다.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;비동기 프로그래밍에 있어서도 side effect가 발생하지 않는다.&lt;/p&gt;
-
-        &lt;p&gt;(인풋에 의해 결정되는 함수들의 조합이기 때문에 thread간에 공유되는 변수가 없다.)&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;자바에서 함수형 프로그래밍을 위해 인터페이스 생성자로 람다식을 사용하고, 메소드처럼 취급할 수 있는&lt;/p&gt;
-
-        &lt;p&gt;여러 인터페이스를 구현해놓았다는 것을 알게 되었다.&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/java/2021/01/18/Functional_Programming.html&quot;&gt;https://isaac56.github.io/java/2021/01/18/Functional_Programming.html&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;프로그래머스의 길찾기 게임과 카펫 문제를 풀었다.&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;길찾기 게임:
-        &lt;ul&gt;
-          &lt;li&gt;단순한 구현 문제이다.&lt;/li&gt;
-          &lt;li&gt;y값으로 내림차순 정렬을 한 후 이진 탐색 트리에 삽입한다.&lt;/li&gt;
-          &lt;li&gt;pre-order, post-order 순서로 각각 탐색한 후 결과를 반환한다.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;카펫:
-        &lt;ul&gt;
-          &lt;li&gt;단순한 완전탐색 문제이다.&lt;/li&gt;
-          &lt;li&gt;yellow의 형태에 따라 결정되는 brown갯수를 알면 쉽다.&lt;/li&gt;
-          &lt;li&gt;주어진 yellow개수로 취할수 있는 yellow의 형태를 바꿔가며 brown개수가 일치하는 순간 답을 반환한다.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;TCP/IP 쉽게 30페이지까지 읽었다.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;각각 계층이 자신의 역할만 하고 나머지는 다른 계층에 위임한다.&lt;/li&gt;
-      &lt;li&gt;이런 위임을 통해 마치 자신의 계층만 있는 것처럼 통신할 수 있다.&lt;/li&gt;
-      &lt;li&gt;애플리케이션 계층, 트랜스포트 게층, 인터넷 계층, 네트워크 인터페이스 계층에서 사용하는 프로토콜들을 확인하였다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;자바에서 함수형 프로그래밍을 위해 꼭 Functional Interface를 사용해야하는 건지 모르겠다.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;미션에서 주어진 조건을 만족하기 위해서는 굳이 Functional Interface가 필요한지 모르겠다.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;함수형 프로그래밍으로 Refactoring하는 목적에 코드의 간소화도 있을텐데, Functional Interface를 남발하면&lt;/p&gt;
-
-        &lt;p&gt;코드가 더 복잡해지는 것 같다.&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;TCP/IP 책을 읽었는데 엄청 꼼꼼하게 읽기보다 쓱쓱 여러번 읽는 방향으로 진행하려고 한다.&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;부담없이 쓱쓱 읽으니까 잘 읽히고, 좋다.&lt;/li&gt;
-      &lt;li&gt;여러번 읽음으로써 체득하려고 한다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;코드스쿼드 마스터즈 수업듣기&lt;/li&gt;
-  &lt;li&gt;코드스쿼드 미션 개선해보기&lt;/li&gt;
-  &lt;li&gt;프로그래머스 문제 풀기&lt;/li&gt;
-  &lt;li&gt;TCP/IP 쉽게 더쉽게 읽기&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Functional Interface" /><category term="Algorithm" /><category term="Network" /></entry><entry><title type="html">21년 1월 17일</title><link href="http://localhost:4000/til/2021/01/17/TIL14.html" rel="alternate" type="text/html" title="21년 1월 17일" /><published>2021-01-17T00:00:00+09:00</published><updated>2021-01-17T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/17/TIL14</id><content type="html" xml:base="http://localhost:4000/til/2021/01/17/TIL14.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="Functinal Programming" /></entry><entry><title type="html">21년 1월 17일</title><link href="http://localhost:4000/til/2021/01/17/TIL14.html" rel="alternate" type="text/html" title="21년 1월 17일" /><published>2021-01-17T00:00:00+09:00</published><updated>2021-01-17T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/17/TIL14</id><content type="html" xml:base="http://localhost:4000/til/2021/01/17/TIL14.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;2주만에 처음으로 아무것도 안하고 쉬고 말았다.&lt;/li&gt;
@@ -911,140 +1025,7 @@
 
 &lt;p&gt;이렇게 다형성을 이용하면 자식 클래스가 새로운 메소드를 만들 필요 없이 부모 메소드를 수정함으로써&lt;/p&gt;
 
-&lt;p&gt;불필요한 메소드명의 낭비를 줄일 수 있게 된다.&lt;/p&gt;</content><author><name></name></author><category term="OOP" /></entry><entry><title type="html">Java로 순열 구현</title><link href="http://localhost:4000/algorithm/2021/01/13/Permutation.html" rel="alternate" type="text/html" title="Java로 순열 구현" /><published>2021-01-13T00:00:00+09:00</published><updated>2021-01-13T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/2021/01/13/Permutation</id><content type="html" xml:base="http://localhost:4000/algorithm/2021/01/13/Permutation.html">&lt;h2 id=&quot;자바에는-기본제공-순열-함수가-없다-ㅠㅠ&quot;&gt;자바에는 기본제공 순열 함수가 없다 ㅠㅠ&lt;/h2&gt;
-
-&lt;p&gt;C++로 코딩테스트를 풀다가 자바로 넘어갔을 때 가장 당황했던 것이었다.&lt;/p&gt;
-
-&lt;p&gt;그러나 진즉에 알고 있었어야 하는 기본 알고리즘이다.&lt;/p&gt;
-
-&lt;p&gt;STL에 의존해서 알아보려고 하지 않았던 Permutation에 대하여 알아보고 구현해보겠다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;abc를-가지고-상황을-생각해보자&quot;&gt;ABC를 가지고 상황을 생각해보자&lt;/h2&gt;
-
-&lt;p&gt;[A, B, C] -&amp;gt; 이렇게 생긴 리스트를 가지고 만들 수 있는 순열을 생각해보자.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/public/img/Permutation/1.gif&quot; alt=&quot;1&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;출처 : &lt;a href=&quot;http://www.eandbsoftware.org/print-all-permutations-of-a-given-string/&quot;&gt;http://www.eandbsoftware.org/print-all-permutations-of-a-given-string/&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;초기 상태가 A라고 한다면 다음과 같이 경우의 수가 나온다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;첫번째에 A가 위치
-    &lt;ol&gt;
-      &lt;li&gt;두번째에 B가 위치
-        &lt;ul&gt;
-          &lt;li&gt;ABC&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;두번째에 C가 위치
-        &lt;ul&gt;
-          &lt;li&gt;ACB&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;첫번째에 B가 위치
-    &lt;ol&gt;
-      &lt;li&gt;두번째에 A가 위치
-        &lt;ul&gt;
-          &lt;li&gt;BAC&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;두번째에 C가 위치
-        &lt;ul&gt;
-          &lt;li&gt;BCA&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;첫번째에 C가 위치
-    &lt;ol&gt;
-      &lt;li&gt;두번째에 B가 위치
-        &lt;ul&gt;
-          &lt;li&gt;CBA&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;두번째에 A가 위치
-        &lt;ul&gt;
-          &lt;li&gt;CAB&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;위 과정을 이해하고 코드로 구현하면 아래와 같이 간단하게 구현이 가능하다&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Permutation&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;permutation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;depth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;depth&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;printArr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;depth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;depth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;permutation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;depth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;depth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;printArr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;swap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;};&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;permutation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;string의-permutation을-매우-간단하게-구현&quot;&gt;String의 Permutation을 매우 간단하게 구현&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42839&quot;&gt;프로그래머스 - 소수찾기&lt;/a&gt;를 풀다가 String을 매우 간단하게 permutation한 함수를 발견하여 추가해놓았다.&lt;/p&gt;
-
-&lt;p&gt;위와 핵심은 똑같다, 맨 앞자리부터 들어갈 수 있는 요소들을 집어넣는 것.&lt;/p&gt;
-
-&lt;p&gt;그러나 자바에서 String 은 +로 쉽게 String끼리 이어붙일 수 있기 때문에 아래와 같은 구현이 가능했다.&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//사용법 permutation(&quot;&quot;,str);&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;permutation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prefix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prefix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;permutation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prefix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()));&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;c-stl과-같이-next_permutation을-구현하기&quot;&gt;C++ STL과 같이 next_permutation을 구현하기&lt;/h2&gt;
-
-&lt;p&gt;또 다른 방법으로 STL의 next_permutation을 구현할 수 있다고 한다.&lt;/p&gt;
-
-&lt;p&gt;일단 위의 백트래킹으로 구현한 permutation을 사용할 예정이므로 next_permutation은 참고할 만한 글의 주소를 남겨놓아야겠다.&lt;/p&gt;
-
-&lt;p&gt;(나중에 공부해야겠다.)&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://velog.io/@junhok82/Java로-순열Permutation-구현하기&quot;&gt;https://velog.io/@junhok82/Java로-순열Permutation-구현하기&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="Permutation" /></entry><entry><title type="html">21년 1월 13일</title><link href="http://localhost:4000/til/2021/01/13/TIL10.html" rel="alternate" type="text/html" title="21년 1월 13일" /><published>2021-01-13T00:00:00+09:00</published><updated>2021-01-13T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/13/TIL10</id><content type="html" xml:base="http://localhost:4000/til/2021/01/13/TIL10.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;p&gt;불필요한 메소드명의 낭비를 줄일 수 있게 된다.&lt;/p&gt;</content><author><name></name></author><category term="OOP" /></entry><entry><title type="html">21년 1월 13일</title><link href="http://localhost:4000/til/2021/01/13/TIL10.html" rel="alternate" type="text/html" title="21년 1월 13일" /><published>2021-01-13T00:00:00+09:00</published><updated>2021-01-13T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/13/TIL10</id><content type="html" xml:base="http://localhost:4000/til/2021/01/13/TIL10.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;오늘은 하루종일 알고리즘만 풀었다.&lt;/li&gt;
   &lt;li&gt;코드스쿼드 미션으로 나온 문제들(릿코드):
