@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-22T00:02:31+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">Process와 Thread</title><link href="http://localhost:4000/os/2021/01/21/Process_vs_Thread.html" rel="alternate" type="text/html" title="Process와 Thread" /><published>2021-01-21T00:00:00+09:00</published><updated>2021-01-21T00:00:00+09:00</updated><id>http://localhost:4000/os/2021/01/21/Process_vs_Thread</id><content type="html" xml:base="http://localhost:4000/os/2021/01/21/Process_vs_Thread.html">&lt;h2 id=&quot;process-란&quot;&gt;Process 란&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-22T00:48:40+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">Process와 Thread</title><link href="http://localhost:4000/os/2021/01/21/Process_vs_Thread.html" rel="alternate" type="text/html" title="Process와 Thread" /><published>2021-01-21T00:00:00+09:00</published><updated>2021-01-21T00:00:00+09:00</updated><id>http://localhost:4000/os/2021/01/21/Process_vs_Thread</id><content type="html" xml:base="http://localhost:4000/os/2021/01/21/Process_vs_Thread.html">&lt;h2 id=&quot;process-란&quot;&gt;Process 란&lt;/h2&gt;
 
 &lt;p&gt;일반적으로 Process는 프로그램을 실행시킨 상태라고도 하고, 실행중인 프로그램이라고도 한다.&lt;/p&gt;
 
@@ -166,7 +166,7 @@
       &lt;li&gt;커널 권한과 이에 따른 시스템 콜, 트랩 핸들러에 대해 배웠다.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;프로그래머스 문제 불량 사용자를 풀었다.
+  &lt;li&gt;프로그래머스 문제 불량 사용자, 단속카메라를 풀었다.
     &lt;ol&gt;
       &lt;li&gt;불량 사용자:
         &lt;ul&gt;
@@ -175,6 +175,22 @@
           &lt;li&gt;DFS안에 현재까지의 불량 사용자 목록을 HashSet으로 담는다.&lt;/li&gt;
           &lt;li&gt;모든 밴 리스트를 참고하여 HashSet을 완성했으면 HashSet의 HashSet에 추가하여 중복을 제거한다.&lt;/li&gt;
           &lt;li&gt;HashSet의 HashSet의 size()가 정답의 개수가 된다.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;단속카메라:
+        &lt;ul&gt;
+          &lt;li&gt;Greedy 문제였다.&lt;/li&gt;
+          &lt;li&gt;구현은 매우 쉬운데 아이디어를 떠올리는게 정말 어려웠다.&lt;/li&gt;
+          &lt;li&gt;각 Route의 end 지점을 기준으로 오름차순 정렬을 한다.&lt;/li&gt;
+          &lt;li&gt;end 지점을 기준으로 오름차순 정렬했기 때문에, 자신이 설치해야 하는 최선의 경우는 자신의 end지점에 설치하는 것이다.&lt;/li&gt;
+          &lt;li&gt;정렬한 Routes를 순회하다가, 마지막에 설치한 카메라가 자신의 범위 안에 없으면, 자신의 end 위치에 카메라를 설치한다.
+            &lt;ul&gt;
+              &lt;li&gt;마지막에 설치한 카메라가 자신의 범위 안에 없으면 자신은 카메라를 안지나치는 것이다.&lt;/li&gt;
+              &lt;li&gt;그 이유는 end를 기준으로 오름차순 정렬했고 이것을 순회하며 카메라를 설치하기 때문이다.&lt;/li&gt;
+              &lt;li&gt;마지막에 설치한 카메라는 항상 설치된 카메라 중 제일 뒤쪽에 있는 카메라이다.&lt;/li&gt;
+              &lt;li&gt;따라서 앞에 설치한 카메라가 자신의 범위 안에 있는데, 마지막 설치한 카메라가 자신의 범위 안에 없을 경우는 없다.&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ol&gt;
@@ -192,6 +208,7 @@
 &lt;ul&gt;
   &lt;li&gt;OS를 오랜만에 복습하고, 글로 정리하여 포스팅하였다.&lt;/li&gt;
   &lt;li&gt;레벨 3 카카오 문제를 한번에 풀었다 (80분 걸림)&lt;/li&gt;
+  &lt;li&gt;greedy문제를 끈질기게 생각해서 해결방법을 알아냈다 (50분 걸림)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
