@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Dev.Isaac" /></head>
+<style>@import url(/public/css/syntax/monokai.css);</style>
+  <title>Dev.Isaac</title>
+  <!-- <link href="/public/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link href="/public/css/style.css" rel="stylesheet">
+  <body>
+  	<div class="container"> 
+		<div class="sidebar">
+			<div class="sidebar-item sidebar-header">
+	<div class='sidebar-brand'>
+		<a href="/about/">Dev.Isaac</a>
+	</div>
+	<p class="lead">정이삭 공부블로그</p></div>
+
+<div class="sidebar-item sidebar-nav">
+	<ul class="nav">
+      <li class="nav-title">Pages</li>
+	  <li>
+	  	<a class="nav-item" href="/">Articles</a>
+	  </li>
+	  
+	  
+	    
+	  
+	    
+	      
+	        <li>
+	        	<a class="nav-item" href="/about/">
+	            	About
+	            </a>
+	        </li>
+	      
+	    
+	  
+	    
+	      
+	    
+	  
+	    
+	  
+	    
+	  
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-nav">
+  	<ul class="nav">
+			<li class="nav-title">Categories</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#TIL">
+				<span class="name">TIL</span>
+				<span class="badge">17</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Linux">
+				<span class="name">Linux</span>
+				<span class="badge">5</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Network">
+				<span class="name">Network</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Java">
+				<span class="name">Java</span>
+				<span class="badge">5</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Data Structure">
+				<span class="name">Data Structure</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Algorithm">
+				<span class="name">Algorithm</span>
+				<span class="badge">2</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#OS">
+				<span class="name">OS</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	  </nav>
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-footer">
+	<p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
+</div>
+		</div>
+		<div class="content">
+			<article class="post">
+	<header class="post-header">
+		<div class="post-title"> 
+			Process와 Thread
+		</div>
+		<time class="post-date dt-published" datetime="2021-01-21T00:00:00+09:00" itemprop="datePublished">2021/01/21
+		</time>		
+	</header>
+
+	<div class="post-content">
+		<h2 id="process-란">Process 란</h2>
+
+<p>일반적으로 Process는 프로그램을 실행시킨 상태라고도 하고, 실행중인 프로그램이라고도 한다.</p>
+
+<p>그렇다면 실행중이라는 상태는 구체적으로 어떤 모양일까?</p>
+
+<p><br /></p>
+
+<p>프로그램은 디스크에 저장된 정적 데이터와 코드의 모임일 뿐이다.</p>
+
+<p>프로그램이 프로세스로 실행되는 과정을 간단하게(?) 설명하면 다음과 같다.</p>
+
+<ol>
+  <li>운영체제는 프로그램의 코드와 정적 데이터를 프로세스의 메모리 공간(Code와 Data 영역)에 적재한다.</li>
+  <li>main함수를 찾아 CPU의 PC(Program Counter) 레지스터에 실행할 코드의 메모리 주소를 저장한다.</li>
+  <li>프로그램 실행 시 입력했던 Argument와 함께 Stack 영역을 구성한다.</li>
+  <li>프로세스가 사용할 Heap영역의 메모리를 할당한다.(Heap 영역은 동적 할당을 위해 사용된다.)</li>
+  <li>PC 레지스터가 가리키는 명령를 실행하기 위해, 데이터를 메모리로부터 읽어 레지스터에 저장한다.</li>
+  <li>레지스터에 저장한 값을 읽어 ALU가 명령에 따라 계산하고, 이 값을 다시 결과값 레지스터에 저장한다.</li>
+  <li>레지스터에 저장된 결과값을 다시 메모리에 저장한다.</li>
+  <li>PC 레지스터의 값을 증가시켜 다음 명령을 실행할 준비를 한다.</li>
+  <li>(5)~(8)이 반복되며 프로세스가 진행된다.</li>
+</ol>
+
+<p>이런식으로 프로세스는 실행된다.</p>
+
+<p><br /></p>
+
+<p>즉, Process란 디스크에 저장되어 있던 코드뭉치를 메모리에 적재하여 실행 가능하게 한 상태라고 할 수 있다.</p>
+
+<p><br /></p>
+
+<h2 id="context-switch">Context Switch</h2>
+
+<p>일반적으로 OS는 마치 CPU 여러대가 있는 것처럼 착각할 수 있도록, 시분할 기법을 사용하여 프로세스들을 실행시켜준다.</p>
+
+<p><br /></p>
+
+<p>예를 들어 프로세스가 3개 있다고 했을 때, 1번을 아주 조~금 실행한 후, 2번을 아주 조~금 실행한 후,</p>
+
+<p>3번을 아주 조~금 실행하는 방식을 통해 모든 프로세스가 동시에 진행되는 것처럼 느끼게 해준다.</p>
+
+<p>(어떤 순서로 돌아가며 프로세스를 실행시킬 지는 스케줄러 정책에 따라 다르다.)</p>
+
+<p>마치 CPU가 여러대 있는 것처럼 느끼게 해주는 것인데, 이렇게 하기 위해선 Context Switch가 반드시 필요하다.</p>
+
+<p><br /></p>
+
+<p>Context란 아주 간단하다. Process가 실행되던 그 상황을 의미한다.</p>
+
+<p>1번 프로세스를 그 상황 그대로 멈추게 한 후, 마찬가지로 멈춰 있던 2번 프로세스를 실행시켜줘야 하고,</p>
+
+<p>다시 1번 프로세스를 실행할 시간이 되면 멈췄던 그 상황 그대로 되살려서 실행해야 한다.</p>
+
+<p><br /></p>
+
+<p>그렇다면 그 ‘상황’(Context)는 어떻게 저장할까?</p>
+
+<p>위에서 설명한 Process를 통해 유추해볼 수 있는데,</p>
+
+<p>프로세스가 사용하던 Memory 주소와 레지스터값들을 저장하면 된다!</p>
+
+<p>(Memory 주소를 저장하는 이유는 메모리 가상화와 관련된 내용인데 지금은 다루지 않겠다.)</p>
+
+<p>(이 외에도 pid, process state, open files 등 저장할 값들이 있지만 생략하겠다. )</p>
+
+<p><br /></p>
+
+<p>그 상황에 사용하던 레지스터 값(PC를 포함한)들을 다시 CPU의 레지스터에 올리게 되면,</p>
+
+<p>다시 PC에 저장된 메모리 주소를 읽어 명령을 실행함으로써, 정지되었던 그 상황에서 실행하는 것이 가능해진다.</p>
+
+<p><br /></p>
+
+<p>이런 context를 저장하는 구조체를 PCB(Process Control Block) 이라고 하는데,</p>
+
+<p>실행중인 Process의 PCB를 메모리에 저장한 후, 다음 실행할 Process의 PCB를</p>
+
+<p>메모리에서 읽어(CPU 레지스터에 올려) 실행하는 것을 Context Switch라고 한다.</p>
+
+<p>(User mode, kernel mode 간의 switch 등 많은 과정이 생략되었으니, 자세히 알고 싶으면 관련 내용을 찾아보기 바란다.)</p>
+
+<p><br /></p>
+
+<h2 id="thread-란">Thread 란</h2>
+
+<p>Thread는 Process에 종속된 개념으로 실제로 작업을 수행하는 주체라고 할 수 있다.</p>
+
+<p>위 설명에서 Process가 실행될 때 main함수를 찾아 PC에 저장해주고 Stack 프레임을 구성해준다고 했는데,</p>
+
+<p>이것은 프로세스의 시작이라고 할 수도 있지만, 메인 쓰레드의 시작이라고 할 수도 있다.</p>
+
+<p><br /></p>
+
+<p>쓰레드는 각각 레지스터 셋(PC를 포함한)과 Stack프레임을 갖고 있어서,</p>
+
+<p>한 프로세스이지만 각각의 쓰레드가 독립적으로 명령을 수행하는 것처럼 보이게 해준다.</p>
+
+<p><br /></p>
+
+<p>어? 위에서 설명한 Context Switch를 보면, 레지스터 셋은 Context고 이걸 각각 갖고 있으면 Process가 아닌가?</p>
+
+<p>라고 생각할 수 있지만, 가장 큰 차이점은 같은 Process의 쓰레드는 메모리 공간을 공유한다는 것이다.</p>
+
+<p>쓰레드는 레지스터셋과 Stack프레임을 각각 갖고 있지만, 프로세스의 Code, Data, Heap 메모리 공간을 공유한다.</p>
+
+<p><br /></p>
+
+<p>따라서 쓰레드간의 Context switch에서는 쓰레드가 사용할 메모리 주소값을 교체할 필요가 없고,</p>
+
+<p>레지스터 값과 Stack Pointer만 교체하면 되므로 Context Switch의 오버헤드가 프로세스보다 훨씬 적다.</p>
+
+<p>뿐만 아니라, Data나 Heap 영역을 공유하므로 쓰레드 간의 데이터 공유도 가능하다.</p>
+
+<blockquote>
+  <p>Process끼리는 Memory Protection 정책에 의해 같은 메모리로 접근이 불가능하다.</p>
+
+  <p>Process끼리는 시스템에서 제공하는 IPC(Inter Process Communication)으로만 통신 가능</p>
+</blockquote>
+
+<p><br /></p>
+
+<h1 id="요약-process-vs-thread">요약 (Process vs Thread)</h1>
+
+<p>프로세스: 운영체제로부터 메모리를 할당받아 실행할 수 있게된 작업의 단위 (메모리에 올라간 프로그램)</p>
+
+<p>스레드: 프로세스가 할당받은 메모리를 이용하는 실행 흐름의 단위 (프로그램을 실행하는 독립적인 실행 흐름)</p>
+
+<p><br /></p>
+
+<p>Thread의 장점:</p>
+
+<ul>
+  <li>쓰레드 간의 Context Switching이 프로세스 간의 Context Switching보다 빠르다.</li>
+  <li>Stack을 제외한 메모리 자원을 공유하고 있어서, 쓰레드 간의 통신이 프로세스 간의 통신보다 쉽다.</li>
+</ul>
+
+<p>Thread의 단점:</p>
+
+<ul>
+  <li>
+    <p>Process의 자원을 공유하기 때문에, 쓰레드 중 하나에 문제만 생겨도 Process가 종료되고, 따라서 전체 쓰레드도 종료된다.</p>
+  </li>
+  <li>
+    <p>Stack을 제외한 메모리 자원을 공유하고 있어서, 프로그램 설계와 디버깅이 어렵다.</p>
+
+    <p>(동시에 같은 변수에 접근할 수 있기 때문에, 이상 동작을 고려한 설계가 필요하다.)</p>
+  </li>
+</ul>
+
+
+	</div>
+</article>
+		</div>
+	</div>
+  </body>
+</html>
