@@ -113,9 +113,9 @@
 			<article class="post">
 	<header class="post-header">
 		<div class="post-title"> 
-			21년 1월 17일
+			21년 1월 21일
 		</div>
-		<time class="post-date dt-published" datetime="2021-01-17T00:00:00+09:00" itemprop="datePublished">2021/01/17
+		<time class="post-date dt-published" datetime="2021-01-21T00:00:00+09:00" itemprop="datePublished">2021/01/21
 		</time>		
 	</header>
 
@@ -123,34 +123,65 @@
 		<h2 id="한-일">한 일</h2>
 
 <ul>
-  <li>2주만에 처음으로 아무것도 안하고 쉬고 말았다.</li>
+  <li>프로세스와 스레드의 차이점에 대해 공부하였다.</li>
+  <li>프로세스는 메모리에 적재하여 실행가능한 상태의 작업 단위이다.
+    <ul>
+      <li>스레드는 프로세스에 할당된 메모리 자원을 이용하여 실행되는 프로세스 내의 독립 실행 흐름이다.</li>
+      <li>스레드 간의 Context Switch는 레지스터 값과 Stack Pointer만 변경하면 되기 때문에 Process의 Context switch보다 빠르다.</li>
+      <li>스레드는 Stack영역 이외의 공간을 공유하기 때문에, 스레드 간의 통신이 쉽다.</li>
+      <li><a href="https://isaac56.github.io/os/2021/01/21/Process_vs_Thread.html">Process vs Thread</a></li>
+    </ul>
+  </li>
+  <li>OperatingSystem Three Easy Pieces 책을 80 page까지 읽었다.
+    <ul>
+      <li>운영체제의 주요 컨셉인 CPU 가상화, 메모리 가상화, 동시 실행, 영속성을 배웠다.</li>
+      <li>프로세스가 실행되는 과정을 배웠다.</li>
+      <li>커널 모드로의 전환과 프로세스 간의 컨텍스트 스위치 과정에 대해 배웠다.</li>
+      <li>커널 권한과 이에 따른 시스템 콜, 트랩 핸들러에 대해 배웠다.</li>
+    </ul>
+  </li>
+  <li>프로그래머스 문제 불량 사용자를 풀었다.
+    <ol>
+      <li>불량 사용자:
+        <ul>
+          <li>처음에 쉽게 접근했다가 복잡하다는 것을 깨달았다.</li>
+          <li>DFS로 풀었는데, HashSet을 남발하여 다소 찜찜하다.</li>
+          <li>DFS안에 현재까지의 불량 사용자 목록을 HashSet으로 담는다.</li>
+          <li>모든 밴 리스트를 참고하여 HashSet을 완성했으면 HashSet의 HashSet에 추가하여 중복을 제거한다.</li>
+          <li>HashSet의 HashSet의 size()가 정답의 개수가 된다.</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
 </ul>
 
 <h2 id="잘못한-것">잘못한 것</h2>
 
 <ul>
-  <li>계획에 없던 휴식이었다. 정말 아무것도 안해버렸다</li>
+  <li></li>
 </ul>
 
 <h2 id="잘한-것">잘한 것</h2>
 
 <ul>
-  <li></li>
+  <li>OS를 오랜만에 복습하고, 글로 정리하여 포스팅하였다.</li>
+  <li>레벨 3 카카오 문제를 한번에 풀었다 (80분 걸림)</li>
 </ul>
 
 <h2 id="느낌">느낌</h2>
 
 <ul>
-  <li>목이 좀 뻐근했던 것이 핑계였는지 오늘은 아무것도 하기싫었다 ..</li>
-  <li>내일부터 다시 제대로 마음먹고 시작해야겠다.</li>
+  <li>오랜만에 OS를 복습했는데, 생각보다 까먹은게 많아서 아쉬웠다.(3학년때 정말 열심히 했는데 ㅠㅠ)</li>
+  <li>그래도 빠르게 읽고 다시 기억할 수 있어서 공부하길 잘했다는 생각이 든다.</li>
+  <li>카카오 문제 풀긴 했는데 HashSet의 HashSet을 쓴게 찜찜하여 다른 사람은 어떻게 풀었는지 참고해야겠다.</li>
 </ul>
 
 <h2 id="할-일">할 일</h2>
 
 <ul>
-  <li>10시~18시: 코드스쿼드 미션 진행하기</li>
-  <li>19시~22시:  프로그래머스 알고리즘 풀기</li>
-  <li>22시~23시30분: TCP/IP 쉽게 더 쉽게 읽기</li>
+  <li>코드스쿼드 미션하기</li>
+  <li>프로그래머스 문제 풀기</li>
+  <li>TCP/IP 쉽게 더쉽게 읽기</li>
 </ul>
 
 	</div>
