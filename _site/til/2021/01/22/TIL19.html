@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Dev.Isaac" /></head>
+<style>@import url(/public/css/syntax/monokai.css);</style>
+  <title>Dev.Isaac</title>
+  <!-- <link href="/public/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link href="/public/css/style.css" rel="stylesheet">
+  <body>
+  	<div class="container"> 
+		<div class="sidebar">
+			<div class="sidebar-item sidebar-header">
+	<div class='sidebar-brand'>
+		<a href="/about/">Dev.Isaac</a>
+	</div>
+	<p class="lead">정이삭 공부블로그</p></div>
+
+<div class="sidebar-item sidebar-nav">
+	<ul class="nav">
+      <li class="nav-title">Pages</li>
+	  <li>
+	  	<a class="nav-item" href="/">Articles</a>
+	  </li>
+	  
+	  
+	    
+	  
+	    
+	      
+	        <li>
+	        	<a class="nav-item" href="/about/">
+	            	About
+	            </a>
+	        </li>
+	      
+	    
+	  
+	    
+	      
+	    
+	  
+	    
+	  
+	    
+	  
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-nav">
+  	<ul class="nav">
+			<li class="nav-title">Categories</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#TIL">
+				<span class="name">TIL</span>
+				<span class="badge">19</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Linux">
+				<span class="name">Linux</span>
+				<span class="badge">5</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Network">
+				<span class="name">Network</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Java">
+				<span class="name">Java</span>
+				<span class="badge">5</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Data Structure">
+				<span class="name">Data Structure</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Algorithm">
+				<span class="name">Algorithm</span>
+				<span class="badge">2</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#OS">
+				<span class="name">OS</span>
+				<span class="badge">2</span>
+	    	</a>
+ 		</li>
+	    
+	  </nav>
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-footer">
+	<p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
+</div>
+		</div>
+		<div class="content">
+			<article class="post">
+	<header class="post-header">
+		<div class="post-title"> 
+			21년 1월 22일
+		</div>
+		<time class="post-date dt-published" datetime="2021-01-22T00:00:00+09:00" itemprop="datePublished">2021/01/22
+		</time>		
+	</header>
+
+	<div class="post-content">
+		<h2 id="한-일">한 일</h2>
+
+<ul>
+  <li>
+    <p>코드스쿼드 미션으로 프로세스의 시뮬레이션을 설계 및 구현해보았다.</p>
+
+    <ul>
+      <li>
+        <p>CPU class를 만들어서 그 CPU는 항상 자신에게 올라온 Process를 Run하는 역할만 맡겼다.</p>
+      </li>
+      <li>
+        <p>CPU는 무한루프를 돌면서 자신의 Process의 run 메소드를 실행하는데, run 메소드는 Process 클래스를 반환해서</p>
+
+        <p>다음으로 돌릴 Process는 계속 변하게 설계하였다.</p>
+      </li>
+      <li>
+        <p>Process class를 상속받는 UserProcess(유저모드), KernelProcess(커널모드)를 만들었다.</p>
+      </li>
+      <li>
+        <p>UserProcess는 public Process run() 메소드를 통해 실행되게 되는데, run 한 번에 1tick으로</p>
+
+        <p>Timer Interrupt가 걸린다고 가정하고 구현하였다.</p>
+      </li>
+      <li>
+        <p>UserProcess의 run메소드 마지막에 항상 자신이 갖고있는 KernelProcess의 TrapNumber를</p>
+
+        <p>Timer interrupt로 지정해주고 자신의 KernelProcess를 반환하게 된다.</p>
+      </li>
+      <li>
+        <p>CPU에서는 반환된 KernelProcess의 run을 실행하게 되어 커널 모드로 진입하고 TrapNumber가</p>
+
+        <p>Timer interrupt라면 scheduler를 실행하여 다음으로 실행할 UserProcess를 반환한다.</p>
+
+        <p>(사실은 다음 Process의 Kernel모드를 반환후 다음 Process의 커널에서 유저모드로 전환해야 하는데,</p>
+
+        <p>구현상 너무 어려워서 하지 않았다.)</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<ul>
+  <li>
+    <p>자바의 정석 Chapter 13 쓰레드 - 8. 쓰레드의 실행제어까지 읽었다</p>
+
+    <ul>
+      <li>
+        <p>서로 관련된 Thread를 그룹으로 묶기 위한 ThreadGroup이 있고,</p>
+
+        <p>ThreadGroup이 생성될때 어떤 규칙으로 생성되는지 알게 되었다.</p>
+      </li>
+      <li>
+        <p>suspend(), stop(), resume() 등이 동기화, 교착상태 등에서 문제를 발생할 수 있어</p>
+
+        <p>deprecated 되었다는 것을 알게 되었고, 이를 대체하기 위한 설계 구조를 배웠다.</p>
+      </li>
+      <li>
+        <p>interrupt()와 yield()를 이용해 좀더 반응성이 좋은 Thread를 설계하는 법을 배웠다.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<ul>
+  <li>
+    <p>프로그래머스 문제 N으로 표현 문제를 풀었다.</p>
+
+    <ol>
+      <li>
+        <p>N으로 표현:</p>
+
+        <ul>
+          <li>
+            <p>dp문제였는데, dp라는 개념을 다 까먹어서 답 코드를 보고 복기하였다.</p>
+          </li>
+          <li>
+            <p>모든 경우의 수를 생각하기 때문에 언뜻 dfs, bfs랑 비슷해 보일 수 있다.</p>
+          </li>
+          <li>
+            <p>그러나 경우를 잘게 쪼개서 (n+2의 경우) = (n+1의 경우와 n의 경우의 조합)와 같이</p>
+
+            <p>점화식을 구해서 모든 경우의 수를 쉽게 구할 수 있다.</p>
+          </li>
+          <li>
+            <p>특히 한번 n의 경우를 구했으면 cache 구조체에 저장하여,</p>
+
+            <p>다음부터 n의 경우는 cache에서 바로 반환 있어야 시간초과가 나지 않을 것이다 (메모이제이션)</p>
+          </li>
+          <li>
+            <p>N으로 최소 갯수만큼 써서, number를 만들어야 한다.</p>
+          </li>
+          <li>
+            <p>기본적으로 N을 x번 써서 만들 수 있는 number는 NNN..(x번)이 존재한다.(기본숫자)</p>
+
+            <p>(ex: 9를 3번 써서 만들 수 있는 number에는 999가 포함된다.)</p>
+          </li>
+          <li>
+            <p>따라서 N을 x번 써서 만들 수 있는 숫자는 (기본숫자) + (1번 쓰는 경우와 N-1번 쓰는 경우의 조합) +</p>
+
+            <p>(2번 쓰는 경우와 N-2번 쓰는 경우의 조합) + … + (N-1번 쓰는 경우와 1번 쓰는 경우의 조합)</p>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<h2 id="잘못한-것">잘못한 것</h2>
+
+<ul>
+  <li></li>
+</ul>
+
+<h2 id="잘한-것">잘한 것</h2>
+
+<ul>
+  <li>금요일이라고 일찍 쉬지 않고, 자바의 정석 읽기 + 코테연습 모드 진행하였다.</li>
+</ul>
+
+<h2 id="느낌">느낌</h2>
+
+<ul>
+  <li>자바의 정석을 제대로 읽기 시작했는데, 자바에서 쓰레드를 쓰는 좋은 팁이 있었다. 정말 좋은 책 같다.</li>
+  <li>dp를 애매하게 알고 있어서 찜찜했는데 드디어 복습을 시작했다.</li>
+  <li>꾸준히 하면 언젠가 늘겠지, dp도 쉽게 느껴지는 날이 오기를</li>
+</ul>
+
+<h2 id="할-일">할 일</h2>
+
+<ul>
+  <li>프로그래머스 문제 풀기</li>
+  <li>TCP/IP 쉽게 더쉽게 읽기</li>
+  <li>자바의 정석 읽기</li>
+</ul>
+
+	</div>
+</article>
+		</div>
+	</div>
+  </body>
+</html>
