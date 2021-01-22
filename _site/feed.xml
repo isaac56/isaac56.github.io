@@ -1,4 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-22T00:48:40+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">Process와 Thread</title><link href="http://localhost:4000/os/2021/01/21/Process_vs_Thread.html" rel="alternate" type="text/html" title="Process와 Thread" /><published>2021-01-21T00:00:00+09:00</published><updated>2021-01-21T00:00:00+09:00</updated><id>http://localhost:4000/os/2021/01/21/Process_vs_Thread</id><content type="html" xml:base="http://localhost:4000/os/2021/01/21/Process_vs_Thread.html">&lt;h2 id=&quot;process-란&quot;&gt;Process 란&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-22T11:02:41+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">싱글코어에서도 Thread를 늘리면 빨라질까?</title><link href="http://localhost:4000/os/2021/01/22/Is_it_faster_to_increase_thread.html" rel="alternate" type="text/html" title="싱글코어에서도 Thread를 늘리면 빨라질까?" /><published>2021-01-22T00:00:00+09:00</published><updated>2021-01-22T00:00:00+09:00</updated><id>http://localhost:4000/os/2021/01/22/Is_it_faster_to_increase_thread</id><content type="html" xml:base="http://localhost:4000/os/2021/01/22/Is_it_faster_to_increase_thread.html">&lt;h2 id=&quot;싱글코어-cpu-한-개라서-실질적으로-한번에-한-개만-실행할-수-있다고-가정&quot;&gt;싱글코어 CPU 한 개라서, 실질적으로 한번에 한 개만 실행할 수 있다고 가정&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;여기서 덧셈을 하는 300개의 쓰레드를 생성해 돌린다고 가정해보자.&lt;/li&gt;
+  &lt;li&gt;커널 레벨 쓰레드라면, 나의 Task(프로세스, 쓰레드 등 스케줄링해야 하는 작업 단위)가 많아진다.&lt;/li&gt;
+  &lt;li&gt;다른 프로세스도 돌아가고 있을 것이므로, 쓰레드를 늘린 프로세스(나)의 CPU 점유율이 높아져서 내 속도가 빨라진다.&lt;/li&gt;
+  &lt;li&gt;즉, 다른 프로세스도 돌아가고 있고, 커널 레벨 쓰레드라면, 나의 CPU점유율이 높아져서 속도가 빨라진다.&lt;/li&gt;
+  &lt;li&gt;물론, 쓰레드 너무 많이 만든다면 오버헤드가 더 커져서 느려지게 된다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;요약:&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;멀티 프로세스 환경에서 다른 프로세스가 돌아가고 있을 때, 커널 레벨 쓰레드를 늘린다면 프로세스 속도는 빨라진다.&lt;/p&gt;
+
+        &lt;p&gt;(CPU 점유율이 높아지기 때문에)&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;프로세스가 딱 하나만 돌아가고 있거나, 유저 레벨 쓰레드를 늘린다면 오버헤드 때문에 프로세스 속도는 느려진다.&lt;/p&gt;
+
+        &lt;p&gt;(유저 레벨 쓰레드는 프로세스 내에서 쓰레드 스케줄링할 뿐, 운영체제는 프로세스 하나로 보기 때문에 점유율이 높아지지 않는다.)&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="OS" /><category term="Process" /><category term="Thread" /></entry><entry><title type="html">Process와 Thread</title><link href="http://localhost:4000/os/2021/01/21/Process_vs_Thread.html" rel="alternate" type="text/html" title="Process와 Thread" /><published>2021-01-21T00:00:00+09:00</published><updated>2021-01-21T00:00:00+09:00</updated><id>http://localhost:4000/os/2021/01/21/Process_vs_Thread</id><content type="html" xml:base="http://localhost:4000/os/2021/01/21/Process_vs_Thread.html">&lt;h2 id=&quot;process-란&quot;&gt;Process 란&lt;/h2&gt;
 
 &lt;p&gt;일반적으로 Process는 프로그램을 실행시킨 상태라고도 하고, 실행중인 프로그램이라고도 한다.&lt;/p&gt;
 
@@ -973,79 +1002,5 @@
 &lt;ul&gt;
   &lt;li&gt;프로그래머스 알고리즘 풀기&lt;/li&gt;
   &lt;li&gt;외벽점검 문제 푸는 방법에 따른 속도차이 생각해보기&lt;/li&gt;
-  &lt;li&gt;자바의정석 읽기&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /><category term="OOP" /></entry><entry><title type="html">21년 1월 14일</title><link href="http://localhost:4000/til/2021/01/14/TIL11.html" rel="alternate" type="text/html" title="21년 1월 14일" /><published>2021-01-14T00:00:00+09:00</published><updated>2021-01-14T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/14/TIL11</id><content type="html" xml:base="http://localhost:4000/til/2021/01/14/TIL11.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;코드스쿼드 미션으로 객체지향적으로 프로그래밍 하기를 해봤다.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;입력으로 (x, y) 좌표들을 받는다.&lt;/li&gt;
-      &lt;li&gt;좌표가 2개면 선의 길이, 좌표가 3개면 삼각형 넓이, 좌표가 4개면 직사각형 넓이(직사각형인지 검사)를 출력한다.&lt;/li&gt;
-      &lt;li&gt;점부터, 선, 삼각형, 직사각형 등을 클래스로 설계하고 상속과 다형성을 사용하여 객체지향적으로 프로그래밍해야한다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;미션을 끝까지 하지 못했다.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;삼각형과 직사각형은 도형이라는 추상클래스를 공통 부모 클래스로 두면 될 것 같은데,&lt;/p&gt;
-
-        &lt;p&gt;선은 삼각형이나 직사각형과 전혀 달라서 설계가 안된다.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;도형이라는 추상클래스에 높이, 너비, 넓이를 구하는 메소드를 정의하고 삼각형과 직사각형은 이를 오버라이드하게 하였다.&lt;/li&gt;
-      &lt;li&gt;선은 단순히 길이를 구할 뿐인데, 선은 도형과 전혀 다르지 않나?? 선,삼각형,직사각형 세 타입을 어떻게 묶어야 하는지 모르겠다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;OOP의 기본개념을 정리하여 포스팅하였다.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/java/2021/01/14/OOP_basic_concept.html&quot;&gt;https://isaac56.github.io/java/2021/01/14/OOP_basic_concept.html&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;프로그래머스 기둥과 보 설치 문제를 풀었다.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;단순 시뮬레이션 문제였다.&lt;/li&gt;
-      &lt;li&gt;푸는 방법보다 구현이 복잡한 문제여서, 꼼꼼하게 경우의 수를 생각하고 꼼꼼한 코딩을 해야 하는 문제이다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;프로그래머스 외벽점검 문제 풀기 실패하였다.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;C++로 BFS를 통해 풀었던 문제인데, 자바로 BFS를 통해 풀었더니 시간초과가 난다.&lt;/li&gt;
-      &lt;li&gt;BFS로 푸는과정에서 예전과 로직이 달라서 시간초과인지, 자바로 풀어서 시간초과가 난건지(그럴 확률은 낮지만) 내일 확인하려한다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;저녁에 코딩테스트 공부가 길어지다보니, 계획했던 다른 공부를 전혀 하지 못한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;알고리즘을 자바로 푸는게 맞는가 확신이 들지 않는다. ㅠㅠ&lt;/li&gt;
-  &lt;li&gt;전에 풀었던 외벽점검 C++ 답과 똑같은 로직을 자바로 구현하여 시간을 재볼 것이다.&lt;/li&gt;
-  &lt;li&gt;똑같은 로직인데도 자바가 시간초과가 난다면, 파이썬이나 C++로 옮길 것이다&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;코드스쿼드 미션 진행&lt;/li&gt;
-  &lt;li&gt;프로그래머스 알고리즘 풀기&lt;/li&gt;
-  &lt;li&gt;외벽점검 문제 C++ 답안과 동일하게 자바로 구현해보기&lt;/li&gt;
   &lt;li&gt;자바의정석 읽기&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /><category term="OOP" /></entry></feed>
