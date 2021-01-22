@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-22T11:02:41+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">싱글코어에서도 Thread를 늘리면 빨라질까?</title><link href="http://localhost:4000/os/2021/01/22/Is_it_faster_to_increase_thread.html" rel="alternate" type="text/html" title="싱글코어에서도 Thread를 늘리면 빨라질까?" /><published>2021-01-22T00:00:00+09:00</published><updated>2021-01-22T00:00:00+09:00</updated><id>http://localhost:4000/os/2021/01/22/Is_it_faster_to_increase_thread</id><content type="html" xml:base="http://localhost:4000/os/2021/01/22/Is_it_faster_to_increase_thread.html">&lt;h2 id=&quot;싱글코어-cpu-한-개라서-실질적으로-한번에-한-개만-실행할-수-있다고-가정&quot;&gt;싱글코어 CPU 한 개라서, 실질적으로 한번에 한 개만 실행할 수 있다고 가정&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-22T22:48:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">싱글코어에서도 Thread를 늘리면 빨라질까?</title><link href="http://localhost:4000/os/2021/01/22/Is_it_faster_to_increase_thread.html" rel="alternate" type="text/html" title="싱글코어에서도 Thread를 늘리면 빨라질까?" /><published>2021-01-22T00:00:00+09:00</published><updated>2021-01-22T00:00:00+09:00</updated><id>http://localhost:4000/os/2021/01/22/Is_it_faster_to_increase_thread</id><content type="html" xml:base="http://localhost:4000/os/2021/01/22/Is_it_faster_to_increase_thread.html">&lt;h2 id=&quot;싱글코어-cpu-한-개라서-실질적으로-한번에-한-개만-실행할-수-있다고-가정&quot;&gt;싱글코어 CPU 한 개라서, 실질적으로 한번에 한 개만 실행할 수 있다고 가정&lt;/h2&gt;
 
 &lt;ol&gt;
   &lt;li&gt;여기서 덧셈을 하는 300개의 쓰레드를 생성해 돌린다고 가정해보자.&lt;/li&gt;
@@ -169,11 +169,17 @@
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;Process의 자원을 공유하기 때문에, 쓰레드 중 하나에 문제만 생겨도 Process가 종료되고, 따라서 전체 쓰레드도 종료된다.&lt;/p&gt;
+
+    &lt;p&gt;※ 자바에서는 메인 쓰레드가 종료되어도 돌고 있는 쓰레드가 있으면 Process가 종료되지 않는다.&lt;/p&gt;
+
+    &lt;p&gt;즉, 모든 쓰레드가 종료되어야 Process가 종료되기 때문에 쓰레드 중 하나에 문제가 생겨도 다른 쓰레드는 잘 돌아간다.&lt;/p&gt;
+
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Stack을 제외한 메모리 자원을 공유하고 있어서, 프로그램 설계와 디버깅이 어렵다.&lt;/p&gt;
 
-    &lt;p&gt;(동시에 같은 변수에 접근할 수 있기 때문에, 이상 동작을 고려한 설계가 필요하다.)&lt;/p&gt;
+    &lt;p&gt;(동시에 같은 변수에 접근할 수 있기 때문에 동기화(Synchronization), 교착상태(deadlock)를 고려한 설계가 필요하다.)&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><category term="OS" /><category term="Process" /><category term="Thread" /></entry><entry><title type="html">21년 1월 21일</title><link href="http://localhost:4000/til/2021/01/21/TIL18.html" rel="alternate" type="text/html" title="21년 1월 21일" /><published>2021-01-21T00:00:00+09:00</published><updated>2021-01-21T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/21/TIL18</id><content type="html" xml:base="http://localhost:4000/til/2021/01/21/TIL18.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 
