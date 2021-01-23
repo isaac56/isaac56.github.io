@@ -1,4 +1,143 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-23T01:10:40+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 1월 22일</title><link href="http://localhost:4000/til/2021/01/22/TIL19.html" rel="alternate" type="text/html" title="21년 1월 22일" /><published>2021-01-22T00:00:00+09:00</published><updated>2021-01-22T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/22/TIL19</id><content type="html" xml:base="http://localhost:4000/til/2021/01/22/TIL19.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-23T23:34:52+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 1월 23일</title><link href="http://localhost:4000/til/2021/01/23/TIL20.html" rel="alternate" type="text/html" title="21년 1월 23일" /><published>2021-01-23T00:00:00+09:00</published><updated>2021-01-23T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/23/TIL20</id><content type="html" xml:base="http://localhost:4000/til/2021/01/23/TIL20.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;자바의 정석 Chapter 13 쓰레드 (9.쓰레드의 동기화 ~ 끝) 모두 읽었다.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;synchronized를 이용한 동기화를 배웠다.
+        &lt;ul&gt;
+          &lt;li&gt;synchornized method와 synchronized block을 이용한 critical section 생성&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;특정 객체가 Lock을 너무 오래 갖는 것을 방지하기 위한 wait와 notify의 사용법을 배웠다.&lt;/li&gt;
+      &lt;li&gt;JDK1.5부터 추가된 java.util.concurrent.locks 패키지 사용법을 배웠다.
+        &lt;ul&gt;
+          &lt;li&gt;ReetrantLock, ReetrantReadWriteLock, StampedLock 사용법&lt;/li&gt;
+          &lt;li&gt;StampedLock은 ReetrantReadWriteLock에 optimisticLock이 추가된 Lock이다.
+            &lt;ul&gt;
+              &lt;li&gt;optimisticReadLock은 사용하면 바로 lock을 얻지만, 누군가 쓰기 lock을 얻는다면 바로 무효화된다.&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;await(), signal()은 synchronized의 wait(), notify()와 대응된다.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;volatile 키워드가 무엇인지 알게 되었다.
+        &lt;ul&gt;
+          &lt;li&gt;변수를 원자화한다.
+            &lt;ol&gt;
+              &lt;li&gt;JVM은 4바이트 단위로 처리하기 때문에, long이나 double 타입은 한번에 읽을수 없다.&lt;/li&gt;
+              &lt;li&gt;volatile키워드로 선언하면 long이나 double도 다른 쓰레드의 침범 없이 원자화하여 읽을 수 있다.&lt;/li&gt;
+            &lt;/ol&gt;
+          &lt;/li&gt;
+          &lt;li&gt;항상 메모리에서 값을 가져온다.
+            &lt;ol&gt;
+              &lt;li&gt;멀티 코어에서는 각 코어가 캐시에 저장된 변수를 참조할 수도 있다.&lt;/li&gt;
+              &lt;li&gt;즉, 1번 코어에서 메모리에 변수를 바꿔도, 2번 코어는 캐시의 변수를 참조하고 있으면 정상 동작하지 않는다.&lt;/li&gt;
+              &lt;li&gt;이를 방지하기 위해서 volatile 키워드로 변수를 선언하여 항상 메모리에서 값을 읽도록 강제해준다.&lt;/li&gt;
+            &lt;/ol&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;프로그래머스 문제 정수삼각형, 등굣길을 풀었다.&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;정수삼각형:&lt;/p&gt;
+
+        &lt;ol&gt;
+          &lt;li&gt;dp 문제 같긴한데, 그냥 iterative하게 푸는게 더 편하고 빠르다.&lt;/li&gt;
+          &lt;li&gt;삼각형의 위층부터 내려오며 각 위치까지 오는데 가장 큰 값들을 계산해서 넣어준다.&lt;/li&gt;
+          &lt;li&gt;삼각형의 맨 마지막 층에 각 위치별로 오는데 가장 큰 값이 저장되어 있을 것이다.&lt;/li&gt;
+          &lt;li&gt;마지막 층에 저장된 값중 가장 큰 값을 반환한다.&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;등굣길:&lt;/p&gt;
+
+        &lt;ol&gt;
+          &lt;li&gt;전형적인 dp문제이다.&lt;/li&gt;
+          &lt;li&gt;(x,y)의 길의 개수는 (x-1,y)+(x,y-1)가 된다.&lt;/li&gt;
+          &lt;li&gt;m,n 크기일 때, cache배열을 3차원 &lt;code class=&quot;highlighter-rouge&quot;&gt;new int[m][n][2]&lt;/code&gt; 으로 하는 것이 핵심이다.&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cache[x][y][0]&lt;/code&gt; 에는 (x,y)값이 계산이 끝났는지(1), 물 웅덩이인지(-1), 아직 계산이 안됐는지(0)가 저장된다.&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cache[x][y][1]&lt;/code&gt; 에는(x,y)값의 계산이 끝났을 경우 (x,y)값이 저장된다.&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;등굣길 문제를 풀 때, input으로 들어온 x,y좌표 기준과 내가 정의한 x,y좌표 기준이 틀려서 해멨다.
+    &lt;ul&gt;
+      &lt;li&gt;문제에서 (1,1)은 내가 설계한 코드에서는 (0,0)을 의미하기 때문에 x,y모두 1씩 빼줘야했다 ㅠㅠ&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;실제 문제였으면 테스트케이스까지만 확인하고 냈으므로 틀렸을 것이다.&lt;/li&gt;
+  &lt;li&gt;아주 사소한 문제인데, 또 실수를 해버려서 아쉽다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;자바의 정석을 계획한 데로 읽었다.&lt;/li&gt;
+  &lt;li&gt;프로그래머스 문제 2문제나 풀었다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;자바의 정석 쓰레드는 운영체제 지식이 없으면 읽기 어려웠을 것 같다.&lt;/li&gt;
+  &lt;li&gt;그래도 이해하면서 쓰레드 챕터를 완독할 수 있어서 아주 뿌듯했다.&lt;/li&gt;
+  &lt;li&gt;다 외우는게 목적이 아니기 때문에, 이해만으로 넘어가고 앞으로 코딩할때 참고용으로 자주 봐야겠다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;프로그래머스 문제 풀기&lt;/li&gt;
+  &lt;li&gt;TCP/IP 쉽게 더쉽게 읽기&lt;/li&gt;
+  &lt;li&gt;자바의 정석 제너릭스 읽기&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /></entry><entry><title type="html">싱글코어에서도 Thread를 늘리면 빨라질까?</title><link href="http://localhost:4000/os/2021/01/22/Is_it_faster_to_increase_thread.html" rel="alternate" type="text/html" title="싱글코어에서도 Thread를 늘리면 빨라질까?" /><published>2021-01-22T00:00:00+09:00</published><updated>2021-01-22T00:00:00+09:00</updated><id>http://localhost:4000/os/2021/01/22/Is_it_faster_to_increase_thread</id><content type="html" xml:base="http://localhost:4000/os/2021/01/22/Is_it_faster_to_increase_thread.html">&lt;h2 id=&quot;싱글코어-cpu-한-개라서-실질적으로-한번에-한-개만-실행할-수-있다고-가정&quot;&gt;싱글코어 CPU 한 개라서, 실질적으로 한번에 한 개만 실행할 수 있다고 가정&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;여기서 덧셈을 하는 300개의 쓰레드를 생성해 돌린다고 가정해보자.&lt;/li&gt;
+  &lt;li&gt;커널 레벨 쓰레드라면, 나의 Task(프로세스, 쓰레드 등 스케줄링해야 하는 작업 단위)가 많아진다.&lt;/li&gt;
+  &lt;li&gt;다른 프로세스도 돌아가고 있을 것이므로, 쓰레드를 늘린 프로세스(나)의 CPU 점유율이 높아져서 내 속도가 빨라진다.&lt;/li&gt;
+  &lt;li&gt;즉, 다른 프로세스도 돌아가고 있고, 커널 레벨 쓰레드라면, 나의 CPU점유율이 높아져서 속도가 빨라진다.&lt;/li&gt;
+  &lt;li&gt;물론, 쓰레드 너무 많이 만든다면 오버헤드가 더 커져서 느려지게 된다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;요약:&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;멀티 프로세스 환경에서 다른 프로세스가 돌아가고 있을 때, 커널 레벨 쓰레드를 늘린다면 프로세스 속도는 빨라진다.&lt;/p&gt;
+
+        &lt;p&gt;(CPU 점유율이 높아지기 때문에)&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;프로세스가 딱 하나만 돌아가고 있거나, 유저 레벨 쓰레드를 늘린다면 오버헤드 때문에 프로세스 속도는 느려진다.&lt;/p&gt;
+
+        &lt;p&gt;(유저 레벨 쓰레드는 프로세스 내에서 쓰레드 스케줄링할 뿐, 운영체제는 프로세스 하나로 보기 때문에 점유율이 높아지지 않는다.)&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="OS" /><category term="Process" /><category term="Thread" /></entry><entry><title type="html">21년 1월 22일</title><link href="http://localhost:4000/til/2021/01/22/TIL19.html" rel="alternate" type="text/html" title="21년 1월 22일" /><published>2021-01-22T00:00:00+09:00</published><updated>2021-01-22T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/22/TIL19</id><content type="html" xml:base="http://localhost:4000/til/2021/01/22/TIL19.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -135,36 +274,7 @@
   &lt;li&gt;프로그래머스 문제 풀기&lt;/li&gt;
   &lt;li&gt;TCP/IP 쉽게 더쉽게 읽기&lt;/li&gt;
   &lt;li&gt;자바의 정석 읽기&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /></entry><entry><title type="html">싱글코어에서도 Thread를 늘리면 빨라질까?</title><link href="http://localhost:4000/os/2021/01/22/Is_it_faster_to_increase_thread.html" rel="alternate" type="text/html" title="싱글코어에서도 Thread를 늘리면 빨라질까?" /><published>2021-01-22T00:00:00+09:00</published><updated>2021-01-22T00:00:00+09:00</updated><id>http://localhost:4000/os/2021/01/22/Is_it_faster_to_increase_thread</id><content type="html" xml:base="http://localhost:4000/os/2021/01/22/Is_it_faster_to_increase_thread.html">&lt;h2 id=&quot;싱글코어-cpu-한-개라서-실질적으로-한번에-한-개만-실행할-수-있다고-가정&quot;&gt;싱글코어 CPU 한 개라서, 실질적으로 한번에 한 개만 실행할 수 있다고 가정&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;여기서 덧셈을 하는 300개의 쓰레드를 생성해 돌린다고 가정해보자.&lt;/li&gt;
-  &lt;li&gt;커널 레벨 쓰레드라면, 나의 Task(프로세스, 쓰레드 등 스케줄링해야 하는 작업 단위)가 많아진다.&lt;/li&gt;
-  &lt;li&gt;다른 프로세스도 돌아가고 있을 것이므로, 쓰레드를 늘린 프로세스(나)의 CPU 점유율이 높아져서 내 속도가 빨라진다.&lt;/li&gt;
-  &lt;li&gt;즉, 다른 프로세스도 돌아가고 있고, 커널 레벨 쓰레드라면, 나의 CPU점유율이 높아져서 속도가 빨라진다.&lt;/li&gt;
-  &lt;li&gt;물론, 쓰레드 너무 많이 만든다면 오버헤드가 더 커져서 느려지게 된다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;요약:&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;
-        &lt;p&gt;멀티 프로세스 환경에서 다른 프로세스가 돌아가고 있을 때, 커널 레벨 쓰레드를 늘린다면 프로세스 속도는 빨라진다.&lt;/p&gt;
-
-        &lt;p&gt;(CPU 점유율이 높아지기 때문에)&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;프로세스가 딱 하나만 돌아가고 있거나, 유저 레벨 쓰레드를 늘린다면 오버헤드 때문에 프로세스 속도는 느려진다.&lt;/p&gt;
-
-        &lt;p&gt;(유저 레벨 쓰레드는 프로세스 내에서 쓰레드 스케줄링할 뿐, 운영체제는 프로세스 하나로 보기 때문에 점유율이 높아지지 않는다.)&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="OS" /><category term="Process" /><category term="Thread" /></entry><entry><title type="html">21년 1월 21일</title><link href="http://localhost:4000/til/2021/01/21/TIL18.html" rel="alternate" type="text/html" title="21년 1월 21일" /><published>2021-01-21T00:00:00+09:00</published><updated>2021-01-21T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/21/TIL18</id><content type="html" xml:base="http://localhost:4000/til/2021/01/21/TIL18.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /></entry><entry><title type="html">21년 1월 21일</title><link href="http://localhost:4000/til/2021/01/21/TIL18.html" rel="alternate" type="text/html" title="21년 1월 21일" /><published>2021-01-21T00:00:00+09:00</published><updated>2021-01-21T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/21/TIL18</id><content type="html" xml:base="http://localhost:4000/til/2021/01/21/TIL18.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;프로세스와 스레드의 차이점에 대해 공부하였다.&lt;/li&gt;
@@ -1009,61 +1119,4 @@
   &lt;li&gt;10시~18시: 코드스쿼드 미션 진행하기&lt;/li&gt;
   &lt;li&gt;19시~22시:  프로그래머스 알고리즘 풀기&lt;/li&gt;
   &lt;li&gt;22시~23시30분: TCP/IP 쉽게 더 쉽게 읽기&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Rest" /></entry><entry><title type="html">21년 1월 16일</title><link href="http://localhost:4000/til/2021/01/16/TIL13.html" rel="alternate" type="text/html" title="21년 1월 16일" /><published>2021-01-16T00:00:00+09:00</published><updated>2021-01-16T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/16/TIL13</id><content type="html" xml:base="http://localhost:4000/til/2021/01/16/TIL13.html">&lt;ul&gt;
-  &lt;li&gt;
-    &lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;프로그래머스 외벽점검에서 같은 BFS라도 어떤 기준으로 푸느냐에 따라 오답이 될 수 있는 이유를 알아내었다.&lt;/p&gt;
-
-        &lt;ul&gt;
-          &lt;li&gt;
-            &lt;p&gt;글로 설명하긴 어렵다.&lt;/p&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;p&gt;외벽점검 문제에서 weak포인트 배열을 기준으로 BFS를 돌리는데 첫 시작을 제일 능력있는 친구를 넣어놓고,&lt;/p&gt;
-
-            &lt;p&gt;그 다음부터 아무 친구씩 다음 weak포인트에 배치하는 식으로 돌리면 속도가 빠르다.&lt;/p&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;p&gt;자바로 풀었던 방법은 dist 배열(친구들)을 기준으로 BFS를 돌리는데 첫 시작을 제일 능력있는 친구를 넣는건 같지만,&lt;/p&gt;
-
-            &lt;p&gt;다음으로 능력있는 친구를 아무 weak포인트에 배치하게 풀어서 경우의 수가 너무 많아지고 시간초과로 오답이 된다.&lt;/p&gt;
-          &lt;/li&gt;
-          &lt;li&gt;이 문제를 C++로 풀었을 때는 쉽게 풀었었는데, 다시 풀다보니까 BFS돌리는 기준을 잘못 잡아서 시간초과로 틀렸다.&lt;/li&gt;
-          &lt;li&gt;처음 이 문제를 만났을 때, DFS 또는 BFS로 풀어야 한다는 생각은 들지만 위의 사소한 조건을 딱 맞혀서 풀 자신이 없다.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;&lt;strong&gt;&lt;em&gt;오늘은 거북목 때문인지 목이 너무 뻐근해서 하루를 쉬어버렸다..&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;하루를 쉬고 공부를 못했다.&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;길게 보고 꾸준히 하기 위해서 아플때 쉬는 건 잘한 것 같다.&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;지금 내 실력으로 실제 코테에서 외벽점검같은 문제를 만났을 때 정답을 맞히는건 운이 좀 필요할 것 같다.&lt;/li&gt;
-      &lt;li&gt;실력이 좋아진다면 문제를 보고 설계하는 단계에서 저런 정확한 방법을 찾을 수 있을까 잘 모르겠다.&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;프로그래머스 알고리즘 풀기&lt;/li&gt;
-      &lt;li&gt;TCP/IP 쉽게 더 쉽게 읽기&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /><category term="Rest" /></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><category term="Rest" /></entry></feed>
