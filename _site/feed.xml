@@ -1,4 +1,162 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-23T23:34:52+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 1월 23일</title><link href="http://localhost:4000/til/2021/01/23/TIL20.html" rel="alternate" type="text/html" title="21년 1월 23일" /><published>2021-01-23T00:00:00+09:00</published><updated>2021-01-23T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/23/TIL20</id><content type="html" xml:base="http://localhost:4000/til/2021/01/23/TIL20.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-25T00:57:20+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 1월 24일</title><link href="http://localhost:4000/til/2021/01/24/TIL21.html" rel="alternate" type="text/html" title="21년 1월 24일" /><published>2021-01-24T00:00:00+09:00</published><updated>2021-01-24T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/24/TIL21</id><content type="html" xml:base="http://localhost:4000/til/2021/01/24/TIL21.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;자바의 정석 Chapter 12 지네릭스, 열거형, 애너테이션 중 지네릭스를 모두 읽었다.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;지네릭스는 클래스 또는 메소드에 타입을 파라미터처럼 전달하여(타입 변수) 타입을 보다 자유롭게 쓸 수 있게 해준다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;지네릭스의 장점은 다음과 같다.&lt;/p&gt;
+
+        &lt;ol&gt;
+          &lt;li&gt;타입 안정성을 제공한다.&lt;/li&gt;
+          &lt;li&gt;타입체크와 형변환을 생략할 수 있어 코드를 간소화해준다.&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;지네릭 메소드에 선언된 타입 변수와 지네릭 클래스에 선언된 타입 변수는 다르다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;지네릭 메소드에 선언된 타입 변수는 해당 메소드의 지역 변수와 같은 우선순위를 갖는다.&lt;/p&gt;
+
+        &lt;ol&gt;
+          &lt;li&gt;
+            &lt;p&gt;즉, 지네릭 클레스에 T라는 타입변수가 선언되어 있고, 지네릭 메소드에 T라는 타입변수가 있으면,&lt;/p&gt;
+
+            &lt;p&gt;해당 메소드 내의 T는 지역변수나 마찬가지인 지네릭 메소드의 T를 의미한다.&lt;/p&gt;
+          &lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;와일드 카드에 대해 배웠다.&lt;/p&gt;
+
+        &lt;ol&gt;
+          &lt;li&gt;
+            &lt;p&gt;와일드 카드는 ?로 정의되며 &amp;lt;?&amp;gt; 라는 건 &amp;lt;? extends Object&amp;gt;를 생략한 것이다.&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;와일드 카드는 참조변수 타입에 선언되는데,&lt;/p&gt;
+
+            &lt;p&gt;&amp;lt;? extends Fruit&amp;gt;라면 해당 참조변수의 인스턴스에는 타입 변수로 Fruit와 Fruit를 상속한 클래스 타입이 들어갈 수 있고,&lt;/p&gt;
+
+            &lt;p&gt;&amp;lt;? super Fruit&amp;gt;일 경우에는 타입 변수로 Fruit와 Fruit가 상속한 부모 클래스 타입이 들어갈 수 있다.&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;와일드 카드로 선언된 참조변수 간에는 컴파일러가 판단하여 형변환을 할 수 있게 해준다.&lt;/p&gt;
+
+            &lt;ul&gt;
+              &lt;li&gt;
+                &lt;p&gt;Fruit와 Fruit를 상속 받은 Apple, Grape가 있다고 하자.&lt;/p&gt;
+
+                &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Fruit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fruitList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Apple&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;appleList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
+         
+&lt;span class=&quot;n&quot;&gt;appleList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Apple&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fruitList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 에러;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fruitList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Fruit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;appleList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 에러; &lt;/span&gt;
+         
+&lt;span class=&quot;c1&quot;&gt;/////////////////////////////////////////////////////////////////////////&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;?&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Fruit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fruitList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;?&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Apple&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;appleList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
+         
+&lt;span class=&quot;n&quot;&gt;appleList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;?&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Apple&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fruitList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
+&lt;span class=&quot;c1&quot;&gt;//경고; fruitList는 Apple로 형변환할 수 있는 타입이 들어갈수도 있으므로 에러로 막지는 않음&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fruitList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;?&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Fruit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;appleList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//성공; appleList는 Fruit로 형변환할 수 있는 타입이 들어가있으므로 경고하지 않음&lt;/span&gt;
+         
+&lt;span class=&quot;c1&quot;&gt;/////////////////////////////////////////////////////////////////////////&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;?&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Grape&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;grapeList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;?&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Apple&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;appleList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
+         
+&lt;span class=&quot;n&quot;&gt;appleList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;?&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Apple&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;grapeList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
+&lt;span class=&quot;c1&quot;&gt;//에러; grapeList는 Apple로 형변환할 수 있는 타입이 들어갈 수 없으므로 에러&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;grapeList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;?&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Grape&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;appleList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//에러; appleList는 grape로 형변환할 수 있는 타입이 들어갈 수 없으므로 에러&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;                &lt;/div&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;프로그래머스 문제 타겟넘버, 네트워크 문제를 풀었다.&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;타겟넘버:&lt;/p&gt;
+
+        &lt;ol&gt;
+          &lt;li&gt;간단한 DFS/BFS문제이다.&lt;/li&gt;
+          &lt;li&gt;주어진 숫자들을 +또는 -로 연산해가면서 마지막에 target과 같을 경우 경우의 수를 늘려준다.&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;네트워크:&lt;/p&gt;
+
+        &lt;ol&gt;
+          &lt;li&gt;
+            &lt;p&gt;DFS/BFS로 풀수도 있고, union-find알고리즘으로 풀 수도 있다.&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;두 가지 방법으로 모두 풀어봤다.&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;union-find의 경우는 computers매개변수를 순회하며 1인경우 두 노드를 하나의 집합으로 만들어준다.&lt;/p&gt;
+
+            &lt;ol&gt;
+              &lt;li&gt;
+                &lt;p&gt;마지막에 parent 배열을 순회하며 각 parent배열 값을 다시 getParent(parent[n])로 확인하여 HashSet(집합 명 Set)에 넣어준다.&lt;/p&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;p&gt;HashSet의 size가 네트워크 개수가 된다.&lt;/p&gt;
+              &lt;/li&gt;
+            &lt;/ol&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;DFS/BFS로 푸는 방법은 그냥 areaNum을 늘려주며 area가 정해지지 않은 node의 area를 DFS/BFS로 areaNum으로 정해준다.&lt;/p&gt;
+          &lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;TCP/IP 쉽게 더쉽게 읽기라는 목표를 점점 뒤로 미루고 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;주말이라 쉬엄쉬엄했지만 꾸준함의 중요성을 인지하며 공부하고 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;제너릭스는 생각보다 어렵지 않았다.&lt;/li&gt;
+  &lt;li&gt;자바 API를 읽을때마다 헷갈렸던 ?라는 와일드카드를 알게되어서 기분이 좋았다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;코드스쿼드 미션 하기&lt;/li&gt;
+  &lt;li&gt;프로그래머스 문제 풀기&lt;/li&gt;
+  &lt;li&gt;자바의 정석 열거형 읽기&lt;/li&gt;
+  &lt;li&gt;TCP/IP 쉽게 더 쉽게는 자바의 정석 1회독 한 후 읽어야 할 것 같다.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /></entry><entry><title type="html">21년 1월 23일</title><link href="http://localhost:4000/til/2021/01/23/TIL20.html" rel="alternate" type="text/html" title="21년 1월 23일" /><published>2021-01-23T00:00:00+09:00</published><updated>2021-01-23T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/23/TIL20</id><content type="html" xml:base="http://localhost:4000/til/2021/01/23/TIL20.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -108,36 +266,7 @@
   &lt;li&gt;프로그래머스 문제 풀기&lt;/li&gt;
   &lt;li&gt;TCP/IP 쉽게 더쉽게 읽기&lt;/li&gt;
   &lt;li&gt;자바의 정석 제너릭스 읽기&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /></entry><entry><title type="html">싱글코어에서도 Thread를 늘리면 빨라질까?</title><link href="http://localhost:4000/os/2021/01/22/Is_it_faster_to_increase_thread.html" rel="alternate" type="text/html" title="싱글코어에서도 Thread를 늘리면 빨라질까?" /><published>2021-01-22T00:00:00+09:00</published><updated>2021-01-22T00:00:00+09:00</updated><id>http://localhost:4000/os/2021/01/22/Is_it_faster_to_increase_thread</id><content type="html" xml:base="http://localhost:4000/os/2021/01/22/Is_it_faster_to_increase_thread.html">&lt;h2 id=&quot;싱글코어-cpu-한-개라서-실질적으로-한번에-한-개만-실행할-수-있다고-가정&quot;&gt;싱글코어 CPU 한 개라서, 실질적으로 한번에 한 개만 실행할 수 있다고 가정&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;여기서 덧셈을 하는 300개의 쓰레드를 생성해 돌린다고 가정해보자.&lt;/li&gt;
-  &lt;li&gt;커널 레벨 쓰레드라면, 나의 Task(프로세스, 쓰레드 등 스케줄링해야 하는 작업 단위)가 많아진다.&lt;/li&gt;
-  &lt;li&gt;다른 프로세스도 돌아가고 있을 것이므로, 쓰레드를 늘린 프로세스(나)의 CPU 점유율이 높아져서 내 속도가 빨라진다.&lt;/li&gt;
-  &lt;li&gt;즉, 다른 프로세스도 돌아가고 있고, 커널 레벨 쓰레드라면, 나의 CPU점유율이 높아져서 속도가 빨라진다.&lt;/li&gt;
-  &lt;li&gt;물론, 쓰레드 너무 많이 만든다면 오버헤드가 더 커져서 느려지게 된다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;요약:&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;
-        &lt;p&gt;멀티 프로세스 환경에서 다른 프로세스가 돌아가고 있을 때, 커널 레벨 쓰레드를 늘린다면 프로세스 속도는 빨라진다.&lt;/p&gt;
-
-        &lt;p&gt;(CPU 점유율이 높아지기 때문에)&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;프로세스가 딱 하나만 돌아가고 있거나, 유저 레벨 쓰레드를 늘린다면 오버헤드 때문에 프로세스 속도는 느려진다.&lt;/p&gt;
-
-        &lt;p&gt;(유저 레벨 쓰레드는 프로세스 내에서 쓰레드 스케줄링할 뿐, 운영체제는 프로세스 하나로 보기 때문에 점유율이 높아지지 않는다.)&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="OS" /><category term="Process" /><category term="Thread" /></entry><entry><title type="html">21년 1월 22일</title><link href="http://localhost:4000/til/2021/01/22/TIL19.html" rel="alternate" type="text/html" title="21년 1월 22일" /><published>2021-01-22T00:00:00+09:00</published><updated>2021-01-22T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/22/TIL19</id><content type="html" xml:base="http://localhost:4000/til/2021/01/22/TIL19.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /></entry><entry><title type="html">21년 1월 22일</title><link href="http://localhost:4000/til/2021/01/22/TIL19.html" rel="alternate" type="text/html" title="21년 1월 22일" /><published>2021-01-22T00:00:00+09:00</published><updated>2021-01-22T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/22/TIL19</id><content type="html" xml:base="http://localhost:4000/til/2021/01/22/TIL19.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -274,86 +403,36 @@
   &lt;li&gt;프로그래머스 문제 풀기&lt;/li&gt;
   &lt;li&gt;TCP/IP 쉽게 더쉽게 읽기&lt;/li&gt;
   &lt;li&gt;자바의 정석 읽기&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /></entry><entry><title type="html">21년 1월 21일</title><link href="http://localhost:4000/til/2021/01/21/TIL18.html" rel="alternate" type="text/html" title="21년 1월 21일" /><published>2021-01-21T00:00:00+09:00</published><updated>2021-01-21T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/21/TIL18</id><content type="html" xml:base="http://localhost:4000/til/2021/01/21/TIL18.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /></entry><entry><title type="html">싱글코어에서도 Thread를 늘리면 빨라질까?</title><link href="http://localhost:4000/os/2021/01/22/Is_it_faster_to_increase_thread.html" rel="alternate" type="text/html" title="싱글코어에서도 Thread를 늘리면 빨라질까?" /><published>2021-01-22T00:00:00+09:00</published><updated>2021-01-22T00:00:00+09:00</updated><id>http://localhost:4000/os/2021/01/22/Is_it_faster_to_increase_thread</id><content type="html" xml:base="http://localhost:4000/os/2021/01/22/Is_it_faster_to_increase_thread.html">&lt;h2 id=&quot;싱글코어-cpu-한-개라서-실질적으로-한번에-한-개만-실행할-수-있다고-가정&quot;&gt;싱글코어 CPU 한 개라서, 실질적으로 한번에 한 개만 실행할 수 있다고 가정&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;여기서 덧셈을 하는 300개의 쓰레드를 생성해 돌린다고 가정해보자.&lt;/li&gt;
+  &lt;li&gt;커널 레벨 쓰레드라면, 나의 Task(프로세스, 쓰레드 등 스케줄링해야 하는 작업 단위)가 많아진다.&lt;/li&gt;
+  &lt;li&gt;다른 프로세스도 돌아가고 있을 것이므로, 쓰레드를 늘린 프로세스(나)의 CPU 점유율이 높아져서 내 속도가 빨라진다.&lt;/li&gt;
+  &lt;li&gt;즉, 다른 프로세스도 돌아가고 있고, 커널 레벨 쓰레드라면, 나의 CPU점유율이 높아져서 속도가 빨라진다.&lt;/li&gt;
+  &lt;li&gt;물론, 쓰레드 너무 많이 만든다면 오버헤드가 더 커져서 느려지게 된다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;프로세스와 스레드의 차이점에 대해 공부하였다.&lt;/li&gt;
-  &lt;li&gt;프로세스는 메모리에 적재하여 실행가능한 상태의 작업 단위이다.
-    &lt;ul&gt;
-      &lt;li&gt;스레드는 프로세스에 할당된 메모리 자원을 이용하여 실행되는 프로세스 내의 독립 실행 흐름이다.&lt;/li&gt;
-      &lt;li&gt;스레드 간의 Context Switch는 레지스터 값과 Stack Pointer만 변경하면 되기 때문에 Process의 Context switch보다 빠르다.&lt;/li&gt;
-      &lt;li&gt;스레드는 Stack영역 이외의 공간을 공유하기 때문에, 스레드 간의 통신이 쉽다.&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/os/2021/01/21/Process_vs_Thread.html&quot;&gt;Process vs Thread&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;OperatingSystem Three Easy Pieces 책을 80 page까지 읽었다.
-    &lt;ul&gt;
-      &lt;li&gt;운영체제의 주요 컨셉인 CPU 가상화, 메모리 가상화, 동시 실행, 영속성을 배웠다.&lt;/li&gt;
-      &lt;li&gt;프로세스가 실행되는 과정을 배웠다.&lt;/li&gt;
-      &lt;li&gt;커널 모드로의 전환과 프로세스 간의 컨텍스트 스위치 과정에 대해 배웠다.&lt;/li&gt;
-      &lt;li&gt;커널 권한과 이에 따른 시스템 콜, 트랩 핸들러에 대해 배웠다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;프로그래머스 문제 불량 사용자, 단속카메라를 풀었다.
+  &lt;li&gt;
+    &lt;p&gt;요약:&lt;/p&gt;
+
     &lt;ol&gt;
-      &lt;li&gt;불량 사용자:
-        &lt;ul&gt;
-          &lt;li&gt;처음에 쉽게 접근했다가 복잡하다는 것을 깨달았다.&lt;/li&gt;
-          &lt;li&gt;DFS로 풀었는데, HashSet을 남발하여 다소 찜찜하다.&lt;/li&gt;
-          &lt;li&gt;DFS안에 현재까지의 불량 사용자 목록을 HashSet으로 담는다.&lt;/li&gt;
-          &lt;li&gt;모든 밴 리스트를 참고하여 HashSet을 완성했으면 HashSet의 HashSet에 추가하여 중복을 제거한다.&lt;/li&gt;
-          &lt;li&gt;HashSet의 HashSet의 size()가 정답의 개수가 된다.&lt;/li&gt;
-        &lt;/ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;멀티 프로세스 환경에서 다른 프로세스가 돌아가고 있을 때, 커널 레벨 쓰레드를 늘린다면 프로세스 속도는 빨라진다.&lt;/p&gt;
+
+        &lt;p&gt;(CPU 점유율이 높아지기 때문에)&lt;/p&gt;
       &lt;/li&gt;
-      &lt;li&gt;단속카메라:
-        &lt;ul&gt;
-          &lt;li&gt;Greedy 문제였다.&lt;/li&gt;
-          &lt;li&gt;구현은 매우 쉬운데 아이디어를 떠올리는게 정말 어려웠다.&lt;/li&gt;
-          &lt;li&gt;각 Route의 end 지점을 기준으로 오름차순 정렬을 한다.&lt;/li&gt;
-          &lt;li&gt;end 지점을 기준으로 오름차순 정렬했기 때문에, 자신이 설치해야 하는 최선의 경우는 자신의 end지점에 설치하는 것이다.&lt;/li&gt;
-          &lt;li&gt;정렬한 Routes를 순회하다가, 마지막에 설치한 카메라가 자신의 범위 안에 없으면, 자신의 end 위치에 카메라를 설치한다.
-            &lt;ul&gt;
-              &lt;li&gt;마지막에 설치한 카메라가 자신의 범위 안에 없으면 자신은 카메라를 안지나치는 것이다.&lt;/li&gt;
-              &lt;li&gt;그 이유는 end를 기준으로 오름차순 정렬했고 이것을 순회하며 카메라를 설치하기 때문이다.&lt;/li&gt;
-              &lt;li&gt;마지막에 설치한 카메라는 항상 설치된 카메라 중 제일 뒤쪽에 있는 카메라이다.&lt;/li&gt;
-              &lt;li&gt;따라서 앞에 설치한 카메라가 자신의 범위 안에 있는데, 마지막 설치한 카메라가 자신의 범위 안에 없을 경우는 없다.&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;프로세스가 딱 하나만 돌아가고 있거나, 유저 레벨 쓰레드를 늘린다면 오버헤드 때문에 프로세스 속도는 느려진다.&lt;/p&gt;
+
+        &lt;p&gt;(유저 레벨 쓰레드는 프로세스 내에서 쓰레드 스케줄링할 뿐, 운영체제는 프로세스 하나로 보기 때문에 점유율이 높아지지 않는다.)&lt;/p&gt;
       &lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;OS를 오랜만에 복습하고, 글로 정리하여 포스팅하였다.&lt;/li&gt;
-  &lt;li&gt;레벨 3 카카오 문제를 한번에 풀었다 (80분 걸림)&lt;/li&gt;
-  &lt;li&gt;greedy문제를 끈질기게 생각해서 해결방법을 알아냈다 (50분 걸림)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;오랜만에 OS를 복습했는데, 생각보다 까먹은게 많아서 아쉬웠다.(3학년때 정말 열심히 했는데 ㅠㅠ)&lt;/li&gt;
-  &lt;li&gt;그래도 빠르게 읽고 다시 기억할 수 있어서 공부하길 잘했다는 생각이 든다.&lt;/li&gt;
-  &lt;li&gt;카카오 문제 풀긴 했는데 HashSet의 HashSet을 쓴게 찜찜하여 다른 사람은 어떻게 풀었는지 참고해야겠다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;코드스쿼드 미션하기&lt;/li&gt;
-  &lt;li&gt;프로그래머스 문제 풀기&lt;/li&gt;
-  &lt;li&gt;TCP/IP 쉽게 더쉽게 읽기&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /></entry><entry><title type="html">Process와 Thread</title><link href="http://localhost:4000/os/2021/01/21/Process_vs_Thread.html" rel="alternate" type="text/html" title="Process와 Thread" /><published>2021-01-21T00:00:00+09:00</published><updated>2021-01-21T00:00:00+09:00</updated><id>http://localhost:4000/os/2021/01/21/Process_vs_Thread</id><content type="html" xml:base="http://localhost:4000/os/2021/01/21/Process_vs_Thread.html">&lt;h2 id=&quot;process-란&quot;&gt;Process 란&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="OS" /><category term="Process" /><category term="Thread" /></entry><entry><title type="html">Process와 Thread</title><link href="http://localhost:4000/os/2021/01/21/Process_vs_Thread.html" rel="alternate" type="text/html" title="Process와 Thread" /><published>2021-01-21T00:00:00+09:00</published><updated>2021-01-21T00:00:00+09:00</updated><id>http://localhost:4000/os/2021/01/21/Process_vs_Thread</id><content type="html" xml:base="http://localhost:4000/os/2021/01/21/Process_vs_Thread.html">&lt;h2 id=&quot;process-란&quot;&gt;Process 란&lt;/h2&gt;
 
 &lt;p&gt;일반적으로 Process는 프로그램을 실행시킨 상태라고도 하고, 실행중인 프로그램이라고도 한다.&lt;/p&gt;
 
@@ -509,7 +588,86 @@
 
     &lt;p&gt;(동시에 같은 변수에 접근할 수 있기 때문에 동기화(Synchronization), 교착상태(deadlock)를 고려한 설계가 필요하다.)&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="OS" /><category term="Process" /><category term="Thread" /></entry><entry><title type="html">21년 1월 20일</title><link href="http://localhost:4000/til/2021/01/20/TIL17.html" rel="alternate" type="text/html" title="21년 1월 20일" /><published>2021-01-20T00:00:00+09:00</published><updated>2021-01-20T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/20/TIL17</id><content type="html" xml:base="http://localhost:4000/til/2021/01/20/TIL17.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="OS" /><category term="Process" /><category term="Thread" /></entry><entry><title type="html">21년 1월 21일</title><link href="http://localhost:4000/til/2021/01/21/TIL18.html" rel="alternate" type="text/html" title="21년 1월 21일" /><published>2021-01-21T00:00:00+09:00</published><updated>2021-01-21T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/21/TIL18</id><content type="html" xml:base="http://localhost:4000/til/2021/01/21/TIL18.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;프로세스와 스레드의 차이점에 대해 공부하였다.&lt;/li&gt;
+  &lt;li&gt;프로세스는 메모리에 적재하여 실행가능한 상태의 작업 단위이다.
+    &lt;ul&gt;
+      &lt;li&gt;스레드는 프로세스에 할당된 메모리 자원을 이용하여 실행되는 프로세스 내의 독립 실행 흐름이다.&lt;/li&gt;
+      &lt;li&gt;스레드 간의 Context Switch는 레지스터 값과 Stack Pointer만 변경하면 되기 때문에 Process의 Context switch보다 빠르다.&lt;/li&gt;
+      &lt;li&gt;스레드는 Stack영역 이외의 공간을 공유하기 때문에, 스레드 간의 통신이 쉽다.&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/os/2021/01/21/Process_vs_Thread.html&quot;&gt;Process vs Thread&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;OperatingSystem Three Easy Pieces 책을 80 page까지 읽었다.
+    &lt;ul&gt;
+      &lt;li&gt;운영체제의 주요 컨셉인 CPU 가상화, 메모리 가상화, 동시 실행, 영속성을 배웠다.&lt;/li&gt;
+      &lt;li&gt;프로세스가 실행되는 과정을 배웠다.&lt;/li&gt;
+      &lt;li&gt;커널 모드로의 전환과 프로세스 간의 컨텍스트 스위치 과정에 대해 배웠다.&lt;/li&gt;
+      &lt;li&gt;커널 권한과 이에 따른 시스템 콜, 트랩 핸들러에 대해 배웠다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;프로그래머스 문제 불량 사용자, 단속카메라를 풀었다.
+    &lt;ol&gt;
+      &lt;li&gt;불량 사용자:
+        &lt;ul&gt;
+          &lt;li&gt;처음에 쉽게 접근했다가 복잡하다는 것을 깨달았다.&lt;/li&gt;
+          &lt;li&gt;DFS로 풀었는데, HashSet을 남발하여 다소 찜찜하다.&lt;/li&gt;
+          &lt;li&gt;DFS안에 현재까지의 불량 사용자 목록을 HashSet으로 담는다.&lt;/li&gt;
+          &lt;li&gt;모든 밴 리스트를 참고하여 HashSet을 완성했으면 HashSet의 HashSet에 추가하여 중복을 제거한다.&lt;/li&gt;
+          &lt;li&gt;HashSet의 HashSet의 size()가 정답의 개수가 된다.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;단속카메라:
+        &lt;ul&gt;
+          &lt;li&gt;Greedy 문제였다.&lt;/li&gt;
+          &lt;li&gt;구현은 매우 쉬운데 아이디어를 떠올리는게 정말 어려웠다.&lt;/li&gt;
+          &lt;li&gt;각 Route의 end 지점을 기준으로 오름차순 정렬을 한다.&lt;/li&gt;
+          &lt;li&gt;end 지점을 기준으로 오름차순 정렬했기 때문에, 자신이 설치해야 하는 최선의 경우는 자신의 end지점에 설치하는 것이다.&lt;/li&gt;
+          &lt;li&gt;정렬한 Routes를 순회하다가, 마지막에 설치한 카메라가 자신의 범위 안에 없으면, 자신의 end 위치에 카메라를 설치한다.
+            &lt;ul&gt;
+              &lt;li&gt;마지막에 설치한 카메라가 자신의 범위 안에 없으면 자신은 카메라를 안지나치는 것이다.&lt;/li&gt;
+              &lt;li&gt;그 이유는 end를 기준으로 오름차순 정렬했고 이것을 순회하며 카메라를 설치하기 때문이다.&lt;/li&gt;
+              &lt;li&gt;마지막에 설치한 카메라는 항상 설치된 카메라 중 제일 뒤쪽에 있는 카메라이다.&lt;/li&gt;
+              &lt;li&gt;따라서 앞에 설치한 카메라가 자신의 범위 안에 있는데, 마지막 설치한 카메라가 자신의 범위 안에 없을 경우는 없다.&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;OS를 오랜만에 복습하고, 글로 정리하여 포스팅하였다.&lt;/li&gt;
+  &lt;li&gt;레벨 3 카카오 문제를 한번에 풀었다 (80분 걸림)&lt;/li&gt;
+  &lt;li&gt;greedy문제를 끈질기게 생각해서 해결방법을 알아냈다 (50분 걸림)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;오랜만에 OS를 복습했는데, 생각보다 까먹은게 많아서 아쉬웠다.(3학년때 정말 열심히 했는데 ㅠㅠ)&lt;/li&gt;
+  &lt;li&gt;그래도 빠르게 읽고 다시 기억할 수 있어서 공부하길 잘했다는 생각이 든다.&lt;/li&gt;
+  &lt;li&gt;카카오 문제 풀긴 했는데 HashSet의 HashSet을 쓴게 찜찜하여 다른 사람은 어떻게 풀었는지 참고해야겠다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;코드스쿼드 미션하기&lt;/li&gt;
+  &lt;li&gt;프로그래머스 문제 풀기&lt;/li&gt;
+  &lt;li&gt;TCP/IP 쉽게 더쉽게 읽기&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /></entry><entry><title type="html">21년 1월 20일</title><link href="http://localhost:4000/til/2021/01/20/TIL17.html" rel="alternate" type="text/html" title="21년 1월 20일" /><published>2021-01-20T00:00:00+09:00</published><updated>2021-01-20T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/20/TIL17</id><content type="html" xml:base="http://localhost:4000/til/2021/01/20/TIL17.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -1088,35 +1246,4 @@
   &lt;li&gt;&lt;a href=&quot;https://codechacha.com/ko/java8-functional-interface/&quot;&gt;Functional Interface 사용법&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="Functinal Programming" /></entry><entry><title type="html">21년 1월 17일</title><link href="http://localhost:4000/til/2021/01/17/TIL14.html" rel="alternate" type="text/html" title="21년 1월 17일" /><published>2021-01-17T00:00:00+09:00</published><updated>2021-01-17T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/17/TIL14</id><content type="html" xml:base="http://localhost:4000/til/2021/01/17/TIL14.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;2주만에 처음으로 아무것도 안하고 쉬고 말았다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;계획에 없던 휴식이었다. 정말 아무것도 안해버렸다&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;목이 좀 뻐근했던 것이 핑계였는지 오늘은 아무것도 하기싫었다 ..&lt;/li&gt;
-  &lt;li&gt;내일부터 다시 제대로 마음먹고 시작해야겠다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;10시~18시: 코드스쿼드 미션 진행하기&lt;/li&gt;
-  &lt;li&gt;19시~22시:  프로그래머스 알고리즘 풀기&lt;/li&gt;
-  &lt;li&gt;22시~23시30분: TCP/IP 쉽게 더 쉽게 읽기&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Rest" /></entry></feed>
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="Functinal Programming" /></entry></feed>
