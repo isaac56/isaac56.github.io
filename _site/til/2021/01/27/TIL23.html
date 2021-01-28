@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Dev.Isaac" /></head>
+<style>@import url(/public/css/syntax/monokai.css);</style>
+  <title>Dev.Isaac</title>
+  <!-- <link href="/public/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link href="/public/css/style.css" rel="stylesheet">
+  <body>
+  	<div class="container"> 
+		<div class="sidebar">
+			<div class="sidebar-item sidebar-header">
+	<div class='sidebar-brand'>
+		<a href="/about/">Dev.Isaac</a>
+	</div>
+	<p class="lead">정이삭 공부블로그</p></div>
+
+<div class="sidebar-item sidebar-nav">
+	<ul class="nav">
+      <li class="nav-title">Pages</li>
+	  <li>
+	  	<a class="nav-item" href="/">Articles</a>
+	  </li>
+	  
+	  
+	    
+	  
+	    
+	      
+	        <li>
+	        	<a class="nav-item" href="/about/">
+	            	About
+	            </a>
+	        </li>
+	      
+	    
+	  
+	    
+	      
+	    
+	  
+	    
+	  
+	    
+	  
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-nav">
+  	<ul class="nav">
+			<li class="nav-title">Categories</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#TIL">
+				<span class="name">TIL</span>
+				<span class="badge">23</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Linux">
+				<span class="name">Linux</span>
+				<span class="badge">5</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Network">
+				<span class="name">Network</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Java">
+				<span class="name">Java</span>
+				<span class="badge">6</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Data Structure">
+				<span class="name">Data Structure</span>
+				<span class="badge">1</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#Algorithm">
+				<span class="name">Algorithm</span>
+				<span class="badge">2</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#OS">
+				<span class="name">OS</span>
+				<span class="badge">2</span>
+	    	</a>
+ 		</li>
+	    
+	  </nav>
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-footer">
+	<p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
+</div>
+		</div>
+		<div class="content">
+			<article class="post">
+	<header class="post-header">
+		<div class="post-title"> 
+			21년 1월 27일
+		</div>
+		<time class="post-date dt-published" datetime="2021-01-27T00:00:00+09:00" itemprop="datePublished">2021/01/27
+		</time>		
+	</header>
+
+	<div class="post-content">
+		<h2 id="한-일">한 일</h2>
+
+<ul>
+  <li>
+    <p>코드스쿼드 비동기 프로그래밍 미션을 하루종일 했다.</p>
+
+    <ul>
+      <li>
+        <p>미션에서 주어진 역할을 클래스로 만들고 객체간의 메세지를 보내(메소드 실행) 이벤트를 발생하게 했다.</p>
+      </li>
+      <li>
+        <p>객체 각자가 비동기적으로 일을 수행해, 주문을 받은 커피를 만들고 커피가 완료됐다고 출력하는 미션이었다.</p>
+      </li>
+      <li>
+        <p>만든 클래스는 다음과 같다.</p>
+
+        <ol>
+          <li>
+            <p>주문을 받는 Cashier Class</p>
+          </li>
+          <li>
+            <p>주문 목록을 갖고있는 OrderList Class</p>
+          </li>
+          <li>
+            <p>OrderList를 보고 일을 할당해주는 Manager Class</p>
+          </li>
+          <li>
+            <p>커피를 만드는 Barista Class</p>
+          </li>
+          <li>
+            <p>완료된 목록을 출력해주는 DashBoard Class</p>
+          </li>
+          <li>
+            <p>커피 종류인 CoffeeType Enum</p>
+          </li>
+          <li>
+            <p>커피 종류와 주문한 고객정보를 갖고있는 Coffee Class</p>
+          </li>
+          <li>
+            <p>주문한 고객정보와 Coffee를 모두 담고 있는 Order Class</p>
+
+            <p>(고객1이 아메리카노2잔,카페라떼3잔을 시켰다면 커피1잔은 Coffee Class에 해당하고, 전체 주문 한건은 Order Class에 해당)</p>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <p>CompleteFuture에서 제공하는 runAsync나 supplyAsync를 사용하면 Executors로 직접 쓰레드풀을 생성할 필요가 없이,</p>
+
+        <p>ForkJoinPool에서 제공하는 쓰레드 풀에 Task를 할당할 수 있다. (매우 편리하다!)</p>
+      </li>
+      <li>
+        <p>CompleteFuture를 사용하면 콜백지옥없이 thenApplyAsync와 같은 메소드를 통해, promise패턴으로 구현이 가능하다.</p>
+      </li>
+      <li>
+        <p>모든 주문이 완료된 상태에서 3초간 input이 들어오지 않으면 종료시킨다는 조건이 있었는데, io 블락중인 상태를 어떻게 종료해야할지 몰라서 정말 힘들었다.</p>
+
+        <ol>
+          <li>
+            <p>io입력 받는 부분을 CompletFuture를 통해 non-block 상태로 실행시킨다.</p>
+          </li>
+          <li>
+            <p>future.getNow(null) 메소드를 통해 (task가 완료되면 리턴값을, 아직 진행중이면 null을 반환한다는 의미)</p>
+
+            <p>io로 input이 들어왔는지 판단한다.</p>
+          </li>
+          <li>
+            <p>io로 input이 들어오지 않은 상태에서 모든 주문이 끝났고, 주문이 끝난지 3초 이상 지났으면 함수를 return해준다.</p>
+          </li>
+          <li>
+            <p>데몬 쓰레드에서 돌고있는 Scanner.nextLine()이 종료되지 않은 상태에서 메인 쓰레드가 종료되기 때문에, 프로세스가 종료된다.</p>
+
+            <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">startOrder</span><span class="o">(){</span>
+        <span class="n">showMenu</span><span class="o">();</span> <span class="c1">//메뉴 목록 출력</span>
+        <span class="n">showHowToOrder</span><span class="o">();</span> <span class="c1">//주문하는 방법 출력</span>
+        <span class="n">orderCompleted</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span> <span class="c1">//주문받기 시작했기 때문에, 주문이 완료된적 없음</span>
+       
+        <span class="nc">Scanner</span> <span class="n">sc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+        <span class="k">while</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+            <span class="nc">CompletableFuture</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">listen</span> <span class="o">=</span> <span class="nc">CompletableFuture</span><span class="o">.</span><span class="na">supplyAsync</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="n">sc</span><span class="o">.</span><span class="na">nextLine</span><span class="o">());</span>
+            <span class="nc">String</span> <span class="n">orderString</span><span class="o">;</span>
+            <span class="k">while</span><span class="o">((</span><span class="n">orderString</span> <span class="o">=</span> <span class="n">listen</span><span class="o">.</span><span class="na">getNow</span><span class="o">(</span><span class="kc">null</span><span class="o">))</span> <span class="o">==</span> <span class="kc">null</span><span class="o">){</span> <span class="c1">//listen값이 null이 아닌동안 계속 확인</span>
+                <span class="k">try</span><span class="o">{</span><span class="nc">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">10</span><span class="o">);}</span> <span class="k">catch</span><span class="o">(</span><span class="nc">InterruptedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{};</span>
+                <span class="kt">double</span> <span class="n">currentTime</span> <span class="o">=</span> <span class="nc">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">();</span>
+                <span class="k">if</span><span class="o">(</span><span class="n">orderCompleted</span> <span class="o">&amp;&amp;</span> <span class="n">currentTime</span> <span class="o">-</span> <span class="n">completedTime</span> <span class="o">&gt;=</span> <span class="mi">3000</span><span class="o">){</span> <span class="c1">//주문완료, 3초 지났으면 종료</span>
+                    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"모든 메뉴가 완성되었습니다."</span><span class="o">);</span>
+                    <span class="k">return</span><span class="o">;</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+            <span class="n">orderCompleted</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+            <span class="nc">Order</span> <span class="n">order</span> <span class="o">=</span> <span class="n">translateOrder</span><span class="o">(</span><span class="n">orderString</span><span class="o">);</span>
+            <span class="k">if</span><span class="o">(</span><span class="n">order</span> <span class="o">==</span> <span class="kc">null</span><span class="o">){</span>
+                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"올바른 형식을 입력해주세요."</span><span class="o">);</span>
+            <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+                <span class="n">orderList</span><span class="o">.</span><span class="na">addOrder</span><span class="o">(</span><span class="n">order</span><span class="o">);</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+</code></pre></div>            </div>
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="잘못한-것">잘못한 것</h2>
+
+<ul>
+  <li>미션이 생각보다 어려워서, 알고리즘 공부와 자바의정석 읽기를 못했다.</li>
+</ul>
+
+<h2 id="잘한-것">잘한 것</h2>
+
+<ul>
+  <li>생각보다 어려웠는데 새벽 3시까지 코딩해서 결국 다 만들었다 ㅎㅎ</li>
+</ul>
+
+<h2 id="느낌">느낌</h2>
+
+<ul>
+  <li>힘든 일이 있어서 멘붕이 왔었는데, 다시 회복하고 있다.</li>
+  <li>깨졌던 공부 루틴을 회복하기 시작해서 좋다.</li>
+  <li>CompleteFuture를 사용하니까 너무 편리하다. (내부 작동원리 등은 계속 써가면서 공부해야 할 것 같다.)</li>
+</ul>
+
+<h2 id="할-일">할 일</h2>
+
+<ul>
+  <li>코드스쿼드 미션 하기</li>
+  <li>프로그래머스 문제 풀기</li>
+</ul>
+
+
+	</div>
+</article>
+		</div>
+	</div>
+  </body>
+</html>
