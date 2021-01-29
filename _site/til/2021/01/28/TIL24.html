@@ -120,69 +120,56 @@
 			<article class="post">
 	<header class="post-header">
 		<div class="post-title"> 
-			리눅스 group이란, group 변경
+			21년 1월 28일
 		</div>
-		<time class="post-date dt-published" datetime="2021-01-08T00:00:00+09:00" itemprop="datePublished">2021/01/08
+		<time class="post-date dt-published" datetime="2021-01-28T00:00:00+09:00" itemprop="datePublished">2021/01/28
 		</time>		
 	</header>
 
 	<div class="post-content">
-		<h2 id="리눅스에서-group이란">리눅스에서 group이란</h2>
-
-<p>리눅스에선 group이라는 것이 있는데, 어떤 파일이나 폴더를 특정 User에게만 공유하고 싶을 때 사용한다.</p>
+		<h2 id="한-일">한 일</h2>
 
 <ul>
-  <li>root 디렉터리에서 ls -l 커맨드를 치면 아래와 같은 형식으로 폴더 및 파일 정보가 뜬다.</li>
+  <li>
+    <p>코드스쿼드 미션으로 docker로 mysql을 실행하고 locale 설정하는 과정을 진행했다.</p>
+
+    <ul>
+      <li>도커허브의 mysql:5.7 이미지를 이용하여 실행했다.</li>
+      <li>해당 이미지는 debian linux를 토대로 mysql이 설치되어 있었다.</li>
+      <li>debian에서 locale설정하는 법을 알게 되었다.</li>
+      <li>
+        <p>쉘 스크립트를 이용해 file을 작성하고 file을 bulk insert하여 100만개의 랜덤데이터를 생성했다.</p>
+      </li>
+      <li><a href="https://isaac56.github.io/docker/2021/01/28/Docker_mysql_image_run_config.html">환경설정한 기록</a></li>
+    </ul>
+  </li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>drwxr-xr-x  93 root root     4096  Jan  8 01:25 etc
-</code></pre></div></div>
-<ol>
-  <li><code class="highlighter-rouge">rwxr-xr-x</code> 는 etc라는 폴더에 접근 권한이다.</li>
-  <li>3글자씩 잘라서, 소유자/그룹/타인 에 대한 접근 권한이다.</li>
-  <li><code class="highlighter-rouge">root root</code> 는 소유자/그룹 이 누구인지를 뜻한다.</li>
-</ol>
-
-<p>이 때, group1이라는 그룹에 속한 사용자들에게만 권한을 주고 싶다면,</p>
-
-<p>해당 폴더의 그룹을 group1으로 바꾸고 그룹에 대한 접근 권한을 설정해주면 된다.</p>
-
-<h3 id="현재-생성되어-있는-group-확인">현재 생성되어 있는 Group 확인</h3>
-
-<p>현재 생성되어 있는 group은 /etc/group 파일에서 확인할 수 있다.</p>
-
-<h3 id="특정-유저의-그룹-확인">특정 유저의 그룹 확인</h3>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#id user1
-</code></pre></div></div>
-
-<h3 id="그룹-생성하기">그룹 생성하기</h3>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#groupadd -g 777 group1
-</code></pre></div></div>
+<h2 id="잘못한-것">잘못한 것</h2>
 
 <ul>
-  <li>GID가 777인 그룹 group1을 만든다.</li>
+  <li>전날 늦게 잔 후유증으로 집중이 잘안되서 일찍 자버렸다.</li>
+  <li>코드스쿼드 미션 이외에 개인공부를 하지 못했다(알고리즘, 자바의정석 읽기 등)</li>
 </ul>
 
-<h3 id="유저를-그룹에-가입시키기">유저를 그룹에 가입시키기</h3>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#usermod -G group1 user1
-</code></pre></div></div>
+<h2 id="잘한-것">잘한 것</h2>
 
 <ul>
-  <li>user1을 group1에 가입시킨다.</li>
-  <li>user1이 세 개 이상 그룹에 가입하기 위해서는 /etc/group을 수정해야함</li>
+  <li>ㅠㅠ</li>
 </ul>
 
-<h3 id="그룹-삭제하기">그룹 삭제하기</h3>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#groupdel group1
-</code></pre></div></div>
+<h2 id="느낌">느낌</h2>
 
 <ul>
-  <li>group1을 삭제 시킨다.</li>
-  <li>group1을 기본그룹으로 하는 user가 있다면 삭제가 안됨</li>
+  <li>회사에서 종종 사용하던 docker를 이용한 미션이 나와서 반가웠다.</li>
+  <li>자주 사용하지 못해서 docker docs를 확인하며 명령을 실행했고 익숙해져서 기분이 좋다.</li>
+</ul>
+
+<h2 id="할-일">할 일</h2>
+
+<ul>
+  <li>코드스쿼드 미션 하기</li>
+  <li>프로그래머스 문제 풀기</li>
 </ul>
 
 

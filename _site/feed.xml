@@ -1,4 +1,47 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-28T22:25:40+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">Docker mysql 이미지 실행 및 한글설정</title><link href="http://localhost:4000/docker/2021/01/28/Docker_mysql_image_run_config.html" rel="alternate" type="text/html" title="Docker mysql 이미지 실행 및 한글설정" /><published>2021-01-28T00:00:00+09:00</published><updated>2021-01-28T00:00:00+09:00</updated><id>http://localhost:4000/docker/2021/01/28/Docker_mysql_image_run_config</id><content type="html" xml:base="http://localhost:4000/docker/2021/01/28/Docker_mysql_image_run_config.html">&lt;h3 id=&quot;docker-docs를-참고하여-진행했습니다&quot;&gt;Docker Docs를 참고하여 진행했습니다.&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-29T16:39:22+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 1월 28일</title><link href="http://localhost:4000/til/2021/01/28/TIL24.html" rel="alternate" type="text/html" title="21년 1월 28일" /><published>2021-01-28T00:00:00+09:00</published><updated>2021-01-28T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/28/TIL24</id><content type="html" xml:base="http://localhost:4000/til/2021/01/28/TIL24.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;코드스쿼드 미션으로 docker로 mysql을 실행하고 locale 설정하는 과정을 진행했다.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;도커허브의 mysql:5.7 이미지를 이용하여 실행했다.&lt;/li&gt;
+      &lt;li&gt;해당 이미지는 debian linux를 토대로 mysql이 설치되어 있었다.&lt;/li&gt;
+      &lt;li&gt;debian에서 locale설정하는 법을 알게 되었다.&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;쉘 스크립트를 이용해 file을 작성하고 file을 bulk insert하여 100만개의 랜덤데이터를 생성했다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/docker/2021/01/28/Docker_mysql_image_run_config.html&quot;&gt;환경설정한 기록&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;전날 늦게 잔 후유증으로 집중이 잘안되서 일찍 자버렸다.&lt;/li&gt;
+  &lt;li&gt;코드스쿼드 미션 이외에 개인공부를 하지 못했다(알고리즘, 자바의정석 읽기 등)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ㅠㅠ&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;회사에서 종종 사용하던 docker를 이용한 미션이 나와서 반가웠다.&lt;/li&gt;
+  &lt;li&gt;자주 사용하지 못해서 docker docs를 확인하며 명령을 실행했고 익숙해져서 기분이 좋다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;코드스쿼드 미션 하기&lt;/li&gt;
+  &lt;li&gt;프로그래머스 문제 풀기&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Docker" /><category term="Algorithm" /></entry><entry><title type="html">Docker mysql 이미지 실행 및 한글설정</title><link href="http://localhost:4000/docker/2021/01/28/Docker_mysql_image_run_config.html" rel="alternate" type="text/html" title="Docker mysql 이미지 실행 및 한글설정" /><published>2021-01-28T00:00:00+09:00</published><updated>2021-01-28T00:00:00+09:00</updated><id>http://localhost:4000/docker/2021/01/28/Docker_mysql_image_run_config</id><content type="html" xml:base="http://localhost:4000/docker/2021/01/28/Docker_mysql_image_run_config.html">&lt;h3 id=&quot;docker-docs를-참고하여-진행했습니다&quot;&gt;Docker Docs를 참고하여 진행했습니다.&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://docs.docker.com/engine/reference/commandline/&quot;&gt;Docker Docs&lt;/a&gt;&lt;/p&gt;
 
@@ -877,160 +920,4 @@ character-set-server = utf8
   &lt;li&gt;코드스쿼드 미션하기&lt;/li&gt;
   &lt;li&gt;프로그래머스 문제 풀기&lt;/li&gt;
   &lt;li&gt;TCP/IP 쉽게 더쉽게 읽기&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /></entry><entry><title type="html">Process와 Thread</title><link href="http://localhost:4000/os/2021/01/21/Process_vs_Thread.html" rel="alternate" type="text/html" title="Process와 Thread" /><published>2021-01-21T00:00:00+09:00</published><updated>2021-01-21T00:00:00+09:00</updated><id>http://localhost:4000/os/2021/01/21/Process_vs_Thread</id><content type="html" xml:base="http://localhost:4000/os/2021/01/21/Process_vs_Thread.html">&lt;h2 id=&quot;process-란&quot;&gt;Process 란&lt;/h2&gt;
-
-&lt;p&gt;일반적으로 Process는 프로그램을 실행시킨 상태라고도 하고, 실행중인 프로그램이라고도 한다.&lt;/p&gt;
-
-&lt;p&gt;그렇다면 실행중이라는 상태는 구체적으로 어떤 모양일까?&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;프로그램은 디스크에 저장된 정적 데이터와 코드의 모임일 뿐이다.&lt;/p&gt;
-
-&lt;p&gt;프로그램이 프로세스로 실행되는 과정을 간단하게(?) 설명하면 다음과 같다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;운영체제는 프로그램의 코드와 정적 데이터를 프로세스의 메모리 공간(Code와 Data 영역)에 적재한다.&lt;/li&gt;
-  &lt;li&gt;main함수를 찾아 CPU의 PC(Program Counter) 레지스터에 실행할 코드의 메모리 주소를 저장한다.&lt;/li&gt;
-  &lt;li&gt;프로그램 실행 시 입력했던 Argument와 함께 Stack 영역을 구성한다.&lt;/li&gt;
-  &lt;li&gt;프로세스가 사용할 Heap영역의 메모리를 할당한다.(Heap 영역은 동적 할당을 위해 사용된다.)&lt;/li&gt;
-  &lt;li&gt;PC 레지스터가 가리키는 명령를 실행하기 위해, 데이터를 메모리로부터 읽어 레지스터에 저장한다.&lt;/li&gt;
-  &lt;li&gt;레지스터에 저장한 값을 읽어 ALU가 명령에 따라 계산하고, 이 값을 다시 결과값 레지스터에 저장한다.&lt;/li&gt;
-  &lt;li&gt;레지스터에 저장된 결과값을 다시 메모리에 저장한다.&lt;/li&gt;
-  &lt;li&gt;PC 레지스터의 값을 증가시켜 다음 명령을 실행할 준비를 한다.&lt;/li&gt;
-  &lt;li&gt;(5)~(8)이 반복되며 프로세스가 진행된다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;이런식으로 프로세스는 실행된다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;즉, Process란 디스크에 저장되어 있던 코드뭉치를 메모리에 적재하여 실행 가능하게 한 상태라고 할 수 있다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;context-switch&quot;&gt;Context Switch&lt;/h2&gt;
-
-&lt;p&gt;일반적으로 OS는 마치 CPU 여러대가 있는 것처럼 착각할 수 있도록, 시분할 기법을 사용하여 프로세스들을 실행시켜준다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;예를 들어 프로세스가 3개 있다고 했을 때, 1번을 아주 조~금 실행한 후, 2번을 아주 조~금 실행한 후,&lt;/p&gt;
-
-&lt;p&gt;3번을 아주 조~금 실행하는 방식을 통해 모든 프로세스가 동시에 진행되는 것처럼 느끼게 해준다.&lt;/p&gt;
-
-&lt;p&gt;(어떤 순서로 돌아가며 프로세스를 실행시킬 지는 스케줄러 정책에 따라 다르다.)&lt;/p&gt;
-
-&lt;p&gt;마치 CPU가 여러대 있는 것처럼 느끼게 해주는 것인데, 이렇게 하기 위해선 Context Switch가 반드시 필요하다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Context란 아주 간단하다. Process가 실행되던 그 상황을 의미한다.&lt;/p&gt;
-
-&lt;p&gt;1번 프로세스를 그 상황 그대로 멈추게 한 후, 마찬가지로 멈춰 있던 2번 프로세스를 실행시켜줘야 하고,&lt;/p&gt;
-
-&lt;p&gt;다시 1번 프로세스를 실행할 시간이 되면 멈췄던 그 상황 그대로 되살려서 실행해야 한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;그렇다면 그 ‘상황’(Context)는 어떻게 저장할까?&lt;/p&gt;
-
-&lt;p&gt;위에서 설명한 Process를 통해 유추해볼 수 있는데,&lt;/p&gt;
-
-&lt;p&gt;프로세스가 사용하던 Memory 주소와 레지스터값들을 저장하면 된다!&lt;/p&gt;
-
-&lt;p&gt;(Memory 주소를 저장하는 이유는 메모리 가상화와 관련된 내용인데 지금은 다루지 않겠다.)&lt;/p&gt;
-
-&lt;p&gt;(이 외에도 pid, process state, open files 등 저장할 값들이 있지만 생략하겠다. )&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;그 상황에 사용하던 레지스터 값(PC를 포함한)들을 다시 CPU의 레지스터에 올리게 되면,&lt;/p&gt;
-
-&lt;p&gt;다시 PC에 저장된 메모리 주소를 읽어 명령을 실행함으로써, 정지되었던 그 상황에서 실행하는 것이 가능해진다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;이런 context를 저장하는 구조체를 PCB(Process Control Block) 이라고 하는데,&lt;/p&gt;
-
-&lt;p&gt;실행중인 Process의 PCB를 메모리에 저장한 후, 다음 실행할 Process의 PCB를&lt;/p&gt;
-
-&lt;p&gt;메모리에서 읽어(CPU 레지스터에 올려) 실행하는 것을 Context Switch라고 한다.&lt;/p&gt;
-
-&lt;p&gt;(User mode, kernel mode 간의 switch 등 많은 과정이 생략되었으니, 자세히 알고 싶으면 관련 내용을 찾아보기 바란다.)&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;thread-란&quot;&gt;Thread 란&lt;/h2&gt;
-
-&lt;p&gt;Thread는 Process에 종속된 개념으로 실제로 작업을 수행하는 주체라고 할 수 있다.&lt;/p&gt;
-
-&lt;p&gt;위 설명에서 Process가 실행될 때 main함수를 찾아 PC에 저장해주고 Stack 프레임을 구성해준다고 했는데,&lt;/p&gt;
-
-&lt;p&gt;이것은 프로세스의 시작이라고 할 수도 있지만, 메인 쓰레드의 시작이라고 할 수도 있다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;쓰레드는 각각 레지스터 셋(PC를 포함한)과 Stack프레임을 갖고 있어서,&lt;/p&gt;
-
-&lt;p&gt;한 프로세스이지만 각각의 쓰레드가 독립적으로 명령을 수행하는 것처럼 보이게 해준다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;어? 위에서 설명한 Context Switch를 보면, 레지스터 셋은 Context고 이걸 각각 갖고 있으면 Process가 아닌가?&lt;/p&gt;
-
-&lt;p&gt;라고 생각할 수 있지만, 가장 큰 차이점은 같은 Process의 쓰레드는 메모리 공간을 공유한다는 것이다.&lt;/p&gt;
-
-&lt;p&gt;쓰레드는 레지스터셋과 Stack프레임을 각각 갖고 있지만, 프로세스의 Code, Data, Heap 메모리 공간을 공유한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;따라서 쓰레드간의 Context switch에서는 쓰레드가 사용할 메모리 주소값을 교체할 필요가 없고,&lt;/p&gt;
-
-&lt;p&gt;레지스터 값과 Stack Pointer만 교체하면 되므로 Context Switch의 오버헤드가 프로세스보다 훨씬 적다.&lt;/p&gt;
-
-&lt;p&gt;뿐만 아니라, Data나 Heap 영역을 공유하므로 쓰레드 간의 데이터 공유도 가능하다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Process끼리는 Memory Protection 정책에 의해 같은 메모리로 접근이 불가능하다.&lt;/p&gt;
-
-  &lt;p&gt;Process끼리는 시스템에서 제공하는 IPC(Inter Process Communication)으로만 통신 가능&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;요약-process-vs-thread&quot;&gt;요약 (Process vs Thread)&lt;/h1&gt;
-
-&lt;p&gt;프로세스: 운영체제로부터 메모리를 할당받아 실행할 수 있게된 작업의 단위 (메모리에 올라간 프로그램)&lt;/p&gt;
-
-&lt;p&gt;스레드: 프로세스가 할당받은 메모리를 이용하는 실행 흐름의 단위 (프로그램을 실행하는 독립적인 실행 흐름)&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Thread의 장점:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;쓰레드 간의 Context Switching이 프로세스 간의 Context Switching보다 빠르다.&lt;/li&gt;
-  &lt;li&gt;Stack을 제외한 메모리 자원을 공유하고 있어서, 쓰레드 간의 통신이 프로세스 간의 통신보다 쉽다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Thread의 단점:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Process의 자원을 공유하기 때문에, 쓰레드 중 하나에 문제만 생겨도 Process가 종료되고, 따라서 전체 쓰레드도 종료된다.&lt;/p&gt;
-
-    &lt;p&gt;※ 자바에서는 메인 쓰레드가 종료되어도 돌고 있는 쓰레드가 있으면 Process가 종료되지 않는다.&lt;/p&gt;
-
-    &lt;p&gt;​	즉, 모든 쓰레드가 종료되어야 Process가 종료되기 때문에 쓰레드 중 하나에 문제가 생겨도 다른 쓰레드는 잘 돌아간다.&lt;/p&gt;
-
-    &lt;p&gt;​	(정확히는 데몬 쓰레드를 제외한 일반 쓰레드 모두가 종료되어야 Process가 종료된다.)&lt;/p&gt;
-
-    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Stack을 제외한 메모리 자원을 공유하고 있어서, 프로그램 설계와 디버깅이 어렵다.&lt;/p&gt;
-
-    &lt;p&gt;(동시에 같은 변수에 접근할 수 있기 때문에 동기화(Synchronization), 교착상태(deadlock)를 고려한 설계가 필요하다.)&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="OS" /><category term="Process" /><category term="Thread" /></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /></entry></feed>
