@@ -127,35 +127,59 @@
 			<article class="post">
 	<header class="post-header">
 		<div class="post-title"> 
-			su: Authentication failure 발생하는 이유
+			Load Data (bulk insert) 시도 secure_file_priv 문제 뜰 때
 		</div>
-		<time class="post-date dt-published" datetime="2021-01-07T00:00:00+09:00" itemprop="datePublished">2021/01/07
+		<time class="post-date dt-published" datetime="2021-01-29T00:00:00+09:00" itemprop="datePublished">2021/01/29
 		</time>		
 	</header>
 
 	<div class="post-content">
-		<h1 id="root-비번-설정">Root 비번 설정</h1>
+		<h2 id="mysql-에서-bulk-insert-명령을-실행할-때-secure_file_priv-에러-발생">Mysql 에서 bulk insert 명령을 실행할 때, secure_file_priv 에러 발생</h2>
 
 <ul>
   <li>
-    <p>ubuntu를 깔고 사용자 등록 후 su 명령어를 통해 root로 전환하려는데 에러가 났다.</p>
+    <p>쉘스크립트에서 아래와 같이 특정 파일을 bulk insert시도 하였고 secure_file_priv에러 발생하였다.</p>
+  </li>
+  <li>
+    <p>test.sh</p>
 
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>su : Authentication failure
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+  
+mysql <span class="nt">-uroot</span> <span class="nt">-p</span>패스워드 db명 <span class="o">&lt;&lt;</span> <span class="no">EOF</span><span class="sh">
+  
+LOAD DATA INFILE 'test.txt'
+INTO TABLE user_log
+FIELDS TERMINATED BY ',';
+</span><span class="no">EOF
+</span></code></pre></div>    </div>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ERROR 1290 (HY000) at line 2: The MySQL server is running with the --secure-file-priv option so it cannot execute this statement
 </code></pre></div>    </div>
-
-    <ul>
-      <li>
-        <p>나의 경우 root 비밀번호 설정을 하지 않아서 나는 에러였다.</p>
-      </li>
-      <li>
-        <p>root 비밀번호를 설정한다.</p>
-
-        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>passwd root
-</code></pre></div>        </div>
-      </li>
-    </ul>
   </li>
 </ul>
+
+<h2 id="해결방법">해결방법</h2>
+
+<ul>
+  <li>mysql에 접속하여 변수 상태를 확인한다.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql&gt; SELECT @@GLOBAL.secure_file_priv;
++---------------------------+
+| @@GLOBAL.secure_file_priv |
++---------------------------+
+| /var/lib/mysql-files/     |
++---------------------------+
+1 row in set (0.00 sec)
+</code></pre></div></div>
+
+<p>여기서 secure_file_priv에 설정된 경로에 파일이 위치해야만 bulk insert가 가능하다고 한다.</p>
+
+<p>다만, mysql 설정 파일에 아래 내용을 추가한 후 mysql을 재시작하면 아무 위치에서나 bulk insert가 가능하다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[mysqld]
+secure-file-priv=""
+</code></pre></div></div>
 
 
 	</div>
