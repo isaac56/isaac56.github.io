@@ -127,60 +127,83 @@
 			<article class="post">
 	<header class="post-header">
 		<div class="post-title"> 
-			Load Data (bulk insert) 시도 secure_file_priv 문제 뜰 때
+			21년 1월 30일
 		</div>
-		<time class="post-date dt-published" datetime="2021-01-29T00:00:00+09:00" itemprop="datePublished">2021/01/29
+		<time class="post-date dt-published" datetime="2021-01-30T00:00:00+09:00" itemprop="datePublished">2021/01/30
 		</time>		
 	</header>
 
 	<div class="post-content">
-		<h2 id="mysql-에서-bulk-insert-명령을-실행할-때-secure_file_priv-에러-발생">Mysql 에서 bulk insert 명령을 실행할 때, secure_file_priv 에러 발생</h2>
+		<h2 id="한-일">한 일</h2>
 
 <ul>
   <li>
-    <p>쉘스크립트에서 아래와 같이 특정 파일을 bulk insert시도 하였고 secure_file_priv에러 발생하였다.</p>
-  </li>
-  <li>
-    <p>test.sh</p>
+    <p>프로그래머스 셔틀버스 문제를 풀었다.</p>
 
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
-  
-mysql <span class="nt">-uroot</span> <span class="nt">-p</span>패스워드 db명 <span class="o">&lt;&lt;</span> <span class="no">EOF</span><span class="sh">
-  
-LOAD DATA INFILE 'test.txt'
-INTO TABLE user_log
-FIELDS TERMINATED BY ',';
-</span><span class="no">EOF
-</span></code></pre></div>    </div>
+    <ol>
+      <li>
+        <p>셔틀버스</p>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ERROR 1290 (HY000) at line 2: The MySQL server is running with the --secure-file-priv option so it cannot execute this statement
-</code></pre></div>    </div>
+        <ul>
+          <li>
+            <p>탑승을 위해 고려하는 timetable의 최대 개수가 2000이기 때문에, 구현자체가 중요하다고 생각했다.</p>
+          </li>
+          <li>
+            <p>간단한 구현이었다.</p>
+
+            <ol>
+              <li>
+                <p>timetable을 시간순서로 정렬한다.</p>
+              </li>
+              <li>
+                <p>주어진 간격대로 셔틀버스를 출발시키고, 탈 수 있는 승객을 태운다.</p>
+              </li>
+              <li>
+                <p>마지막 셔틀버스를 출발시킬 때</p>
+
+                <ul>
+                  <li>
+                    <p>정원이 꽉차지 않았다면 마지막 셔틀버스출발시간에 줄을 서야한다.</p>
+                  </li>
+                  <li>
+                    <p>정원이 꽉찼다면 마지막 승객보다 1분 빨리 줄을 서야한다.</p>
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </li>
+        </ul>
+      </li>
+    </ol>
   </li>
 </ul>
 
-<h2 id="해결방법">해결방법</h2>
+<h2 id="잘못한-것">잘못한 것</h2>
 
 <ul>
-  <li>mysql에 접속하여 변수 상태를 확인한다.</li>
+  <li>계획한 걸 제대로 못하고 있다. 알고리즘만 한문제 겨우 풀었다.</li>
+  <li>개인 멘탈 문제이다. 안좋은 일이 많은 한 주였다.</li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql&gt; SELECT @@GLOBAL.secure_file_priv;
-+---------------------------+
-| @@GLOBAL.secure_file_priv |
-+---------------------------+
-| /var/lib/mysql-files/     |
-+---------------------------+
-1 row in set (0.00 sec)
-</code></pre></div></div>
+<h2 id="잘한-것">잘한 것</h2>
 
-<p>여기서 secure_file_priv에 설정된 경로에 파일이 위치해야만 bulk insert가 가능하다고 한다.</p>
+<ul>
+  <li></li>
+</ul>
 
-<p>다만, mysql 설정 파일에 아래 내용을 추가한 후 mysql을 재시작하면 아무 위치에서나 bulk insert가 가능하다.</p>
+<h2 id="느낌">느낌</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[mysqld]
-secure-file-priv=""
-</code></pre></div></div>
+<ul>
+  <li>요즘 집중이 흐트러진다.</li>
+  <li>개발 자체는 재밌지만, 블로그 글을 쓰는 것에 대한 부담?때문에 공부를 회피하는것 같다.</li>
+  <li>글을 잘 쓰려고 부담을 갖지말아야겠다 ㅠㅠ</li>
+</ul>
 
+<h2 id="할-일">할 일</h2>
+
+<ul>
+  <li>쉬기</li>
+</ul>
 
 	</div>
 </article>

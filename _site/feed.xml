@@ -1,4 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-29T16:50:08+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">Load Data (bulk insert) 시도 secure_file_priv 문제 뜰 때</title><link href="http://localhost:4000/mysql/2021/01/29/mysql_secure_file_priv_err.html" rel="alternate" type="text/html" title="Load Data (bulk insert) 시도 secure_file_priv 문제 뜰 때" /><published>2021-01-29T00:00:00+09:00</published><updated>2021-01-29T00:00:00+09:00</updated><id>http://localhost:4000/mysql/2021/01/29/mysql_secure_file_priv_err</id><content type="html" xml:base="http://localhost:4000/mysql/2021/01/29/mysql_secure_file_priv_err.html">&lt;h2 id=&quot;mysql-에서-bulk-insert-명령을-실행할-때-secure_file_priv-에러-발생&quot;&gt;Mysql 에서 bulk insert 명령을 실행할 때, secure_file_priv 에러 발생&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-31T23:47:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 1월 30일</title><link href="http://localhost:4000/til/2021/01/30/TIL25.html" rel="alternate" type="text/html" title="21년 1월 30일" /><published>2021-01-30T00:00:00+09:00</published><updated>2021-01-30T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/30/TIL25</id><content type="html" xml:base="http://localhost:4000/til/2021/01/30/TIL25.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;프로그래머스 셔틀버스 문제를 풀었다.&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;셔틀버스&lt;/p&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;p&gt;탑승을 위해 고려하는 timetable의 최대 개수가 2000이기 때문에, 구현자체가 중요하다고 생각했다.&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;간단한 구현이었다.&lt;/p&gt;
+
+            &lt;ol&gt;
+              &lt;li&gt;
+                &lt;p&gt;timetable을 시간순서로 정렬한다.&lt;/p&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;p&gt;주어진 간격대로 셔틀버스를 출발시키고, 탈 수 있는 승객을 태운다.&lt;/p&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;p&gt;마지막 셔틀버스를 출발시킬 때&lt;/p&gt;
+
+                &lt;ul&gt;
+                  &lt;li&gt;
+                    &lt;p&gt;정원이 꽉차지 않았다면 마지막 셔틀버스출발시간에 줄을 서야한다.&lt;/p&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;p&gt;정원이 꽉찼다면 마지막 승객보다 1분 빨리 줄을 서야한다.&lt;/p&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+            &lt;/ol&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;계획한 걸 제대로 못하고 있다. 알고리즘만 한문제 겨우 풀었다.&lt;/li&gt;
+  &lt;li&gt;개인 멘탈 문제이다. 안좋은 일이 많은 한 주였다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;요즘 집중이 흐트러진다.&lt;/li&gt;
+  &lt;li&gt;개발 자체는 재밌지만, 블로그 글을 쓰는 것에 대한 부담?때문에 공부를 회피하는것 같다.&lt;/li&gt;
+  &lt;li&gt;글을 잘 쓰려고 부담을 갖지말아야겠다 ㅠㅠ&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;쉬기&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /></entry><entry><title type="html">Load Data (bulk insert) 시도 secure_file_priv 문제 뜰 때</title><link href="http://localhost:4000/mysql/2021/01/29/mysql_secure_file_priv_err.html" rel="alternate" type="text/html" title="Load Data (bulk insert) 시도 secure_file_priv 문제 뜰 때" /><published>2021-01-29T00:00:00+09:00</published><updated>2021-01-29T00:00:00+09:00</updated><id>http://localhost:4000/mysql/2021/01/29/mysql_secure_file_priv_err</id><content type="html" xml:base="http://localhost:4000/mysql/2021/01/29/mysql_secure_file_priv_err.html">&lt;h2 id=&quot;mysql-에서-bulk-insert-명령을-실행할-때-secure_file_priv-에러-발생&quot;&gt;Mysql 에서 bulk insert 명령을 실행할 때, secure_file_priv 에러 발생&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -43,7 +112,50 @@ FIELDS TERMINATED BY ',';
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[mysqld]
 secure-file-priv=&quot;&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="Mysql" /></entry><entry><title type="html">Docker mysql 이미지 실행 및 한글설정</title><link href="http://localhost:4000/docker/2021/01/28/Docker_mysql_image_run_config.html" rel="alternate" type="text/html" title="Docker mysql 이미지 실행 및 한글설정" /><published>2021-01-28T00:00:00+09:00</published><updated>2021-01-28T00:00:00+09:00</updated><id>http://localhost:4000/docker/2021/01/28/Docker_mysql_image_run_config</id><content type="html" xml:base="http://localhost:4000/docker/2021/01/28/Docker_mysql_image_run_config.html">&lt;h3 id=&quot;docker-docs를-참고하여-진행했습니다&quot;&gt;Docker Docs를 참고하여 진행했습니다.&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="Mysql" /></entry><entry><title type="html">21년 1월 28일</title><link href="http://localhost:4000/til/2021/01/28/TIL24.html" rel="alternate" type="text/html" title="21년 1월 28일" /><published>2021-01-28T00:00:00+09:00</published><updated>2021-01-28T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/28/TIL24</id><content type="html" xml:base="http://localhost:4000/til/2021/01/28/TIL24.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;코드스쿼드 미션으로 docker로 mysql을 실행하고 locale 설정하는 과정을 진행했다.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;도커허브의 mysql:5.7 이미지를 이용하여 실행했다.&lt;/li&gt;
+      &lt;li&gt;해당 이미지는 debian linux를 토대로 mysql이 설치되어 있었다.&lt;/li&gt;
+      &lt;li&gt;debian에서 locale설정하는 법을 알게 되었다.&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;쉘 스크립트를 이용해 file을 작성하고 file을 bulk insert하여 100만개의 랜덤데이터를 생성했다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/docker/2021/01/28/Docker_mysql_image_run_config.html&quot;&gt;환경설정한 기록&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;전날 늦게 잔 후유증으로 집중이 잘안되서 일찍 자버렸다.&lt;/li&gt;
+  &lt;li&gt;코드스쿼드 미션 이외에 개인공부를 하지 못했다(알고리즘, 자바의정석 읽기 등)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ㅠㅠ&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;회사에서 종종 사용하던 docker를 이용한 미션이 나와서 반가웠다.&lt;/li&gt;
+  &lt;li&gt;자주 사용하지 못해서 docker docs를 확인하며 명령을 실행했고 익숙해져서 기분이 좋다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;코드스쿼드 미션 하기&lt;/li&gt;
+  &lt;li&gt;프로그래머스 문제 풀기&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Docker" /><category term="Algorithm" /></entry><entry><title type="html">Docker mysql 이미지 실행 및 한글설정</title><link href="http://localhost:4000/docker/2021/01/28/Docker_mysql_image_run_config.html" rel="alternate" type="text/html" title="Docker mysql 이미지 실행 및 한글설정" /><published>2021-01-28T00:00:00+09:00</published><updated>2021-01-28T00:00:00+09:00</updated><id>http://localhost:4000/docker/2021/01/28/Docker_mysql_image_run_config</id><content type="html" xml:base="http://localhost:4000/docker/2021/01/28/Docker_mysql_image_run_config.html">&lt;h3 id=&quot;docker-docs를-참고하여-진행했습니다&quot;&gt;Docker Docs를 참고하여 진행했습니다.&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://docs.docker.com/engine/reference/commandline/&quot;&gt;Docker Docs&lt;/a&gt;&lt;/p&gt;
 
@@ -140,50 +252,7 @@ character-set-server = utf8
     &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker container restart mysql
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="Docker" /></entry><entry><title type="html">21년 1월 28일</title><link href="http://localhost:4000/til/2021/01/28/TIL24.html" rel="alternate" type="text/html" title="21년 1월 28일" /><published>2021-01-28T00:00:00+09:00</published><updated>2021-01-28T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/28/TIL24</id><content type="html" xml:base="http://localhost:4000/til/2021/01/28/TIL24.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;코드스쿼드 미션으로 docker로 mysql을 실행하고 locale 설정하는 과정을 진행했다.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;도커허브의 mysql:5.7 이미지를 이용하여 실행했다.&lt;/li&gt;
-      &lt;li&gt;해당 이미지는 debian linux를 토대로 mysql이 설치되어 있었다.&lt;/li&gt;
-      &lt;li&gt;debian에서 locale설정하는 법을 알게 되었다.&lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;쉘 스크립트를 이용해 file을 작성하고 file을 bulk insert하여 100만개의 랜덤데이터를 생성했다.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/docker/2021/01/28/Docker_mysql_image_run_config.html&quot;&gt;환경설정한 기록&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;전날 늦게 잔 후유증으로 집중이 잘안되서 일찍 자버렸다.&lt;/li&gt;
-  &lt;li&gt;코드스쿼드 미션 이외에 개인공부를 하지 못했다(알고리즘, 자바의정석 읽기 등)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;ㅠㅠ&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;회사에서 종종 사용하던 docker를 이용한 미션이 나와서 반가웠다.&lt;/li&gt;
-  &lt;li&gt;자주 사용하지 못해서 docker docs를 확인하며 명령을 실행했고 익숙해져서 기분이 좋다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;코드스쿼드 미션 하기&lt;/li&gt;
-  &lt;li&gt;프로그래머스 문제 풀기&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Docker" /><category term="Algorithm" /></entry><entry><title type="html">21년 1월 27일</title><link href="http://localhost:4000/til/2021/01/27/TIL23.html" rel="alternate" type="text/html" title="21년 1월 27일" /><published>2021-01-27T00:00:00+09:00</published><updated>2021-01-27T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/27/TIL23</id><content type="html" xml:base="http://localhost:4000/til/2021/01/27/TIL23.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="Docker" /></entry><entry><title type="html">21년 1월 27일</title><link href="http://localhost:4000/til/2021/01/27/TIL23.html" rel="alternate" type="text/html" title="21년 1월 27일" /><published>2021-01-27T00:00:00+09:00</published><updated>2021-01-27T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/27/TIL23</id><content type="html" xml:base="http://localhost:4000/til/2021/01/27/TIL23.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -857,33 +926,4 @@ character-set-server = utf8
   &lt;li&gt;프로그래머스 문제 풀기&lt;/li&gt;
   &lt;li&gt;TCP/IP 쉽게 더쉽게 읽기&lt;/li&gt;
   &lt;li&gt;자바의 정석 읽기&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /></entry><entry><title type="html">싱글코어에서도 Thread를 늘리면 빨라질까?</title><link href="http://localhost:4000/os/2021/01/22/Is_it_faster_to_increase_thread.html" rel="alternate" type="text/html" title="싱글코어에서도 Thread를 늘리면 빨라질까?" /><published>2021-01-22T00:00:00+09:00</published><updated>2021-01-22T00:00:00+09:00</updated><id>http://localhost:4000/os/2021/01/22/Is_it_faster_to_increase_thread</id><content type="html" xml:base="http://localhost:4000/os/2021/01/22/Is_it_faster_to_increase_thread.html">&lt;h2 id=&quot;싱글코어-cpu-한-개라서-실질적으로-한번에-한-개만-실행할-수-있다고-가정&quot;&gt;싱글코어 CPU 한 개라서, 실질적으로 한번에 한 개만 실행할 수 있다고 가정&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;여기서 덧셈을 하는 300개의 쓰레드를 생성해 돌린다고 가정해보자.&lt;/li&gt;
-  &lt;li&gt;커널 레벨 쓰레드라면, 나의 Task(프로세스, 쓰레드 등 스케줄링해야 하는 작업 단위)가 많아진다.&lt;/li&gt;
-  &lt;li&gt;다른 프로세스도 돌아가고 있을 것이므로, 쓰레드를 늘린 프로세스(나)의 CPU 점유율이 높아져서 내 속도가 빨라진다.&lt;/li&gt;
-  &lt;li&gt;즉, 다른 프로세스도 돌아가고 있고, 커널 레벨 쓰레드라면, 나의 CPU점유율이 높아져서 속도가 빨라진다.&lt;/li&gt;
-  &lt;li&gt;물론, 쓰레드 너무 많이 만든다면 오버헤드가 더 커져서 느려지게 된다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;요약:&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;
-        &lt;p&gt;멀티 프로세스 환경에서 다른 프로세스가 돌아가고 있을 때, 커널 레벨 쓰레드를 늘린다면 프로세스 속도는 빨라진다.&lt;/p&gt;
-
-        &lt;p&gt;(CPU 점유율이 높아지기 때문에)&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;프로세스가 딱 하나만 돌아가고 있거나, 유저 레벨 쓰레드를 늘린다면 오버헤드 때문에 프로세스 속도는 느려진다.&lt;/p&gt;
-
-        &lt;p&gt;(유저 레벨 쓰레드는 프로세스 내에서 쓰레드 스케줄링할 뿐, 운영체제는 프로세스 하나로 보기 때문에 점유율이 높아지지 않는다.)&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="OS" /><category term="Process" /><category term="Thread" /></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /></entry></feed>
