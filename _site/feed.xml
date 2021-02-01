@@ -1,4 +1,260 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-31T23:47:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 1월 30일</title><link href="http://localhost:4000/til/2021/01/30/TIL25.html" rel="alternate" type="text/html" title="21년 1월 30일" /><published>2021-01-30T00:00:00+09:00</published><updated>2021-01-30T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/30/TIL25</id><content type="html" xml:base="http://localhost:4000/til/2021/01/30/TIL25.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-02-01T22:30:22+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">TCP/IP 4계층</title><link href="http://localhost:4000/network/2021/02/01/TCP-IP_4_layer.html" rel="alternate" type="text/html" title="TCP/IP 4계층" /><published>2021-02-01T00:00:00+09:00</published><updated>2021-02-01T00:00:00+09:00</updated><id>http://localhost:4000/network/2021/02/01/TCP:IP_4_layer</id><content type="html" xml:base="http://localhost:4000/network/2021/02/01/TCP-IP_4_layer.html">&lt;h2 id=&quot;tcpip-4계층&quot;&gt;TCP/IP 4계층&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;계층모형
+&lt;br /&gt;&lt;/p&gt;
+
+  &lt;p&gt;계층모형은 컴퓨터들이 정보를 주고받는데 사용하는 프로토콜들을, 각 역할에 맞게 계층으로 나누어 분류한 집합이다.&lt;/p&gt;
+
+  &lt;p&gt;이렇게 역할에 따라 계층을 나눔으로써, 서로 간의 간섭을 최소화하고 사용의 편리성을 높인다.&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;호환성 보장 (다른 제조사 장비들끼리도 통신 가능)으로 인한 비용 절감&lt;/li&gt;
+    &lt;li&gt;문제 발견이 쉬워짐 (어떤 계층에서 문제가 있는지 확인 가능)&lt;/li&gt;
+    &lt;li&gt;다른 계층의 전달 과정을 알 필요가 없어 해결해야할 문제가 단순해짐&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;국제표준화기구 IOS(International Organization for Standardization)에서는 상호 이질적인 네트워크간의 연결에서 호환성의 결여를 막기위해 OSI(Open Systems Interconnection) 모형을 개발했다.&lt;/li&gt;
+  &lt;li&gt;실제 사용되는 TCP/IP는 OSI 참조 모델을 기반으로 상업적이고 실무적으로 이용될 수 있도록 단순화된 모형이다
+    &lt;ul&gt;
+      &lt;li&gt;네트워크 전송 시 데이터 표준을 정리한 것이 OSI 7계층, 이 이론을 실제 사용하는 인터넷 표준이 TCP/IP 4계층이다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;OSI 7계층을 4-5계층으로 분류하여 적용할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;4계층-요약&quot;&gt;4계층 요약&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;TCP/IP 4계층&lt;/th&gt;
+      &lt;th&gt;역할&lt;/th&gt;
+      &lt;th&gt;데이타 단위&lt;/th&gt;
+      &lt;th&gt;전송 주소&lt;/th&gt;
+      &lt;th&gt;예시&lt;/th&gt;
+      &lt;th&gt;장비&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;응용 계층(Application)&lt;/td&gt;
+      &lt;td&gt;응용프로그램 간의 데이타 송수신&lt;/td&gt;
+      &lt;td&gt;Data/Message&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;파일 전송, 이메일, FTP, HTTP, SSH, Telnet, DNS, SMTP 등&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;전송 계층(Transport)&lt;/td&gt;
+      &lt;td&gt;호스트 간의 자료 송수신&lt;/td&gt;
+      &lt;td&gt;Segment&lt;/td&gt;
+      &lt;td&gt;Port&lt;/td&gt;
+      &lt;td&gt;TCP, UDP, RTP, RTCP 등&lt;/td&gt;
+      &lt;td&gt;게이트웨이&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;인터넷 계층(Internet)&lt;/td&gt;
+      &lt;td&gt;데이타 전송을 위한 논리적 주소 지정 및 경로 지정&lt;/td&gt;
+      &lt;td&gt;Packet&lt;/td&gt;
+      &lt;td&gt;IP&lt;/td&gt;
+      &lt;td&gt;IP, ARP, ICMP, RARP, OSPF&lt;/td&gt;
+      &lt;td&gt;라우터&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;네트워크 연결 계층(Network Access)&lt;/td&gt;
+      &lt;td&gt;실제 데이타인 프레임을 송수신&lt;/td&gt;
+      &lt;td&gt;Frame&lt;/td&gt;
+      &lt;td&gt;MAC&lt;/td&gt;
+      &lt;td&gt;Ethernet, PPP, Token Ring 등&lt;/td&gt;
+      &lt;td&gt;브리지, 스위치&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;l4-응용-계층application-layer&quot;&gt;L4 응용 계층(Application Layer)&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;데이타 단위&lt;/strong&gt;: Data/Message&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;사용자와 가장 가까운 계층으로 사용자가 소프트웨어 application과 소통할 수 있게 해준다&lt;/li&gt;
+  &lt;li&gt;응용프로그램(application)들이 데이터를 교환하기 위해 사용되는 프로토콜&lt;/li&gt;
+  &lt;li&gt;사용자 응용프로그램 인터페이스를 담당&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;예시&quot;&gt;예시&lt;/h4&gt;
+
+&lt;p&gt;파일 전송, 이메일, FTP, HTTP, SSH, Telnet, DNS, SMTP 등&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;l3-전송-계층transport-layer&quot;&gt;L3 전송 계층(Transport Layer)&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;데이타 단위&lt;/strong&gt;: Segment
+&lt;strong&gt;전송 주소&lt;/strong&gt;: Port&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;통신 노드 간의 연결 제어 및 자료 송수신을 담당&lt;/li&gt;
+  &lt;li&gt;애플리케이션 계층의 세션과 데이터그램 통신서비스 제공&lt;/li&gt;
+  &lt;li&gt;세그먼트 (Segment)단위의 데이타 구성
+    &lt;ul&gt;
+      &lt;li&gt;실질적인 데이터 전송을 위해 데이타를 일정 크기로 나눈 것. 발신, 수신, 포트주소, 오류검출코드가 붙게된다&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;예시-1&quot;&gt;예시&lt;/h4&gt;
+
+&lt;p&gt;TCP, UDP, RTP, RTCP 등&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;TCP의 혼잡 방지 알고리즘&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;흐름 제어(Flow Control)&lt;/p&gt;
+
+        &lt;p&gt;송신측과 수신측의 데이터처리 속도 차이를 해결하기 위한 기법이다.&lt;/p&gt;
+
+        &lt;p&gt;수신측이 송신측보다 속도가 빠른것은 아무런 문제가 되지 않지만, &lt;strong&gt;송신측이 수신측보다 속도가 빠르면 문제가 발생한다.&lt;/strong&gt;&lt;/p&gt;
+
+        &lt;p&gt;수신측에서 수신된 데이터를 처리해서 윗 계층으로 서비스 하는 속도보다 송신측에서 보내는 데이터 속도가 더 빠르다면, 수신측에서 제한된 저장용량(일반적으로 큐)을 초과하여 이후에 도착하는 데이터의 손실을 가져올 수있다.&lt;/p&gt;
+
+        &lt;p&gt;그렇다면 불필요하게 응답과 재전송의 데이터가 다시 송신측과 수신측간에 비번히 이동해야한다.&lt;/p&gt;
+
+        &lt;p&gt;따라서, 이러한 위험을 줄이기 위해 &lt;strong&gt;강제로 송신측의 데이터 전송을 줄인다&lt;/strong&gt;.&lt;/p&gt;
+
+        &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+        &lt;ol&gt;
+          &lt;li&gt;
+            &lt;p&gt;Stop and wait 방식&lt;/p&gt;
+
+            &lt;p&gt;매번 전송한 패킷에 대해 확인응답을 받아야만 그 다음 패킷을 전송하는 방법&lt;/p&gt;
+          &lt;/li&gt;
+        &lt;/ol&gt;
+
+        &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+        &lt;ol&gt;
+          &lt;li&gt;
+            &lt;p&gt;슬라이딩 윈도우 기법&lt;/p&gt;
+
+            &lt;p&gt;수신 측에서 설정한 윈도우 크기만큼 송신 측에서 확인 응답 없이 세그먼트를 전송할 수 있게 하여 데이터 흐름을 동적으로 조절하여 제어하는 기법이다.&lt;/p&gt;
+
+            &lt;p&gt;이 처럼 슬라이딩 윈도우 기법을 통하여 &lt;strong&gt;송신 버퍼의 범위는 수신 측의 여유 버퍼 공간을 반영하여 동적으로 바뀜&lt;/strong&gt;으로써 흐름제어를 수행한다.&lt;/p&gt;
+          &lt;/li&gt;
+        &lt;/ol&gt;
+
+        &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;혼잡 제어(Congestion control)&lt;/p&gt;
+
+        &lt;p&gt;&lt;strong&gt;송신측의 데이터 전달과 네트워크의 처리속도 차이를 해결하기 위한 기법&lt;/strong&gt;이다.&lt;/p&gt;
+
+        &lt;p&gt;송신측의 데이터는 지역망이나 인터넷으로 연결된 대형 네트워크를 통해 전달된다.&lt;/p&gt;
+
+        &lt;p&gt;하지만 이러한 네트워크 상의 라우터가 항상 한가로운 상황은 아니다.&lt;/p&gt;
+
+        &lt;p&gt;만약, 한 라우터에 데이터가 몰릴 경우, 다시 말해 혼잡할 경우 라우터는 자신에게 온 데이터를 모두 처리할 수 없다.&lt;/p&gt;
+
+        &lt;p&gt;그렇게 되면 호스트들은 또 다시 재전송을 하게 되고 결국 혼잡을 가중시켜 오버플로우나 데이터 손실을 발생시킨다.&lt;/p&gt;
+
+        &lt;p&gt;따라서, 이러한 네트워크의 혼잡을 피하기 위해 송신측에서 보내는 데이터의 전송 속도를 강제로 줄이게 된다.&lt;/p&gt;
+
+        &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+        &lt;ol&gt;
+          &lt;li&gt;
+            &lt;p&gt;Slow start&lt;/p&gt;
+
+            &lt;p&gt;윈도우 크기를 2배로 늘린다.&lt;/p&gt;
+
+            &lt;p&gt;그러다 혼잡현상이 발생하면 창 크기를 1로 떨어뜨린다.&lt;/p&gt;
+
+            &lt;p&gt;그 후 혼잡현상이 발생했던 창 크기의 절반까지는 이전처럼 지수 함수 꼴로(2배로) 창 크기를 증가시키고 그 이후부터는 완만하게 1씩 증가시킨다.&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;Fast Recovery&lt;/p&gt;
+
+            &lt;p&gt;혼잡한 상태가 되면 창 크기를 1로 줄이지 않고 반으로 줄이고 선형 증가시키는 방식이다.&lt;/p&gt;
+          &lt;/li&gt;
+        &lt;/ol&gt;
+
+        &lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/271490475897F87C37&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;p&gt;출처: &lt;a href=&quot;https://jsonsang2.tistory.com/17&quot;&gt;https://jsonsang2.tistory.com/17&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;l2-인터넷-계층internet-layer&quot;&gt;L2 인터넷 계층(Internet Layer)&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;데이타 단위&lt;/strong&gt;: 패킷
+&lt;strong&gt;전송 주소&lt;/strong&gt;: IP&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;네트워크상 최종 목적지까지 정확하게 연결되도록 연결성을 제공&lt;/li&gt;
+  &lt;li&gt;단말을 구분하기위해 논리적인 주소(Logical Address) IP를 할당
+    &lt;ul&gt;
+      &lt;li&gt;출발지와 목적지의 논리적 주소가 담겨있는 IP datagram이라는 패킷으로 데이타를 변경&lt;/li&gt;
+      &lt;li&gt;데이터 전송을 위한 주소 지정&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;라우팅(Routing) 기능을 처리
+    &lt;ul&gt;
+      &lt;li&gt;경로 설정&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;최종 목적지까지 정확하게 연결되도록 연경성 제공&lt;/li&gt;
+  &lt;li&gt;패킷단위의 데이타 구성
+    &lt;ul&gt;
+      &lt;li&gt;세그먼트를 목적지까지 전송하기 위해 시작 주소와 목적지의 논리적 주소를 붙인 단위. 데이타 + IP Header&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;예시-2&quot;&gt;예시&lt;/h4&gt;
+
+&lt;p&gt;IP, ARP, ICMP, RARP, OSPF&lt;/p&gt;
+
+&lt;h2 id=&quot;l1-네트워크-연결-계층network-access-layernetwork-interface-layer&quot;&gt;L1 네트워크 연결 계층(Network Access Layer/Network Interface Layer)&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;데이타 단위&lt;/strong&gt;: 프레임
+&lt;strong&gt;전송 주소&lt;/strong&gt;: MAC&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;물리적으로 데이타가 네트워크를 통해 어떻게 전송되는지를 정의
+    &lt;ul&gt;
+      &lt;li&gt;논리주소(IP주소 등)이 아닌 물리주소(예. MAC주소(Media Access Control Address))을 참조해 장비간 전송&lt;/li&gt;
+      &lt;li&gt;MAC주소란 컴퓨터의 하드웨워 주소&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;기본적으로 에러검출/패킷의 프레임화 담당&lt;/li&gt;
+  &lt;li&gt;프레임(Frame)단위의 데이타 구성
+    &lt;ul&gt;
+      &lt;li&gt;최종적으로 데이타 전송을 하기 전 패킷헤더에 MAC주소와 오류 검출을 위한 부분을 첨부&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;예시-3&quot;&gt;예시&lt;/h4&gt;
+
+&lt;p&gt;MAC, LAN, 패킷망 등에 사용되는 것
+예) Ethernet, PPP, Token Ring 등&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;출처: &lt;a href=&quot;https://velog.io/@jehjong/개발자-인터뷰-TCPIP-4계층&quot;&gt;https://velog.io/@jehjong/개발자-인터뷰-TCPIP-4계층&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Network" /><category term="TCP/IP" /></entry><entry><title type="html">21년 1월 30일</title><link href="http://localhost:4000/til/2021/01/30/TIL25.html" rel="alternate" type="text/html" title="21년 1월 30일" /><published>2021-01-30T00:00:00+09:00</published><updated>2021-01-30T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/30/TIL25</id><content type="html" xml:base="http://localhost:4000/til/2021/01/30/TIL25.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -112,50 +368,7 @@ FIELDS TERMINATED BY ',';
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[mysqld]
 secure-file-priv=&quot;&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="Mysql" /></entry><entry><title type="html">21년 1월 28일</title><link href="http://localhost:4000/til/2021/01/28/TIL24.html" rel="alternate" type="text/html" title="21년 1월 28일" /><published>2021-01-28T00:00:00+09:00</published><updated>2021-01-28T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/28/TIL24</id><content type="html" xml:base="http://localhost:4000/til/2021/01/28/TIL24.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;코드스쿼드 미션으로 docker로 mysql을 실행하고 locale 설정하는 과정을 진행했다.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;도커허브의 mysql:5.7 이미지를 이용하여 실행했다.&lt;/li&gt;
-      &lt;li&gt;해당 이미지는 debian linux를 토대로 mysql이 설치되어 있었다.&lt;/li&gt;
-      &lt;li&gt;debian에서 locale설정하는 법을 알게 되었다.&lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;쉘 스크립트를 이용해 file을 작성하고 file을 bulk insert하여 100만개의 랜덤데이터를 생성했다.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/docker/2021/01/28/Docker_mysql_image_run_config.html&quot;&gt;환경설정한 기록&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;전날 늦게 잔 후유증으로 집중이 잘안되서 일찍 자버렸다.&lt;/li&gt;
-  &lt;li&gt;코드스쿼드 미션 이외에 개인공부를 하지 못했다(알고리즘, 자바의정석 읽기 등)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;ㅠㅠ&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;회사에서 종종 사용하던 docker를 이용한 미션이 나와서 반가웠다.&lt;/li&gt;
-  &lt;li&gt;자주 사용하지 못해서 docker docs를 확인하며 명령을 실행했고 익숙해져서 기분이 좋다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;코드스쿼드 미션 하기&lt;/li&gt;
-  &lt;li&gt;프로그래머스 문제 풀기&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Docker" /><category term="Algorithm" /></entry><entry><title type="html">Docker mysql 이미지 실행 및 한글설정</title><link href="http://localhost:4000/docker/2021/01/28/Docker_mysql_image_run_config.html" rel="alternate" type="text/html" title="Docker mysql 이미지 실행 및 한글설정" /><published>2021-01-28T00:00:00+09:00</published><updated>2021-01-28T00:00:00+09:00</updated><id>http://localhost:4000/docker/2021/01/28/Docker_mysql_image_run_config</id><content type="html" xml:base="http://localhost:4000/docker/2021/01/28/Docker_mysql_image_run_config.html">&lt;h3 id=&quot;docker-docs를-참고하여-진행했습니다&quot;&gt;Docker Docs를 참고하여 진행했습니다.&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="Mysql" /></entry><entry><title type="html">Docker mysql 이미지 실행 및 한글설정</title><link href="http://localhost:4000/docker/2021/01/28/Docker_mysql_image_run_config.html" rel="alternate" type="text/html" title="Docker mysql 이미지 실행 및 한글설정" /><published>2021-01-28T00:00:00+09:00</published><updated>2021-01-28T00:00:00+09:00</updated><id>http://localhost:4000/docker/2021/01/28/Docker_mysql_image_run_config</id><content type="html" xml:base="http://localhost:4000/docker/2021/01/28/Docker_mysql_image_run_config.html">&lt;h3 id=&quot;docker-docs를-참고하여-진행했습니다&quot;&gt;Docker Docs를 참고하여 진행했습니다.&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://docs.docker.com/engine/reference/commandline/&quot;&gt;Docker Docs&lt;/a&gt;&lt;/p&gt;
 
@@ -252,7 +465,50 @@ character-set-server = utf8
     &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker container restart mysql
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="Docker" /></entry><entry><title type="html">21년 1월 27일</title><link href="http://localhost:4000/til/2021/01/27/TIL23.html" rel="alternate" type="text/html" title="21년 1월 27일" /><published>2021-01-27T00:00:00+09:00</published><updated>2021-01-27T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/27/TIL23</id><content type="html" xml:base="http://localhost:4000/til/2021/01/27/TIL23.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="Docker" /></entry><entry><title type="html">21년 1월 28일</title><link href="http://localhost:4000/til/2021/01/28/TIL24.html" rel="alternate" type="text/html" title="21년 1월 28일" /><published>2021-01-28T00:00:00+09:00</published><updated>2021-01-28T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/28/TIL24</id><content type="html" xml:base="http://localhost:4000/til/2021/01/28/TIL24.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;코드스쿼드 미션으로 docker로 mysql을 실행하고 locale 설정하는 과정을 진행했다.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;도커허브의 mysql:5.7 이미지를 이용하여 실행했다.&lt;/li&gt;
+      &lt;li&gt;해당 이미지는 debian linux를 토대로 mysql이 설치되어 있었다.&lt;/li&gt;
+      &lt;li&gt;debian에서 locale설정하는 법을 알게 되었다.&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;쉘 스크립트를 이용해 file을 작성하고 file을 bulk insert하여 100만개의 랜덤데이터를 생성했다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/docker/2021/01/28/Docker_mysql_image_run_config.html&quot;&gt;환경설정한 기록&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;전날 늦게 잔 후유증으로 집중이 잘안되서 일찍 자버렸다.&lt;/li&gt;
+  &lt;li&gt;코드스쿼드 미션 이외에 개인공부를 하지 못했다(알고리즘, 자바의정석 읽기 등)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ㅠㅠ&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;회사에서 종종 사용하던 docker를 이용한 미션이 나와서 반가웠다.&lt;/li&gt;
+  &lt;li&gt;자주 사용하지 못해서 docker docs를 확인하며 명령을 실행했고 익숙해져서 기분이 좋다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;코드스쿼드 미션 하기&lt;/li&gt;
+  &lt;li&gt;프로그래머스 문제 풀기&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Docker" /><category term="Algorithm" /></entry><entry><title type="html">21년 1월 27일</title><link href="http://localhost:4000/til/2021/01/27/TIL23.html" rel="alternate" type="text/html" title="21년 1월 27일" /><published>2021-01-27T00:00:00+09:00</published><updated>2021-01-27T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/27/TIL23</id><content type="html" xml:base="http://localhost:4000/til/2021/01/27/TIL23.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -789,141 +1045,4 @@ character-set-server = utf8
   &lt;li&gt;프로그래머스 문제 풀기&lt;/li&gt;
   &lt;li&gt;TCP/IP 쉽게 더쉽게 읽기&lt;/li&gt;
   &lt;li&gt;자바의 정석 제너릭스 읽기&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /></entry><entry><title type="html">21년 1월 22일</title><link href="http://localhost:4000/til/2021/01/22/TIL19.html" rel="alternate" type="text/html" title="21년 1월 22일" /><published>2021-01-22T00:00:00+09:00</published><updated>2021-01-22T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/22/TIL19</id><content type="html" xml:base="http://localhost:4000/til/2021/01/22/TIL19.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;코드스쿼드 미션으로 프로세스의 시뮬레이션을 설계 및 구현해보았다.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;CPU class를 만들어서 그 CPU는 항상 자신에게 올라온 Process를 Run하는 역할만 맡겼다.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;CPU는 무한루프를 돌면서 자신의 Process의 run 메소드를 실행하는데, run 메소드는 Process 클래스를 반환해서&lt;/p&gt;
-
-        &lt;p&gt;다음으로 돌릴 Process는 계속 변하게 설계하였다.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Process class를 상속받는 UserProcess(유저모드), KernelProcess(커널모드)를 만들었다.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;UserProcess는 public Process run() 메소드를 통해 실행되게 되는데, run 한 번에 1tick으로&lt;/p&gt;
-
-        &lt;p&gt;Timer Interrupt가 걸린다고 가정하고 구현하였다.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;UserProcess의 run메소드 마지막에 항상 자신이 갖고있는 KernelProcess의 TrapNumber를&lt;/p&gt;
-
-        &lt;p&gt;Timer interrupt로 지정해주고 자신의 KernelProcess를 반환하게 된다.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;CPU에서는 반환된 KernelProcess의 run을 실행하게 되어 커널 모드로 진입하고 TrapNumber가&lt;/p&gt;
-
-        &lt;p&gt;Timer interrupt라면 scheduler를 실행하여 다음으로 실행할 UserProcess를 반환한다.&lt;/p&gt;
-
-        &lt;p&gt;(사실은 다음 Process의 Kernel모드를 반환후 다음 Process의 커널에서 유저모드로 전환해야 하는데,&lt;/p&gt;
-
-        &lt;p&gt;구현상 너무 어려워서 하지 않았다.)&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;자바의 정석 Chapter 13 쓰레드 - 8. 쓰레드의 실행제어까지 읽었다&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;서로 관련된 Thread를 그룹으로 묶기 위한 ThreadGroup이 있고,&lt;/p&gt;
-
-        &lt;p&gt;ThreadGroup이 생성될때 어떤 규칙으로 생성되는지 알게 되었다.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;suspend(), stop(), resume() 등이 동기화, 교착상태 등에서 문제를 발생할 수 있어&lt;/p&gt;
-
-        &lt;p&gt;deprecated 되었다는 것을 알게 되었고, 이를 대체하기 위한 설계 구조를 배웠다.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;interrupt()와 yield()를 이용해 좀더 반응성이 좋은 Thread를 설계하는 법을 배웠다.&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;프로그래머스 문제 N으로 표현 문제를 풀었다.&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;
-        &lt;p&gt;N으로 표현:&lt;/p&gt;
-
-        &lt;ul&gt;
-          &lt;li&gt;
-            &lt;p&gt;dp문제였는데, dp라는 개념을 다 까먹어서 답 코드를 보고 복기하였다.&lt;/p&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;p&gt;모든 경우의 수를 생각하기 때문에 언뜻 dfs, bfs랑 비슷해 보일 수 있다.&lt;/p&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;p&gt;그러나 경우를 잘게 쪼개서 (n+2의 경우) = (n+1의 경우와 n의 경우의 조합)와 같이&lt;/p&gt;
-
-            &lt;p&gt;점화식을 구해서 모든 경우의 수를 쉽게 구할 수 있다.&lt;/p&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;p&gt;특히 한번 n의 경우를 구했으면 cache 구조체에 저장하여,&lt;/p&gt;
-
-            &lt;p&gt;다음부터 n의 경우는 cache에서 바로 반환 있어야 시간초과가 나지 않을 것이다 (메모이제이션)&lt;/p&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;p&gt;N으로 최소 갯수만큼 써서, number를 만들어야 한다.&lt;/p&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;p&gt;기본적으로 N을 x번 써서 만들 수 있는 number는 NNN..(x번)이 존재한다.(기본숫자)&lt;/p&gt;
-
-            &lt;p&gt;(ex: 9를 3번 써서 만들 수 있는 number에는 999가 포함된다.)&lt;/p&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;p&gt;따라서 N을 x번 써서 만들 수 있는 숫자는 (기본숫자) + (1번 쓰는 경우와 N-1번 쓰는 경우의 조합) +&lt;/p&gt;
-
-            &lt;p&gt;(2번 쓰는 경우와 N-2번 쓰는 경우의 조합) + … + (N-1번 쓰는 경우와 1번 쓰는 경우의 조합)&lt;/p&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;금요일이라고 일찍 쉬지 않고, 자바의 정석 읽기 + 코테연습 모드 진행하였다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;자바의 정석을 제대로 읽기 시작했는데, 자바에서 쓰레드를 쓰는 좋은 팁이 있었다. 정말 좋은 책 같다.&lt;/li&gt;
-  &lt;li&gt;dp를 애매하게 알고 있어서 찜찜했는데 드디어 복습을 시작했다.&lt;/li&gt;
-  &lt;li&gt;꾸준히 하면 언젠가 늘겠지, dp도 쉽게 느껴지는 날이 오기를&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;프로그래머스 문제 풀기&lt;/li&gt;
-  &lt;li&gt;TCP/IP 쉽게 더쉽게 읽기&lt;/li&gt;
-  &lt;li&gt;자바의 정석 읽기&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /></entry></feed>
