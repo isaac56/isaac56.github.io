@@ -1,91 +1,121 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-02-01T23:06:14+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 2월 1일</title><link href="http://localhost:4000/til/2021/02/01/TIL.html" rel="alternate" type="text/html" title="21년 2월 1일" /><published>2021-02-01T00:00:00+09:00</published><updated>2021-02-01T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/02/01/TIL</id><content type="html" xml:base="http://localhost:4000/til/2021/02/01/TIL.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-02-02T23:39:34+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 2월 2일</title><link href="http://localhost:4000/til/2021/02/02/TIL.html" rel="alternate" type="text/html" title="21년 2월 2일" /><published>2021-02-02T00:00:00+09:00</published><updated>2021-02-02T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/02/02/TIL</id><content type="html" xml:base="http://localhost:4000/til/2021/02/02/TIL.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;코드스쿼드 미션으로 소켓통신으로 Http Request직접 구현하기를 진행하였다.&lt;/p&gt;
+    &lt;p&gt;코드스쿼드 미션: 소켓 통신을 사용하여 HttpRequest와 HttpResponse 객체 구현하기&lt;/p&gt;
 
     &lt;ol&gt;
       &lt;li&gt;
-        &lt;p&gt;URL 클래스를 직접 구현하여, http://www.naver.com:80/test?query=test 와 같은 형식의 url을&lt;/p&gt;
+        &lt;p&gt;URL 객체를 만들었다.&lt;/p&gt;
 
-        &lt;p&gt;프로토콜, 도메인 이름, uri, 파라미터등으로 구분하도록 하였다.&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;URL 객체를 생성할 때, url string값을 인자로 넣어준다.&lt;/li&gt;
+          &lt;li&gt;생성자에서 url을 파싱하여 protocol, domain, path, port를 프로퍼티로 저장한다.&lt;/li&gt;
+          &lt;li&gt;생성자에서 InetAddress를 사용하여 DNS서버로부터 호스트 IP를 받아온다(DNS Look up)&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
-        &lt;p&gt;URL클래스 내부적으로 java.net의 InetAddress 클래스를 이용하여 DNS서버에서 IP주소를 알아낸다.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;직접 구현한 URL 클래스를 이용하여 http 헤더를 붙여서 소켓통신으로 http request를 보내고 response를 받아온다.(내일 예정)&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;TCP/IP 4계층 모델에 대하여 공부 및 포스팅 하였다. (이번 내용은 정보를 서술할 뿐이라 다른 글을 거의 복사했다.)&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/network/2021/02/01/TCP-IP_4_layer.html&quot;&gt;TCP/IP 4계층 모델&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;프로그래머스 징검다리건너기 문제를 풀었다.&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;
-        &lt;p&gt;징검다리건너기&lt;/p&gt;
+        &lt;p&gt;HttpRequest 객체를 만들었다.&lt;/p&gt;
 
         &lt;ul&gt;
           &lt;li&gt;
-            &lt;p&gt;각 돌은 건널 수 있는 숫자가 정해져있고(일정 숫자 이상 밟으면 부서진다고 상상), 최대로 점프할 수 있는 거리는 k로 제한된다.&lt;/p&gt;
+            &lt;p&gt;URL 객체를 인자로 생성할 수 있다.&lt;/p&gt;
           &lt;/li&gt;
           &lt;li&gt;
-            &lt;p&gt;내 풀이:&lt;/p&gt;
+            &lt;p&gt;Request메소드에 [GET, POST, UPDATE, DELETE] Method값(enum)과 body(JsonObject)를 넣어준다.&lt;/p&gt;
 
             &lt;ol&gt;
-              &lt;li&gt;
-                &lt;p&gt;한번에 뛸 수 있는 거리는 k이므로, stones를 전체 순회하며 k 길이만큼의 구간이 사용 가능한 횟수를 구한다.&lt;/p&gt;
-
-                &lt;p&gt;ex) 1~k 구간이 버틸 수 있는 사람 수는 1~k번째 돌에 적힌 숫자 중 최대값이며, 그 다음은 2~k+1번째 구간의 값을 구한다.&lt;/p&gt;
+              &lt;li&gt;인스턴스의 URL과 인자로 받은 Method값, body를 조합하여 기본적인 Http 요청 String을 만든다.&lt;/li&gt;
+              &lt;li&gt;URL의 IP와 포트번호를 기준으로 Socket 연결한다.&lt;/li&gt;
+              &lt;li&gt;Socket 통신을 통해 만들어놓은 Http 요청을 보낸다.&lt;/li&gt;
+              &lt;li&gt;Socket으로 들어온 Response를 BufferedReader로 읽으며 HttpResponse를 생성한다.
+                &lt;ul&gt;
+                  &lt;li&gt;처음 등장하는 빈 줄을 기준으로 header와 body를 나눈다.&lt;/li&gt;
+                  &lt;li&gt;response header에 Content-Length가 있으면 Content-Length개 만큼 body를 읽는다.&lt;/li&gt;
+                  &lt;li&gt;Content-Length가 없으면 &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;/html&amp;gt;&lt;/code&gt;값이 나올때까지 body를 읽는다.&lt;/li&gt;
+                  &lt;li&gt;다 읽으면 바로 socket 연결을 끊는다.&lt;/li&gt;
+                &lt;/ul&gt;
               &lt;/li&gt;
-              &lt;li&gt;이렇게 구한 값중 최소값이 징검다리를 건널 수 있는 최대 인원이다.(k개의 구간이 무너지는 순간 아무도 건널 수 없으므로)&lt;/li&gt;
-              &lt;li&gt;결국 구간 max값을 stones길이만큼 구해야 하는데, 효율성 통과를 위해 구간값을 segment tree로 구했다.&lt;/li&gt;
-            &lt;/ol&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;p&gt;다른 사람 풀이:&lt;/p&gt;
-            &lt;ol&gt;
-              &lt;li&gt;징검다리 건널 수 있는 최대 인원은, 돌에 적힌 숫자 중 최대값과 최소값의 사이이다.&lt;/li&gt;
-              &lt;li&gt;binary search로 answer를 바꿔가며, 정답을 찾는다.&lt;/li&gt;
+              &lt;li&gt;생성한 HttpResponse를 반환한다.&lt;/li&gt;
             &lt;/ol&gt;
           &lt;/li&gt;
         &lt;/ul&gt;
+
+        &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;HttpResponse 객체를 만들었다.&lt;/p&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;p&gt;header String(포맷에 맞아야 함)과 body String을 파라미터로 생성할 수 있다.&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;그냥 생성할 경우, setHeader(String header) 와 setBody(String body)로 Response를 만들어줘야한다.&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;header String 을 파싱하여 protocol, statusCode, statusMessage를 생성하며, 나머지 헤더값은&lt;/p&gt;
+
+            &lt;p&gt;Map&amp;lt;String, String&amp;gt; 형태로 저장한다.&lt;/p&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
       &lt;/li&gt;
     &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;프로그래머스 보석쇼핑 문제 풀기에 실패했다.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;HashSet을 이용하여 보석 종류의 개수를 구한다.&lt;/li&gt;
+      &lt;li&gt;기본적으로 길이가 j 인 구간에서 모든 종류가 있는지 확인할 땐 sliding window기법을 사용했다.
+        &lt;ol&gt;
+          &lt;li&gt;HashMap&amp;lt;String, Integer&amp;gt;을 사용한다.&lt;/li&gt;
+          &lt;li&gt;1번째부터 j번째까지 돌며 HashMap에서 보석의 value를 1씩 증가시킨다.&lt;/li&gt;
+          &lt;li&gt;HashMap의 크기가 보석종류의 개수와 같으면 현재 구간을 반환한다.&lt;/li&gt;
+          &lt;li&gt;j+1번째부터 마지막까지 순회하며
+            &lt;ol&gt;
+              &lt;li&gt;직전 구간 첫번째 보석의 value를 1 감소시키고, value가 0이면 HashMap에서 삭제한다.&lt;/li&gt;
+              &lt;li&gt;새로 포함된 보석의 value를 1 증가시킨다.&lt;/li&gt;
+              &lt;li&gt;HashMap의 크기가 보석종류의 개수와 같으면 현재 구간을 반환한다.&lt;/li&gt;
+            &lt;/ol&gt;
+          &lt;/li&gt;
+          &lt;li&gt;끝까지 답을 못찾으면 null을 반환한다.&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;정답 구간의 길이 최대값은 gems의 개수, 최소값은 보석종류의 개수이다.&lt;/li&gt;
+      &lt;li&gt;binarySearch로 정답 구간의 길이를 찾아가며 최소 길이의 구간을 찾아낸다.&lt;/li&gt;
+      &lt;li&gt;효율성에서 1개 빼고 모두 실패하였다. 방법 자체를 다시 생각해봐야겠다.&lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;네트워크는 대학교때도 꺼려했던 과목이라 기본이 많이 부족하다.&lt;/li&gt;
-  &lt;li&gt;기본이 부족한데도 조급함을 느끼며 빨리빨리 하려고 했다.&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;다시 일상으로 복귀하고 있다.&lt;/li&gt;
+  &lt;li&gt;미션을 아주 만족스럽게 끝낼 수 있었다!!&lt;/li&gt;
+  &lt;li&gt;네트워크에 대해 자신감이 없었는데 이번에 아주 재밌게 실습하고 배웠다.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;조바심을 느껴 쓱 훑고 빨리 구현하려고 하니, 아무것도 하지 못한 느낌이다.&lt;/li&gt;
-  &lt;li&gt;기본이 부족하면 차근차근 공부해야겠다. 시간은 많다.&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;코드스쿼드 미션하기&lt;/li&gt;
+  &lt;li&gt;자바의 정석 읽기&lt;/li&gt;
   &lt;li&gt;네트워크 공부하기&lt;/li&gt;
   &lt;li&gt;프로그래머스 문제 풀기&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><category term="Network" /><category term="Algorithm" /></entry><entry><title type="html">TCP/IP 4계층</title><link href="http://localhost:4000/network/2021/02/01/TCP-IP_4_layer.html" rel="alternate" type="text/html" title="TCP/IP 4계층" /><published>2021-02-01T00:00:00+09:00</published><updated>2021-02-01T00:00:00+09:00</updated><id>http://localhost:4000/network/2021/02/01/TCP:IP_4_layer</id><content type="html" xml:base="http://localhost:4000/network/2021/02/01/TCP-IP_4_layer.html">&lt;h2 id=&quot;tcpip-4계층&quot;&gt;TCP/IP 4계층&lt;/h2&gt;
@@ -344,7 +374,97 @@
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;출처: &lt;a href=&quot;https://velog.io/@jehjong/개발자-인터뷰-TCPIP-4계층&quot;&gt;https://velog.io/@jehjong/개발자-인터뷰-TCPIP-4계층&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Network" /><category term="TCP/IP" /></entry><entry><title type="html">21년 1월 30일</title><link href="http://localhost:4000/til/2021/01/30/TIL25.html" rel="alternate" type="text/html" title="21년 1월 30일" /><published>2021-01-30T00:00:00+09:00</published><updated>2021-01-30T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/30/TIL25</id><content type="html" xml:base="http://localhost:4000/til/2021/01/30/TIL25.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;p&gt;출처: &lt;a href=&quot;https://velog.io/@jehjong/개발자-인터뷰-TCPIP-4계층&quot;&gt;https://velog.io/@jehjong/개발자-인터뷰-TCPIP-4계층&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Network" /><category term="TCP/IP" /></entry><entry><title type="html">21년 2월 1일</title><link href="http://localhost:4000/til/2021/02/01/TIL.html" rel="alternate" type="text/html" title="21년 2월 1일" /><published>2021-02-01T00:00:00+09:00</published><updated>2021-02-01T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/02/01/TIL</id><content type="html" xml:base="http://localhost:4000/til/2021/02/01/TIL.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;코드스쿼드 미션으로 소켓통신으로 Http Request직접 구현하기를 진행하였다.&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;URL 클래스를 직접 구현하여, http://www.naver.com:80/test?query=test 와 같은 형식의 url을&lt;/p&gt;
+
+        &lt;p&gt;프로토콜, 도메인 이름, uri, 파라미터등으로 구분하도록 하였다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;URL클래스 내부적으로 java.net의 InetAddress 클래스를 이용하여 DNS서버에서 IP주소를 알아낸다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;직접 구현한 URL 클래스를 이용하여 http 헤더를 붙여서 소켓통신으로 http request를 보내고 response를 받아온다.(내일 예정)&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;TCP/IP 4계층 모델에 대하여 공부 및 포스팅 하였다. (이번 내용은 정보를 서술할 뿐이라 다른 글을 거의 복사했다.)&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/network/2021/02/01/TCP-IP_4_layer.html&quot;&gt;TCP/IP 4계층 모델&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;프로그래머스 징검다리건너기 문제를 풀었다.&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;징검다리건너기&lt;/p&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;p&gt;각 돌은 건널 수 있는 숫자가 정해져있고(일정 숫자 이상 밟으면 부서진다고 상상), 최대로 점프할 수 있는 거리는 k로 제한된다.&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;내 풀이:&lt;/p&gt;
+
+            &lt;ol&gt;
+              &lt;li&gt;
+                &lt;p&gt;한번에 뛸 수 있는 거리는 k이므로, stones를 전체 순회하며 k 길이만큼의 구간이 사용 가능한 횟수를 구한다.&lt;/p&gt;
+
+                &lt;p&gt;ex) 1~k 구간이 버틸 수 있는 사람 수는 1~k번째 돌에 적힌 숫자 중 최대값이며, 그 다음은 2~k+1번째 구간의 값을 구한다.&lt;/p&gt;
+              &lt;/li&gt;
+              &lt;li&gt;이렇게 구한 값중 최소값이 징검다리를 건널 수 있는 최대 인원이다.(k개의 구간이 무너지는 순간 아무도 건널 수 없으므로)&lt;/li&gt;
+              &lt;li&gt;결국 구간 max값을 stones길이만큼 구해야 하는데, 효율성 통과를 위해 구간값을 segment tree로 구했다.&lt;/li&gt;
+            &lt;/ol&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;다른 사람 풀이:&lt;/p&gt;
+            &lt;ol&gt;
+              &lt;li&gt;징검다리 건널 수 있는 최대 인원은, 돌에 적힌 숫자 중 최대값과 최소값의 사이이다.&lt;/li&gt;
+              &lt;li&gt;binary search로 answer를 바꿔가며, 정답을 찾는다.&lt;/li&gt;
+            &lt;/ol&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;네트워크는 대학교때도 꺼려했던 과목이라 기본이 많이 부족하다.&lt;/li&gt;
+  &lt;li&gt;기본이 부족한데도 조급함을 느끼며 빨리빨리 하려고 했다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;다시 일상으로 복귀하고 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;조바심을 느껴 쓱 훑고 빨리 구현하려고 하니, 아무것도 하지 못한 느낌이다.&lt;/li&gt;
+  &lt;li&gt;기본이 부족하면 차근차근 공부해야겠다. 시간은 많다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;코드스쿼드 미션하기&lt;/li&gt;
+  &lt;li&gt;네트워크 공부하기&lt;/li&gt;
+  &lt;li&gt;프로그래머스 문제 풀기&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Network" /><category term="Algorithm" /></entry><entry><title type="html">21년 1월 30일</title><link href="http://localhost:4000/til/2021/01/30/TIL25.html" rel="alternate" type="text/html" title="21년 1월 30일" /><published>2021-01-30T00:00:00+09:00</published><updated>2021-01-30T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/30/TIL25</id><content type="html" xml:base="http://localhost:4000/til/2021/01/30/TIL25.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -867,162 +987,4 @@ character-set-server = utf8
 
 &lt;p&gt;참고하기 매우 좋은 글&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://homoefficio.github.io/2017/02/19/Blocking-NonBlocking-Synchronous-Asynchronous/&quot;&gt;https://homoefficio.github.io/2017/02/19/Blocking-NonBlocking-Synchronous-Asynchronous/&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Synchronous" /><category term="Asynchronous" /><category term="Blocking" /><category term="Non-Bolocking" /></entry><entry><title type="html">21년 1월 24일</title><link href="http://localhost:4000/til/2021/01/24/TIL21.html" rel="alternate" type="text/html" title="21년 1월 24일" /><published>2021-01-24T00:00:00+09:00</published><updated>2021-01-24T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/01/24/TIL21</id><content type="html" xml:base="http://localhost:4000/til/2021/01/24/TIL21.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;자바의 정석 Chapter 12 지네릭스, 열거형, 애너테이션 중 지네릭스를 모두 읽었다.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;지네릭스는 클래스 또는 메소드에 타입을 파라미터처럼 전달하여(타입 변수) 타입을 보다 자유롭게 쓸 수 있게 해준다.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;지네릭스의 장점은 다음과 같다.&lt;/p&gt;
-
-        &lt;ol&gt;
-          &lt;li&gt;타입 안정성을 제공한다.&lt;/li&gt;
-          &lt;li&gt;타입체크와 형변환을 생략할 수 있어 코드를 간소화해준다.&lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;지네릭 메소드에 선언된 타입 변수와 지네릭 클래스에 선언된 타입 변수는 다르다.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;지네릭 메소드에 선언된 타입 변수는 해당 메소드의 지역 변수와 같은 우선순위를 갖는다.&lt;/p&gt;
-
-        &lt;ol&gt;
-          &lt;li&gt;
-            &lt;p&gt;즉, 지네릭 클레스에 T라는 타입변수가 선언되어 있고, 지네릭 메소드에 T라는 타입변수가 있으면,&lt;/p&gt;
-
-            &lt;p&gt;해당 메소드 내의 T는 지역변수나 마찬가지인 지네릭 메소드의 T를 의미한다.&lt;/p&gt;
-          &lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;와일드 카드에 대해 배웠다.&lt;/p&gt;
-
-        &lt;ol&gt;
-          &lt;li&gt;
-            &lt;p&gt;와일드 카드는 ?로 정의되며 &amp;lt;?&amp;gt; 라는 건 &amp;lt;? extends Object&amp;gt;를 생략한 것이다.&lt;/p&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;p&gt;와일드 카드는 참조변수 타입에 선언되는데,&lt;/p&gt;
-
-            &lt;p&gt;&amp;lt;? extends Fruit&amp;gt;라면 해당 참조변수의 인스턴스에는 타입 변수로 Fruit와 Fruit를 상속한 클래스 타입이 들어갈 수 있고,&lt;/p&gt;
-
-            &lt;p&gt;&amp;lt;? super Fruit&amp;gt;일 경우에는 타입 변수로 Fruit와 Fruit가 상속한 부모 클래스 타입이 들어갈 수 있다.&lt;/p&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;p&gt;와일드 카드로 선언된 참조변수 간에는 컴파일러가 판단하여 형변환을 할 수 있게 해준다.&lt;/p&gt;
-
-            &lt;ul&gt;
-              &lt;li&gt;
-                &lt;p&gt;Fruit와 Fruit를 상속 받은 Apple, Grape가 있다고 하자.&lt;/p&gt;
-
-                &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Fruit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fruitList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
-&lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Apple&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;appleList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
-         
-&lt;span class=&quot;n&quot;&gt;appleList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Apple&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fruitList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 에러;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fruitList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Fruit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;appleList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 에러; &lt;/span&gt;
-         
-&lt;span class=&quot;c1&quot;&gt;/////////////////////////////////////////////////////////////////////////&lt;/span&gt;
-&lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;?&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Fruit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fruitList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
-&lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;?&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Apple&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;appleList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
-         
-&lt;span class=&quot;n&quot;&gt;appleList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;?&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Apple&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fruitList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
-&lt;span class=&quot;c1&quot;&gt;//경고; fruitList는 Apple로 형변환할 수 있는 타입이 들어갈수도 있으므로 에러로 막지는 않음&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fruitList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;?&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Fruit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;appleList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//성공; appleList는 Fruit로 형변환할 수 있는 타입이 들어가있으므로 경고하지 않음&lt;/span&gt;
-         
-&lt;span class=&quot;c1&quot;&gt;/////////////////////////////////////////////////////////////////////////&lt;/span&gt;
-&lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;?&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Grape&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;grapeList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
-&lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;?&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Apple&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;appleList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
-         
-&lt;span class=&quot;n&quot;&gt;appleList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;?&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Apple&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;grapeList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
-&lt;span class=&quot;c1&quot;&gt;//에러; grapeList는 Apple로 형변환할 수 있는 타입이 들어갈 수 없으므로 에러&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;grapeList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;?&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Grape&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;appleList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//에러; appleList는 grape로 형변환할 수 있는 타입이 들어갈 수 없으므로 에러&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;                &lt;/div&gt;
-              &lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;프로그래머스 문제 타겟넘버, 네트워크 문제를 풀었다.&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;
-        &lt;p&gt;타겟넘버:&lt;/p&gt;
-
-        &lt;ol&gt;
-          &lt;li&gt;간단한 DFS/BFS문제이다.&lt;/li&gt;
-          &lt;li&gt;주어진 숫자들을 +또는 -로 연산해가면서 마지막에 target과 같을 경우 경우의 수를 늘려준다.&lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;네트워크:&lt;/p&gt;
-
-        &lt;ol&gt;
-          &lt;li&gt;
-            &lt;p&gt;DFS/BFS로 풀수도 있고, union-find알고리즘으로 풀 수도 있다.&lt;/p&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;p&gt;두 가지 방법으로 모두 풀어봤다.&lt;/p&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;p&gt;union-find의 경우는 computers매개변수를 순회하며 1인경우 두 노드를 하나의 집합으로 만들어준다.&lt;/p&gt;
-
-            &lt;ol&gt;
-              &lt;li&gt;
-                &lt;p&gt;마지막에 parent 배열을 순회하며 각 parent배열 값을 다시 getParent(parent[n])로 확인하여 HashSet(집합 명 Set)에 넣어준다.&lt;/p&gt;
-              &lt;/li&gt;
-              &lt;li&gt;
-                &lt;p&gt;HashSet의 size가 네트워크 개수가 된다.&lt;/p&gt;
-              &lt;/li&gt;
-            &lt;/ol&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;p&gt;DFS/BFS로 푸는 방법은 그냥 areaNum을 늘려주며 area가 정해지지 않은 node의 area를 DFS/BFS로 areaNum으로 정해준다.&lt;/p&gt;
-          &lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;TCP/IP 쉽게 더쉽게 읽기라는 목표를 점점 뒤로 미루고 있다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;주말이라 쉬엄쉬엄했지만 꾸준함의 중요성을 인지하며 공부하고 있다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;제너릭스는 생각보다 어렵지 않았다.&lt;/li&gt;
-  &lt;li&gt;자바 API를 읽을때마다 헷갈렸던 ?라는 와일드카드를 알게되어서 기분이 좋았다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;코드스쿼드 미션 하기&lt;/li&gt;
-  &lt;li&gt;프로그래머스 문제 풀기&lt;/li&gt;
-  &lt;li&gt;자바의 정석 열거형 읽기&lt;/li&gt;
-  &lt;li&gt;TCP/IP 쉽게 더 쉽게는 자바의 정석 1회독 한 후 읽어야 할 것 같다.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Algorithm" /></entry></feed>
+&lt;p&gt;&lt;a href=&quot;https://homoefficio.github.io/2017/02/19/Blocking-NonBlocking-Synchronous-Asynchronous/&quot;&gt;https://homoefficio.github.io/2017/02/19/Blocking-NonBlocking-Synchronous-Asynchronous/&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Synchronous" /><category term="Asynchronous" /><category term="Blocking" /><category term="Non-Bolocking" /></entry></feed>
