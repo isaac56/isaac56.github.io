@@ -127,55 +127,112 @@
 			<article class="post">
 	<header class="post-header">
 		<div class="post-title"> 
-			21년 1월 10일
+			21년 2월 3일
 		</div>
-		<time class="post-date dt-published" datetime="2021-01-10T00:00:00+09:00" itemprop="datePublished">2021/01/10
+		<time class="post-date dt-published" datetime="2021-02-03T00:00:00+09:00" itemprop="datePublished">2021/02/03
 		</time>		
 	</header>
 
 	<div class="post-content">
 		<h2 id="한-일">한 일</h2>
+
 <ul>
-  <li>Java 내부클래스 개념 공부 (자바의 정석 책)</li>
-  <li>Java 내부클래스 정리하여 게시 <a href="https://isaac56.github.io/java/2021/01/10/InnerClass.html">바로가기</a></li>
-  <li>프로그래머스 더맵게
-    <ul>
-      <li>PriorityQueue를 사용하여 푸는 간단한 문제이다.</li>
-    </ul>
+  <li>
+    <p>프로그래머스 보석쇼핑와 여행경로 문제를 풀었다.</p>
+
+    <ol>
+      <li>
+        <p>보석쇼핑</p>
+
+        <ul>
+          <li>
+            <p>HashSet을 이용하여 보석 종류의 개수를 구한다.</p>
+          </li>
+          <li>
+            <p>이전 풀이에서 구간의 길이를 고정하던 것을 최소 길이로 변화하며 찾도록 하였더니 풀렸다.</p>
+
+            <ol>
+              <li>
+                <p>HashMap&lt;String, Integer&gt;인 hashMap을 준비한다.</p>
+              </li>
+              <li>
+                <p>발견된 최소 길이인 int 변수 minRange를 두고, gems.length + 1로 초기화시킨다.</p>
+              </li>
+              <li>
+                <p>start변수와 end변수를 두고 둘다 0을 초기값으로 가진다.</p>
+              </li>
+              <li>
+                <p>end변수가 gems의 마지막 index까지 증가하며 while문을 돈다.</p>
+
+                <ol>
+                  <li>
+                    <p>hashMap에서 end index에 해당하는 보석이름의 Value를 1 증가시킨다.</p>
+                  </li>
+                  <li>
+                    <p>hashMap에서 start 보석이름의 value가 2이상인 동안, 보석이름의 value를 1 감소시키고 start를 증가시킨다.</p>
+                  </li>
+                  <li>
+                    <p>현재 hashMap의 size가 총 보석 종류의 개수와 일치하고, end-start+1값이 minRange보다 작으면</p>
+
+                    <p>end와 start를 저장한다.</p>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <p>while문이 끝난후 저장되어있던 start와 end가 정답이 된다.</p>
+
+                <p>(문제에서 기준이 1부터 시작하므로 new int[]{start+1,end+1}을 반환)</p>
+              </li>
+            </ol>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>여행경로</p>
+
+        <ul>
+          <li>정렬이 포함된 DFS문제였다.</li>
+          <li>모든 여행티켓을 사용한 경로를 DFS로 구해야 한다.</li>
+          <li>하지만 경로가 여러개일 경우 알파벳 순사가 앞서는 경로를 출력해야한다.</li>
+          <li>여행티켓을 알파벳 순서로 정렬한 후에, DFS로 구하면 간단하게 정답이 구해진다.</li>
+        </ul>
+      </li>
+    </ol>
   </li>
-  <li>프로그래머스 디스크컨트롤러
-    <ul>
-      <li>PrirorityQueue를 사용하여 풀었다.</li>
-      <li>하드디스크에 요청작업이 들어왔을 때, 처리할 수 있는 요청중에서 작업시간이 가장 작은 것부터 처리해야 평균 처리시간이 가장 낮다는 사실을 알아야 한다.</li>
-      <li>해당 사실을 모를때, 차트 상에서 시간이 누적되는 개념을 그림적으로 생각해 아이디어를 얻었다.</li>
-    </ul>
+  <li>
+    <p>자바의 정석 Stream 부분을 읽었다.</p>
   </li>
 </ul>
 
 <h2 id="잘못한-것">잘못한 것</h2>
 
 <ul>
-  <li>조급하다. 자꾸 마음이 불안하다. 마인드 컨트롤이 필요하다.</li>
+  <li>자바의 정석 Stream을 읽는데 집중이 안되서 정독하지 못했다.</li>
+  <li>시간이 부족하여 네트워크 공부를 하지못했다.</li>
 </ul>
 
 <h2 id="잘한-것">잘한 것</h2>
+
 <ul>
-  <li>1아니면 0이라는 느낌으로 열심히 안하면 아예 안하려는 습관이 있었는데, 조금이라도 오늘 할 일을 하였다.</li>
+  <li>알고리즘에 자신감이 붙기 시작했다.</li>
+  <li>코딩테스트에 감이 생겼다.</li>
 </ul>
 
 <h2 id="느낌">느낌</h2>
+
 <ul>
-  <li>주말에 안 쉬면 평일에 힘들거 같다는 강박에 갖힌것 같다.</li>
-  <li>주말 계획은 따로 세워서 널널하게 가보는게 어떨까 싶다.</li>
+  <li>오늘도 시간이 훅 가버렸다.</li>
+  <li>오랜만에 코드스쿼드 미션이 없는 날이라 개인공부를 하려고했는데 많이 하지 못했다 ㅠㅠ</li>
 </ul>
 
 <h2 id="할-일">할 일</h2>
+
 <ul>
-  <li>코드스쿼드 미션 진행</li>
-  <li>프로그래머스 알고리즘 풀기</li>
-  <li>자바의정석 읽기</li>
-  <li>TCP/IP 쉽게 더 쉽게 읽기</li>
+  <li>코드스쿼드 미션하기</li>
+  <li>자바의 정석 읽기</li>
+  <li>프로그래머스 문제 풀기</li>
 </ul>
+
 
 	</div>
 </article>
