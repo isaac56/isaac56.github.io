@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-02-03T22:39:21+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 2월 3일</title><link href="http://localhost:4000/til/2021/02/03/TIL.html" rel="alternate" type="text/html" title="21년 2월 3일" /><published>2021-02-03T00:00:00+09:00</published><updated>2021-02-03T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/02/03/TIL</id><content type="html" xml:base="http://localhost:4000/til/2021/02/03/TIL.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-02-04T18:22:21+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 2월 3일</title><link href="http://localhost:4000/til/2021/02/03/TIL.html" rel="alternate" type="text/html" title="21년 2월 3일" /><published>2021-02-03T00:00:00+09:00</published><updated>2021-02-03T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/02/03/TIL</id><content type="html" xml:base="http://localhost:4000/til/2021/02/03/TIL.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -99,7 +99,7 @@
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;코드스쿼드 미션: 소켓 통신을 사용하여 HttpRequest와 HttpResponse 객체 구현하기&lt;/p&gt;
+    &lt;p&gt;소켓 통신을 사용하여 HttpRequest와 HttpResponse 객체 구현하기&lt;/p&gt;
 
     &lt;ol&gt;
       &lt;li&gt;
@@ -199,7 +199,7 @@
 &lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;미션을 아주 만족스럽게 끝낼 수 있었다!!&lt;/li&gt;
+  &lt;li&gt;HttpRequest와 HttpResponse를 내가 할수있는데까지 잘 구현하였다.&lt;/li&gt;
   &lt;li&gt;네트워크에 대해 자신감이 없었는데 이번에 아주 재밌게 실습하고 배웠다.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -219,7 +219,7 @@
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;코드스쿼드 미션으로 소켓통신으로 Http Request직접 구현하기를 진행하였다.&lt;/p&gt;
+    &lt;p&gt;자바 소켓통신으로 Http 요청을 구현해보았고 성공적인 Response를 받을 수 있었다.&lt;/p&gt;
 
     &lt;ol&gt;
       &lt;li&gt;
@@ -776,7 +776,7 @@ character-set-server = utf8
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;코드스쿼드 미션으로 docker로 mysql을 실행하고 locale 설정하는 과정을 진행했다.&lt;/p&gt;
+    &lt;p&gt;오랜만에 도커를 사용하여 mysql을 실행하고 locale 설정까지 해보았다.&lt;/p&gt;
 
     &lt;ul&gt;
       &lt;li&gt;도커허브의 mysql:5.7 이미지를 이용하여 실행했다.&lt;/li&gt;
@@ -806,7 +806,6 @@ character-set-server = utf8
 &lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;회사에서 종종 사용하던 docker를 이용한 미션이 나와서 반가웠다.&lt;/li&gt;
   &lt;li&gt;자주 사용하지 못해서 docker docs를 확인하며 명령을 실행했고 익숙해져서 기분이 좋다.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -819,14 +818,14 @@ character-set-server = utf8
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;코드스쿼드 비동기 프로그래밍 미션을 하루종일 했다.&lt;/p&gt;
+    &lt;p&gt;자바 - 비동기 프로그래밍으로 커피를 판매하는 시뮬레이션을 구현해 보았다.(CompleteFuture를 사용했다.)&lt;/p&gt;
 
     &lt;ul&gt;
       &lt;li&gt;
-        &lt;p&gt;미션에서 주어진 역할을 클래스로 만들고 객체간의 메세지를 보내(메소드 실행) 이벤트를 발생하게 했다.&lt;/p&gt;
+        &lt;p&gt;구현에 필요한 클래스를 설계하고 객체간의 메세지를 보내(메소드 실행) 이벤트를 발생하게 했다.&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
-        &lt;p&gt;객체 각자가 비동기적으로 일을 수행해, 주문을 받은 커피를 만들고 커피가 완료됐다고 출력하는 미션이었다.&lt;/p&gt;
+        &lt;p&gt;객체 각자가 비동기적으로 일을 수행해, 주문을 받은 커피를 만들고 커피가 완료됐다고 출력하는게 목표였다.&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
         &lt;p&gt;만든 클래스는 다음과 같다.&lt;/p&gt;
@@ -923,7 +922,7 @@ character-set-server = utf8
 &lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;미션이 생각보다 어려워서, 알고리즘 공부와 자바의정석 읽기를 못했다.&lt;/li&gt;
+  &lt;li&gt;구현이 생각보다 어려워서, 알고리즘 공부와 자바의정석 읽기를 못했다.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
