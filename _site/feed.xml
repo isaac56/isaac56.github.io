@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-02-04T18:22:21+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 2월 3일</title><link href="http://localhost:4000/til/2021/02/03/TIL.html" rel="alternate" type="text/html" title="21년 2월 3일" /><published>2021-02-03T00:00:00+09:00</published><updated>2021-02-03T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/02/03/TIL</id><content type="html" xml:base="http://localhost:4000/til/2021/02/03/TIL.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-02-05T21:09:31+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 2월 3일</title><link href="http://localhost:4000/til/2021/02/03/TIL.html" rel="alternate" type="text/html" title="21년 2월 3일" /><published>2021-02-03T00:00:00+09:00</published><updated>2021-02-03T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/02/03/TIL</id><content type="html" xml:base="http://localhost:4000/til/2021/02/03/TIL.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -964,7 +964,6 @@ character-set-server = utf8
 
 &lt;ul&gt;
   &lt;li&gt;어제 처음으로 TIL도 쓰지 않고, 아무것도 하지 못했다.&lt;/li&gt;
-  &lt;li&gt;오늘도 코드스쿼드 미션은 읽어보지도 못하고 울면서 알고리즘 한문제만 겨우 푼거같다.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
@@ -976,8 +975,8 @@ character-set-server = utf8
 &lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;어제 오늘 개인사정으로 인해 정말 오르락내리락 멘탈이 무너졌던 이틀이었다.&lt;/li&gt;
-  &lt;li&gt;무슨일이 생겨도 꾸준히 하던 것을 놓으면 안되는데, 애초에 멘탈을 강하게 지켜야하는데 이번 일은 그게 좀 힘들었다.&lt;/li&gt;
+  &lt;li&gt;어제 오늘 개인사정으로 인해 공부를 제대로 하지못했다.&lt;/li&gt;
+  &lt;li&gt;다소 힘든일이 있어서 평소처럼 공부하지 못했다.&lt;/li&gt;
   &lt;li&gt;내일부터 다시 제대로 열심히 꾸준히 해보려고한다.&lt;/li&gt;
 &lt;/ul&gt;
 
