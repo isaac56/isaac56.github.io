@@ -134,9 +134,9 @@
 			<article class="post">
 	<header class="post-header">
 		<div class="post-title"> 
-			21년 1월 18일
+			21년 2월 8일
 		</div>
-		<time class="post-date dt-published" datetime="2021-01-18T00:00:00+09:00" itemprop="datePublished">2021/01/18
+		<time class="post-date dt-published" datetime="2021-02-08T00:00:00+09:00" itemprop="datePublished">2021/02/08
 		</time>		
 	</header>
 
@@ -144,60 +144,68 @@
 		<h2 id="한-일">한 일</h2>
 
 <ul>
+  <li>체스게임 만들기 구현을 시작하였다.</li>
+  <li>Git에 대한 기본개념을 복습하였다.
+    <ul>
+      <li>pull, fetch, merge, push, add, commit, rebase, revert, cherry-pick 등</li>
+      <li>remote repository, local repository, staging area, working directory 등</li>
+      <li>branch는 commit의 참조변수이다.</li>
+      <li>commit은 변경사항이 아니라 그 당시 파일들의 snap shot이다.</li>
+      <li>HEAD는 working directory가 위치하는 commit 또는 branch를 가리킨다.</li>
+    </ul>
+  </li>
+  <li>Gradle이 무엇인지 검색하여 적어보았다.
+    <ul>
+      <li><a href="https://isaac56.github.io/gradle/2021/02/08/what_gradle.html">https://isaac56.github.io/gradle/2021/02/08/what_gradle.html</a></li>
+    </ul>
+  </li>
+  <li>Gradle 3.4.1버전에서 JUnit 5로 Test할 때 오류나는 문제 해결에 대하여 정리하였다.
+    <ul>
+      <li><a href="https://isaac56.github.io/gradle/2021/02/08/gradle_project_JUnit_Error.html">https://isaac56.github.io/gradle/2021/02/08/gradle_project_JUnit_Error.html</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<ul>
   <li>
-    <p>함수형 프로그래밍이 무엇인지 학습하고 정리하였다.</p>
+    <p>프로그래머스 경주로건설 문제를 풀었다.</p>
 
     <ol>
       <li>
-        <p>프로그램을 함수의 조합으로 바라보는 패러다임이다.</p>
+        <p>정말 까다로운 문제였다. BFS처럼 풀지만 Queue대신 PriorityQueue(최소 Cost 우선하도록)를 사용해야 했다.</p>
       </li>
       <li>
-        <p>여기서 함수는 불변성과 순수함수라는 특징이 있어, 어떤 상태인지에 따른 side effect가 발생하지 않는다.</p>
+        <p>Visit Check를 Queue에 넣을때 하는게 효율적이라고 생각하기 쉽지만, 이 문제에서는 Queue에서 꺼낼때 Visit Check를 해야만 한다.</p>
+
+        <ol>
+          <li>한번 Visit Check 해버리면 후발주자가 해당 자리에 위치할 수 없기 때문이다.</li>
+        </ol>
+      </li>
+      <li>Priority Queue에서 먼저 꺼내져도 코너이냐 직선이냐에 따라 cost가 +600이 될 수도, +100이 될 수도 있기 때문이다.
+        <ol>
+          <li>cost가 100이지만 다음에 +600이 되버린게 add되며 그 자리를 visit해린다면,</li>
+          <li>cost가 200이지만 다음에 +100이 되는 최소값이 그 자리에 visit할수 없게 되버린다.</li>
+        </ol>
       </li>
       <li>
-        <p>비동기 프로그래밍에 있어서도 side effect가 발생하지 않는다.</p>
+        <p>visit check도 현재 위치에 veritcal로 방문했는지 horizontal로 방문했는지를 구분해야한다.</p>
 
-        <p>(인풋에 의해 결정되는 함수들의 조합이기 때문에 thread간에 공유되는 변수가 없다.)</p>
-      </li>
-      <li>
-        <p>자바에서 함수형 프로그래밍을 위해 인터페이스 생성자로 람다식을 사용하고, 메소드처럼 취급할 수 있는</p>
+        <p>(이 부분은 예외 딱 1개 발생해서 발견하는데 애먹었다. ㅠㅠ)</p>
 
-        <p>여러 인터페이스를 구현해놓았다는 것을 알게 되었다.</p>
-      </li>
-    </ol>
-
-    <ul>
-      <li><a href="https://isaac56.github.io/java/2021/01/18/Functional_Programming.html">https://isaac56.github.io/java/2021/01/18/Functional_Programming.html</a></li>
-    </ul>
-  </li>
-  <li>
-    <p>프로그래머스의 길찾기 게임과 카펫 문제를 풀었다.</p>
-
-    <ol>
-      <li>길찾기 게임:
-        <ul>
-          <li>단순한 구현 문제이다.</li>
-          <li>y값으로 내림차순 정렬을 한 후 이진 탐색 트리에 삽입한다.</li>
-          <li>pre-order, post-order 순서로 각각 탐색한 후 결과를 반환한다.</li>
-        </ul>
-      </li>
-      <li>카펫:
-        <ul>
-          <li>단순한 완전탐색 문제이다.</li>
-          <li>yellow의 형태에 따라 결정되는 brown갯수를 알면 쉽다.</li>
-          <li>주어진 yellow개수로 취할수 있는 yellow의 형태를 바꿔가며 brown개수가 일치하는 순간 답을 반환한다.</li>
-        </ul>
+        <ol>
+          <li>vertical로 방문했을땐 다음 위치로 가기 위해 +600이 되고, horziontal로 방문했을 때 다음 위치로 가기 위해 +100이 되는 경우가 있다고 가정해보자.</li>
+          <li>vertical로 방문했을 때가 제일 최소값이라 Queue에서 빼며 Visit Check해버린다.</li>
+          <li>뒤이어 horizontal로 방문했을땐 이미 visit check가 되어있다.</li>
+          <li>그러나 다음 위치 입장에서는 horiziontal로 방문했을 때 +100이 되어 자신에게 오는 경우가 최소값인 경우도 존재한다.</li>
+          <li>따라서 visit check는 horziontal과 vertical을 구분해야 한다.</li>
+        </ol>
       </li>
     </ol>
   </li>
   <li>
-    <p>TCP/IP 쉽게 30페이지까지 읽었다.</p>
-
-    <ul>
-      <li>각각 계층이 자신의 역할만 하고 나머지는 다른 계층에 위임한다.</li>
-      <li>이런 위임을 통해 마치 자신의 계층만 있는 것처럼 통신할 수 있다.</li>
-      <li>애플리케이션 계층, 트랜스포트 게층, 인터넷 계층, 네트워크 인터페이스 계층에서 사용하는 프로토콜들을 확인하였다.</li>
-    </ul>
+    <p>자바의 정석 Enum 부분을 읽었다.</p>
   </li>
 </ul>
 
@@ -210,42 +218,22 @@
 <h2 id="잘한-것">잘한 것</h2>
 
 <ul>
-  <li></li>
+  <li>재충전 후 성공적으로 계획한 공부를 할 수 있었다.</li>
 </ul>
 
 <h2 id="느낌">느낌</h2>
 
 <ul>
-  <li>
-    <p>자바에서 함수형 프로그래밍을 위해 꼭 Functional Interface를 사용해야하는 건지 모르겠다.</p>
-
-    <ul>
-      <li>
-        <p>미션에서 주어진 조건을 만족하기 위해서는 굳이 Functional Interface가 필요한지 모르겠다.</p>
-      </li>
-      <li>
-        <p>함수형 프로그래밍으로 Refactoring하는 목적에 코드의 간소화도 있을텐데, Functional Interface를 남발하면</p>
-
-        <p>코드가 더 복잡해지는 것 같다.</p>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p>TCP/IP 책을 읽었는데 엄청 꼼꼼하게 읽기보다 쓱쓱 여러번 읽는 방향으로 진행하려고 한다.</p>
-    <ul>
-      <li>부담없이 쓱쓱 읽으니까 잘 읽히고, 좋다.</li>
-      <li>여러번 읽음으로써 체득하려고 한다.</li>
-    </ul>
-  </li>
+  <li>Git을 미리 사용하고 개념을 익혀놓은 보람이 있다.</li>
+  <li>알고리즘 맨날 푸니까 아예 새로운 개념이 아니면 풀이가 잘 떠오르는 거 같아서 좋다.</li>
 </ul>
 
 <h2 id="할-일">할 일</h2>
 
 <ul>
-  <li>코드스쿼드 마스터즈 수업듣기</li>
-  <li>코드스쿼드 미션 개선해보기</li>
+  <li>코드스쿼드 미션하기</li>
+  <li>자바의 정석 읽기</li>
   <li>프로그래머스 문제 풀기</li>
-  <li>TCP/IP 쉽게 더쉽게 읽기</li>
 </ul>
 
 	</div>
