@@ -1,162 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-02-09T10:46:17+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">21년 2월 8일</title><link href="http://localhost:4000/til/2021/02/08/TIL.html" rel="alternate" type="text/html" title="21년 2월 8일" /><published>2021-02-08T00:00:00+09:00</published><updated>2021-02-08T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/02/08/TIL</id><content type="html" xml:base="http://localhost:4000/til/2021/02/08/TIL.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-02-09T10:51:11+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev.Isaac</title><subtitle>정이삭 공부블로그</subtitle><entry><title type="html">[면접질문]Iterator vs for문</title><link href="http://localhost:4000/java/2021/02/09/Iterator_vs_for.html" rel="alternate" type="text/html" title="[면접질문]Iterator vs for문" /><published>2021-02-09T00:00:00+09:00</published><updated>2021-02-09T00:00:00+09:00</updated><id>http://localhost:4000/java/2021/02/09/Iterator_vs_for</id><content type="html" xml:base="http://localhost:4000/java/2021/02/09/Iterator_vs_for.html">&lt;p&gt;오늘 스터디에서 어떤 분이 java Collections의 Iterator를 공부하게 되었다고 했다.&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;체스게임 만들기 구현을 시작하였다.&lt;/li&gt;
-  &lt;li&gt;Git에 대한 기본개념을 복습하였다.
-    &lt;ul&gt;
-      &lt;li&gt;pull, fetch, merge, push, add, commit, rebase, revert, cherry-pick 등&lt;/li&gt;
-      &lt;li&gt;remote repository, local repository, staging area, working directory 등&lt;/li&gt;
-      &lt;li&gt;branch는 commit의 참조변수이다.&lt;/li&gt;
-      &lt;li&gt;commit은 변경사항이 아니라 그 당시 파일들의 snap shot이다.&lt;/li&gt;
-      &lt;li&gt;HEAD는 working directory가 위치하는 commit 또는 branch를 가리킨다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Gradle이 무엇인지 검색하여 적어보았다.
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/gradle/2021/02/08/what_gradle.html&quot;&gt;https://isaac56.github.io/gradle/2021/02/08/what_gradle.html&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Gradle 3.4.1버전에서 JUnit 5로 Test할 때 오류나는 문제 해결에 대하여 정리하였다.
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/gradle/2021/02/08/gradle_project_JUnit_Error.html&quot;&gt;https://isaac56.github.io/gradle/2021/02/08/gradle_project_JUnit_Error.html&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;앞으로는 Iterator를 쓰려고 노력해야겠다고 하셨는데, 예전에 Iterator와 for문의 장단점을 검색했던 기억이 났다.&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;무조건 Iterator만 쓰는게 좋은건 아닌거 같아서 내용을 다시 검색했고, stackoverflow에 면접 질문으로 받았다는 내용이 있어서 기록해놓는다.&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;프로그래머스 경주로건설 문제를 풀었다.&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;
-        &lt;p&gt;정말 까다로운 문제였다. BFS처럼 풀지만 Queue대신 PriorityQueue(최소 Cost 우선하도록)를 사용해야 했다.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Visit Check를 Queue에 넣을때 하는게 효율적이라고 생각하기 쉽지만, 이 문제에서는 Queue에서 꺼낼때 Visit Check를 해야만 한다.&lt;/p&gt;
-
-        &lt;ol&gt;
-          &lt;li&gt;한번 Visit Check 해버리면 후발주자가 해당 자리에 위치할 수 없기 때문이다.&lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Priority Queue에서 먼저 꺼내져도 코너이냐 직선이냐에 따라 cost가 +600이 될 수도, +100이 될 수도 있기 때문이다.
-        &lt;ol&gt;
-          &lt;li&gt;cost가 100이지만 다음에 +600이 되버린게 add되며 그 자리를 visit해린다면,&lt;/li&gt;
-          &lt;li&gt;cost가 200이지만 다음에 +100이 되는 최소값이 그 자리에 visit할수 없게 되버린다.&lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;visit check도 현재 위치에 veritcal로 방문했는지 horizontal로 방문했는지를 구분해야한다.&lt;/p&gt;
-
-        &lt;p&gt;(이 부분은 예외 딱 1개 발생해서 발견하는데 애먹었다. ㅠㅠ)&lt;/p&gt;
-
-        &lt;ol&gt;
-          &lt;li&gt;vertical로 방문했을땐 다음 위치로 가기 위해 +600이 되고, horziontal로 방문했을 때 다음 위치로 가기 위해 +100이 되는 경우가 있다고 가정해보자.&lt;/li&gt;
-          &lt;li&gt;vertical로 방문했을 때가 제일 최소값이라 Queue에서 빼며 Visit Check해버린다.&lt;/li&gt;
-          &lt;li&gt;뒤이어 horizontal로 방문했을땐 이미 visit check가 되어있다.&lt;/li&gt;
-          &lt;li&gt;그러나 다음 위치 입장에서는 horiziontal로 방문했을 때 +100이 되어 자신에게 오는 경우가 최소값인 경우도 존재한다.&lt;/li&gt;
-          &lt;li&gt;따라서 visit check는 horziontal과 vertical을 구분해야 한다.&lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;자바의 정석 Enum 부분을 읽었다.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;재충전 후 성공적으로 계획한 공부를 할 수 있었다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Git을 미리 사용하고 개념을 익혀놓은 보람이 있다.&lt;/li&gt;
-  &lt;li&gt;알고리즘 맨날 푸니까 아예 새로운 개념이 아니면 풀이가 잘 떠오르는 거 같아서 좋다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;코드스쿼드 미션하기&lt;/li&gt;
-  &lt;li&gt;자바의 정석 읽기&lt;/li&gt;
-  &lt;li&gt;프로그래머스 문제 풀기&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Gradle" /><category term="Git" /><category term="Algorithm" /></entry><entry><title type="html">gradle이란 무엇일까</title><link href="http://localhost:4000/gradle/2021/02/08/what_gradle.html" rel="alternate" type="text/html" title="gradle이란 무엇일까" /><published>2021-02-08T00:00:00+09:00</published><updated>2021-02-08T00:00:00+09:00</updated><id>http://localhost:4000/gradle/2021/02/08/what_gradle</id><content type="html" xml:base="http://localhost:4000/gradle/2021/02/08/what_gradle.html">&lt;h2 id=&quot;gradle이란&quot;&gt;Gradle이란?&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Gradle은 groovy 언어를 이용한 빌드 자동화 시스템이다. Ant와 Maven과 같은 이전 빌드 도구들의 장점을 모아 만든 오픈소스 빌드 도구이다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;프로젝트 설정이나 의존 라이브러리 등 빌드에 필요한 정보를 gradle로 설정해 놓으면, 다른 환경에서 프로젝트를 불러도 빌드에 필요한 것들을 알아서 설정해준다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;심지어 Maven의 pom.xml을 Gradle용으로 변환할 수도 있으며 Maven의 중앙저장소도 지원하기 때문에 필요한 라이브러리를 가져다 사용할 수 있다.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;gradle-wrapper&quot;&gt;gradle wrapper&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;이미 존재하는 프로젝트를 새로운 환경에 설치할때 별도의 설치나 설정과정없이 곧 바로 빌드할 수 있게 해준다.&lt;/p&gt;
-
-    &lt;p&gt;(Java나 Gradle도 설치할 필요가 없다. gradle wrapper를 이용하면 로컬에 설치된 Java와 gradle 버전을 신경쓸 필요 없이 wrapper에 포함된 java와 gradle을 사용하는 듯 하다)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;wrapper는 사용자가 Gradle이 설치되어 있지 않아도 Gradle tasks를 실행할 수 있도록 해주는 작은 script, jar 및 등록 정보 파일&lt;/li&gt;
-  &lt;li&gt;wrapper를 생성하면 사용자가 프로젝트를 만든 사람과 동일한 버전의 Gradle을 사용할 수 있음&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;gradle wrapper 실행&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gradle wrapper
-
-BUILD SUCCESSFUL &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;602ms
-1 actionable task: 1 executed
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;아래와 같이 파일이 만들어짐&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-├── build.gradle
-├── gradle
-│   └── wrapper
-│       ├── gradle-wrapper.jar
-│       └── gradle-wrapper.properties
-├── gradlew
-└── gradlew.bat
-
-2 directories, 5 files
-  &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;./gradlew build
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Wrapper를 사용하면 위와 같이 실행가능&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gradle build
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이 경우 Java나 Gradle이 설치되어 있어야 하고, 새로받은 프로젝트의 Gradle 버전과 로컬에 설치된 Gradle 버전이 호환되지 않으면 문제가 발생할 수 있음&lt;/p&gt;
-
-&lt;p&gt;또, gradle명령어로 컴파일이나 빌드 등을 할때, 위와 같이 하면 로컬에 설치된 gradle을 사용&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Build 후에는 test, compile 후 jar파일 생성&lt;/li&gt;
-  &lt;li&gt;gradlew라는 UNIX script와 gradlew.bat라는 Windows명령이 jar 파일 및 속성 파일과 함께 생성됨&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;출처: &lt;a href=&quot;https://velog.io/@hwany/gradle&quot;&gt;https://velog.io/@hwany/gradle&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="gradle" /></entry><entry><title type="html">gradle 프로젝트에서 JUnit Test시 에러 발생</title><link href="http://localhost:4000/gradle/2021/02/08/gradle_project_JUnit_Error.html" rel="alternate" type="text/html" title="gradle 프로젝트에서 JUnit Test시 에러 발생" /><published>2021-02-08T00:00:00+09:00</published><updated>2021-02-08T00:00:00+09:00</updated><id>http://localhost:4000/gradle/2021/02/08/gradle_project_JUnit_Error</id><content type="html" xml:base="http://localhost:4000/gradle/2021/02/08/gradle_project_JUnit_Error.html">&lt;h3 id=&quot;intellij의-gradle-프로젝트에서-평소와-같이-junit-test를-실행시켰다&quot;&gt;IntelliJ의 Gradle 프로젝트에서 평소와 같이 JUnit Test를 실행시켰다.&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/22267919/iterator-vs-for&quot;&gt;https://stackoverflow.com/questions/22267919/iterator-vs-for&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Iterator" /><category term="for" /></entry><entry><title type="html">gradle 프로젝트에서 JUnit Test시 에러 발생</title><link href="http://localhost:4000/gradle/2021/02/08/gradle_project_JUnit_Error.html" rel="alternate" type="text/html" title="gradle 프로젝트에서 JUnit Test시 에러 발생" /><published>2021-02-08T00:00:00+09:00</published><updated>2021-02-08T00:00:00+09:00</updated><id>http://localhost:4000/gradle/2021/02/08/gradle_project_JUnit_Error</id><content type="html" xml:base="http://localhost:4000/gradle/2021/02/08/gradle_project_JUnit_Error.html">&lt;h3 id=&quot;intellij의-gradle-프로젝트에서-평소와-같이-junit-test를-실행시켰다&quot;&gt;IntelliJ의 Gradle 프로젝트에서 평소와 같이 JUnit Test를 실행시켰다.&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;아래와 같은 에러가 발생했다.&lt;/li&gt;
@@ -262,7 +110,165 @@ test {
   &lt;li&gt;출처 - &lt;a href=&quot;https://stackoverflow.com/questions/30474767/no-tests-found-for-given-includes-error-when-running-parameterized-unit-test-in&quot;&gt;https://stackoverflow.com/questions/30474767/no-tests-found-for-given-includes-error-when-running-parameterized-unit-test-in&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;```&lt;/p&gt;</content><author><name></name></author><category term="gradle" /></entry><entry><title type="html">21년 2월 3일</title><link href="http://localhost:4000/til/2021/02/03/TIL.html" rel="alternate" type="text/html" title="21년 2월 3일" /><published>2021-02-03T00:00:00+09:00</published><updated>2021-02-03T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/02/03/TIL</id><content type="html" xml:base="http://localhost:4000/til/2021/02/03/TIL.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+&lt;p&gt;```&lt;/p&gt;</content><author><name></name></author><category term="gradle" /></entry><entry><title type="html">gradle이란 무엇일까</title><link href="http://localhost:4000/gradle/2021/02/08/what_gradle.html" rel="alternate" type="text/html" title="gradle이란 무엇일까" /><published>2021-02-08T00:00:00+09:00</published><updated>2021-02-08T00:00:00+09:00</updated><id>http://localhost:4000/gradle/2021/02/08/what_gradle</id><content type="html" xml:base="http://localhost:4000/gradle/2021/02/08/what_gradle.html">&lt;h2 id=&quot;gradle이란&quot;&gt;Gradle이란?&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Gradle은 groovy 언어를 이용한 빌드 자동화 시스템이다. Ant와 Maven과 같은 이전 빌드 도구들의 장점을 모아 만든 오픈소스 빌드 도구이다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;프로젝트 설정이나 의존 라이브러리 등 빌드에 필요한 정보를 gradle로 설정해 놓으면, 다른 환경에서 프로젝트를 불러도 빌드에 필요한 것들을 알아서 설정해준다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;심지어 Maven의 pom.xml을 Gradle용으로 변환할 수도 있으며 Maven의 중앙저장소도 지원하기 때문에 필요한 라이브러리를 가져다 사용할 수 있다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;gradle-wrapper&quot;&gt;gradle wrapper&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;이미 존재하는 프로젝트를 새로운 환경에 설치할때 별도의 설치나 설정과정없이 곧 바로 빌드할 수 있게 해준다.&lt;/p&gt;
+
+    &lt;p&gt;(Java나 Gradle도 설치할 필요가 없다. gradle wrapper를 이용하면 로컬에 설치된 Java와 gradle 버전을 신경쓸 필요 없이 wrapper에 포함된 java와 gradle을 사용하는 듯 하다)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;wrapper는 사용자가 Gradle이 설치되어 있지 않아도 Gradle tasks를 실행할 수 있도록 해주는 작은 script, jar 및 등록 정보 파일&lt;/li&gt;
+  &lt;li&gt;wrapper를 생성하면 사용자가 프로젝트를 만든 사람과 동일한 버전의 Gradle을 사용할 수 있음&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;gradle wrapper 실행&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gradle wrapper
+
+BUILD SUCCESSFUL &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;602ms
+1 actionable task: 1 executed
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;아래와 같이 파일이 만들어짐&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+├── build.gradle
+├── gradle
+│   └── wrapper
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── gradlew
+└── gradlew.bat
+
+2 directories, 5 files
+  &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;./gradlew build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Wrapper를 사용하면 위와 같이 실행가능&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gradle build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이 경우 Java나 Gradle이 설치되어 있어야 하고, 새로받은 프로젝트의 Gradle 버전과 로컬에 설치된 Gradle 버전이 호환되지 않으면 문제가 발생할 수 있음&lt;/p&gt;
+
+&lt;p&gt;또, gradle명령어로 컴파일이나 빌드 등을 할때, 위와 같이 하면 로컬에 설치된 gradle을 사용&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Build 후에는 test, compile 후 jar파일 생성&lt;/li&gt;
+  &lt;li&gt;gradlew라는 UNIX script와 gradlew.bat라는 Windows명령이 jar 파일 및 속성 파일과 함께 생성됨&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;출처: &lt;a href=&quot;https://velog.io/@hwany/gradle&quot;&gt;https://velog.io/@hwany/gradle&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="gradle" /></entry><entry><title type="html">21년 2월 8일</title><link href="http://localhost:4000/til/2021/02/08/TIL.html" rel="alternate" type="text/html" title="21년 2월 8일" /><published>2021-02-08T00:00:00+09:00</published><updated>2021-02-08T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/02/08/TIL</id><content type="html" xml:base="http://localhost:4000/til/2021/02/08/TIL.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;체스게임 만들기 구현을 시작하였다.&lt;/li&gt;
+  &lt;li&gt;Git에 대한 기본개념을 복습하였다.
+    &lt;ul&gt;
+      &lt;li&gt;pull, fetch, merge, push, add, commit, rebase, revert, cherry-pick 등&lt;/li&gt;
+      &lt;li&gt;remote repository, local repository, staging area, working directory 등&lt;/li&gt;
+      &lt;li&gt;branch는 commit의 참조변수이다.&lt;/li&gt;
+      &lt;li&gt;commit은 변경사항이 아니라 그 당시 파일들의 snap shot이다.&lt;/li&gt;
+      &lt;li&gt;HEAD는 working directory가 위치하는 commit 또는 branch를 가리킨다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Gradle이 무엇인지 검색하여 적어보았다.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/gradle/2021/02/08/what_gradle.html&quot;&gt;https://isaac56.github.io/gradle/2021/02/08/what_gradle.html&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Gradle 3.4.1버전에서 JUnit 5로 Test할 때 오류나는 문제 해결에 대하여 정리하였다.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://isaac56.github.io/gradle/2021/02/08/gradle_project_JUnit_Error.html&quot;&gt;https://isaac56.github.io/gradle/2021/02/08/gradle_project_JUnit_Error.html&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;프로그래머스 경주로건설 문제를 풀었다.&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;정말 까다로운 문제였다. BFS처럼 풀지만 Queue대신 PriorityQueue(최소 Cost 우선하도록)를 사용해야 했다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Visit Check를 Queue에 넣을때 하는게 효율적이라고 생각하기 쉽지만, 이 문제에서는 Queue에서 꺼낼때 Visit Check를 해야만 한다.&lt;/p&gt;
+
+        &lt;ol&gt;
+          &lt;li&gt;한번 Visit Check 해버리면 후발주자가 해당 자리에 위치할 수 없기 때문이다.&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Priority Queue에서 먼저 꺼내져도 코너이냐 직선이냐에 따라 cost가 +600이 될 수도, +100이 될 수도 있기 때문이다.
+        &lt;ol&gt;
+          &lt;li&gt;cost가 100이지만 다음에 +600이 되버린게 add되며 그 자리를 visit해린다면,&lt;/li&gt;
+          &lt;li&gt;cost가 200이지만 다음에 +100이 되는 최소값이 그 자리에 visit할수 없게 되버린다.&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;visit check도 현재 위치에 veritcal로 방문했는지 horizontal로 방문했는지를 구분해야한다.&lt;/p&gt;
+
+        &lt;p&gt;(이 부분은 예외 딱 1개 발생해서 발견하는데 애먹었다. ㅠㅠ)&lt;/p&gt;
+
+        &lt;ol&gt;
+          &lt;li&gt;vertical로 방문했을땐 다음 위치로 가기 위해 +600이 되고, horziontal로 방문했을 때 다음 위치로 가기 위해 +100이 되는 경우가 있다고 가정해보자.&lt;/li&gt;
+          &lt;li&gt;vertical로 방문했을 때가 제일 최소값이라 Queue에서 빼며 Visit Check해버린다.&lt;/li&gt;
+          &lt;li&gt;뒤이어 horizontal로 방문했을땐 이미 visit check가 되어있다.&lt;/li&gt;
+          &lt;li&gt;그러나 다음 위치 입장에서는 horiziontal로 방문했을 때 +100이 되어 자신에게 오는 경우가 최소값인 경우도 존재한다.&lt;/li&gt;
+          &lt;li&gt;따라서 visit check는 horziontal과 vertical을 구분해야 한다.&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;자바의 정석 Enum 부분을 읽었다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘못한-것&quot;&gt;잘못한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;잘한-것&quot;&gt;잘한 것&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;재충전 후 성공적으로 계획한 공부를 할 수 있었다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;느낌&quot;&gt;느낌&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Git을 미리 사용하고 개념을 익혀놓은 보람이 있다.&lt;/li&gt;
+  &lt;li&gt;알고리즘 맨날 푸니까 아예 새로운 개념이 아니면 풀이가 잘 떠오르는 거 같아서 좋다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;할-일&quot;&gt;할 일&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;코드스쿼드 미션하기&lt;/li&gt;
+  &lt;li&gt;자바의 정석 읽기&lt;/li&gt;
+  &lt;li&gt;프로그래머스 문제 풀기&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Gradle" /><category term="Git" /><category term="Algorithm" /></entry><entry><title type="html">21년 2월 3일</title><link href="http://localhost:4000/til/2021/02/03/TIL.html" rel="alternate" type="text/html" title="21년 2월 3일" /><published>2021-02-03T00:00:00+09:00</published><updated>2021-02-03T00:00:00+09:00</updated><id>http://localhost:4000/til/2021/02/03/TIL</id><content type="html" xml:base="http://localhost:4000/til/2021/02/03/TIL.html">&lt;h2 id=&quot;한-일&quot;&gt;한 일&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -939,101 +945,4 @@ FIELDS TERMINATED BY ',';
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[mysqld]
 secure-file-priv=&quot;&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="Mysql" /></entry><entry><title type="html">Docker mysql 이미지 실행 및 한글설정</title><link href="http://localhost:4000/docker/2021/01/28/Docker_mysql_image_run_config.html" rel="alternate" type="text/html" title="Docker mysql 이미지 실행 및 한글설정" /><published>2021-01-28T00:00:00+09:00</published><updated>2021-01-28T00:00:00+09:00</updated><id>http://localhost:4000/docker/2021/01/28/Docker_mysql_image_run_config</id><content type="html" xml:base="http://localhost:4000/docker/2021/01/28/Docker_mysql_image_run_config.html">&lt;h3 id=&quot;docker-docs를-참고하여-진행했습니다&quot;&gt;Docker Docs를 참고하여 진행했습니다.&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://docs.docker.com/engine/reference/commandline/&quot;&gt;Docker Docs&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;mysql-이미지를-컨테이너로-실행하고-설정한-기록&quot;&gt;mysql 이미지를 컨테이너로 실행하고 설정한 기록&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;docker hub 에서 mysql image pull 받기&lt;/p&gt;
-
-    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker pull mysql:5.7
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;image를 container로 실행하기(-d는 background로 실행, -e는 환경변수 설정한다는 뜻)&lt;/p&gt;
-
-    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; mysql &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;MYSQL_ROOT_PWD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;비밀번호 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; mysql:5.7
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;컨테이너에게 exec명령어로 bash 실행하기 (-i는 Keep STDIN open even if not attached라는 뜻, -t 는 psedo TTY를 할당한다)&lt;/p&gt;
-
-    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docer &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-it&lt;/span&gt; mysql /bin/bash
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;locale 설정하기 (Debian Linux 기준입니다.)&lt;/p&gt;
-
-    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;apt update
-apt upgrade
-apt &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; locales locales-all
-dpkg-reconfigure locales &lt;span class=&quot;c&quot;&gt;#여기서 실행되는 프로그램에서 ko_KR.UTF-8을 선택&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;4-1) 현재 컨테이너를 이미지로 만든 후 LC_ALL 환경변수를 ko_KR.UTF-8로 변경하여 재실행한다.&lt;/p&gt;
-
-    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker commit mysql isaac/mysql
-docker container &lt;span class=&quot;nb&quot;&gt;rm &lt;/span&gt;mysql
-docker run &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; mysql &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;LC_ALL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ko_KR.UTF-8 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; isaac/mysql
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;mysql -uroot -p비밀번호 명령어를 통해 mysql 접속한다.&lt;/p&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mysql -uroot -p루트비번
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;status 명령어로 현재 설정 확인하면 characterset이 latin1로 되어있는 걸 확인할 수 있다.&lt;/p&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mysql&amp;gt; status
---------------
-mysql  Ver 14.14 Distrib 5.7.33, for Linux (x86_64) using  EditLine wrapper
-   
-Connection id:		3
-Current database:	
-Current user:		root@localhost
-SSL:			Not in use
-Current pager:		stdout
-Using outfile:		''
-Using delimiter:	;
-Server version:		5.7.33 MySQL Community Server (GPL)
-Protocol version:	10
-Connection:		Localhost via UNIX socket
-Server characterset:	latin1
-Db     characterset:	latin1
-Client characterset:	latin1
-Conn.  characterset:	latin1
-UNIX socket:		/var/run/mysqld/mysqld.sock
-Uptime:			49 min 29 sec
-   
-Threads: 1  Questions: 7  Slow queries: 0  Opens: 105  Flush tables: 1  Open tables: 98  Queries per second avg: 0.002
---------------
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;/etc/mysql/mysql.conf.d/mysqld.cnf 파일을 수정해준다. (도커허브 mysql:5.7 이미지 기준입니다.)&lt;/p&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//아래 내용을 파일에 추가해준다.
-[client]
-default-character-set=utf8
-   
-[mysql]
-default-character-set=utf8
-   
-[mysqld]
-collation-server = utf8_unicode_ci
-init-connect='SET NAMES utf8'
-character-set-server = utf8
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;docer container 명령어로 restart시켜준다&lt;/p&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker container restart mysql
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="Docker" /></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="Mysql" /></entry></feed>
