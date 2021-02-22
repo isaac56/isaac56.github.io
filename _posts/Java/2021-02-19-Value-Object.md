@@ -73,4 +73,5 @@ Value Object는 값을 나타내는 객체이고, 다음과 같은 속성을 가
      }
      ```
 
-     
+출처: [https://medium.com/@nicolopigna/value-objects-like-a-pro-f1bfc1548c72](https://medium.com/@nicolopigna/value-objects-like-a-pro-f1bfc1548c72)
+
