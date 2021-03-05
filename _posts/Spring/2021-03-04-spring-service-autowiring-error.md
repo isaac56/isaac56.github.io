@@ -59,3 +59,6 @@ Caused by: java.lang.IllegalArgumentException: Not a managed type: class 어쩌�
 ```
 
 이 때는 `@EntityScan(basePackages = {})`를 확인한다. XXX 엔티티 클래스가 속한 패키지가 지정되어 있지 않은 상태일 것이다. 적절히 패키지를 지정해주면 된다.
+
+출처 - [https://raw.githubusercontent.com/HomoEfficio/dev-tips/master/Spring%20-%20Autowiring%20%EA%B4%80%EB%A0%A8%20%EC%98%A4%EB%A5%98.md](https://raw.githubusercontent.com/HomoEfficio/dev-tips/master/Spring%20-%20Autowiring%20%EA%B4%80%EB%A0%A8%20%EC%98%A4%EB%A5%98.md)
+
