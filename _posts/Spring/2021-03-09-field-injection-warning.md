@@ -21,5 +21,7 @@ last_modified_at: 2021-03-09
 
 이번 기회에 해당 경고가 왜 뜨는지 찾아보고 아래 글을 기반으로 학습하게 되었다.
 
+[https://leejisoo860911.tistory.com/2](https://leejisoo860911.tistory.com/2)
+
 [https://yaboong.github.io/spring/2019/08/29/why-field-injection-is-bad/](https://yaboong.github.io/spring/2019/08/29/why-field-injection-is-bad/)
 
