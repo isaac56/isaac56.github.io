@@ -17,14 +17,10 @@ last_modified_at: 2021-03-19
 ---
 
 1. 스프링의 트랜잭션 지원
-
-- 스프링은 코드 기반의 트랜잭션 처리(Programmatic Transaction) 뿐만 아니라 선언적 트랜잭션(Declarative Transaction)을 지원하고 있다. 스프링이 제공하는 트랜잭션 템플릿 클래스를 이용하거나 설정 파일, 어노테이션을 이용해서 트랜잭션의 범위 및 규칙을 정의할 수 있다.
+   - 스프링은 코드 기반의 트랜잭션 처리(Programmatic Transaction) 뿐만 아니라 선언적 트랜잭션(Declarative Transaction)을 지원하고 있다. 스프링이 제공하는 트랜잭션 템플릿 클래스를 이용하거나 설정 파일, 어노테이션을 이용해서 트랜잭션의 범위 및 규칙을 정의할 수 있다.
 
 2. 선언적 트랜잭션 처리
-
-- 선언적 트랜잭션은 설정 파일이나 어노테이션을 이용해서 트랜잭션의 범위, 롤백 규칙 등을 정의
-
-
+   - 선언적 트랜잭션은 설정 파일이나 어노테이션을 이용해서 트랜잭션의 범위, 롤백 규칙 등을 정의
 
 ## @Transactional
 
@@ -45,4 +41,3 @@ last_modified_at: 2021-03-19
 
 [Transactional 과 Synchrnoized](https://stackoverflow.com/questions/41767860/spring-transactional-with-synchronized-keyword-doesnt-work)
 
-d
