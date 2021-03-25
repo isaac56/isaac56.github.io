@@ -4,7 +4,7 @@ title:  "RestControllerAdvice에서 RestController의 예외만 받기"
 excerpt: ""
 
 categories:
-  - TIL
+  - Spring
 tags:
   - [Spring, Transactional]
 

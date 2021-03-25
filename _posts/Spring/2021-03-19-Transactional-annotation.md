@@ -4,7 +4,7 @@ title:  "@Transactional"
 excerpt: ""
 
 categories:
-  - TIL
+  - Spring
 tags:
   - [Spring, Transactional]
 
