@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "JPA - @NotNull vs @Column(nullable = true)"
+title:  "JPA - @NotNull vs @Column(nullable = false)"
 excerpt: ""
 
 categories:
@@ -16,7 +16,7 @@ date: 2021-03-30
 last_modified_at: 2021-03-30
 ---
 
-## @NotNull과 @Column(nullable=true) 의 차이가 뭘까?
+## @NotNull과 @Column(nullable=false) 의 차이가 뭘까?
 
 엔티티 필드에 선언하게 되면, 두 어노테이션 모두 동일한 결과를 보이는 듯 하다.
 
@@ -41,7 +41,7 @@ implementation group: 'javax.validation', name: 'validation-api', version: '2.0.
 
 ## 2. 체크하는 시스템이 다르다.
 
-@Column(nullable = true) 는 DB 테이블 생성시에 not null 제약조건을 추가할 뿐이다.
+@Column(nullable = false) 는 DB 테이블 생성시에 not null 제약조건을 추가할 뿐이다.
 
 해당 칼럼에 null이 할당된 채로 DB에 저장하려고 하더라도, Java Application에서는 검사하지 않는다.
 
@@ -57,7 +57,7 @@ SQL문이 실행되면서 not null 제약 조건에 걸려 실패할 뿐이다.
 
 <br>
 
-@Column(nullable = true)은 DB에서 null인지 체크하게 되고,
+@Column(nullable = false)은 DB에서 null인지 체크하게 되고,
 
 @NotNull은 java application에서 null인지 체크하게 된다.
 
@@ -67,7 +67,7 @@ SQL문이 실행되면서 not null 제약 조건에 걸려 실패할 뿐이다.
 
 위에서 설명한 바와 같다.
 
-@Column(nullable = true)는 SQL문이 실행되는 시점에 not null 제약조건을 통해 체크하게 된다.
+@Column(nullable = false)는 SQL문이 실행되는 시점에 not null 제약조건을 통해 체크하게 된다.
 
 (해당 어노테이션은 단순히 테이블 생성시 제약조건을 만들어줄 뿐이다.)
 
