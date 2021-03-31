@@ -4,7 +4,7 @@ title:  "Linked List"
 excerpt: ""
 
 categories:
-  - Data Structure
+  - DataStructure
 tags:
   - [Java, 자료구조, Linked List]
 
