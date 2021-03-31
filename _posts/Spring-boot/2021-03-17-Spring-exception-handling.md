@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Spring - 예외처리하는 방법"
+title:  "Spring-boot: 예외처리하는 방법"
 excerpt: ""
 
 categories:
-  - Spring
+  - Spring-boot
 tags:
-  - [Spring]
+  - [Spring-boot]
 
 toc: true
 toc_sticky: true

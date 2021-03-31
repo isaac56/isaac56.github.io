@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "@Autowired 없어도 DI 해주는 경우?"
+title:  "Spring-boot: @Autowired 없어도 DI 해주는 경우?"
 excerpt: ""
 
 categories:
-  - Spring
+  - Spring-boot
 tags:
-  - [Spring, Transactional]
+  - [Spring-boot, Transactional]
 
 toc: true
 toc_sticky: true

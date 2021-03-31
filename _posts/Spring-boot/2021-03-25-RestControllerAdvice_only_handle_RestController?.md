@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "RestControllerAdvice에서 RestController의 예외만 받기"
+title:  "Spring-boot: RestControllerAdvice에서 RestController의 예외만 받기"
 excerpt: ""
 
 categories:
-  - Spring
+  - Spring-boot
 tags:
-  - [Spring, Transactional]
+  - [Spring-boot, Transactional]
 
 toc: true
 toc_sticky: true

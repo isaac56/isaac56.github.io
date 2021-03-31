@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Spring - 스프링 의존성 주입(Dependency Injection)이란?"
+title:  "Spring-boot: 스프링 의존성 주입(Dependency Injection)이란?"
 excerpt: ""
 
 categories:
-  - Spring
+  - Spring-boot
 tags:
-  - [Spring]
+  - [Spring-boot]
 
 toc: true
 toc_sticky: true

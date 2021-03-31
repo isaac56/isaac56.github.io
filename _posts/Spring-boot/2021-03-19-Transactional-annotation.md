@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "@Transactional"
+title:  "Spring-boot: @Transactional"
 excerpt: ""
 
 categories:
-  - Spring
+  - Spring-boot
 tags:
-  - [Spring, Transactional]
+  - [Spring-boot, Transactional]
 
 toc: true
 toc_sticky: true

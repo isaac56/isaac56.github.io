@@ -4,9 +4,9 @@ title:  "Spring Service Autowiring 관련 문제"
 excerpt: ""
 
 categories:
-  - Spring
+  - Spring-boot
 tags:
-  - [Spring]
+  - [Spring-boot]
 
 toc: true
 toc_sticky: true

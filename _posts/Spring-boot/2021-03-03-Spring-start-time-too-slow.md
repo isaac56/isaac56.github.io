@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Mac으로 Spring-boot 실행 시간이 오래 걸리는 현상 해결"
+title:  "Spring-boot 실행 시 DNS Look up 없이 실행하기(Mac)"
 excerpt: ""
 
 categories:
-  - Spring
+  - Spring-boot
 tags:
-  - [Spring, Mac]
+  - [Spring-boot, Mac]
 
 toc: true
 toc_sticky: true

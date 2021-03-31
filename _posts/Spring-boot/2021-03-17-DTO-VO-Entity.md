@@ -4,9 +4,9 @@ title:  "DTO vs VO vs Entity"
 excerpt: ""
 
 categories:
-  - Spring
+  - Spring-boot
 tags:
-  - [Spring]
+  - [Spring-boot]
 
 toc: true
 toc_sticky: true

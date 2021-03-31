@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Spring - 생성자 주입을 사용해야 하는 이유, 필드 인젝션이 좋지 않은 이유"
+title:  "Spring-boot: 생성자 주입을 사용해야 하는 이유, 필드 인젝션이 좋지 않은 이유"
 excerpt: ""
 
 categories:
-  - Spring
+  - Spring-boot
 tags:
-  - [Spring]
+  - [Spring-boot]
 
 toc: true
 toc_sticky: true

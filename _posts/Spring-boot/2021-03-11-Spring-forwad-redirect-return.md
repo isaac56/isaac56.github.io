@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "spring - redirect, forward, 그냥 리턴의 차이"
+title:  "redirect, forward, 그냥 리턴의 차이"
 excerpt: ""
 
 categories:
-  - Spring
+  - Spring-boot
 tags:
-  - [Spring]
+  - [Spring-boot]
 
 toc: true
 toc_sticky: true
