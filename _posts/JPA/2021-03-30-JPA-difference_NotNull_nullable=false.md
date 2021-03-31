@@ -33,6 +33,8 @@ last_modified_at: 2021-03-30
 ```java
 //build.gradle의 경우
 implementation group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final'
+//spring-boot를 사용한다면 위 대신 이걸 추가하자
+implementation 'org.springframework.boot:spring-boot-starter-validation'
 ```
 
 <br>
