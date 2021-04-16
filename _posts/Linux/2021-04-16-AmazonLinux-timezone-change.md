@@ -54,4 +54,4 @@ reboot
 
 
 
-출처 - [https://jojoldu.tistory.com/513]
+출처 - <https://jojoldu.tistory.com/513>
