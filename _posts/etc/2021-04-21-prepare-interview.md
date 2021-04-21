@@ -19,3 +19,14 @@ Authentication(인증) - 내가 A라고 주장할 때, 실제로 내가 A인지 
 
 Authorization(권한 부여) - 어떤 자원에 대한 접근을 허용해주는 것
 
+<br>
+
+## Oauth 2.0 (Open authentication)
+
+Resource Owner: 일반적인 사용자
+
+Client: 서비스 제공자 (ex: oauth를 통해 인증을 사용하고 싶은 서비스업체)
+
+Authorization Server: 인증을 담당하는 서버 (ex: 깃헙 인증 서버)
+
+Resource Server: 리소스를 가지고 있고 클라이언트에게 제공해주는 서버 (ex: 깃헙 데이터 서버)
