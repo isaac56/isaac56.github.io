@@ -49,4 +49,7 @@ last_modified_at: 2021-04-30
 
 ## OAuth로 인증한 Access Token을 API 서버 세션에 저장한다는 것 자체가 잘못 된 것 같다.
 
-- 찾아보니 JWT Token으로 저장하는 것 같은데 차후 구현해 보아야겠다.
+- [SPA와 API Server로 구성되어 있다면 OAuth의 call back url은 프론트 서버여야 한다.](https://stackoverflow.com/questions/59124914/should-the-oauth2-redirect-url-be-to-the-frontend-or-backend)
+
+- 그렇게 해야지 call back url에서 받은 access token을 브라우저에 JWT로 저장하거나, access token을 저장한 session ID를 브라우저에 쿠키로 저장할 수 있게 되는 것 같다.
+
