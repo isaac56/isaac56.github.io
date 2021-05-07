@@ -23,7 +23,7 @@ last_modified_at: 2021-05-07
 
 ### 설정 파일에 들어가서 character set을 UTF8로 변경한 후 재시작하자
 
-1. mysql 설정 파일에 들어가서 아래 내용을 추가한다.
+- mysql 설정 파일에 들어가서 아래 내용을 추가한다.
 
 ```
 [mysql]
@@ -38,27 +38,28 @@ collation-server = utf8_general_ci
 init_connect=’SET NAMES utf8’
 ```
 
-2. mysql 데몬을 재시작 한다.
+- mysql 데몬을 재시작 한다.
 
 ```
 sudo systemctl restart mysqld
 ```
 
-3. 이미 테이블을 생성한 적 있으면 해당 테이블은 생성했을 당시의 character-set으로 남아있다.
+- 이미 테이블을 생성한 적 있으면 해당 테이블은 생성했을 당시의 character-set으로 남아있다.
+  - 테이블을 새로 생성하거나, character set을 바꾸자
+  
+  - 테이블의 character set 확인
+  
+    ```
+    SHOW CREATE TABLE table_name; 
+    ```
+  
+  - 테이블의 character set 변경
+  
+    ```
+    ALTER TABLE table_name CONVERT TO character SET utf8;
+    ```
+  
+    
 
-   - 테이블을 새로 생성하거나, character set을 바꾸자
 
-   1. 테이블의 character set 확인
-
-   ```
-   SHOW CREATE TABLE table_name; 
-   ```
-
-   2. 테이블의 character set 변경
-
-   ```
-   ALTER TABLE table_name CONVERT TO character SET utf8;
-   ```
-
-   
 
