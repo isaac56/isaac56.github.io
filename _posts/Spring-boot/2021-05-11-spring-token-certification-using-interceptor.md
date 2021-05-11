@@ -25,7 +25,9 @@ last_modified_at: 2021-05-11
 
 모든 controller method에 token을 검사하는 코드가 중복되어 들어간다면 번거로울 뿐만 아니라 유지/보수에도 좋지 않다.
 
-그래서 이번엔 interceptor를 활용하여 인증이 필요한 api는 interceptor의 preHandle 에서 인증 검사를 하도록 만들어 보았다. (Spring Security는 어려울 것 같아서 나중에 적용해야겠다.)
+그래서 이번엔 interceptor를 활용하여 인증이 필요한 api는 interceptor의 preHandle 에서 인증 검사를 하도록 만들어 보았다.
+
+(Spring Security는 어려울 것 같아서 나중에 적용해야겠다.)
 
 
 
