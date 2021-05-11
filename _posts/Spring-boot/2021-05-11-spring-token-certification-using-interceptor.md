@@ -31,7 +31,7 @@ last_modified_at: 2021-05-11
 
 ## interceptor 생성
 
-```
+```java
 @Component
 public class CertificationInterceptor implements HandlerInterceptor {
     private final UserService userService;
@@ -75,19 +75,25 @@ public class CertificationInterceptor implements HandlerInterceptor {
 
 HandlerInterceptor를 상속받아서 쉽게 구현이 가능하다.
 
-코드를 읽어보면, preHandler에서 request header의 Authorization값(jwt)를 읽어서 UserService 내부의 메소드를 사용해 userId를 넘겨준다.
+코드를 읽어보면, preHandler에서 request header의 Authorization값(jwt)를 읽어서 UserService 내부의 메소드를 사용해 userId를 컨트롤러 메소드에 넘겨준다
 
- (UserService.getUserIdFromJwt 메소드 내부에서 jwt 유효성 검사를 진행하며 잘못되었으면 Exception을 던진다.)
+(HttpServletRequest에 setAttribute로 전달)
 
+<br>
 
+UserService.getUserIdFromJwt 메소드 내부에서 jwt 유효성 검사를 하고 있어서,
+
+유효한 jwt가 아니라면 관련 Exception을 던지게 되어있다.
+
+<br>
 
 이렇게 정의해놓으면, jwt가 유효하지 않을 때 throw 된 Exception을 GlobalExceptionHandler가 받아서 적절한 에러메세지를 반환해주고, 제대로 확인이 되었으면 controller의 메소드가 실행된다.
 
-
+<br>
 
 ## Interceptor 등록
 
-```
+```java
 @Configuration
 public class WebMvcConfig implements WebMvcConfigurer {
     private HandlerInterceptor interceptor;
