@@ -96,7 +96,7 @@ unique가 걸려있지 않아도 같은 email의 유저가 매번 생기기 때�
 
 null이 아니면 메소드가 실행되지 않고 원하는 동작이 잘 실행된다.
 
-orElse를 풀어쓰면 다음과 같은 플로우가 될것이다.
+orElseGet를 풀어쓰면 다음과 같은 플로우가 될것이다.
 
 ```java
 Optional<User> userOptional = userRepository.findByEmail(email);
