@@ -4,7 +4,7 @@ title:  "JPA + queryDSL 참고자료"
 excerpt: ""
 
 categories:
-  - JPA, queryDSL
+  - JPA
 tags:
   - [Spring-boot,JPA,queryDSL]
 

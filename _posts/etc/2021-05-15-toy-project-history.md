@@ -32,7 +32,7 @@ last_modified_at: 2021-06-07
   - OAuth, jwt
 - 결과/성과:
   - jpql의 fetch join을 사용하여 N+1 쿼리문제를 해결해보았습니다.
-  - querydsl을 사용하여 동적으로 조건을 생성하는 쿼리를 생성했습니다.
+  - querydsl을 사용하여 동적으로 조건을 생성하는 쿼리를 적용했습니다.
   - mysql의 geometric type과 spatial index를 사용하여 위치 검색을 최적화 해보았습니다.
   - 예약의 안정성을 위하여 예약을 진행할 때 double check하도록 구성해보았습니다.
 

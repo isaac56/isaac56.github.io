@@ -4,7 +4,7 @@ title:  "JPA - repository test에서 테스트용 디비 사용하기"
 excerpt: ""
 
 categories:
-  - JPA, DataJpaTest
+  - JPA
 tags:
   - [Spring-boot,JPA,DataJpaTest]
 
