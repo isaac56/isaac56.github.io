@@ -13,8 +13,31 @@ toc_sticky: true
 comments: true
  
 date: 2021-05-15
-last_modified_at: 2021-05-15
+last_modified_at: 2021-06-07
 ---
+[에어비엔비 클론 앱]
+
+- 소스 코드: https://github.com/isaac56/airbnb
+- 진행 기간: 2021.5.17 ~ 2021.6.4
+- 주요 내용:
+  - 행정 구역(시, 구, 동)으로 숙소 검색이 가능합니다.
+  - 위도, 경도를 사용하여 반경 x km에 존재하는 숙소 검색이 가능합니다.
+  - 숙소 검색 시 항상 날짜를 선택하며, 예약 가능한 숙소만 목록에 나타납니다.
+  - 세부 조건(숙소 타입, 인원 수, 화장실 개수)도 추가하여 검색이 가능합니다.
+  - 예약 및 찜 목록에 등록이 가능합니다.
+- 본인의 역할: DB 설계, 백엔드 API 서버 개발, AWS 배포
+- 사용한 Skill 또는 지식:
+  - Spring boot, JPA, querydsl, Mysql
+  - Git, AWS EC2
+  - OAuth, jwt
+- 결과/성과:
+  - jpql의 fetch join을 사용하여 N+1 쿼리문제를 해결해보았습니다.
+  - querydsl을 사용하여 동적으로 조건을 생성하는 쿼리를 생성했습니다.
+  - mysql의 geometric type과 spatial index를 사용하여 위치 검색을 최적화 해보았습니다.
+  - 예약의 안정성을 위하여 예약을 진행할 때 double check하도록 구성해보았습니다.
+
+<br>
+
 [온라인 야구게임 iOS 앱]
 
 - 소스 코드: https://github.com/isaac56/baseball
