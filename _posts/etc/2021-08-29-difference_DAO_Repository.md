@@ -20,9 +20,7 @@ last_modified_at: 2021-08-29
 
 지금까지 개인프로젝트에서는 jpa를 사용했었고 자연스럽게 DAL(Data Access Layer)로 Repository pattern을 사용하고 있었다.
 
-새로 입사한 회사에서는 mybatis를 사용하고, Repository가 아니라 DAO를 주로 사용하고 있는데
-
-지금까지 Repository나 DAO나 모두 DB에 접근해서 Data를 가져오는 이름만 다르고 기능은 같은 pattern이라고 생각하고 있었다.
+새로 입사한 회사에서는 mybatis를 사용하고, Repository가 아니라 DAO를 주로 사용하고 있는데 지금까지 Repository DAO 모두 DB에 접근해서 Data를 가져오는, 이름만 다른 동일 Pattern이라고 생각하고 있었다.
 
 > 아무 생각 없이 "mybatis는 레거시고, jpa가 요즘 기술이니까 짱이야!" 라고 생각했었는데, 모두 각자의 사정이 있는 것 같다.
 >
@@ -96,7 +94,12 @@ Repository로 다루는 객체를 다루기 위해서 여러 테이블에 접근
 
 ## 결론
 
-Data Access Layer라는 점에서 Repository와 DAO는 공통점을 갖지만, Repository는 객체 중심, DAO는 데이터 저장소(DB 테이블) 중심인 것이다.
+- DAO는 Data Peristence의 추상화이고, Repository는 객체 Collection의 추상화이다.
+- DAO는 storage system에 더 가까운 개념이고 상대적으로 low level concept, Repository는 Domain객체에 가까운 개념이며 상대적으로 high level concept
+- DAO는 데이터 맵핑/접근 계층으로 쿼리를 숨기지만, Repository는 Domain과 DAL사이의 계층으로 데이터를 대조하고 Domain 객체로 Mapping하는 로직을 숨긴다.
+- DAO는 Repository를 사용하여 구현할 수 없지만, Repository는 DAO를 사용해 구현할 수 있다.
+
+Data Access한다는 점에서 Repository와 DAO는 공통점을 갖지만, Repository는 객체 중심, DAO는 데이터 저장소(DB 테이블) 중심인 것이다.
 
 또한, Repository는 객체 중심으로 데이터를 다루기 위해 하나 이상의 DAO를 사용할 수 있으며, 따라서 DAO보다 higher layer이다.
 
