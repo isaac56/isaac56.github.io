@@ -50,7 +50,7 @@ last_modified_at: 2021-08-29
 >
 > 또한 pk의 구성칼럼이 많아질수록 성능에 좋지 않은 영향이 가게 된다.
 
-10분 장애를 발생시킬 수는 없으니, migration후 rename 방법을 생각 했으나 이 또한 상당히 복잡하고 일정내에 완료하기 힘들.
+10분 장애를 발생시킬 수는 없으니, migration후 rename 방법을 생각 했으나 일정내에 완료하기 힘든 작업이라고 판단되었다.
 
 결국 테이블 분리를 하여 데이터를 관리하게 되었다. (``여자사람``, ``남자사람``)
 
@@ -103,4 +103,9 @@ Data Access Layer라는 점에서 Repository와 DAO는 공통점을 갖지만, R
 <br>
 
 JPA는 Entity를 정의하고, Repository interface를 작성하면 직접 구현체를 작성할 일이 없기 때문에 이러한 개념에 무지했던 것 같다.
+
+
+
+- 참고 :
+  - <https://www.baeldung.com/java-dao-vs-repository>
 
