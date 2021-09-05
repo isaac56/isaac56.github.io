@@ -21,9 +21,9 @@ last_modified_at: 2021-09-05
 
 개발 진행 중, handlebars(hbs 파일)로 웹을 그릴 때 특수문자가 출력되지 않는 QA가 발생하여 대응했다.
 
-hbs에서 변수를 참조할 때 ``{{변수명}}`` 형태로 참조하고 있었는데, 이렇게 참조할 경우 자동으로 html-escaping이 적용된다.
+hbs에서 변수를 참조하는 두 가지 방식이 있는데, html escaping 처리가 된 채로 출력되는 방식을 사용하고 있었다.
 
-이 때문에 특수문자가 escaping 문자로 출력되었고, {{{변수명}}} 으로 사용하여 html-escaping을 제거할 수 있었다.
+escaping 처리하지 않는 참조 방식으로 수정하여 문제를 해결할 수 있었다.
 
 (<https://handlebarsjs.com/guide/expressions.html#html-escaping>)
 
@@ -37,7 +37,7 @@ hbs에서 변수를 참조할 때 ``{{변수명}}`` 형태로 참조하고 있�
 >
 > html-escaped: &amp &lt &gt &quot &#x27 &#x60 &#x3D
 
-HTML escaping 을 제거할땐 필연적으로 XSS 이슈에 대해 고민할 필요가 있다.
+하지만, HTML escaping 을 제거할땐 필연적으로 XSS 이슈에 대해 고민할 필요가 있다.
 
 왜냐하면 HTML escaping이 나온 이유가 XSS 공격을 막기 위해서이기 때문이다.
 
