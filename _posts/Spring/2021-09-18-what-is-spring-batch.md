@@ -4,7 +4,7 @@ title:  "Spring Batch 란?"
 excerpt: ""
 
 categories:
-  - Spring-boot, Spring
+  - Spring
 tags:
   - [Spring-boot, Spring]
 
@@ -90,9 +90,7 @@ last_modified_at: 2021-09-18
 
 아래는 Spring Batch의 기본적인 구성요소에 대한 설명이다. 
 
-<https://cheese10yun.github.io/spring-batch-basic/> 의 내용을 그대로 적었으며 (너무 정리가 잘 되어있어서..) 
-
-해당 포스트 예제 따라하며 batch 사용법 익히는 중이다.
+<https://cheese10yun.github.io/spring-batch-basic/> 의 내용을 그대로 적었으며 (너무 정리가 잘 되어있어서..) 해당 포스트 예제 따라하며 batch 사용법 익히는 중이다.
 
 
 
